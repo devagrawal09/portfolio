@@ -15,5 +15,10 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
+  local_dir: ./public
+  repo: devagrawal09/devagrawal09.github.io
+  target_branch: master
+  fqdn: devagr.me
+  verbose: true
   on:
     branch: master
