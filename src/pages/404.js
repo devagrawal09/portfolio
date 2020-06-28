@@ -7,7 +7,9 @@ const NotFoundPage = ({ location }) => (
   <Layout location={location}>
     <section className="page-section clearfix">
         <div className="container">
-          <h1 className="text-center wheat-text">You just hit a route that doesn&#39;t exist... the sadness.</h1>
+          <h1 className="text-center wheat-text">
+            You just hit a page that doesn&#39;t exist... try going back to <Link to="/">home</Link>?.
+          </h1>
         </div>
       </section>
   </Layout>
