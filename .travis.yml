@@ -6,6 +6,10 @@ node_js:
 script:
   - npm run build
 
+after_success:
+  - mkdir ./docs
+  - mv ./public/* ./docs/
+
 deploy:
   provider: pages
   skip_cleanup: true
