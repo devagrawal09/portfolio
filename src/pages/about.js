@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import resume from "./resume.pdf";
 import me from "../images/about.jpg";
 
 const AboutPage = ({ location }) => (
@@ -27,7 +28,7 @@ const AboutPage = ({ location }) => (
                   I am a problem solver. I have always been attracted to puzzles and riddles. I like how they compel you to move all the gears of your brain for one purpose - search for a solution. And successfully finding the solution is highly rewarding. This is why I was attracted to the Information Technology program - most of it is problem solving.
               </p>
                 <p className="text-center">
-                  <a href="resume.pdf">Check out my resume here!</a>
+                  <a href={resume} target="_blank">Check out my resume here!</a>
                 </p>
               </div>
             </div>
