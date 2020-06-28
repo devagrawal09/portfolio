@@ -1,11 +1,15 @@
-sudo:          false
-language:      node_js
+language: node_js
+
 node_js:
-  - "node"
-install:       npm install
+  - 12
+
 script:
-  - npm test
-  - gulp
-cache:
-  directories:
-    - node_modules
+  - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
