@@ -201,9 +201,12 @@ p {
   }
 }
 
-.leadershape {
-  background: #5e3829;
+.showcase {
+  background: rgba(94,56,41, 0.85);
   padding: 50px 150px;
+  border-radius: 0.5rem;
+  width: 80%;
+  margin: auto;
 }
 
 .list-hours {
