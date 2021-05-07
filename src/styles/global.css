@@ -55,10 +55,6 @@ p {
   margin-bottom: 5rem;
 }
 
-.section-heading {
-  text-transform: uppercase;
-}
-
 .section-heading .section-heading-upper {
   display: block;
   font-size: 1rem;
