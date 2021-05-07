@@ -73,21 +73,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Raleway`,
-            variants: [`100`, `100i`, `200`, `200i`, `300`, `300i`, `400`, `400i`, `500`, `500i`, `600`, `600i`, `700`, `700i`, `800`, `800i`, `900`, `900i`]
-          },
-          {
-            family: `Lora`,
-            variants: [`400`, `400i`, `700`, `700i`]
-          },
-        ],
-      },
-    }
+    `gatsby-plugin-preload-fonts`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

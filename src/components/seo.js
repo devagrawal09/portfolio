@@ -68,6 +68,15 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[{
+        rel: "stylesheet",
+        type: "text/css",
+        href: "//fonts.googleapis.com/css?family=Raleway"
+      }, {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "//fonts.googleapis.com/css?family=Lora"
+      }]}
     />
   )
 }
