@@ -12,11 +12,10 @@ const ContactPage = ({ location }) => (
                 <span className="section-heading-lower">Talk to me!</span>
               </h2>
               <p>
-                I might be an Introvert, but I love talking to new people about
-                anything from new possibilities and innovations in the field of
-                technology to the existence of magic and sorcery, or from the
-                next Marvel movie predictions to the meaning and purpose of
-                life!
+                I might be an Introvert, but I love talking to about anything
+                from new possibilities and innovations in software development
+                to metal music, or from the comic books and movies to the
+                meaning and purpose of life!
               </p>
               <br />
               <p className="mb-0">
