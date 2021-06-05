@@ -147,10 +147,14 @@ const JuniorYearPage = ({ location }) => (
                   awkward to something elegant and beautiful, like a seed
                   turning into a plant. Expansion is when the plant grows into a
                   tree, expanding its roots and branches into the environment,
-                  and making its presence dominant and significant. As a wise man once said,
+                  and making its presence dominant and significant. As a wise
+                  man once said,
                 </p>
                 <blockquote className="blockquote text-center">
-                  <em>We only get one life. Might as well use it to put a dent on the universe.</em>
+                  <em>
+                    We only get one life. Might as well use it to put a dent on
+                    the universe.
+                  </em>
                 </blockquote>
                 <p>
                   <em>Cheers, and keep up the good work!</em>

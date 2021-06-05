@@ -7,9 +7,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Navbar, Nav, Dropdown } from "react-bootstrap";
+import { Navbar, Nav, Dropdown } from "react-bootstrap"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import SEO from "./seo";
+import SEO from "./seo"
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
@@ -43,26 +43,42 @@ const Layout = ({ children, location }) => {
         <Navbar.Toggle aria-controls="navbarResponsive" />
         <Navbar.Collapse id="navbarResponsive">
           <Nav className="mx-auto">
-            {
-              data.site.siteMetadata.menuLinks.map(node =>
-                node.dropdown?.length ?
-                  <Dropdown key={node.name} as={Nav.Item} className="px-lg-4">
-                    <Dropdown.Toggle as={Nav.Link} className="text-uppercase text-expanded">{node.name}</Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      {node.dropdown.map(subNode =>
-                        <Dropdown.Item key={subNode.name} as={Link} to={`${node.link}${subNode.link}`} state={{ title: subNode.name }}>
-                          {subNode.name}
-                        </Dropdown.Item>
-                      )}
-                    </Dropdown.Menu>
-                  </Dropdown> :
-                  <Nav.Item key={node.name} className="px-lg-4">
-                    <Nav.Link as={Link} className="text-uppercase text-expanded" to={node.link} activeClassName="active" state={{ title: node.name }}>
-                      {node.name}
-                    </Nav.Link>
-                  </Nav.Item>
+            {data.site.siteMetadata.menuLinks.map(node =>
+              node.dropdown?.length ? (
+                <Dropdown key={node.name} as={Nav.Item} className="px-lg-4">
+                  <Dropdown.Toggle
+                    as={Nav.Link}
+                    className="text-uppercase text-expanded"
+                  >
+                    {node.name}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    {node.dropdown.map(subNode => (
+                      <Dropdown.Item
+                        key={subNode.name}
+                        as={Link}
+                        to={`${node.link}${subNode.link}`}
+                        state={{ title: subNode.name }}
+                      >
+                        {subNode.name}
+                      </Dropdown.Item>
+                    ))}
+                  </Dropdown.Menu>
+                </Dropdown>
+              ) : (
+                <Nav.Item key={node.name} className="px-lg-4">
+                  <Nav.Link
+                    as={Link}
+                    className="text-uppercase text-expanded"
+                    to={node.link}
+                    activeClassName="active"
+                    state={{ title: node.name }}
+                  >
+                    {node.name}
+                  </Nav.Link>
+                </Nav.Item>
               )
-            }
+            )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

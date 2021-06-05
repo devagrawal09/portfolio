@@ -4,9 +4,15 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
  */
 
- body {
-  font-family: 'Lora';
-  background: -webkit-gradient(linear,left top,left bottom,from(rgba(47,23,15,.65))),url("./bg.jpg");
+body {
+  font-family: "Lora";
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(47, 23, 15, 0.65))
+    ),
+    url("./bg.jpg");
   background: rgba(47, 23, 15, 0.65), url("./bg.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -19,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 p {
@@ -35,7 +41,7 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 .site-heading .site-heading-upper {
@@ -73,7 +79,7 @@ p {
 
 #mainNav {
   background-color: rgba(47, 23, 15, 0.9);
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
 #mainNav .navbar-brand {
@@ -154,7 +160,7 @@ p {
 
 .cta .cta-inner:before {
   border-radius: 0.5rem;
-  content: '';
+  content: "";
   position: absolute;
   top: -0.5rem;
   bottom: -0.5rem;
@@ -198,7 +204,7 @@ p {
 }
 
 .showcase {
-  background: rgba(94,56,41, 0.85);
+  background: rgba(94, 56, 41, 0.85);
   padding: 50px 150px;
   border-radius: 0.5rem;
   width: 80%;
@@ -211,7 +217,7 @@ p {
 
 .list-hours .list-hours-item {
   border-bottom: 1px solid rgba(230, 167, 86, 0.5);
-  padding-bottom: .25rem;
+  padding-bottom: 0.25rem;
   margin-bottom: 1rem;
   font-style: italic;
 }
@@ -254,7 +260,9 @@ p {
   border-color: #e6a756;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
   background-color: #df902a;
   border-color: #df902a;
 }
