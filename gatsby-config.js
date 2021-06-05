@@ -28,6 +28,10 @@ module.exports = {
             name: 'Sophomore',
             link: '/sophomore'
           },
+          {
+            name: 'Junior',
+            link: '/junior'
+          },
         ]
       },
       {
