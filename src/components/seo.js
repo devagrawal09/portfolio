@@ -70,6 +70,15 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
       link={[
         {
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossOrigin: "true",
+        },
+        {
           rel: "stylesheet",
           type: "text/css",
           href: "//fonts.googleapis.com/css?family=Raleway",
@@ -78,6 +87,12 @@ function SEO({ description, lang, meta, title }) {
           rel: "stylesheet",
           type: "text/css",
           href: "//fonts.googleapis.com/css?family=Lora",
+        },
+        {
+          rel: "stylesheet",
+          type: "text/css",
+          href:
+            "//fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap",
         },
       ]}
     />

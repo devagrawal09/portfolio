@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../../components/layout"
-import leadershape1 from "../../images/leadershape1.jpg"
-import leadershape2 from "../../images/leadershape2.jpeg"
+import Layout from "../../../components/layout"
+import leadershape1 from "../../../images/leadershape1.jpg"
+import leadershape2 from "../../../images/leadershape2.jpeg"
 
 const LeadershapePage = ({ location }) => (
   <Layout location={location}>

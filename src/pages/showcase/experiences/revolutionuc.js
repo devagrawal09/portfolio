@@ -1,9 +1,9 @@
 import React from "react"
-import Layout from "../../components/layout"
-import revolutionuc1 from "../../images/revolutionuc1.jpeg"
-import revolutionuc2 from "../../images/revolutionuc2.png"
-import revolutionuc3 from "../../images/revolutionuc3.png"
-import revolutionuc4 from "../../images/revolutionuc4.png"
+import Layout from "../../../components/layout"
+import revolutionuc1 from "../../../images/revolutionuc1.jpeg"
+import revolutionuc2 from "../../../images/revolutionuc2.png"
+import revolutionuc3 from "../../../images/revolutionuc3.png"
+import revolutionuc4 from "../../../images/revolutionuc4.png"
 
 const RevolutionUCPage = ({ location }) => (
   <Layout location={location}>

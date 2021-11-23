@@ -5,54 +5,64 @@ module.exports = {
     author: `@devagrawal09`,
     menuLinks: [
       {
-        name: 'Home',
-        link: '/'
+        name: "Home",
+        link: "/",
       },
       {
-        name: 'About Me',
-        link: '/about'
+        name: "About Me",
+        link: "/about",
       },
       {
-        name: 'Honors Experiences',
-        link: '/experiences'
-      },
-      {
-        name: 'Year in Review',
-        link: '/review',
+        name: "Showcase",
+        link: `/showcase`,
         dropdown: [
           {
-            name: 'Freshman',
-            link: '/freshman'
+            name: "Projects",
+            link: "/projects",
           },
           {
-            name: 'Sophomore',
-            link: '/sophomore'
+            name: "Experiences",
+            link: "/experiences",
           },
-          {
-            name: 'Junior',
-            link: '/junior'
-          },
-        ]
+        ],
       },
       {
-        name: 'Gateway to University Honors',
-        link: '/honors',
+        name: "Year in Review",
+        link: "/review",
         dropdown: [
           {
-            name: 'Problem Pitch',
-            link: '/pitch'
+            name: "Freshman",
+            link: "/freshman",
           },
           {
-            name: 'Global Citizen Scholar Plan',
-            link: '/gcsp'
+            name: "Sophomore",
+            link: "/sophomore",
           },
-        ]
+          {
+            name: "Junior",
+            link: "/junior",
+          },
+        ],
       },
       {
-        name: 'Contact',
-        link: '/contact'
-      }
-    ]
+        name: "University Honors",
+        link: "/honors",
+        dropdown: [
+          {
+            name: "Problem Pitch",
+            link: "/pitch",
+          },
+          {
+            name: "Global Citizen Scholar Plan",
+            link: "/gcsp",
+          },
+        ],
+      },
+      {
+        name: "Contact",
+        link: "/contact",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -77,7 +87,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-preload-fonts`
+    `gatsby-plugin-preload-fonts`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
