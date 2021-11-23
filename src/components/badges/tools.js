@@ -6,6 +6,7 @@ import awsLogo from "../../images/icons/aws.png"
 import discordLogo from "../../images/icons/discord.png"
 import travisLogo from "../../images/icons/travis.png"
 import droneLogo from "../../images/icons/drone.png"
+import cordovaLogo from "../../images/icons/cordova.png"
 
 const ToolBadge = ({ color, backgroundColor, children }) => (
   <Badge
@@ -118,5 +119,23 @@ export const DroneBadge = () => (
 export const DiscordBadge = () => (
   <ToolBadge color="white" backgroundColor="#5560e9">
     <ImgBadge src={discordLogo} /> Discord
+  </ToolBadge>
+)
+
+export const MeteorBadge = () => (
+  <ToolBadge color="white" backgroundColor="#df5052">
+    <i className="devicon-meteor-plain" /> Meteor
+  </ToolBadge>
+)
+
+export const CordovaBadge = () => (
+  <ToolBadge color="black" backgroundColor="#4dc2e4">
+    <ImgBadge src={cordovaLogo} /> Cordova
+  </ToolBadge>
+)
+
+export const AndroidBadge = () => (
+  <ToolBadge color="white" backgroundColor="#a4c439">
+    <i className="devicon-android-plain" /> Android
   </ToolBadge>
 )

@@ -59,7 +59,31 @@ export const E2EBadge = () => (
 )
 
 export const MicroservicesBadge = () => (
-  <ToolBadge color="white" backgroundColor="#FF007F">
+  <ToolBadge color="white" backgroundColor="#eF207F">
     Microservices
+  </ToolBadge>
+)
+
+export const IsomorphicBadge = () => (
+  <ToolBadge color="white" backgroundColor="#2F40aF">
+    Isomorphic
+  </ToolBadge>
+)
+
+export const InternationalizationBadge = () => (
+  <ToolBadge color="white" backgroundColor="#309f0F">
+    Internationalization
+  </ToolBadge>
+)
+
+export const PubSubBadge = () => (
+  <ToolBadge color="white" backgroundColor="#509f7F">
+    PubSub
+  </ToolBadge>
+)
+
+export const CrossPlatformBadge = () => (
+  <ToolBadge color="black" backgroundColor="#ffb4bb">
+    Cross Platform
   </ToolBadge>
 )

@@ -27,9 +27,18 @@ import {
   RBACBadge,
   E2EBadge,
   MicroservicesBadge,
+  MeteorBadge,
+  CordovaBadge,
+  IsomorphicBadge,
+  InternationalizationBadge,
+  PubSubBadge,
+  CrossPlatformBadge,
+  AndroidBadge,
 } from "../../../components/badges"
 import hackathonImage from "../../../images/hackathon.jpg"
 import osdpImage from "../../../images/osdp.png"
+import hloImage from "../../../images/hlo.jpg"
+import hitchdImage from "../../../images/hitchd.jpg"
 
 const ProjectsPage = ({ location }) => (
   <Layout location={location}>
@@ -41,7 +50,7 @@ const ProjectsPage = ({ location }) => (
             <Row>
               <Col xs={6}>
                 <Link
-                  to="hackathon"
+                  to="#"
                   style={{ color: `black` }}
                   state={{ title: `RevolutionUC Organizing` }}
                 >
@@ -73,9 +82,12 @@ const ProjectsPage = ({ location }) => (
                 <h3>Design Features</h3>
                 <p>
                   <DistributedBadge />
+                  <MicroservicesBadge />
+                  <DDDBadge />
                   <CloudBadge />
                   <IntegrationBadge />
                   <RBACBadge />
+                  <CrossPlatformBadge />
                 </p>
               </Col>
             </Row>
@@ -87,7 +99,7 @@ const ProjectsPage = ({ location }) => (
               <Col xs={6}>
                 <p className="project-description">
                   A system for courts to record and analyze sentencing data
-                  using the <strong>Uniform Sentencing Entry</strong> form
+                  using standardized entry forms
                 </p>
                 <h3>Tools</h3>
                 <p>
@@ -110,7 +122,7 @@ const ProjectsPage = ({ location }) => (
               </Col>
               <Col xs={6}>
                 <Link
-                  to="osdp"
+                  to="#"
                   style={{ color: `black` }}
                   state={{ title: `RevolutionUC Organizing` }}
                 >
@@ -128,7 +140,7 @@ const ProjectsPage = ({ location }) => (
             <Row>
               <Col xs={6}>
                 <Link
-                  to="hackathon"
+                  to="#"
                   style={{ color: `black` }}
                   state={{ title: `Risk Assessment` }}
                 >
@@ -166,39 +178,72 @@ const ProjectsPage = ({ location }) => (
             <Row>
               <Col xs={6}>
                 <p className="project-description">
-                  A system for courts to record and analyze sentencing data
-                  using the <strong>Uniform Sentencing Entry</strong> form
+                  A web and mobile portal for care giving job postings and
+                  caregivers to create a profile and apply to postings
                 </p>
                 <h3>Tools</h3>
                 <p>
-                  <TSBadge />
-                  <ReactBadge />
-                  <ExpressBadge />
-                  <PostgresBadge />
+                  <MeteorBadge />
+                  <CordovaBadge />
                   <MongoBadge />
-                  <DroneBadge />
-                  <DockerBadge />
-                  <LinuxBadge />
+                  <HerokuBadge />
+                  <AWSBadge />
                 </p>
                 <h3>Design Features</h3>
                 <p>
-                  <DDDBadge />
-                  <DevopsBadge />
-                  <RBACBadge />
-                  <E2EBadge />
+                  <IsomorphicBadge />
+                  <InternationalizationBadge />
+                  <PubSubBadge />
+                  <IntegrationBadge />
+                  <CrossPlatformBadge />
                 </p>
               </Col>
               <Col xs={6}>
                 <Link
-                  to="hlo"
+                  to="#"
                   style={{ color: `black` }}
                   state={{ title: `RevolutionUC Organizing` }}
                 >
                   <h2 className="project-title" id="osdp">
                     HealthyLovedOnes
                   </h2>
-                  <img className="project-image" src={osdpImage} />
+                  <img className="project-image" src={hloImage} />
                 </Link>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+        <Card className="project">
+          <Card.Body>
+            <Row>
+              <Col xs={6}>
+                <Link
+                  to="#"
+                  style={{ color: `black` }}
+                  state={{ title: `Hitch'd` }}
+                >
+                  <h2 className="project-title" id="hackathon">
+                    Hitch'd
+                  </h2>
+                  <img className="project-image" src={hitchdImage} />
+                </Link>
+              </Col>
+              <Col xs={6}>
+                <p>My very first personal project - a wedding planner app</p>
+                <h3>Tools</h3>
+                <p>
+                  <MeteorBadge />
+                  <CordovaBadge />
+                  <AndroidBadge />
+                  <MongoBadge />
+                  <HerokuBadge />
+                </p>
+                <h3>Design Features</h3>
+                <p>
+                  <IsomorphicBadge />
+                  <PubSubBadge />
+                  <CrossPlatformBadge />
+                </p>
               </Col>
             </Row>
           </Card.Body>
