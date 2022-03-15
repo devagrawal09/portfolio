@@ -44,6 +44,7 @@ const ContactPage = ({ location }) => (
                   <em>Social media ftw!</em>
                 </small>
                 <br />
+                <a href="https://twitter.com/dadevil99/">Twitter</a> <br />
                 <a href="https://www.facebook.com/dadevil09">Facebook</a> <br />
                 <a href="https://www.instagram.com/dadevil_666/">Instagram</a>
               </p>
