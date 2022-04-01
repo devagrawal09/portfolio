@@ -11,7 +11,7 @@ const ExperiencesPage = ({ location }) => (
     <section className="page-section">
       <div className="container">
         <h1 className="wheat-text">My Honors Experiences</h1>
-        <div className="product-item">
+        <div className="product-item mb-2">
           <Link
             to="roundtable"
             style={{ textDecoration: `none`, color: `black` }}
@@ -41,7 +41,7 @@ const ExperiencesPage = ({ location }) => (
             </div>
           </Link>
         </div>
-        <div className="product-item">
+        <div className="product-item mb-2">
           <Link
             to="mentorship"
             style={{ textDecoration: `none`, color: `black` }}
@@ -52,7 +52,7 @@ const ExperiencesPage = ({ location }) => (
                 <h2 className="section-heading mb-0">
                   <span className="section-heading-upper">August 2021</span>
                   <span className="section-heading-lower">
-                    UHP Welcome Experience Mentorship
+                    Welcome Experience Mentorship
                   </span>
                 </h2>
               </div>
@@ -72,7 +72,7 @@ const ExperiencesPage = ({ location }) => (
             </div>
           </Link>
         </div>
-        <div className="product-item">
+        <div className="product-item mb-2">
           <Link
             to="revolutionuc"
             style={{ textDecoration: `none`, color: `black` }}
@@ -104,7 +104,7 @@ const ExperiencesPage = ({ location }) => (
             </div>
           </Link>
         </div>
-        <div className="product-item">
+        <div className="product-item mb-2">
           <Link
             to="leadershape"
             style={{ textDecoration: `none`, color: `black` }}
@@ -129,7 +129,7 @@ const ExperiencesPage = ({ location }) => (
             </div>
             <div className="product-item-description d-flex mr-auto">
               <div className="bg-faded p-5 rounded">
-                <p className="mb-0">Blooming leaders of tomorrow!</p>
+                <p className="mb-0">Blooming leaders of tomorrow</p>
               </div>
             </div>
           </Link>
