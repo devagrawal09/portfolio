@@ -69,15 +69,76 @@ const LeadershapePage = ({ location }) => (
                   people who can contribute to the organization. <br />
                   The recruitment process has many different aspects, including
                   (but not limited to) identifying the target audience, figuring
-                  out incentives and benefits, and formualting attractive
+                  out incentives and benefits, and formulating attractive
                   marketing material. <br />
-                  To exercise formualting elevator pitches, we did the classic
+                  To exercise formulating elevator pitches, we did the classic
                   "Sell me X in a minute" activity. The presenters chose a few
                   random images, and a volunteer had to come up with an elevator
                   pitch on the spot. This was a great exercise for me
                   personally, because I am often put in a situation where I am
                   in a conversation and I want to tell them about my
                   organization and what we do and why they should get involved.
+                </p>
+                <h3 id="session-3">Session 3: March 2</h3>
+                <p>
+                  In our third meeting, we talked about{" "}
+                  <strong>Executive Transition</strong>. <br />
+                  Executive transition is an issue that usually lives in the
+                  blind spot of organization leaders. If we are not conscious
+                  about how we are handling transitions to the new executives at
+                  the end of our tenures, the organization can potentially go
+                  through a very difficult start and change into something else.{" "}
+                  <br />
+                  This mostly happens because every leader needs to have certain
+                  frameworks and processes to run an organization. If those
+                  frameworks are not handed to us by a previous leader, we will
+                  come up with our own, which will take a lot of time to figure
+                  out, and will be likely very different from what the previous
+                  leaders used. <br />
+                  We talked about the timeline of executive transition -
+                  candidacy, elections, transitions and first meeting. For
+                  candidacy and elections, we discussed what the candidates and
+                  the voters need to know before the elections. We also
+                  discussed how different organizations can have different
+                  approaches to how the new executive is selected, or how
+                  elections are executed. <br />
+                  Every executive role has some essential core aspects, which
+                  need to be clearly documented and shared with the newly
+                  elected members. The easiest way to achieve that is to write
+                  it in a document and hold a transition meeting between the
+                  outgoing and incoming member.
+                </p>
+                <h3 id="session-4">Session 4: March 23</h3>
+                <p>
+                  This is the meeting that I presented in along with a partner,
+                  and it was about <strong>Inter-Org Collab</strong>. <br />I am
+                  very passionate about collaborations. I think collabs are a
+                  great way to build up relationships, expand outreach, and get
+                  access to more resources and do bigger projects. So that is
+                  what we started the discussion with - benefits of
+                  collaborating. <br />I had a lot of experiences and anecdotes
+                  to share for this presentation, because almost all of ITSA
+                  events have been a collab of some sort. They also helped me
+                  come up with topics to talk about, as well as to make my
+                  point. For example, I brought up the idea of the ITSA
+                  partnering with a local cafe and coffee roaster to increase
+                  awareness about specialty coffee. <br />
+                  This specific meeting was also a little disappointing in some
+                  ways. It finished in less than 40 minutes, where as all the
+                  previous ones went on until the 50-55 minute mark. While some
+                  of that can definitely be attributed to low attendance and
+                  participation by the other members of the roundtable, I
+                  definitely felt like the content we came up with in the
+                  meeting was not enough. What makes it worse is that my partner
+                  warned me of this, but for some reason I was confident that
+                  the content we have in the slides was more than enough. In
+                  hindsight looking at the slides of the other meetings, I
+                  definitely under-prepared. <br />
+                  However, even though I did not get much feedback from the
+                  other members on this topic, just the preparation had an
+                  immense impact on how I think about collaborations, and it
+                  helped me organize a lot of my random thoughts and opinions
+                  into a clear framework, which I can document further.
                 </p>
               </div>
             </div>
