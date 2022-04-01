@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import leadershapeLogo from "../../images/leadershape.png"
 import revucLogo from "../../images/revolutionuc.png"
+import mentorshipLogo from "../../images/mentorship.png"
 
 const ExperiencesPage = ({ location }) => (
   <Layout location={location}>
@@ -28,15 +29,14 @@ const ExperiencesPage = ({ location }) => (
             <div className="showcase">
               <img
                 className="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                src={revucLogo}
+                src={mentorshipLogo}
                 alt=""
+                width={270}
               />
             </div>
             <div className="product-item-description d-flex mr-auto">
               <div className="bg-faded p-5 rounded">
-                <p className="mb-0">
-                  Mentoring the next generation of honors
-                </p>
+                <p className="mb-0">Mentoring the next generation of honors</p>
               </div>
             </div>
           </Link>
