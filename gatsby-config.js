@@ -5,54 +5,54 @@ module.exports = {
     author: `@devagrawal09`,
     menuLinks: [
       {
-        name: 'Home',
-        link: '/'
+        name: "Home",
+        link: "/",
       },
       {
-        name: 'About Me',
-        link: '/about'
+        name: "About Me",
+        link: "/about",
       },
       {
-        name: 'Honors Experiences',
-        link: '/experiences'
+        name: "Honors Experiences",
+        link: "/experiences",
       },
       {
-        name: 'Year in Review',
-        link: '/review',
+        name: "Year in Review",
+        link: "/review",
         dropdown: [
           {
-            name: 'Freshman',
-            link: '/freshman'
+            name: "Freshman",
+            link: "/freshman",
           },
           {
-            name: 'Sophomore',
-            link: '/sophomore'
+            name: "Sophomore",
+            link: "/sophomore",
           },
           {
-            name: 'Junior',
-            link: '/junior'
+            name: "Junior",
+            link: "/junior",
           },
-        ]
+        ],
       },
       {
-        name: 'Gateway to University Honors',
-        link: '/honors',
+        name: "Gateway to University Honors",
+        link: "/honors",
         dropdown: [
           {
-            name: 'Problem Pitch',
-            link: '/pitch'
+            name: "Problem Pitch",
+            link: "/pitch",
           },
           {
-            name: 'Global Citizen Scholar Plan',
-            link: '/gcsp'
+            name: "Global Citizen Scholar Plan",
+            link: "/gcsp",
           },
-        ]
+        ],
       },
       {
-        name: 'Contact',
-        link: '/contact'
-      }
-    ]
+        name: "Contact",
+        link: "/contact",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -74,10 +74,10 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/da.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-preload-fonts`
+    `gatsby-plugin-preload-fonts`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
