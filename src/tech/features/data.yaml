@@ -1,5 +1,5 @@
 features:
-  - id: domain-driven design
+  - id: ddd
     name: Domain-Driven Design
     color: "white"
     bgColor: "#35524A"
@@ -9,7 +9,7 @@ features:
     color: "white"
     bgColor: "#627C85"
 
-  - id: multi-cloud
+  - id: multicloud
     name: Multi-Cloud
     color: "black"
     bgColor: "#9C9CDB"
@@ -19,17 +19,17 @@ features:
     color: "black"
     bgColor: "#A2E8DD"
 
-  - id: external integration
+  - id: integration
     name: External Integration
     color: "black"
     bgColor: "#32DE8A"
 
-  - id: role-based access
+  - id: rbac
     name: Role-Based Access
     color: "black"
     bgColor: "#FCAA67"
 
-  - id: e2e testing
+  - id: e2e
     name: E2E Testing
     color: "white"
     bgColor: "#B0413E"
@@ -44,7 +44,7 @@ features:
     color: "white"
     bgColor: "#2F40aF"
 
-  - id: internationalization
+  - id: i18n
     name: Internationalization
     color: "white"
     bgColor: "#309f0F"
@@ -54,7 +54,7 @@ features:
     color: "white"
     bgColor: "#509f7F"
 
-  - id: cross platform
+  - id: crossplatform
     name: Cross Platform
     color: "black"
     bgColor: "#ffb4bb"
