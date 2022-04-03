@@ -1,0 +1,100 @@
+projects:
+  - id: hackathon
+    name: Hackathon Suite
+    description: A suite of applications developed to aid the organization of a hackathon event
+    tools:
+      - typescript
+      - react
+      - angular
+      - nest
+      - postgres
+      - jekyll
+      - heroku
+      - aws
+      - netlify
+      - discord
+      - travis
+      - cloudflare
+    features:
+      - distributed
+      - microservices
+      - ddd
+      - multicloud
+      - integration
+      - rbac
+      - crossplatform
+
+  - id: osdp
+    name: Ohio Sentencing Data Platform
+    description: A system for courts to record and analyze sentencing data using standardized entry forms
+    tools:
+      - typescript
+      - react
+      - express
+      - postgres
+      - mongo
+      - drone
+      - docker
+      - linux
+    features:
+      - ddd
+      - devops
+      - rbac
+      - e2e
+
+  - id: bonfire
+    name: UCCI Risk Assessment
+    description: A system for risk assessment tracking for correction agencies
+    tools:
+      - typescript
+      - react
+      - express
+      - postgres
+    features:
+      - distributed
+      - rbac
+      - devops
+      - microservices
+
+  - id: portfolio
+    name: Portfolio
+    description: My portfolio website
+    tools:
+      - gatsby
+      - typescript
+      - react
+      - travis
+      - cloudflare
+    features:
+      - ssg
+      - a11y
+
+  - id: hloapp
+    name: HealthyLovedOnes
+    description: A web and mobile portal for care giving job postings and caregivers to create a profile and apply to postings
+    tools:
+      - meteor
+      - cordova
+      - mongo
+      - heroku
+      - aws
+    features:
+      - isomorphic
+      - i18n
+      - pubsub
+      - integration
+      - crossplatform
+
+  - id: hitchd
+    name: Hitch'd
+    description: My very first personal project - a wedding planner app
+    tools:
+      - meteor
+      - cordova
+      - android
+      - mongo
+      - heroku
+    features:
+      - isomorphic
+      - pubsub
+      - crossplatform
