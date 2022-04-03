@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from "../../components/layout"
-import leadershapeLogo from "../../images/leadershape.png"
-import revucLogo from "../../images/revolutionuc.png"
-import mentorshipLogo from "../../images/mentorship.png"
-import roundtableLogo from "../../images/roundtable.png"
+import Layout from "../../../components/layout"
+import leadershapeLogo from "../../../images/leadershape.png"
+import revucLogo from "../../../images/revolutionuc.png"
+import mentorshipLogo from "../../../images/mentorship.png"
+import roundtableLogo from "../../../images/roundtable.png"
 
 const ExperiencesPage = ({ location }) => (
   <Layout location={location}>

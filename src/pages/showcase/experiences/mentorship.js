@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../../components/layout"
-import revolutionuc1 from "../../images/revolutionuc1.jpeg"
+import Layout from "../../../components/layout"
+import revolutionuc1 from "../../../images/revolutionuc1.jpeg"
 
 const WelcomeExperiencePage = ({ location }) => (
   <Layout location={location}>

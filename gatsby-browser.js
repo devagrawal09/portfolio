@@ -7,5 +7,5 @@
 // You can delete this file if you're not using it
 
 import "bootstrap/dist/css/bootstrap.min.css"
-import "devicon/devicon.css"
+import "devicon/devicon.min.css"
 import "./src/styles/global.css"
