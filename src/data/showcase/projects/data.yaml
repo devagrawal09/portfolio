@@ -2,6 +2,7 @@ projects:
   - id: hackathon
     name: Hackathon Suite
     description: A suite of applications developed to aid the organization of a hackathon event
+    image: images/hackathon.jpg
     tools:
       - typescript
       - react
@@ -27,6 +28,7 @@ projects:
   - id: osdp
     name: Ohio Sentencing Data Platform
     description: A system for courts to record and analyze sentencing data using standardized entry forms
+    image: images/osdp.png
     tools:
       - typescript
       - react
@@ -59,6 +61,7 @@ projects:
   - id: portfolio
     name: Portfolio
     description: My portfolio website
+    image: images/DA.png
     tools:
       - gatsby
       - typescript
@@ -72,6 +75,7 @@ projects:
   - id: hloapp
     name: HealthyLovedOnes
     description: A web and mobile portal for care giving job postings and caregivers to create a profile and apply to postings
+    image: images/hlo.jpg
     tools:
       - meteor
       - cordova
@@ -88,6 +92,7 @@ projects:
   - id: hitchd
     name: Hitch'd
     description: My very first personal project - a wedding planner app
+    image: images/hitchd.jpg
     tools:
       - meteor
       - cordova

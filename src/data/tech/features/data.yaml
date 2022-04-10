@@ -58,3 +58,13 @@ features:
     name: Cross Platform
     color: "black"
     bgColor: "#ffb4bb"
+
+  - id: ssg
+    name: Static Site Generation
+    color: "white"
+    bgColor: "#3992ab"
+
+  - id: a11y
+    name: Accessibility
+    color: "white"
+    bgColor: "#292f4c"
