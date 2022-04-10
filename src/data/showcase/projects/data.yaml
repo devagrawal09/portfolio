@@ -29,6 +29,7 @@ projects:
     name: Ohio Sentencing Data Platform
     description: A system for courts to record and analyze sentencing data using standardized entry forms
     image: images/osdp.png
+    page: ./osdp.md
     tools:
       - typescript
       - react

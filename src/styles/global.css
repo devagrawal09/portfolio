@@ -288,3 +288,7 @@ p {
   font-size: 20px;
   font-weight: bold;
 }
+
+.project-page .project-image {
+  width: 100%;
+}

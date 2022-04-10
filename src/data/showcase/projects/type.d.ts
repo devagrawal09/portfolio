@@ -7,4 +7,7 @@ export interface IProject {
   tools: string[];
   features: string[];
   image: ImageDataLike;
+  page?: {
+    childMarkdownRemark: { html: string }
+  }
 }
