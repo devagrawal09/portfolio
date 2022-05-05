@@ -98,6 +98,10 @@ module.exports = {
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: { trackingIds: ["G-ZVPSFXW1WZ"] },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -8,6 +8,7 @@
     "bootstrap": "^4.6.1",
     "devicon": "^2.12.0",
     "gatsby": "^4.11.1",
+    "gatsby-plugin-google-gtag": "^4.13.0",
     "gatsby-plugin-image": "^2.11.1",
     "gatsby-plugin-manifest": "^4.11.1",
     "gatsby-plugin-offline": "^5.11.1",
