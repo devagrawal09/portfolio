@@ -124,3 +124,9 @@ tools:
     color: "white"
     bgColor: "#663399"
     devicon: gatsby-plain
+
+  - id: next
+    name: Next.js
+    color: "white"
+    bgColor: "#111"
+    devicon: nextjs-plain

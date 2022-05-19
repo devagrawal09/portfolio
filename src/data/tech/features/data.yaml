@@ -68,3 +68,8 @@ features:
     name: Accessibility
     color: "white"
     bgColor: "#292f4c"
+
+  - id: serverless
+    name: Serverless
+    color: "white"
+    bgColor: "#025669"

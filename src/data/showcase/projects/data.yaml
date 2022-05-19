@@ -26,6 +26,24 @@ projects:
       - rbac
       - crossplatform
 
+  - id: thedynamics
+    name: TheDynamics Community Application
+    description: An online community platform for TheDynamics members to interact, share, network, and learn new skills.
+    image: images/thedynamics.png
+    page: ./thedynamics.md
+    tools:
+      - typescript
+      - react
+      - next
+      - mongo
+      - aws
+      - discord
+    features:
+      - serverless
+      - isomorphic
+      - multicloud
+      - integration
+
   # - id: osdp
   #   name: Ohio Sentencing Data Platform
   #   description: A system for courts to record and analyze sentencing data using standardized entry forms
