@@ -28,6 +28,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.5",
     "prettier": "2.6.2"
   },
   "keywords": [

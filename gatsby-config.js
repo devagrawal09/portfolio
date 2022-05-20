@@ -3,6 +3,8 @@ module.exports = {
     title: `Dev Agrawal`,
     description: `Dev Agrawal's website`,
     author: `@devagrawal09`,
+    twitter: `@dadevil99`,
+    image: `https://devagr.me/portfolio.png`,
     menuLinks: [
       {
         name: "Home",

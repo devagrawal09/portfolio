@@ -10,14 +10,14 @@ import type { IProject } from "../data/showcase/projects/type"
 import type { IFeature } from "../data/tech/features/type"
 import type { ITool } from "../data/tech/tools/type"
 
-const ProjectPageTemplate = ({ pageContext, location }) => {
+const ProjectPageTemplate = ({ pageContext }) => {
   const project: IProject = pageContext.project
   const features: IFeature[] = pageContext.features
   const tools: ITool[] = pageContext.tools
   const __html = project.page?.childMarkdownRemark.html
 
   return (
-    <Layout location={location} title={project.name}>
+    <Layout title={project.name} description={project.description}>
       <section className="page-section about-heading project-page">
         <div className="container">
           <GatsbyImage
