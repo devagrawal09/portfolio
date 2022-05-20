@@ -39,16 +39,18 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       }
       featuresYaml {
         features {
-          name
           id
+          name
+          description
           color
           bgColor
         }
       }
       toolsYaml {
         tools {
-          name
           id
+          name
+          description
           devicon
           color
           bgColor

@@ -11,7 +11,7 @@ import { Navbar, Nav, Dropdown } from "react-bootstrap"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import SEO from "./seo"
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, title }) => {
   const data = useStaticQuery(graphql`
     query SiteQuery {
       site {
@@ -32,7 +32,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <SEO title={location.state?.title || `Home`} />
+      <SEO title={title || location.state?.title || `Home`} />
       <h1 className="site-heading text-center text-white d-none d-lg-block">
         <span className="site-heading-upper text-primary mb-3">Portfolio</span>
         <span className="site-heading-lower">Dev Agrawal</span>
@@ -96,6 +96,7 @@ const Layout = ({ children, location }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  title: PropTypes.string,
 }
 
 export default Layout

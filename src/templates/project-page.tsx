@@ -17,7 +17,7 @@ const ProjectPageTemplate = ({ pageContext, location }) => {
   const __html = project.page?.childMarkdownRemark.html
 
   return (
-    <Layout location={location}>
+    <Layout location={location} title={project.name}>
       <section className="page-section about-heading project-page">
         <div className="container">
           <GatsbyImage

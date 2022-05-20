@@ -25,6 +25,7 @@ projects:
       - integration
       - rbac
       - crossplatform
+      - monorepo
 
   - id: thedynamics
     name: TheDynamics Community Application
@@ -44,39 +45,41 @@ projects:
       - multicloud
       - integration
 
-  # - id: osdp
-  #   name: Ohio Sentencing Data Platform
-  #   description: A system for courts to record and analyze sentencing data using standardized entry forms
-  #   image: images/osdp.png
-  #   page: ./osdp.md
-  #   tools:
-  #     - typescript
-  #     - react
-  #     - express
-  #     - postgres
-  #     - mongo
-  #     - drone
-  #     - docker
-  #     - linux
-  #   features:
-  #     - ddd
-  #     - devops
-  #     - rbac
-  #     - e2e
+  - id: osdp
+    name: Ohio Sentencing Data Platform
+    description: A system to help judges implement standard sentencing entries and empower courts with accessible and reliable information
+    image: images/osdp.png
+    page: ./osdp.md
+    tools:
+      - typescript
+      - react
+      - express
+      - postgres
+      - mongo
+      - drone
+      - docker
+      - linux
+    features:
+      - ddd
+      - devops
+      - rbac
+      - e2e
+      - monorepo
 
-  # - id: bonfire
-  #   name: UCCI Risk Assessment
-  #   description: A system for risk assessment tracking for correction agencies
-  #   tools:
-  #     - typescript
-  #     - react
-  #     - express
-  #     - postgres
-  #   features:
-  #     - distributed
-  #     - rbac
-  #     - devops
-  #     - microservices
+  - id: bonfire
+    name: UCCI Risk Assessment
+    description: A system to enable criminal justice agencies to learn more about individuals in an effort to best address the risk and need factors specific to that person, and as a result best strategize for effective intervention treatment.
+    page: ./bonfire.md
+    tools:
+      - typescript
+      - react
+      - express
+      - postgres
+    features:
+      - distributed
+      - rbac
+      - devops
+      - microservices
 
   - id: portfolio
     name: Portfolio

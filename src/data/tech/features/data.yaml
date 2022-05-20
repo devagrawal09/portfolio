@@ -3,73 +3,94 @@ features:
     name: Domain-Driven Design
     color: "white"
     bgColor: "#35524A"
+    description: "A software design approach focusing on modelling software to match a domain"
 
   - id: distributed
     name: Distributed
     color: "white"
     bgColor: "#627C85"
+    description: "Software split into multiple components and distributed across multiple machines on a network"
 
   - id: multicloud
     name: Multi-Cloud
     color: "black"
     bgColor: "#9C9CDB"
+    description: "Leveraging multiple cloud platforms to avoid vendor lock-in and improve cost"
 
   - id: devops
     name: DevOps
     color: "black"
     bgColor: "#A2E8DD"
+    description: "Continuous delivery and automation of software development"
 
   - id: integration
     name: External Integration
     color: "black"
     bgColor: "#32DE8A"
+    description: "Integration with external systems"
 
   - id: rbac
     name: Role-Based Access
     color: "black"
     bgColor: "#FCAA67"
+    description: "Software access defined by user roles"
 
   - id: e2e
     name: E2E Testing
     color: "white"
     bgColor: "#B0413E"
+    description: "End-to-end testing of software"
 
   - id: microservices
     name: Microservices
     color: "white"
     bgColor: "#eF207F"
+    description: "Software split into multiple independent and loosely-coupled services"
 
   - id: isomorphic
     name: Isomorphic
     color: "white"
     bgColor: "#2F40aF"
+    description: "Code that can run on both client and server side"
 
   - id: i18n
     name: Internationalization
     color: "white"
     bgColor: "#309f0F"
+    description: "User interface translation into multiple languages"
 
   - id: pubsub
     name: PubSub
     color: "white"
     bgColor: "#509f7F"
+    description: "Real-time communication between multiple clients and server using publish-subscribe"
 
   - id: crossplatform
     name: Cross Platform
     color: "black"
     bgColor: "#ffb4bb"
+    description: "Software that runs on multiple platforms"
 
   - id: ssg
     name: Static Site Generation
     color: "white"
     bgColor: "#3992ab"
+    description: "Static site generation using data at build time instead of at runtime"
 
   - id: a11y
     name: Accessibility
     color: "white"
     bgColor: "#292f4c"
+    description: "Software that is accessible to all users and devices with assistive technologies"
 
   - id: serverless
     name: Serverless
     color: "white"
     bgColor: "#025669"
+    description: "Software split into independent functions that are run on demand"
+
+  - id: monorepo
+    name: Monorepo
+    color: "white"
+    bgColor: "#3992ab"
+    description: "An approach to source code management of multiple projects in a single repository"

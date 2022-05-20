@@ -25,16 +25,18 @@ export const query = graphql`
     }
     featuresYaml {
       features {
-        name
         id
+        name
+        description
         color
         bgColor
       }
     }
     toolsYaml {
       tools {
-        name
         id
+        name
+        description
         devicon
         color
         bgColor
@@ -52,6 +54,7 @@ const ProjectsPage = ({ location, data }) => {
   const projects: IProject[] = data.projectsYaml.projects
   const features: IFeature[] = data.featuresYaml.features
   const tools: ITool[] = data.toolsYaml.tools
+  console.log({ tools })
 
   return <Layout location={location}>
     <section className="page-section">
