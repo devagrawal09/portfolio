@@ -8,6 +8,10 @@ The project makes full use of some of the best features Meteor has to offer, lik
 
 Hitch'd is not deployed anymore, but the source code is available on my github.
 
+## My Role
+
+This was a solo project. I was the only person on this project.
+
 ## Links
 
 My blog posts about this project - [First](https://medium.com/@devagrawal09/my-first-app-68fdda99eb2f) [Second](https://medium.com/@devagrawal09/my-first-app-release-v0-1-1ab0a0b1dfc) [Third](https://medium.com/@devagrawal09/hitchd-27903ed39c20)
