@@ -54,7 +54,6 @@ const ProjectsPage = ({ location, data }) => {
   const projects: IProject[] = data.projectsYaml.projects
   const features: IFeature[] = data.featuresYaml.features
   const tools: ITool[] = data.toolsYaml.tools
-  console.log({ tools })
 
   return <Layout location={location}>
     <section className="page-section">

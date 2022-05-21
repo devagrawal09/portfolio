@@ -4,7 +4,8 @@ module.exports = {
     description: `Dev Agrawal's website`,
     author: `@devagrawal09`,
     twitter: `@dadevil99`,
-    image: `https://devagr.me/portfolio.png`,
+    image: `social-card.png`,
+    url: `https://devagr.me`,
     menuLinks: [
       {
         name: "Home",
@@ -91,8 +92,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `rgb(47, 23, 15)`,
+        theme_color: `rgb(47, 23, 15)`,
         display: `minimal-ui`,
         icon: `src/images/da.png`, // This path is relative to the root of the site.
       },

@@ -21,7 +21,7 @@ export const ProjectTools = ({
   allTools,
 }: Pick<CardProps, "project" | "allTools">) => {
   return (
-    <p>
+    <div>
       {project.tools.map((tool, i) => {
         const toolData = allTools.find(t => t.id === tool)
         if (!toolData) {
@@ -29,7 +29,7 @@ export const ProjectTools = ({
         }
         return <ToolBadge key={i} tool={toolData} projectId={project.id} />
       })}
-    </p>
+    </div>
   )
 }
 
@@ -68,11 +68,13 @@ export const ProjectCard = ({
         <h2 className="project-title" id="hackathon">
           {project.name}
         </h2>
-        <GatsbyImage
-          image={getImage(project.image)}
-          alt={project.name}
-          className="project-image"
-        />
+        {project.image &&
+          <GatsbyImage
+            image={getImage(project.image)}
+            alt={project.name}
+            className="project-image"
+          />
+        }
       </Link>
     </Col>
   )

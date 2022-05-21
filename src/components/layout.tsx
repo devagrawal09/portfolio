@@ -1,12 +1,14 @@
 import React from "react"
 import { Navbar, Nav, Dropdown } from "react-bootstrap"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { Location } from '@gatsbyjs/reach-router';
 import SEO from "./seo"
 
 interface Props {
   title?: string;
   description?: string;
   image?: string;
+  location?: Location;
 }
 
 const Layout: React.FC<Props> = ({ children, title, description, image }) => {
@@ -30,7 +32,7 @@ const Layout: React.FC<Props> = ({ children, title, description, image }) => {
 
   return (
     <>
-      <SEO title={title || `Home`} description={description} image={image} />
+      <SEO title={title || `Home`} description={description} image={image} location={location} />
       <h1 className="site-heading text-center text-white d-none d-lg-block">
         <span className="site-heading-upper text-primary mb-3">Portfolio</span>
         <span className="site-heading-lower">Dev Agrawal</span>
