@@ -4,7 +4,7 @@ module.exports = {
     description: `Dev Agrawal's website`,
     author: `@devagrawal09`,
     twitter: `@dadevil99`,
-    image: `social-card.png`,
+    image: `/social-card.png`,
     url: `https://devagr.me`,
     menuLinks: [
       {

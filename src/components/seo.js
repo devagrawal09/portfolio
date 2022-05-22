@@ -24,8 +24,7 @@ function SEO({ description, lang, meta, title, image, path }) {
   const metaTitle = title || `Home`
   const metaDescription = description || site.siteMetadata.description
   const metaUrl = `${site.siteMetadata.url}${path}`
-  const metaImage =
-    image || `${site.siteMetadata.url}/${site.siteMetadata.image}`
+  const metaImage = `${site.siteMetadata.url}${site.siteMetadata.image}`
 
   return (
     <Helmet
