@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../components/layout"
 
 const GCSPPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout path={location.pathname}>
     <section className="page-section clearfix">
       <div className="container">
         <h5 className="wheat-text">

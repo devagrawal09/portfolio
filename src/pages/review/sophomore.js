@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../components/layout"
 
 const SophomoreYearPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout path={location.pathname}>
     <section className="page-section about-heading">
       <div className="container">
         <div className="pitch-content">

@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 const NotFoundPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout path={location.pathname}>
     <section className="page-section clearfix">
       <div className="container">
         <h1 className="text-center wheat-text">

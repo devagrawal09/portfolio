@@ -4,7 +4,7 @@ import resume from "./resume.pdf"
 import me from "../images/about.jpg"
 
 const AboutPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout path={location.pathname}>
     <section class="page-section about-heading">
       <div class="container">
         <img

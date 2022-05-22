@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 import Layout from "../../../components/layout"
 import { ProjectCard } from "../../../components/portfolio/project-card"
 
-import type { IProject } from '../../../data/showcase/projects/type'
-import type { IFeature } from '../../../data/tech/features/type'
-import type { ITool } from '../../../data/tech/tools/type'
+import type { IProject } from "../../../data/showcase/projects/type"
+import type { IFeature } from "../../../data/tech/features/type"
+import type { ITool } from "../../../data/tech/tools/type"
 
 export const query = graphql`
   query ProjectsQuery {
@@ -55,22 +55,28 @@ const ProjectsPage = ({ location, data }) => {
   const features: IFeature[] = data.featuresYaml.features
   const tools: ITool[] = data.toolsYaml.tools
 
-  return <Layout location={location}>
-    <section className="page-section">
-      <div className="container">
-        <h1 className="wheat-text">My Projects</h1>
-        {projects.map((project, i) =>
-          <ProjectCard
-            key={project.id}
-            project={project}
-            allFeatures={features}
-            allTools={tools}
-            i={i}
-          />
-        )}
-      </div>
-    </section>
-  </Layout>
+  return (
+    <Layout
+      title="Projects Showcase"
+      description="A showcase of software projects that I have been a part of that have made an impact on my life"
+      path={location.pathname}
+    >
+      <section className="page-section">
+        <div className="container">
+          <h1 className="wheat-text">My Projects</h1>
+          {projects.map((project, i) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              allFeatures={features}
+              allTools={tools}
+              i={i}
+            />
+          ))}
+        </div>
+      </section>
+    </Layout>
+  )
 }
 
 export default ProjectsPage

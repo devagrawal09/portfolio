@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 
 const ContactPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout path={location.pathname}>
     <section className="page-section cta">
       <div className="container">
         <div className="row">

@@ -6,7 +6,7 @@ import revolutionuc3 from "../../../images/revolutionuc3.png"
 import revolutionuc4 from "../../../images/revolutionuc4.png"
 
 const RevolutionUCPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout path={location.pathname}>
     <section className="page-section about-heading">
       <div className="container">
         <img

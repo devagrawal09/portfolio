@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../../components/layout"
 
 const LeadershapePage = ({ location }) => (
-  <Layout location={location}>
+  <Layout path={location.pathname}>
     <section className="page-section about-heading">
       <div className="container">
         <div className="about-heading-content">

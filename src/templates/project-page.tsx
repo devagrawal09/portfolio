@@ -1,5 +1,5 @@
 import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import {
   ProjectFeatures,
@@ -10,17 +10,21 @@ import type { IProject } from "../data/showcase/projects/type"
 import type { IFeature } from "../data/tech/features/type"
 import type { ITool } from "../data/tech/tools/type"
 
-const ProjectPageTemplate = ({ pageContext, location }) => {
+const ProjectPageTemplate = ({ pageContext }) => {
+  const path: string = pageContext.path
   const project: IProject = pageContext.project
   const features: IFeature[] = pageContext.features
   const tools: ITool[] = pageContext.tools
+
   const __html = project.page?.childMarkdownRemark.html
+  const image = project.image ? getSrc(project.image) : ``
 
   return (
     <Layout
       title={project.name}
       description={project.description}
-      location={location}
+      image={image}
+      path={path}
     >
       <section className="page-section about-heading project-page">
         <div className="container">

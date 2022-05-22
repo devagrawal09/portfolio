@@ -7,7 +7,11 @@ import mentorshipLogo from "../../../images/mentorship.png"
 import roundtableLogo from "../../../images/roundtable.png"
 
 const ExperiencesPage = ({ location }) => (
-  <Layout location={location}>
+  <Layout
+    title="Experiences Showcase"
+    description="Self development projects and experiences done as a part of the University Honors Program"
+    path={location.pathname}
+  >
     <section className="page-section">
       <div className="container">
         <h1 className="wheat-text">My Honors Experiences</h1>

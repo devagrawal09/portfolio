@@ -65,10 +65,11 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
   `)
 
   projects.forEach(project => {
+    const path = `showcase/projects/${project.id}`
     createPage({
-      path: `showcase/projects/${project.id}`,
+      path,
       component: require.resolve("./src/templates/project-page.tsx"),
-      context: { project, features, tools },
+      context: { path, project, features, tools },
     })
   })
 }
