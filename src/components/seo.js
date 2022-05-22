@@ -27,13 +27,6 @@ function SEO({ description, lang, meta, title, image, path }) {
   const metaImage =
     image || `${site.siteMetadata.url}/${site.siteMetadata.image}`
 
-  console.log({
-    metaTitle,
-    metaDescription,
-    metaUrl,
-    metaImage,
-  })
-
   return (
     <Helmet
       htmlAttributes={{ lang }}
