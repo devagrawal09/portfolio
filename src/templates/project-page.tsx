@@ -11,7 +11,7 @@ import type { IFeature } from "../data/tech/features/type"
 import type { ITool } from "../data/tech/tools/type"
 
 const ProjectPageTemplate = ({ pageContext }) => {
-  const path: string = pageContext.path
+  const path: string = pageContext.pagePath
   const project: IProject = pageContext.project
   const features: IFeature[] = pageContext.features
   const tools: ITool[] = pageContext.tools

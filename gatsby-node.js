@@ -4,17 +4,42 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
-
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const {
     data: {
+      experiencesYaml: { experiences },
       projectsYaml: { projects },
       featuresYaml: { features },
       toolsYaml: { tools },
     },
   } = await graphql(`
     query ProjectsQuery {
+      experiencesYaml {
+        experiences {
+          id
+          name
+          description
+          date
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          pageImage {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          page {
+            childMarkdownRemark {
+              frontmatter {
+                title
+              }
+              html
+            }
+          }
+        }
+      }
       projectsYaml {
         projects {
           id
@@ -69,7 +94,16 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     createPage({
       path,
       component: require.resolve("./src/templates/project-page.tsx"),
-      context: { path, project, features, tools },
+      context: { pagePath: path, project, features, tools },
+    })
+  })
+
+  experiences.forEach(experience => {
+    const path = `showcase/experiences/${experience.id}`
+    createPage({
+      path,
+      component: require.resolve("./src/templates/experience-page.tsx"),
+      context: { pagePath: path, experience },
     })
   })
 }

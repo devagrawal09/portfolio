@@ -30,6 +30,10 @@ module.exports = {
         ],
       },
       {
+        name: "Blog",
+        link: "/blog",
+      },
+      {
         name: "Year in Review",
         link: "/review",
         dropdown: [

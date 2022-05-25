@@ -68,13 +68,13 @@ export const ProjectCard = ({
         <h2 className="project-title" id="hackathon">
           {project.name}
         </h2>
-        {project.image &&
+        {project.image && (
           <GatsbyImage
             image={getImage(project.image)}
             alt={project.name}
             className="project-image"
           />
-        }
+        )}
       </Link>
     </Col>
   )

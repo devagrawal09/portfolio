@@ -1,0 +1,8 @@
+experiences:
+  - id: leadershape
+    name: LeaderShape Institute
+    description: Blooming leaders of tomorrow
+    date: Jan 2019
+    image: images/leadershape.png
+    pageImage: images/leadershape-group.jpg
+    page: ./leadershape.md

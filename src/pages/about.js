@@ -54,7 +54,7 @@ const AboutPage = ({ location }) => (
                   most of it is problem solving.
                 </p>
                 <p className="text-center">
-                  <a href={resume} target="_blank">
+                  <a href={resume} target="_blank" rel="noreferrer">
                     Check out my resume here!
                   </a>
                 </p>
