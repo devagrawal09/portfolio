@@ -1,6 +1,6 @@
 import React from "react"
 import { Navbar, Nav, Dropdown } from "react-bootstrap"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import SEO from "./seo"
 
 interface Props {
@@ -10,6 +10,53 @@ interface Props {
   path?: string
 }
 
+const menuLinks = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "About Me",
+    link: "/about",
+  },
+  {
+    name: "Showcase",
+    link: `/showcase`,
+    dropdown: [
+      {
+        name: "Projects",
+        link: "/projects",
+      },
+      {
+        name: "Experiences",
+        link: "/experiences",
+      },
+    ],
+  },
+  {
+    name: "Blog",
+    link: "/blog",
+  },
+  {
+    name: "University Honors",
+    link: "/honors",
+    dropdown: [
+      {
+        name: "Problem Pitch",
+        link: "/pitch",
+      },
+      {
+        name: "Global Citizen Scholar Plan",
+        link: "/gcsp",
+      },
+    ],
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+]
+
 const Layout: React.FC<Props> = ({
   children,
   title,
@@ -17,24 +64,6 @@ const Layout: React.FC<Props> = ({
   image,
   path,
 }) => {
-  const data = useStaticQuery(graphql`
-    query SiteQuery {
-      site {
-        siteMetadata {
-          title
-          menuLinks {
-            name
-            link
-            dropdown {
-              name
-              link
-            }
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <SEO
@@ -53,7 +82,7 @@ const Layout: React.FC<Props> = ({
         <Navbar.Toggle aria-controls="navbarResponsive" />
         <Navbar.Collapse id="navbarResponsive">
           <Nav className="mx-auto">
-            {data.site.siteMetadata.menuLinks.map(node =>
+            {menuLinks.map(node =>
               node.dropdown?.length ? (
                 <Dropdown key={node.name} as={Nav.Item} className="px-lg-4">
                   <Dropdown.Toggle

@@ -6,66 +6,6 @@ module.exports = {
     twitter: `@dadevil99`,
     image: `/social-card.png`,
     url: `https://devagr.me`,
-    menuLinks: [
-      {
-        name: "Home",
-        link: "/",
-      },
-      {
-        name: "About Me",
-        link: "/about",
-      },
-      {
-        name: "Showcase",
-        link: `/showcase`,
-        dropdown: [
-          {
-            name: "Projects",
-            link: "/projects",
-          },
-          {
-            name: "Experiences",
-            link: "/experiences",
-          },
-        ],
-      },
-      {
-        name: "Year in Review",
-        link: "/review",
-        dropdown: [
-          {
-            name: "Freshman",
-            link: "/freshman",
-          },
-          {
-            name: "Sophomore",
-            link: "/sophomore",
-          },
-          {
-            name: "Junior",
-            link: "/junior",
-          },
-        ],
-      },
-      {
-        name: "University Honors",
-        link: "/honors",
-        dropdown: [
-          {
-            name: "Problem Pitch",
-            link: "/pitch",
-          },
-          {
-            name: "Global Citizen Scholar Plan",
-            link: "/gcsp",
-          },
-        ],
-      },
-      {
-        name: "Contact",
-        link: "/contact",
-      },
-    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
