@@ -60,21 +60,17 @@ export const ProjectCard = ({
 }: CardProps) => {
   const col1 = (
     <Col xs={6}>
-      <Link
-        to={project.id}
-        style={{ color: `black` }}
-        state={{ title: `RevolutionUC Organizing` }}
-      >
+      <Link to={project.id} style={{ color: `black` }}>
         <h2 className="project-title" id="hackathon">
           {project.name}
         </h2>
-        {project.image &&
+        {project.image && (
           <GatsbyImage
             image={getImage(project.image)}
             alt={project.name}
             className="project-image"
           />
-        }
+        )}
       </Link>
     </Col>
   )

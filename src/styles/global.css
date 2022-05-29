@@ -292,3 +292,13 @@ p {
 .project-page .project-image {
   width: 100%;
 }
+
+.blog-article .text-muted,
+.blog-article .article-excerpt {
+  font-size: 0.9rem;
+}
+
+.blog-article .article-image {
+  width: 100%;
+  filter: brightness(0.8);
+}

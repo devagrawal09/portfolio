@@ -1,0 +1,15 @@
+tags:
+  - id: year_in_review
+    name: Year In Review
+    color: "white"
+    bgColor: "#007acc"
+
+  - id: technology
+    name: Technology
+    color: "white"
+    bgColor: "#a4c439"
+
+  - id: software_development
+    name: Software Development
+    color: "white"
+    bgColor: "#b8011c"
