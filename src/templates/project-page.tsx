@@ -17,14 +17,13 @@ const ProjectPageTemplate = ({ pageContext }) => {
   const tools: ITool[] = pageContext.tools
 
   const __html = project.page?.childMarkdownRemark.html
-  const image = project.image ? getSrc(project.image) : ``
 
   return (
     <Layout
       title={project.name}
       description={project.description}
-      image={image}
       path={path}
+      image={project.image ? `/images/projects/${project.id}.png` : undefined}
     >
       <section className="page-section about-heading project-page">
         <div className="container">

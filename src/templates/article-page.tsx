@@ -12,13 +12,16 @@ const ArticlePageTemplate = ({ pageContext }) => {
   const tags = allTags.filter(tag => article.frontmatter.tags?.includes(tag.id))
   const __html = article.html
 
-  console.log(article.frontmatter.image)
-
   return (
     <Layout
       title={article.frontmatter.title}
       description={article.excerpt}
       path={path}
+      image={
+        article.frontmatter.image
+          ? `/images/blog/${article.frontmatter.id}.png`
+          : undefined
+      }
     >
       <section className="page-section about-heading">
         <div className="container">
