@@ -38,20 +38,6 @@ const menuLinks = [
     link: "/blog",
   },
   {
-    name: "University Honors",
-    link: "/honors",
-    dropdown: [
-      {
-        name: "Problem Pitch",
-        link: "/pitch",
-      },
-      {
-        name: "Global Citizen Scholar Plan",
-        link: "/gcsp",
-      },
-    ],
-  },
-  {
     name: "Contact",
     link: "/contact",
   },

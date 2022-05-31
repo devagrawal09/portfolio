@@ -4,6 +4,11 @@ tags:
     color: "white"
     bgColor: "#007acc"
 
+  - id: honors
+    name: University Honors Program
+    color: "black"
+    bgColor: "#bae1ff"
+
   - id: technology
     name: Technology
     color: "white"

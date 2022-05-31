@@ -3,7 +3,7 @@ id: sophomore
 title: "Year in Review - Sophomore"
 date: "06-02-2020"
 featured: 3
-tags: [year_in_review]
+tags: [honors, year_in_review]
 ---
 
 _Here we go... let's see what I can do!_

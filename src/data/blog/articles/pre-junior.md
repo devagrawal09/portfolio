@@ -3,7 +3,7 @@ id: pre-junior
 title: "Year in Review - Pre-Junior"
 date: "05-05-2021"
 featured: 2
-tags: [year_in_review]
+tags: [honors, year_in_review]
 ---
 
 _Well, that worked out great!_

@@ -2,7 +2,7 @@
 id: freshman
 title: "Year in Review - Freshman"
 date: "05-23-2019"
-tags: [year_in_review]
+tags: [honors, year_in_review]
 ---
 
 _Man, what a year!_
