@@ -1,5 +1,5 @@
 import React from "react"
-import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import {
   ProjectFeatures,
