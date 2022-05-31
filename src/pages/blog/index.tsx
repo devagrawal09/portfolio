@@ -100,8 +100,8 @@ const BlogHomePage = ({ location, data }) => {
 
   return (
     <Layout
-      title="Projects Showcase"
-      description="A showcase of software projects that I have been a part of that have made an impact on my life"
+      title="Blog"
+      description="Articles about my personal life, programming and software development, and other random things."
       path={location.pathname}
     >
       <section className="page-section">
