@@ -70,6 +70,22 @@ function SEO({ description, lang, meta, title, image, path }) {
           name: `twitter:creator`,
           content: site.siteMetadata.twitter,
         },
+        {
+          name: `twitter:title`,
+          content: metaTitle,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: `${metaTitle} image`,
+        },
       ].concat(meta)}
       link={[
         {
