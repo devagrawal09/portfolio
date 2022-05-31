@@ -1,10 +1,10 @@
-import React, { FC, HTMLAttributes } from "react"
-import { Link, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React from "react"
+import { graphql } from "gatsby"
 import { IArticle, ITag } from "../../data/blog/type"
 import Layout from "../../components/layout"
-import { Row, Col, Card } from "react-bootstrap"
-import { TagBadge } from "./../../components/portfolio/tag-badge"
+import { Row, Col } from "react-bootstrap"
+import { ArticleCard } from "../../components/blog/article-card"
+import { FeaturedArticleCard } from "../../components/blog/featured-article-card"
 
 export const query = graphql`
   query BlogQuery {
@@ -40,59 +40,6 @@ export const query = graphql`
   }
 `
 
-const ArticleCard: FC<
-  { article: IArticle; allTags: ITag[] } & HTMLAttributes<any>
-> = ({ article, allTags, ...props }) => {
-  const tags = allTags.filter(tag => article.frontmatter.tags?.includes(tag.id))
-
-  return (
-    <>
-      {/* @ts-expect-error */}
-      <Link
-        to={article.frontmatter.id}
-        style={{ color: `black`, textDecoration: `none` }}
-      >
-        <Card
-          className="blog-article"
-          {...props}
-          style={{ ...props.style, marginBottom: `2rem` }}
-        >
-          <Card.Body>
-            <Row>
-              <Col>
-                <Card.Title className="mb-0">
-                  {article.frontmatter.title}
-                </Card.Title>
-              </Col>
-              <Col className="text-right">
-                <Card.Subtitle className="mb-2 text-muted">
-                  Published on {article.frontmatter.date}
-                </Card.Subtitle>
-                <Card.Subtitle className="text-muted">
-                  {article.timeToRead} minute read
-                </Card.Subtitle>
-              </Col>
-            </Row>
-            {tags.map(tag => (
-              <TagBadge key={tag.id} tag={tag} />
-            ))}
-            {article.frontmatter.image && (
-              <GatsbyImage
-                image={getImage(article.frontmatter.image)}
-                alt={article.frontmatter.title}
-                className="article-image"
-              />
-            )}
-            <Card.Text className="article-excerpt mt-4">
-              {article.excerpt}
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </Link>
-    </>
-  )
-}
-
 const BlogHomePage = ({ location, data }) => {
   const [first, second, third, ...articles]: IArticle[] =
     data.allMarkdownRemark.nodes
@@ -108,28 +55,28 @@ const BlogHomePage = ({ location, data }) => {
         <div className="container">
           <h1 className="wheat-text">Blog</h1>
           <Row>
-            <Col md={6}>
-              <ArticleCard
-                article={first}
-                allTags={allTags}
-                style={{ height: `25rem` }}
-              />
+            <Col md={8}>
+              <div style={{ height: `100%` }} className="pb-4">
+                <ArticleCard
+                  article={first}
+                  allTags={allTags}
+                  className="featured"
+                />
+              </div>
             </Col>
-            <Col md={6}>
-              <ArticleCard
-                article={second}
-                allTags={allTags}
-                style={{ height: `11.5rem` }}
-              />
-              <ArticleCard
-                article={third}
-                allTags={allTags}
-                style={{ height: `11.5rem` }}
-              />
+            <Col md={4}>
+              <div className="mb-4">
+                <ArticleCard article={second} allTags={allTags} />
+              </div>
+              <div className="mb-4">
+                <ArticleCard article={third} allTags={allTags} />
+              </div>
             </Col>
             {articles.map(article => (
-              <Col md={6} key={article.frontmatter.id}>
-                <ArticleCard article={article} allTags={allTags} />
+              <Col md={4} key={article.frontmatter.id}>
+                <div className="mb-4">
+                  <ArticleCard article={article} allTags={allTags} />
+                </div>
               </Col>
             ))}
           </Row>
