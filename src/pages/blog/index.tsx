@@ -64,7 +64,7 @@ const ArticleCard: FC<
                   {article.frontmatter.title}
                 </Card.Title>
               </Col>
-              <Col className="text-right">
+              <Col className="text-right mt-2">
                 <Card.Subtitle className="mb-2 text-muted">
                   Published on {article.frontmatter.date}
                 </Card.Subtitle>
@@ -83,7 +83,7 @@ const ArticleCard: FC<
                 className="article-image"
               />
             )}
-            <Card.Text className="article-excerpt mt-4">
+            <Card.Text className="article-excerpt mt-3">
               {article.excerpt}
             </Card.Text>
           </Card.Body>
@@ -112,24 +112,28 @@ const BlogHomePage = ({ location, data }) => {
               <ArticleCard
                 article={first}
                 allTags={allTags}
-                style={{ height: `25rem` }}
+                style={{ height: `24rem` }}
               />
             </Col>
             <Col md={6}>
               <ArticleCard
                 article={second}
                 allTags={allTags}
-                style={{ height: `11.5rem` }}
+                style={{ height: `11rem` }}
               />
               <ArticleCard
                 article={third}
                 allTags={allTags}
-                style={{ height: `11.5rem` }}
+                style={{ height: `11rem` }}
               />
             </Col>
             {articles.map(article => (
               <Col md={6} key={article.frontmatter.id}>
-                <ArticleCard article={article} allTags={allTags} />
+                <ArticleCard
+                  article={article}
+                  allTags={allTags}
+                  style={{ height: `11rem` }}
+                />
               </Col>
             ))}
           </Row>
