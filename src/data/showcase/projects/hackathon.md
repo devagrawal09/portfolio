@@ -1,10 +1,10 @@
-In terms of technical challenge, diversity, and educational value, this has been my biggest project so far.
-
 ## Project Goals
 
 The "Hackathon Suite" is a suite of applications and services that are designed to aid our hackathon organizing teams with various aspects of the hackathon. I joined this project in late 2019, at which point this project had a very small scope. I took charge of this project and the team in 2020, just as we were forced to go virtual. The need for more virtual assistance, along with my endeavors to automate as much as possible, increased the scope of this project drastically.
 
 ## Composition
+
+In terms of technical challenge, diversity, and educational value, this has been my biggest project so far.
 
 This project is composed of:
 
@@ -20,6 +20,16 @@ This project is composed of:
 
 <image src="/hackathon-web.jpg" width="100%">
 
+## Architecture
+
+Deployment diagram
+
+<image src="/hackathon-deployment.jpg" width="100%">
+
 ## My Role
 
 I am the lead developer on this project.
+
+## Links
+
+[RevolutionUC Github](https://github.com/revolutionUC/)
