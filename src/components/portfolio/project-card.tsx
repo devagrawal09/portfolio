@@ -59,7 +59,7 @@ export const ProjectCard = ({
   i,
 }: CardProps) => {
   const col1 = (
-    <Col xs={6}>
+    <Col md={6} className={i % 2 == 0 ? `order-md-1` : `order-md-2`}>
       <Link to={project.id} style={{ color: `black` }}>
         <h2 className="project-title" id="hackathon">
           {project.name}
@@ -76,30 +76,21 @@ export const ProjectCard = ({
   )
 
   const col2 = (
-    <Col xs={6}>
+    <Col md={6} className={i % 2 == 0 ? `order-md-2` : `order-md-1`}>
       <p>{project.description}</p>
       <h3>Tools</h3>
       <ProjectTools project={project} allTools={allTools} />
-      <h3>Design Features</h3>
+      <h3 className="mt-3">Design Features</h3>
       <ProjectFeatures project={project} allFeatures={allFeatures} />
     </Col>
   )
 
   return (
     <Card className="project">
-      <Card.Body>
+      <Card.Body className="px-2 px-md-4">
         <Row>
-          {i % 2 === 0 ? (
-            <>
-              {col1}
-              {col2}
-            </>
-          ) : (
-            <>
-              {col2}
-              {col1}
-            </>
-          )}
+          {col1}
+          {col2}
         </Row>
       </Card.Body>
     </Card>

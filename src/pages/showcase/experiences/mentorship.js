@@ -14,7 +14,7 @@ const WelcomeExperiencePage = ({ location }) => (
         <div className="about-heading-content">
           <div className="row">
             <div className="col-xl-9 col-lg-10 mx-auto">
-              <div className="bg-faded rounded p-5">
+              <div className="bg-faded rounded px-3 py-4 px-md-5 text-justify-p">
                 <h2 className="section-heading mb-4">
                   <span className="section-heading-upper">August 2021</span>
                   <span className="section-heading-lower">

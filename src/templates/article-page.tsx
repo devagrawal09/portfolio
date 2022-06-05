@@ -25,7 +25,7 @@ const ArticlePageTemplate = ({ pageContext }) => {
     >
       <section className="page-section about-heading">
         <div className="container">
-          <div className="bg-faded rounded p-5">
+          <div className="bg-faded rounded px-3 py-4 px-md-5">
             <h2 className="section-heading">
               <span className="section-heading-upper">
                 {article.timeToRead} minute read
@@ -48,7 +48,10 @@ const ArticlePageTemplate = ({ pageContext }) => {
                 alt={article.frontmatter.title}
               />
             )}
-            <div className="mt-4" dangerouslySetInnerHTML={{ __html }} />
+            <div
+              className="mt-4 text-justify-p"
+              dangerouslySetInnerHTML={{ __html }}
+            />
           </div>
         </div>
       </section>

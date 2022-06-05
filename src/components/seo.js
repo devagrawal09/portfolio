@@ -28,8 +28,6 @@ function SEO({ description, lang, meta, title, image, path }) {
     image || site.siteMetadata.image
   }`
 
-  console.log({ metaTitle, metaDescription, metaUrl, metaImage })
-
   return (
     <Helmet
       htmlAttributes={{ lang }}

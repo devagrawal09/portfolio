@@ -15,14 +15,14 @@ const ExperiencesPage = ({ location }) => (
     <section className="page-section">
       <div className="container">
         <h1 className="wheat-text">My Honors Experiences</h1>
-        <div className="experience">
+        <div className="experience mt-4">
           <Link
             to="roundtable"
             style={{ textDecoration: `none`, color: `black` }}
             state={{ title: `Student Leader Round Table` }}
           >
-            <div className="product-item-title d-flex">
-              <div className="bg-faded p-5 d-flex ml-auto rounded">
+            <div className="experience-title d-flex">
+              <div className="bg-faded py-3 px-3 p-md-5 d-flex ml-auto rounded">
                 <h2 className="section-heading mb-0">
                   <span className="section-heading-upper">Jan 2022</span>
                   <span className="section-heading-lower">
@@ -31,28 +31,28 @@ const ExperiencesPage = ({ location }) => (
                 </h2>
               </div>
             </div>
-            <div className="showcase">
+            <div className="showcase py-3 py-md-5 px-2">
               <img
-                className="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                className="experience-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
                 src={roundtableLogo}
                 alt=""
               />
             </div>
-            <div className="product-item-description d-flex mr-auto">
-              <div className="bg-faded p-5 rounded">
+            <div className="experience-description d-flex mr-auto">
+              <div className="bg-faded py-3 px-3 p-md-5 rounded">
                 <p className="mb-0">The student leader illuminati</p>
               </div>
             </div>
           </Link>
         </div>
-        <div className="experience">
+        <div className="experience mt-4">
           <Link
             to="mentorship"
             style={{ textDecoration: `none`, color: `black` }}
             state={{ title: `UHP Welcome Experience Mentorship` }}
           >
-            <div className="product-item-title d-flex">
-              <div className="bg-faded p-5 d-flex ml-auto rounded">
+            <div className="experience-title d-flex">
+              <div className="bg-faded py-3 px-3 p-md-5 d-flex ml-auto rounded">
                 <h2 className="section-heading mb-0">
                   <span className="section-heading-upper">August 2021</span>
                   <span className="section-heading-lower">
@@ -61,29 +61,28 @@ const ExperiencesPage = ({ location }) => (
                 </h2>
               </div>
             </div>
-            <div className="showcase">
+            <div className="showcase py-3 py-md-5 px-2">
               <img
-                className="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                className="experience-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
                 src={mentorshipLogo}
                 alt=""
-                width={270}
               />
             </div>
-            <div className="product-item-description d-flex mr-auto">
-              <div className="bg-faded p-5 rounded">
+            <div className="experience-description d-flex mr-auto">
+              <div className="bg-faded py-3 px-3 p-md-5 rounded">
                 <p className="mb-0">Mentoring the next generation of honors</p>
               </div>
             </div>
           </Link>
         </div>
-        <div className="experience">
+        <div className="experience mt-4">
           <Link
             to="revolutionuc"
             style={{ textDecoration: `none`, color: `black` }}
             state={{ title: `RevolutionUC Organizing` }}
           >
             <div className="experience-title d-flex">
-              <div className="bg-faded p-5 d-flex ml-auto rounded">
+              <div className="bg-faded py-3 px-3 p-md-5 d-flex ml-auto rounded">
                 <h2 className="section-heading mb-0">
                   <span className="section-heading-upper">Feb 2021</span>
                   <span className="section-heading-lower">
@@ -92,7 +91,7 @@ const ExperiencesPage = ({ location }) => (
                 </h2>
               </div>
             </div>
-            <div className="showcase">
+            <div className="showcase py-3 py-md-5 px-2">
               <img
                 className="experience-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
                 src={revucLogo}
@@ -100,7 +99,7 @@ const ExperiencesPage = ({ location }) => (
               />
             </div>
             <div className="experience-description d-flex mr-auto">
-              <div className="bg-faded p-5 rounded">
+              <div className="bg-faded py-3 px-3 p-md-5 rounded">
                 <p className="mb-0">
                   A hackathon hosted at the University of Cincinnati
                 </p>
@@ -108,14 +107,14 @@ const ExperiencesPage = ({ location }) => (
             </div>
           </Link>
         </div>
-        <div className="experience">
+        <div className="experience mt-4">
           <Link
             to="leadershape"
             style={{ textDecoration: `none`, color: `black` }}
             state={{ title: `Leadershape` }}
           >
             <div className="experience-title d-flex">
-              <div className="bg-faded p-5 d-flex ml-auto rounded">
+              <div className="bg-faded py-3 px-3 p-md-5 d-flex ml-auto rounded">
                 <h2 className="section-heading mb-0">
                   <span className="section-heading-upper">Jan 2019</span>
                   <span className="section-heading-lower">
@@ -124,7 +123,7 @@ const ExperiencesPage = ({ location }) => (
                 </h2>
               </div>
             </div>
-            <div className="showcase">
+            <div className="showcase py-3 py-md-5 px-2">
               <img
                 className="experience-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
                 src={leadershapeLogo}
@@ -132,7 +131,7 @@ const ExperiencesPage = ({ location }) => (
               />
             </div>
             <div className="experience-description d-flex mr-auto">
-              <div className="bg-faded p-5 rounded">
+              <div className="bg-faded py-3 px-3 p-md-5 rounded">
                 <p className="mb-0">Blooming leaders of tomorrow</p>
               </div>
             </div>

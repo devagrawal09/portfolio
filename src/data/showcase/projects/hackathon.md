@@ -18,13 +18,13 @@ This project is composed of:
 - An emails server to process templates designed in HTML and SCSS and produce email templates. Built using Express and HEML.
 - A modular monolith API server, built with NestJS and Postgres.
 
-<image src="/hackathon-web.jpg" width="100%">
+<image src="/hackathon-web.jpg" width="100%" style="margin-bottom: 1em;">
 
 ## Architecture
 
 Deployment diagram
 
-<image src="/hackathon-deployment.jpg" width="100%">
+<image src="/hackathon-deployment.png" width="100%" style="margin-bottom: 1em;">
 
 ## My Role
 

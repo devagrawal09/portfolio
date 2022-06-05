@@ -108,31 +108,31 @@ const BlogHomePage = ({ location, data }) => {
         <div className="container">
           <h1 className="wheat-text">Blog</h1>
           <Row>
-            <Col md={6}>
+            <Col lg={6}>
               <ArticleCard
                 article={first}
                 allTags={allTags}
-                style={{ height: `24rem` }}
+                className="featured-article-card"
               />
             </Col>
-            <Col md={6}>
+            <Col lg={6}>
               <ArticleCard
                 article={second}
                 allTags={allTags}
-                style={{ height: `11rem` }}
+                className="article-card"
               />
               <ArticleCard
                 article={third}
                 allTags={allTags}
-                style={{ height: `11rem` }}
+                className="article-card"
               />
             </Col>
             {articles.map(article => (
-              <Col md={6} key={article.frontmatter.id}>
+              <Col lg={6} key={article.frontmatter.id}>
                 <ArticleCard
                   article={article}
                   allTags={allTags}
-                  style={{ height: `11rem` }}
+                  className="article-card"
                 />
               </Col>
             ))}
