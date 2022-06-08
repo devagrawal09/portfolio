@@ -1,3 +1,4 @@
+import { IExperience } from "./src/data/showcase/experiences/type.d"
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -52,7 +53,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
       toolsYaml: { tools },
     },
   } = await graphql<{
-    experiencesYaml: { experiences }
+    experiencesYaml: { experiences: IExperience[] }
     projectsYaml: { projects: IProject[] }
     featuresYaml: { features: IFeature[] }
     toolsYaml: { tools: ITool[] }
@@ -175,7 +176,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   `)
 
-  projects.map(async project => {
+  projects.forEach(async project => {
     const path = `showcase/projects/${project.id}`
     createPage({
       path,
@@ -184,7 +185,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     })
   })
 
-  articles.map(async article => {
+  articles.forEach(async article => {
     const path = `blog/${article.frontmatter.id}`
     createPage({
       path,
@@ -197,7 +198,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     const path = `showcase/experiences/${experience.id}`
     createPage({
       path,
-      component: require.resolve("./src/templates/experience-page.tsx"),
+      component: `${cwd}/src/templates/experience-page.tsx`,
       context: { pagePath: path, experience },
     })
   })

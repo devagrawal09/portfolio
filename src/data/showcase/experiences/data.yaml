@@ -1,8 +1,30 @@
 experiences:
+  - id: roundtable
+    name: Student Leader Round Table
+    description: The student leader illuminati
+    date: January 2022
+    image: ./roundtable/logo.png
+    page: ./roundtable/article.md
+
+  - id: mentorship
+    name: Welcome Experience Mentorship
+    description: Mentoring the next generation of university honors
+    date: August 2021
+    image: ./mentorship/logo.png
+    page: ./mentorship/article.md
+
+  - id: revolutionuc
+    name: RevolutionUC Organizing
+    description: A hackathon hosted at the University of Cincinnati
+    date: February 2021
+    image: ./revuc/logo.png
+    pageImage: ./revuc/banner.jpeg
+    page: ./revuc/article.md
+
   - id: leadershape
     name: LeaderShape Institute
     description: Blooming leaders of tomorrow
-    date: Jan 2019
-    image: images/leadershape.png
-    pageImage: images/leadershape-group.jpg
-    page: ./leadershape.md
+    date: January 2019
+    image: ./leadershape/logo.png
+    pageImage: ./leadershape/banner.jpg
+    page: ./leadershape/article.md

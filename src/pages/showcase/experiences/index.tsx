@@ -20,9 +20,9 @@ const ExperienceCard = ({ experience }: { experience: IExperience }) => {
             </h2>
           </div>
         </div>
-        <div className="showcase py-3 py-md-5 px-2">
+        <div className="showcase py-3 py-md-5 px-2 text-center">
           <GatsbyImage
-            className="experience-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+            className=""
             image={getImage(experience.image)}
             alt={experience.name}
           />
@@ -47,7 +47,7 @@ export const query = graphql`
         description
         image {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
+            gatsbyImageData(layout: CONSTRAINED, height: 200)
           }
         }
       }
