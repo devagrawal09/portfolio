@@ -24,7 +24,9 @@ function SEO({ description, lang, meta, title, image, path }) {
   const metaTitle = title || `Home`
   const metaDescription = description || site.siteMetadata.description
   const metaUrl = `${site.siteMetadata.url}${path}`
-  const metaImage = `${site.siteMetadata.url}${site.siteMetadata.image}`
+  const metaImage = `${site.siteMetadata.url}${
+    image || site.siteMetadata.image
+  }`
 
   return (
     <Helmet
@@ -67,6 +69,22 @@ function SEO({ description, lang, meta, title, image, path }) {
         {
           name: `twitter:creator`,
           content: site.siteMetadata.twitter,
+        },
+        {
+          name: `twitter:title`,
+          content: metaTitle,
+        },
+        {
+          name: `twitter:description`,
+          content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: `${metaTitle} image`,
         },
       ].concat(meta)}
       link={[

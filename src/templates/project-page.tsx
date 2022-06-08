@@ -1,5 +1,5 @@
 import React from "react"
-import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import {
   ProjectFeatures,
@@ -17,14 +17,13 @@ const ProjectPageTemplate = ({ pageContext }) => {
   const tools: ITool[] = pageContext.tools
 
   const __html = project.page?.childMarkdownRemark.html
-  const image = project.image ? getSrc(project.image) : ``
 
   return (
     <Layout
       title={project.name}
       description={project.description}
-      image={image}
       path={path}
+      image={project.image ? `/images/projects/${project.id}.png` : undefined}
     >
       <section className="page-section about-heading project-page">
         <div className="container">
@@ -36,7 +35,7 @@ const ProjectPageTemplate = ({ pageContext }) => {
           <div className="about-heading-content">
             <div className="row">
               <div className="col-xl-9 col-lg-10 mx-auto">
-                <div className="bg-faded rounded p-5">
+                <div className="bg-faded rounded px-3 py-4 px-md-5">
                   <h2 className="section-heading mb-4">
                     <span className="section-heading-upper">
                       {project.description}
@@ -47,7 +46,12 @@ const ProjectPageTemplate = ({ pageContext }) => {
                   </h2>
                   <ProjectTools project={project} allTools={tools} />
                   <ProjectFeatures project={project} allFeatures={features} />
-                  {__html && <div dangerouslySetInnerHTML={{ __html }} />}
+                  {__html && (
+                    <div
+                      dangerouslySetInnerHTML={{ __html }}
+                      className="text-justify-p"
+                    />
+                  )}
                 </div>
               </div>
             </div>

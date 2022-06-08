@@ -69,8 +69,18 @@ p {
 
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 100;
+}
+
+@media (min-width: 768px) {
+  .section-heading .section-heading-lower {
+    font-size: 2.8rem;
+  }
+}
+
+.experience-img {
+  max-height: 200px;
 }
 
 .bg-faded {
@@ -203,7 +213,6 @@ p {
 
 .showcase {
   background: rgba(94, 56, 41, 0.85);
-  padding: 50px 150px;
   border-radius: 0.5rem;
   width: 80%;
   margin: auto;
@@ -291,4 +300,28 @@ p {
 
 .project-page .project-image {
   width: 100%;
+}
+
+.blog-article .text-muted,
+.blog-article .article-excerpt {
+  font-size: 0.9rem;
+}
+
+.blog-article .article-image {
+  width: 100%;
+  filter: brightness(0.8);
+}
+
+@media (min-width: 992px) {
+  .featured-article-card {
+    height: 27rem;
+  }
+
+  .article-card {
+    height: 12.5rem;
+  }
+}
+
+.text-justify-p p {
+  text-align: justify;
 }

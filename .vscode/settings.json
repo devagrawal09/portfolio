@@ -27,5 +27,5 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["Leadershape"]
+  "cSpell.words": ["frontmatter", "gatsbyjs", "hackathon"]
 }
