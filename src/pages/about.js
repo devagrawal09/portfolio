@@ -21,14 +21,14 @@ const AboutPage = ({ location }) => (
                 </h2>
                 <p>
                   I am Dev Agrawal (The name 'Dev' translates to 'God', but I
-                  don't let that get to my head :P ). I am a third-year
+                  don't let that get to my head :P ). I am a fifth-year
                   Information Technology major at the University of Cincinnati.
                   I am also a software developer, and currently I work at the UC
                   IT Solutions Center.
                 </p>
                 <p>
                   I was introduced into this world on the 9th of May 1999, the
-                  last summer of the millenium, in the beautiful and diverse
+                  last summer of the millennium, in the beautiful and diverse
                   country of India. I was born to highly socially active
                   parents, with a large age gap between me and all of my older
                   cousins, including my brother. These factors made me a very
