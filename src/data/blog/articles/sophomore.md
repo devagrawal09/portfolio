@@ -2,7 +2,6 @@
 id: sophomore
 title: "Year in Review - Sophomore"
 date: "06-02-2020"
-featured: 3
 tags: [honors, year_in_review]
 ---
 
