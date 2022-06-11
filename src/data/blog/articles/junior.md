@@ -1,7 +1,7 @@
 ---
 id: junior
 title: "Year in Review - Junior"
-date: "06-09-2021"
+date: "06-11-2021"
 featured: 2
 tags: [honors, year_in_review]
 ---
