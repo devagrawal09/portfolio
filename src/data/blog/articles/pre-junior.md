@@ -2,7 +2,6 @@
 id: pre-junior
 title: "Year in Review - Pre-Junior"
 date: "05-05-2021"
-featured: 3
 tags: [honors, year_in_review]
 ---
 

@@ -2,14 +2,14 @@
 id: junior
 title: "Year in Review - Junior"
 date: "06-11-2021"
-featured: 2
+featured: 3
 tags: [honors, year_in_review]
 ---
 
 _"Are you sure you can do this?"_
 
 Every couple months, something came up in my life when I had to ask myself this question.
-Sometimes every other day. Sometimes multiple times a day. Why? I thought the year of crazy was over! 
+Sometimes every other day. Sometimes multiple times a day. Why? I thought the year of crazy was over!
 
 The theme I had set for this year in my last review was "grow".
 I wanted to spend the year looking at opportunities to grow and expand, whatever form that would take.
@@ -39,10 +39,10 @@ I don't think I did a great job being a leader and a team player there, even tho
 
 ### Students, Associate!
 
-The other interesting and eventful area of my life was the **IT Student Association** (ITSA). My fasciation 
+The other interesting and eventful area of my life was the **IT Student Association** (ITSA). My fasciation
 of student tech orgs and events is not hidden from anyone. I have been involved with ACM@UC for a while now,
 and there are a lot of things that I wanted to do but didn't get the opportunity to do so
-with ACM@UC. I also had some outsider feelings at ACM since it's almost entirely comprised of 
+with ACM@UC. I also had some outsider feelings at ACM since it's almost entirely comprised of
 EECS students. I wanted an org like this but with IT students.
 
 ITSA had existed for years, but they had been inactive for a couple years due to the old exec graduating, and COVID preventing
@@ -103,7 +103,7 @@ Now that I have started building my network, I can't progress much further with 
 to show people why they should look at me. So I have started working on this portfolio website a lot more.
 I have already added 2 new sections, Projects Showcase, and Blog. I want to turn this into an actual
 portfolio of my skills and my work by showcasing what I've done over the years, and writing about
-things that will capture attention and show how much I actually know about things. While I am 
+things that will capture attention and show how much I actually know about things. While I am
 pretty confident that I am ahead of my peers in this field, I also need to show some tangible
 evidence to support this claim, and this is the best way to do so. I have also started working on video
 content that I can put up on YouTube or TikTok and expand my reach even further.

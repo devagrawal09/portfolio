@@ -1,8 +1,11 @@
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import React from "react"
+import React, { useEffect } from "react"
+import hljs from "highlight.js"
 import Layout from "../components/layout"
 import { TagBadge } from "../components/portfolio/tag-badge"
 import { IArticle, ITag } from "../data/blog/type"
+
+import "highlight.js/styles/base16/dracula.css"
 
 const ArticlePageTemplate = ({ pageContext }) => {
   const path: string = pageContext.pagePath
@@ -11,6 +14,11 @@ const ArticlePageTemplate = ({ pageContext }) => {
 
   const tags = allTags.filter(tag => article.frontmatter.tags?.includes(tag.id))
   const __html = article.html
+
+  useEffect(() => {
+    // @ts-ignore
+    document.querySelectorAll("pre code").forEach(hljs.highlightBlock)
+  }, [])
 
   return (
     <Layout

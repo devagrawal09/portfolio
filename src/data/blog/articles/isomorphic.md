@@ -2,7 +2,7 @@
 id: isomorphic
 title: "Isomorphic Code"
 date: "05-31-2022"
-featured: 1
+featured: 2
 image: images/isomorphic.png
 tags: [technology, software_development]
 ---
