@@ -23,7 +23,7 @@ const generateImageForProject = async (project: IProject) => {
 
   console.log(`Generating og image for project ${project.name}`)
 
-  const output = `${cwd}/static/images/projects/${project.id}.png`
+  const output = `${cwd}/static/seo-images/projects/${project.id}.png`
 
   return mergeWithBackground(project.image, output)
 }
@@ -36,7 +36,7 @@ const generateImageForArticle = async (article: IArticle) => {
 
   console.log(`Generating og image for article ${article.frontmatter.title}`)
 
-  const output = `${cwd}/static/images/blog/${article.frontmatter.id}.png`
+  const output = `${cwd}/static/seo-images/blog/${article.frontmatter.id}.png`
 
   return mergeWithBackground(article.frontmatter.image, output)
 }

@@ -9,22 +9,20 @@ const ExperiencePageTemplate = ({ pageContext }) => {
   const experience: IExperience = pageContext.experience
 
   const __html = experience.page?.childMarkdownRemark.html
-  const image = experience.pageImage ? getSrc(experience.pageImage) : ``
+  const image = experience.pageImage
 
   return (
     <>
       <Layout
         title={experience.name}
         description={experience.description}
-        image={image}
         path={path}
       >
         <section className="page-section about-heading">
           <div className="container">
-            <GatsbyImage
-              image={getImage(experience.pageImage)}
-              alt={experience.name}
-            />
+            {image && (
+              <GatsbyImage image={getImage(image)} alt={experience.name} />
+            )}
             <div className="about-heading-content">
               <div className="row">
                 <div className="col-xl-9 col-lg-10 mx-auto">
