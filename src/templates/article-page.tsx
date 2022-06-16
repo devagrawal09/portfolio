@@ -27,7 +27,7 @@ const ArticlePageTemplate = ({ pageContext }) => {
       path={path}
       image={
         article.frontmatter.image
-          ? `/images/blog/${article.frontmatter.id}.png`
+          ? `/seo-images/blog/${article.frontmatter.id}.png`
           : undefined
       }
     >

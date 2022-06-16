@@ -23,7 +23,9 @@ const ProjectPageTemplate = ({ pageContext }) => {
       title={project.name}
       description={project.description}
       path={path}
-      image={project.image ? `/images/projects/${project.id}.png` : undefined}
+      image={
+        project.image ? `/seo-images/projects/${project.id}.png` : undefined
+      }
     >
       <section className="page-section about-heading project-page">
         <div className="container">

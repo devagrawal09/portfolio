@@ -41,8 +41,8 @@ export const query = graphql`
 `
 
 const ArticleCard: FC<
-  { article: IArticle; allTags: ITag[] } & HTMLAttributes<any>
-> = ({ article, allTags, ...props }) => {
+  { article: IArticle; allTags: ITag[]; image?: boolean } & HTMLAttributes<any>
+> = ({ article, allTags, image, ...props }) => {
   const tags = allTags.filter(tag => article.frontmatter.tags?.includes(tag.id))
 
   return (
@@ -75,7 +75,7 @@ const ArticleCard: FC<
             {tags.map(tag => (
               <TagBadge key={tag.id} tag={tag} />
             ))}
-            {article.frontmatter.image && (
+            {article.frontmatter.image && image && (
               <GatsbyImage
                 image={getImage(article.frontmatter.image)}
                 alt={article.frontmatter.title}
@@ -112,6 +112,7 @@ const BlogHomePage = ({ location, data }) => {
                 article={first}
                 allTags={allTags}
                 className="featured-article-card"
+                image
               />
             </Col>
             <Col lg={6}>
