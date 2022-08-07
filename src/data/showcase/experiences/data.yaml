@@ -1,4 +1,12 @@
 experiences:
+  - id: itsa
+    name: Student Organization Leadership
+    description: Lead one of the largest tech orgs on campus
+    date: January 2022
+    image: ./itsa/logo.png
+    pageImage: ./itsa/banner.png
+    page: ./itsa/article.md
+
   - id: roundtable
     name: Student Leader Round Table
     description: The student leader illuminati

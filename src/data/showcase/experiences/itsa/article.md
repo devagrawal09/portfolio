@@ -1,17 +1,13 @@
-But obviously, I couldn't have done it alone. Running an organization also meant leading an organizations,
-which I was not good at. I still took the jump and held an election to get more executive members,
-and then selected some people to be committee chairs. But I could not follow through on a lot
-of things, especially sharing my passion and enthusiasm for hosting events and creating
-a community. Many times I'd just reach out to others on the team for certain tasks, and
-have to act as a kind of boss ordering someone to work on something. I did not want to do that,
-but I couldn't come up with a better way to get everyone on the same page and collaboratively
-organize an activity and get everything done on time. I also ended up doing pretty much 
-everything by myself, because it seemed a much faster way to finish tasks.
+Having experienced a touch of organizational leadership and hosting events through ACM@UC and RevolutionUC, I decided to increase the challenge and really test my abilities as an organization leader. I was also interested in fostering a student community similar to what I had experience in the computer science space but in the information technology space.
 
-While this gave me a lot of freedom to develop and implement
-new solutions and automations, it also required me to lead the team and not do it alone.
+And ITSA was the perfect opportunity for this. Not only was ITSA the primary student organization in the IT community, it was also almost dead and anyone who was interested in sustaining ITSA had already graduated. This meant I got to use an existing recognized brand name but still start from scratch in terms of ideas and activities.
 
-As you might expect the same thing happened where I was not a capable enough leader
-and ended up doing most of the work myself, because I could not share my passion and skills 
-with everyone. While I would love to attribute this to the members' lack of interest,
-as a leader I am always accountable for anything that happens in the team to some extent.
+My vision for the ITSA was simply this - _The go-to club for tech enthusiasts at UC_. This meant hosting events that are educational and provide networking opportunities, exposing students to the industry, and fostering a community where people with mutual interests can share ideas and form groups.
+
+For the Fall 2021 semester, we did events almost every week on wednesdays, which ranged from simple ice-breakers and get-to-knows to workshops on programming and web development, to informational sessions on research or data analysis from professionals. We collaborated with the Civic Tech Research Lab to host a session on research projects and methodologies, and invited speakers from companies like SmartData, Brooksource, and Skilled Inc. to share their professional wisdom. We also hosted an exam review session and study group before the final exams week to help students get a better handle on the course material.
+
+For the Spring semester, we decided to slow down the pace and host events every other month. We toured the CyrusOne data center, and the IT Solutions Center, to help students learn about industry teams and operations. We also sponsored students to attend the Momentum Developer Conference and React Miami Conference, both of which were huge learning and networking opportunities for the students.
+
+We were also recognized as the primary community of IT students by multiple university departments, and our executives as representatives of the IT student body as a whole. We were contacted by the School of IT and the Cincinnati Innovation District to help organize networking events that would be most useful to the students. We were also contacted by ELCE to provide feedback to changes to the EEP program from the perspective of a student. We also met with recruiters and company executives to help them meet more students to hire through sponsored events.
+
+This experience was a gold mine of personal and professional development for me. Each event involved a lot of marketing and logistics work, coordinating with speakers, members, and other organizers, and coming up with ideas or content. I also met a lot of good people in the industry who are going to be a great help to my professional life. This has been a great experience in leadership and community building for me.
