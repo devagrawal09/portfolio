@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Card, Row, Col } from "react-bootstrap"
 import { ToolBadge } from "./tool-badge"
@@ -8,6 +7,7 @@ import { FeatureBadge } from "./feature-badge"
 import type { IProject } from "../../data/showcase/projects/type"
 import type { IFeature } from "../../data/tech/features/type"
 import type { ITool } from "../../data/tech/tools/type"
+import { Link } from "@gatsbyjs/reach-router"
 
 interface CardProps {
   project: IProject
@@ -66,7 +66,7 @@ export const ProjectCard = ({
         </h2>
         {project.image && (
           <GatsbyImage
-            image={getImage(project.image)}
+            image={getImage(project.image)!}
             alt={project.name}
             className="project-image"
           />
