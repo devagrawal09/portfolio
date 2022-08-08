@@ -1,11 +1,5 @@
-import { IExperience } from "./src/data/showcase/experiences/type.d"
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
 import { mergeWithBackground } from "./src/images/merge-images"
+import { IExperience } from "./src/data/showcase/experiences/type.d"
 
 import type { GatsbyNode } from "gatsby"
 import type { IProject } from "./src/data/showcase/projects/type.d"
@@ -45,14 +39,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
   actions: { createPage },
 }) => {
-  const {
-    data: {
-      experiencesYaml: { experiences },
-      projectsYaml: { projects },
-      featuresYaml: { features },
-      toolsYaml: { tools },
-    },
-  } = await graphql<{
+  const { data: data1 } = await graphql<{
     experiencesYaml: { experiences: IExperience[] }
     projectsYaml: { projects: IProject[] }
     featuresYaml: { features: IFeature[] }
@@ -134,12 +121,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   `)
 
-  const {
-    data: {
-      allMarkdownRemark: { nodes: articles },
-      tagsYaml: { tags },
-    },
-  } = await graphql<{
+  const { data: data2 } = await graphql<{
     allMarkdownRemark: { nodes: IArticle[] }
     tagsYaml: { tags: ITag[] }
   }>(`
@@ -176,6 +158,18 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
   `)
 
+  const {
+    experiencesYaml: { experiences },
+    projectsYaml: { projects },
+    featuresYaml: { features },
+    toolsYaml: { tools },
+  } = data1!
+
+  const {
+    allMarkdownRemark: { nodes: articles },
+    tagsYaml: { tags },
+  } = data2!
+
   projects.forEach(async project => {
     const path = `showcase/projects/${project.id}`
     createPage({
@@ -205,11 +199,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 }
 
 export const onPreBuild: GatsbyNode["onPreBuild"] = async ({ graphql }) => {
-  const {
-    data: {
-      projectsYaml: { projects },
-    },
-  } = await graphql<{
+  const { data: data3 } = await graphql<{
     projectsYaml: { projects: IProject[] }
   }>(`
     query ProjectsQuery {
@@ -229,10 +219,10 @@ export const onPreBuild: GatsbyNode["onPreBuild"] = async ({ graphql }) => {
   `)
 
   const {
-    data: {
-      allMarkdownRemark: { nodes: articles },
-    },
-  } = await graphql<{
+    projectsYaml: { projects },
+  } = data3!
+
+  const { data: data4 } = await graphql<{
     allMarkdownRemark: { nodes: IArticle[] }
   }>(`
     query BlogQuery {
@@ -253,7 +243,10 @@ export const onPreBuild: GatsbyNode["onPreBuild"] = async ({ graphql }) => {
     }
   `)
 
-  // const generateProjectImages = []
+  const {
+    allMarkdownRemark: { nodes: articles },
+  } = data4!
+
   const generateProjectImages = projects.map(generateImageForProject)
 
   const generateArticleImages = articles.map(generateImageForArticle)
