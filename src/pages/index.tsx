@@ -28,21 +28,21 @@ const IndexPage = ({ location }) => (
             <div className="row">
               <div className="col">
                 <Link to="showcase/projects">
-                  <button className="btn btn-block btn-light">
-                    See my Projects <FontAwesomeIcon icon={faCode} />
+                  <button className="btn btn-block btn-lg btn-light">
+                    See my Projects Showcase <FontAwesomeIcon icon={faCode} />
                   </button>
                 </Link>
               </div>
               <div className="col">
                 <Link to="blog">
-                  <button className="btn btn-block btn-light">
-                    Read my Blog <FontAwesomeIcon icon={faNewspaper} />
+                  <button className="btn btn-block btn-lg btn-light">
+                    Read my Blog Articles <FontAwesomeIcon icon={faNewspaper} />
                   </button>
                 </Link>
               </div>
               <div className="col">
                 <Link to="showcase/experiences">
-                  <button className="btn btn-block btn-light">
+                  <button className="btn btn-block btn-lg btn-light">
                     Learn about my Experiences{" "}
                     <FontAwesomeIcon icon={faAward} />
                   </button>
