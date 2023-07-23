@@ -2,7 +2,7 @@
 id: senior
 title: "Year in Review - Senior"
 date: "07-23-2023"
-tags: [honors, year_in_review]
+tags: [year_in_review]
 featured: 1
 ---
 
