@@ -10,9 +10,9 @@ featured: 1
 
 In the past year, I found myself uttering this overly dramatic sentence to describe areas of my life to myself and close friends.
 
-Obviously, I didn’t actually lose **everything**. Broadly speaking, my life has certainly leveled up quite a bit since I wrote the last year-in-review. I have a new job as a Developer Advocate in a rapidly growing startup, I am making content about things I enjoy, I am traveling to conferences and meeting people that I look up to and enjoy chatting with, and I’m earning a decent enough paycheck to keep my mom and debt happy. I even graduated college and acquired work authorization in the US! Objectively speaking, I have more things now that I did 2 years ago.
+Obviously, I didn’t actually lose ***everything***. Broadly speaking, my life has certainly leveled up quite a bit since I wrote the last year-in-review. I have a new job as a Developer Advocate in a rapidly growing startup, I am making content about things I enjoy, I am traveling to conferences and meeting people that I look up to and enjoy chatting with, and I’m earning a decent enough paycheck to keep my mom and debt happy. I even graduated college and acquired work authorization in the US! Objectively speaking, I have more things now that I did 2 years ago.
 
-Then why do I feel like I have lost more than I have gained?
+**Then why do I feel like I have lost more than I have gained?**
 
 ### Craft, Crack, Crash
 
