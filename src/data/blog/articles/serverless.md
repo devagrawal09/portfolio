@@ -2,7 +2,7 @@
 id: serverless
 title: "Serverless Deployment"
 date: "06-16-2022"
-featured: 1
+featured: 2
 image: images/serverless.png
 tags: [technology, software_development]
 ---
