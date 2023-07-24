@@ -10,7 +10,17 @@ featured: 1
 
 In the past year, I found myself uttering this overly dramatic sentence to describe areas of my life to myself and close friends.
 
-Obviously, I didn’t actually lose ***everything***. Broadly speaking, my life has certainly leveled up quite a bit since I wrote the last year-in-review. I have a [new job](https://www.linkedin.com/posts/dev-agr_job-career-devrel-activity-7060641113346379776-baj3?utm_source=share&utm_medium=member_desktop) as a Developer Advocate in a rapidly growing startup, I am [making content](https://youtu.be/FvA1dU2-Gwg) about things I enjoy, I am [traveling to conferences](https://twitter.com/devagrawal09/status/1650175797884329986) and meeting [people that I look up](https://twitter.com/devagrawal09/status/1666247328682917890) to and enjoy chatting with, and I’m earning a decent enough paycheck to keep my mom and debt happy. I even [graduated college](https://www.linkedin.com/posts/dev-agr_i-graduated-yay-activity-7058150425979469824--2LP?utm_source=share&utm_medium=member_desktop) and acquired work authorization in the US! Objectively speaking, I have more things now that I did 2 years ago.
+Obviously, I didn’t actually lose ***everything***. Broadly speaking, my life has certainly leveled up quite a bit since I wrote the last year-in-review. I have a 
+<a target="_blank" href="https://www.linkedin.com/posts/dev-agr_job-career-devrel-activity-7060641113346379776-baj3?utm_source=share&utm_medium=member_desktop">new job</a>
+as a Developer Advocate in a rapidly growing startup, I am 
+<a target="_blank" href="https://youtu.be/FvA1dU2-Gwg">making content</a>
+about things I enjoy, I am 
+<a target="_blank" href="https://twitter.com/devagrawal09/status/1650175797884329986">traveling to conferences</a>
+and meeting 
+<a target="_blank" href="https://twitter.com/devagrawal09/status/1666247328682917890">people that I look up</a>
+to and enjoy chatting with, and I’m earning a decent enough paycheck to keep my mom and debt happy. I even 
+<a target="_blank" href="https://www.linkedin.com/posts/dev-agr_i-graduated-yay-activity-7058150425979469824--2LP?utm_source=share&utm_medium=member_desktop">graduated college</a>
+and acquired work authorization in the US! Objectively speaking, I have more things now that I did 2 years ago.
 
 **Then why do I feel like I have lost more than I have gained?**
 
