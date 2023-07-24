@@ -26,7 +26,7 @@ and acquired work authorization in the US! Objectively speaking, I have more thi
 
 ### Craft, Crack, Crash
 
-In the [last year-in-review](/blog/junior), I decided the theme of the upcoming year to be *Craft*. I wanted to spend some time carefully crafting my brand, my content, my skills, and my network.
+In the <a href="/blog/junior" target="_blank">last year-in-review</a>, I decided the theme of the upcoming year to be *Craft*. I wanted to spend some time carefully crafting my brand, my content, my skills, and my network.
 
 Where did I get this idea from? Why did I decide the theme to be “craft” and not something else?
 
@@ -42,7 +42,7 @@ What if it was all three?
 
 ### The Cracks
 
-The cracks in my life had already started to show when I started writing the last year-in-review. I had low energy and motivation, missed the first couple deadlines, then hastily wrote it past due date and sent an apologetic letter to my amazing advisor [Ashley](https://www.linkedin.com/in/ashleylwebber/) for not finishing the year in review early enough. I wasn’t very happy with what I had written, but I published it anyways because I couldn’t be bothered with it. I was tired.
+The cracks in my life had already started to show when I started writing the last year-in-review. I had low energy and motivation, missed the first couple deadlines, then hastily wrote it past due date and sent an apologetic letter to my amazing advisor <a href="https://www.linkedin.com/in/ashleylwebber/" target="_blank">Ashley</a> for not finishing the year in review early enough. I wasn’t very happy with what I had written, but I published it anyways because I couldn’t be bothered with it. I was tired.
 
 I took some time recently to read back all my year-in-reviews, and apparently I did a pretty good job of structuring and formulating my thoughts last year, even while lacking the energy and motivation to do so. However, the cracks in my life subtly reveal themselves in this review if you know what to look for.
 
@@ -52,7 +52,7 @@ I made attempts at fixing stuff - I tried to move out of my apartment and live a
 
 ### The Crash
 
-In December, I decided to take the winter holidays to travel back to India and go on a vacation with my family. I had a great time - got to [reconnect with my family](https://twitter.com/devagrawal09/status/1608141335059640322) and some old friends, met my brother’s newborn for the first time and realized that babies are kinda cute, and took some [amazing](https://twitter.com/devagrawal09/status/1627429623544905729) [photos](https://twitter.com/devagrawal09/status/1610578000000716801) enjoying snow on the top of the mighty Himalayas. For the most part I was just enjoying the moment of break from my usual life, and I wasn’t spending too much time thinking about the fact that I had just resigned from my job and broke up with my girlfriend.
+In December, I decided to take the winter holidays to travel back to India and go on a vacation with my family. I had a great time - got to <a target="_blank" href="https://twitter.com/devagrawal09/status/1608141335059640322">reconnect with my family</a> and some old friends, met my brother’s newborn for the first time and realized that babies are kinda cute, and took some <a href="https://twitter.com/devagrawal09/status/1627429623544905729" target="_blank">amazing</a> <a href="https://twitter.com/devagrawal09/status/1610578000000716801" target="_blank">photos</a> enjoying snow on the top of the mighty Himalayas. For the most part I was just enjoying the moment of break from my usual life, and I wasn’t spending too much time thinking about the fact that I had just resigned from my job and broke up with my girlfriend.
 
 Financially I was in a decent enough position that not having a job for a few months would not be a big deal - I was pretty confident that I would have a job by the time I graduated college. However, any idea I had of experiencing “the perfect life” crashed and crumbled, as the two biggest pillars that it stood on couldn’t bear the cracks that had formed over the year.
 
@@ -78,7 +78,7 @@ The general frustration with life and feelings of burnout seemed to form a feedb
 
 So far I have painted a pretty bleak picture of my life over the last year. And it certainly was at times. This is why I am very surprised at how much of my initial promise of *crafting* I was still able to keep up.
 
-Content creation has been an absolute boon for me. I had zero expectations of ever getting even slightly famous or recognized in the industry. I had zero expectations of [unlocking opportunities](https://twitter.com/devagrawal09/status/1656005839675695109) I didn’t know existed. I just wanted to look at a camera and rant about microservices for a bit. But as I dove into the world of content creation, I started to see more and more opportunities, and I tried to grab as many of them as I could. This is a legitimate industry now and I am excited to see how far I can push myself and what kind of content I can craft.
+Content creation has been an absolute boon for me. I had zero expectations of ever getting even slightly famous or recognized in the industry. I had zero expectations of <a href="https://twitter.com/devagrawal09/status/1656005839675695109" target="_blank">unlocking opportunities</a> I didn’t know existed. I just wanted to look at a camera and rant about microservices for a bit. But as I dove into the world of content creation, I started to see more and more opportunities, and I tried to grab as many of them as I could. This is a legitimate industry now and I am excited to see how far I can push myself and what kind of content I can craft.
 
 My venture into content creation led me to discover Developer Relations - an industry closely tied to content creation but with very specific goals. I decided to pursue a career in DevRel as an opportunity to see what I can learn about this fascinating new industry. This means that my career as a Software Developer has been put on hold and moved to the back burner for the time being. I am unsure if this was the best decision, and there are times when I wish that I still had my old job, or some other job that allowed me to explore the complexities and intricacies of developing software systems at scale. But, that will have to wait. I first need to explore this new position that I have crafted for myself.
 
