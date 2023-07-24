@@ -10,13 +10,13 @@ featured: 1
 
 In the past year, I found myself uttering this overly dramatic sentence to describe areas of my life to myself and close friends.
 
-Obviously, I didn’t actually lose ***everything***. Broadly speaking, my life has certainly leveled up quite a bit since I wrote the last year-in-review. I have a new job as a Developer Advocate in a rapidly growing startup, I am making content about things I enjoy, I am traveling to conferences and meeting people that I look up to and enjoy chatting with, and I’m earning a decent enough paycheck to keep my mom and debt happy. I even graduated college and acquired work authorization in the US! Objectively speaking, I have more things now that I did 2 years ago.
+Obviously, I didn’t actually lose ***everything***. Broadly speaking, my life has certainly leveled up quite a bit since I wrote the last year-in-review. I have a [new job](https://www.linkedin.com/posts/dev-agr_job-career-devrel-activity-7060641113346379776-baj3?utm_source=share&utm_medium=member_desktop) as a Developer Advocate in a rapidly growing startup, I am [making content](https://youtu.be/FvA1dU2-Gwg) about things I enjoy, I am [traveling to conferences](https://twitter.com/devagrawal09/status/1650175797884329986) and meeting [people that I look up](https://twitter.com/devagrawal09/status/1666247328682917890) to and enjoy chatting with, and I’m earning a decent enough paycheck to keep my mom and debt happy. I even [graduated college](https://www.linkedin.com/posts/dev-agr_i-graduated-yay-activity-7058150425979469824--2LP?utm_source=share&utm_medium=member_desktop) and acquired work authorization in the US! Objectively speaking, I have more things now that I did 2 years ago.
 
 **Then why do I feel like I have lost more than I have gained?**
 
 ### Craft, Crack, Crash
 
-In the last year-in-review, I decided the theme of the upcoming year to be *Craft*. I wanted to spend some time carefully crafting my brand, my content, my skills, and my network.
+In the [last year-in-review](/blog/junior), I decided the theme of the upcoming year to be *Craft*. I wanted to spend some time carefully crafting my brand, my content, my skills, and my network.
 
 Where did I get this idea from? Why did I decide the theme to be “craft” and not something else?
 
@@ -24,7 +24,7 @@ I can sit here and say that for the last 4 years I have been reflecting on how m
 
 But I mostly feel like I look into a crystal ball to see what the upcoming year might be like, what I expect myself to be doing, and pick a theme based on that.
 
-It seems like last year when I looked into the crystal ball, things were foggy and unclear, and all I saw out of it was an engraving with three letters - *cra…*. And then I made up the rest and decided on *craft*.
+It seems like last year when I looked into the crystal ball, things were foggy and unclear, and all I saw out of it was an engraving with three letters - *cra...*, and then I made up the rest and decided on *craft*.
 
 I wish there was a way to rewind the clock back a year so that I can take a better look at what the crystal ball was trying to tell me. Was it actually trying to show me the things I have *crafted*? Was it an indicator of the *cracks* forming in my life? Or was it a warning that things are going to *crash*?
 
@@ -32,7 +32,7 @@ What if it was all three?
 
 ### The Cracks
 
-The cracks in my life had already started to show when I started writing the last year-in-review. I had low energy and motivation, missed the first couple deadlines, then hastily wrote it past due date and sent an apologetic letter to my amazing advisor Ashley for not finishing the year in review early enough. I wasn’t very happy with what I had written, but I published it anyways because I couldn’t be bothered with it. I was tired.
+The cracks in my life had already started to show when I started writing the last year-in-review. I had low energy and motivation, missed the first couple deadlines, then hastily wrote it past due date and sent an apologetic letter to my amazing advisor [Ashley](https://www.linkedin.com/in/ashleylwebber/) for not finishing the year in review early enough. I wasn’t very happy with what I had written, but I published it anyways because I couldn’t be bothered with it. I was tired.
 
 I took some time recently to read back all my year-in-reviews, and apparently I did a pretty good job of structuring and formulating my thoughts last year, even while lacking the energy and motivation to do so. However, the cracks in my life subtly reveal themselves in this review if you know what to look for.
 
@@ -42,7 +42,7 @@ I made attempts at fixing stuff - I tried to move out of my apartment and live a
 
 ### The Crash
 
-In December, I decided to take the winter holidays to travel back to India and go on a vacation with my family. I had a great time - got to reconnect with my family and some old friends, met my brother’s newborn for the first time and realized that babies are kinda cute, and took some amazing photos enjoying snow on the top of the mighty Himalayas. For the most part I was just enjoying the moment of break from my usual life, and I wasn’t spending too much time thinking about the fact that I had just resigned from my job and broke up with my girlfriend.
+In December, I decided to take the winter holidays to travel back to India and go on a vacation with my family. I had a great time - got to [reconnect with my family](https://twitter.com/devagrawal09/status/1608141335059640322) and some old friends, met my brother’s newborn for the first time and realized that babies are kinda cute, and took some [amazing](https://twitter.com/devagrawal09/status/1627429623544905729) [photos](https://twitter.com/devagrawal09/status/1610578000000716801) enjoying snow on the top of the mighty Himalayas. For the most part I was just enjoying the moment of break from my usual life, and I wasn’t spending too much time thinking about the fact that I had just resigned from my job and broke up with my girlfriend.
 
 Financially I was in a decent enough position that not having a job for a few months would not be a big deal - I was pretty confident that I would have a job by the time I graduated college. However, any idea I had of experiencing “the perfect life” crashed and crumbled, as the two biggest pillars that it stood on couldn’t bear the cracks that had formed over the year.
 
@@ -52,7 +52,7 @@ For the longest time, I was unwilling to accept that something was wrong and nee
 
 Finally, a couple weeks ago, I decided to stop everything else and ask some serious questions about what had happened to me. I spent an entire night trying to remember and note down every significant event from the last 5 years, and how one event led to another, in an attempt to pinpoint the source of the cracks and the crash. Weirdly, the conclusion was both satisfying and unsatisfying at the same time.
 
-### It was… inevitable?
+### It was... inevitable?
 
 Free will is an illusion. We are just a collection of terribly-designed bio-electrical machines capable of remembering and communicating ideas. Actions and decisions are purely based on past events and experiences instead of some internal choice making process that many people believe we possess and label as “free will”.
 
@@ -68,7 +68,7 @@ The general frustration with life and feelings of burnout seemed to form a feedb
 
 So far I have painted a pretty bleak picture of my life over the last year. And it certainly was at times. This is why I am very surprised at how much of my initial promise of *crafting* I was still able to keep up.
 
-Content creation has been an absolute boon for me. I had zero expectations of ever getting even slightly famous or recognized in the industry. I had zero expectations of unlocking opportunities I didn’t know existed. I just wanted to look at a camera and rant about microservices for a bit. But as I dove into the world of content creation, I started to see more and more opportunities, and I tried to grab as many of them as I could. This is a legitimate industry now and I am excited to see how far I can push myself and what kind of content I can craft.
+Content creation has been an absolute boon for me. I had zero expectations of ever getting even slightly famous or recognized in the industry. I had zero expectations of [unlocking opportunities](https://twitter.com/devagrawal09/status/1656005839675695109) I didn’t know existed. I just wanted to look at a camera and rant about microservices for a bit. But as I dove into the world of content creation, I started to see more and more opportunities, and I tried to grab as many of them as I could. This is a legitimate industry now and I am excited to see how far I can push myself and what kind of content I can craft.
 
 My venture into content creation led me to discover Developer Relations - an industry closely tied to content creation but with very specific goals. I decided to pursue a career in DevRel as an opportunity to see what I can learn about this fascinating new industry. This means that my career as a Software Developer has been put on hold and moved to the back burner for the time being. I am unsure if this was the best decision, and there are times when I wish that I still had my old job, or some other job that allowed me to explore the complexities and intricacies of developing software systems at scale. But, that will have to wait. I first need to explore this new position that I have crafted for myself.
 
