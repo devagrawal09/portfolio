@@ -30,7 +30,7 @@ Passionate about Developer Experience and Education, Devtools, and Content Creat
 
 ## Work Experience
 
-### Developer Advocate (Clerk.com) (May '23 - Feb '24)
+### Developer Advocate (Clerk.com) (May 2023 - Feb 2024)
 
 Helped establish Clerk in the community during the hockey stick growth period (5x managed users, 3x downloads, 2x company size, Series A and B)
 
@@ -42,7 +42,7 @@ Curated feedback and requests from the community to help prioritize work for the
 
 Collaborated with engineering and product teams to ensure high quality and developer experience
 
-### Senior Software Developer (UC IT Solutions Center) (Jan '20 – Aug '20, Jan '21 – Dec '22)
+### Senior Software Developer (UC IT Solutions Center) (Jan 2020 – Aug 2020, Jan 2021 – Dec 2022)
 
 Led the development and operation of the Ohio Sentencing Data Platform in collaboration with the Ohio Supreme Court and 10+ counties across Ohio
 
@@ -52,7 +52,7 @@ Identified and triaged project requirements in collaboration with key stakeholde
 
 Assisted with DevOps, System administration, Quality Assurance, Monitoring and Client support
 
-### Research Assistant (University of Cincinnati) (Sep '18 – Dec '19)
+### Research Assistant (University of Cincinnati) (Sep 2018 – Dec 2019)
 
 Worked on a research project funded by NSF and Mozilla with a team of professors and masters students
 
@@ -60,17 +60,17 @@ Built an access control model for smart-homes that supports automatic emergency 
 
 Published a paper for the ACM International Conference on Enhancing Smart Home Security
 
-### Web Developer (TorpedoShoes) (May '19 – Aug '19)
+### Web Developer (TorpedoShoes) (May 2019 – Aug 2019)
 
 Built an internal platform for tracking manufacturing lines, quality control, and reporting to replace existing paper report system used by 8 manufacturing units
 
-### Web Developer (HealthyLovedOnes) (Apr '18 – Jul '18)
+### Web Developer (HealthyLovedOnes) (Apr 2018 – Jul 2018)
 
 Developed a web application for caregivers and people in need to connect with each other
 
 Built a platform for job search, advertisement, communication, and payment for caregivers
 
-### Web Developer (Bharat Vikas Parishad) (Feb '17 – May '17)
+### Web Developer (Bharat Vikas Parishad) (Feb 2017 – May 2017)
 
 Designed a web application for Bharat Vikas Parishad (Shiva Branch, Varanasi) for management of 50 members
 
@@ -82,7 +82,7 @@ Suite of applications to aid hackathon organizing with marketing, judging, regis
 
 Service-based backend leveraging cloud services (AWS, Heroku, Netlify, Cloudflare)
 
-Frontends built with Jekyll, React, and Angularz
+Frontends built with Jekyll, React, and Angular
 
 My contribution – conceptualized, architected, and developed most of this system
 
