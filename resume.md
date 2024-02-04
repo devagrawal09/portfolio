@@ -1,17 +1,10 @@
 # Dev Agrawal
 
-## Contact
-GitHub: github.com/devagrawal09
-
-E-mail: agrawadv@mail.uc.edu
-
-LinkedIn: linkedin.com/in/dev-agrawal
-
-Website: devagr.me
-
-Twitter: twitter.com/devagrawal09
-
-YouTube: youtube.com/@devagr
+[GitHub](https://github.com/devagrawal09) .
+[LinkedIn](https://linkedin.com/in/dev-agrawal) .
+[Website](https://devagr.me) .
+[Twitter](https://twitter.com/devagrawal09) .
+[YouTube](https://youtube.com/@devagr)
 
 ## Summary
 Software Developer, Architect, Content Creator and Educator.
