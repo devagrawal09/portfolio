@@ -1,7 +1,7 @@
 # Dev Agrawal
 
 [GitHub](https://github.com/devagrawal09) .
-[LinkedIn](https://linkedin.com/in/dev-agrawal) .
+[LinkedIn](https://www.linkedin.com/in/dev-agr) .
 [Website](https://devagr.me) .
 [Twitter](https://twitter.com/devagrawal09) .
 [YouTube](https://youtube.com/@devagr)
