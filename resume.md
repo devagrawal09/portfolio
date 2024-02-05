@@ -10,11 +10,11 @@
 
 Software Developer, Architect, Content Creator and Educator.
 
-Over 7 years of experience with Greenfield projects, identifying business needs, rapid development and iteration, and going from 0 to production.
+Over **7 years of experience** with Greenfield projects, identifying business needs, **rapid development and iteration**.
 
-In depth understanding of Software Architecture and making appropriate trade-offs.
+In depth understanding of **Software Architecture** and making appropriate trade-offs.
 
-Passionate about Developer Experience and Education, Devtools, and Content Creation.
+Passionate about **Developer Experience** and **Education**, **Devtools**, and **Content Creation**.
 
 ## Technical Skills
 
@@ -32,89 +32,89 @@ Passionate about Developer Experience and Education, Devtools, and Content Creat
 
 ### Developer Advocate (Clerk.com) (May 2023 - Feb 2024)
 
-Helped establish Clerk in the community during the hockey stick growth period (5x managed users, 3x downloads, 2x company size, Series A and B)
+Helped **establish Clerk in the community** during the hockey stick **growth period** (5x managed users, 3x downloads, 2x company size, Series A and B)
 
-Engaged and provided support to the Discord community of 8k members and Twitter community of 14k followers
+**Engaged and provided support** to the Discord community of 8k members and Twitter community of 14k followers
 
-Solidified Clerk's presence at 5 conferences through talks, workshops, demos, and product walkthroughs
+**Solidified Clerk's presence** at 5 conferences through **talks**, **workshops**, **demos**, and **product walkthroughs**
 
-Curated feedback and requests from the community to help prioritize work for the engineering team
+**Curated feedback and requests** from the community to help **prioritize work** for the engineering team
 
-Collaborated with engineering and product teams to ensure high quality and developer experience
+Collaborated with engineering and product teams to **ensure high quality** and **developer experience**
 
 ### Senior Software Developer (UC IT Solutions Center) (Jan 2020 – Aug 2020, Jan 2021 – Dec 2022)
 
-Led the development and operation of the Ohio Sentencing Data Platform in collaboration with the Ohio Supreme Court and 10+ counties across Ohio
+**Led the development and operation** of the **Ohio Sentencing Data Platform** in collaboration with the **Ohio Supreme Court** and **10+ counties across Ohio**
 
-Led the work on a suite of applications used by UC Corrections Institute and Department of Youth Services, and developed the new version of the primary case tracking application
+Led the work on a **suite of applications** used by **UC Corrections Institute** and **Department of Youth Services**, and developed the new version of the **primary case tracking application**
 
-Identified and triaged project requirements in collaboration with key stakeholders
+**Identified and triaged project requirements** in collaboration with key stakeholders
 
 Assisted with DevOps, System administration, Quality Assurance, Monitoring and Client support
 
 ### Research Assistant (University of Cincinnati) (Sep 2018 – Dec 2019)
 
-Worked on a research project funded by NSF and Mozilla with a team of professors and masters students
+Worked on a research project **funded by NSF and Mozilla** with a team of professors and masters students
 
-Built an access control model for smart-homes that supports automatic emergency detection, escalation, and response
+**Built an access control model** for smart-homes that supports **automatic emergency detection**, **escalation**, and **response**
 
-Published a paper for the ACM International Conference on Enhancing Smart Home Security
+**Published a paper** for the **ACM International Conference** on Enhancing Smart Home Security
 
 ### Web Developer (TorpedoShoes) (May 2019 – Aug 2019)
 
-Built an internal platform for tracking manufacturing lines, quality control, and reporting to replace existing paper report system used by 8 manufacturing units
+**Built an internal platform** for tracking manufacturing lines, quality control, and reporting to **replace existing paper report system** used by **8 manufacturing units**
 
 ### Web Developer (HealthyLovedOnes) (Apr 2018 – Jul 2018)
 
-Developed a web application for caregivers and people in need to connect with each other
+**Developed a web application** for caregivers and people in need to connect with each other
 
-Built a platform for job search, advertisement, communication, and payment for caregivers
+**Built a platform** for **job search**, **advertisement**, **communication**, and **payment** for caregivers
 
 ### Web Developer (Bharat Vikas Parishad) (Feb 2017 – May 2017)
 
-Designed a web application for Bharat Vikas Parishad (Shiva Branch, Varanasi) for management of 50 members
+**Built a web application** for Bharat Vikas Parishad (Shiva Branch, Varanasi) for **management of over 50 members**
 
 ## Projects
 
 ### Hackathon Suite (Lead Developer)
 
-Suite of applications to aid hackathon organizing with marketing, judging, registration, hacker matching etc.
+**Suite of applications** to aid hackathon organizing with **marketing**, **judging**, **registration**, **hacker matching**, and **discord management**
 
-Service-based backend leveraging cloud services (AWS, Heroku, Netlify, Cloudflare)
+Service-based backend **leveraging cloud services** (AWS, Heroku, Netlify, Cloudflare)
 
-Frontends built with Jekyll, React, and Angular
+**Frontends** built with Jekyll, React, and Angular
 
 My contribution – conceptualized, architected, and developed most of this system
 
 ### Ohio Sentencing Data Platform (Senior Developer)
 
-Collaboration with the Ohio Supreme Court
+Collaboration with the **Ohio Supreme Court**
 
-For courts to record and analyze data about criminal sentencing cases
+For courts to **record and analyze data** about criminal sentencing cases
 
-Custom built engine to generate complex forms with real-time capabilities, analyzable data outputs, and docx exports based on JSON schemas
+**Custom built engine** to generate **complex forms** with **real-time capabilities**, **analyzable data outputs**, and **docx exports** based on JSON schemas
 
-Integration with legacy systems to pull data
+**Integration with legacy systems** to pull data
 
 My contribution – developed most of the system from scratch including the most complex features
 
 ### Devtranet (Senior Developer)
 
-Networking platform for engineers, investors, and entrepreneurs.
+**Networking platform** for engineers, investors, and entrepreneurs.
 
-Discovering events, posting blogs, showcasing projects, finding jobs, and social media
+**Discovering events**, **posting blogs**, **showcasing projects**, **finding jobs**, and **social media**
 
-Full stack Typescript, Next.js, React, and Tailwind
+**Full stack Typescript**, Next.js, React, and Tailwind
 
 My contribution – architected and developed all of the backend to be modular and optimized for serverless
 
 ### HealthyLovedOnes (Solo Developer)
 
-A job portal for caregivers and those in need with built in hiring, communication, and payment system
+A **job portal** for caregivers and those in need with built in hiring, communication, and payment system
 
-Holistic caregiver profiles based on professional and personal skills
+**Holistic caregiver profiles** based on professional and personal skills
 
-Mobile-ready full stack application built with Meteor
+Mobile-ready **full stack application** built with Meteor
 
 My contribution – developed all of the system
 
@@ -128,7 +128,13 @@ University Honors Program
 
 ## Extra-Curricular
 
-### Organizer of RevolutionUC And MakeUC (Sep 2019 – Current)
+### Organizer of Momentum Developer Conference (Feb 2023 - Current)
+
+Participate in the steering committee of the biggest tech conference in Cincinnati (500+ registrations)
+
+Platform engineering, Social Media, 
+
+### Organizer of RevolutionUC And MakeUC (Sep 2019 – Mar 2023)
 
 Organizer for UC’s largest hackathons
 Developing and managing the hackathon website, server, database, and the various online services
