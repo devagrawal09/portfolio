@@ -42,6 +42,8 @@ Helped **establish Clerk in the community** during the hockey stick **growth per
 
 Collaborated with engineering and product teams to **ensure high quality** and **developer experience**
 
+Built starter kits and demos on **Next.js**, **React**, **TailwindCSS**, and **Vercel**
+
 ### Senior Software Developer (UC IT Solutions Center) (Jan 2020 – Aug 2020, Jan 2021 – Dec 2022)
 
 **Led the development and operation** of the **Ohio Sentencing Data Platform** in collaboration with the **Ohio Supreme Court** and **10+ counties across Ohio**
@@ -52,6 +54,8 @@ Led the work on a **suite of applications** used by **UC Corrections Institute**
 
 Assisted with DevOps, System administration, Quality Assurance, Monitoring and Client support
 
+Used **Nodejs**, **Express**, **React**, **PostgreSQL**, **MongoDB**, and **Linux**
+
 ### Research Assistant (University of Cincinnati) (Sep 2018 – Dec 2019)
 
 Worked on a research project **funded by NSF and Mozilla** with a team of professors and masters students
@@ -60,19 +64,21 @@ Worked on a research project **funded by NSF and Mozilla** with a team of profes
 
 **Published a paper** for the **ACM International Conference** on Enhancing Smart Home Security
 
+Built a demo smart home application using **MeteorJS** for user testing
+
 ### Web Developer (TorpedoShoes) (May 2019 – Aug 2019)
 
-**Built an internal platform** for tracking manufacturing lines, quality control, and reporting to **replace existing paper report system** used by **8 manufacturing units**
+**Built an internal platform** using **MeteorJS** for tracking manufacturing lines, quality control, and reporting to **replace existing paper report system** used by **8 manufacturing units**
 
 ### Web Developer (HealthyLovedOnes) (Apr 2018 – Jul 2018)
 
-**Developed a web application** for caregivers and people in need to connect with each other
+**Developed a web application** using **MeteorJS** for caregivers and people in need to connect with each other
 
 **Built a platform** for **job search**, **advertisement**, **communication**, and **payment** for caregivers
 
 ### Web Developer (Bharat Vikas Parishad) (Feb 2017 – May 2017)
 
-**Built a web application** for Bharat Vikas Parishad (Shiva Branch, Varanasi) for **management of over 50 members**
+**Built a web application** for Bharat Vikas Parishad (Shiva Branch, Varanasi) for **management of over 50 members** using **PHP** and **Bootstrap**
 
 ## Projects
 
@@ -132,7 +138,7 @@ University Honors Program
 
 Participate in the steering committee of the biggest tech conference in Cincinnati (500+ registrations)
 
-Platform engineering, Social Media, 
+Platform engineering, Social Media,
 
 ### Organizer of RevolutionUC And MakeUC (Sep 2019 – Mar 2023)
 
