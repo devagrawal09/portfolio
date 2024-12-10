@@ -143,8 +143,14 @@ Talk: Harnessing Events for Reactive and AI-powered Frontends
 ### Commit Your Code Conference, Dallas, TX (Dec 2024)
 [Talk: Deploying Stateful Realtime Services To The Edge](https://www.youtube.com/live/_cCmh-FrYeM?si=05mwvnxDxbZ_EAtx&t=2133)
 
+### AJC and the Web Devs, Virtual (Dev 2024)
+[Podcast: Realtime Frameworks](https://www.youtube.com/live/q8AlF3QcR2M?si=hdyr5Gu8ie0Lcsbx)
+
 ### Dev Innovation Summit, Santa Clara, CA (Nov 2024)
 Talk: Meet the Web Framework from the Future
+
+### What's Good (Egghead.io), Virtual (Sep 2024)
+[Podcast: Nitro, Vinxi, and RSCs](https://egghead.io/nitro-vinxi-and-rscs-whats-good-with-dev-agrawal~s577t)
 
 ### React Rally, Salt Lake City, UT (Aug 2024)
 [Talk: Build your own React Metaframework](https://youtu.be/4V_Wz_k35C8?si=wvar4Ra5i-aO6e6q)
