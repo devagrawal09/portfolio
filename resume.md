@@ -8,13 +8,11 @@
 
 ## Summary
 
-Software Developer, Architect, Content Creator and Educator.
+I build and teach how to build awesome fullstack applications.
 
-Over **7 years of experience** with Greenfield projects, identifying business needs, **rapid development and iteration**.
+**8 years of experience** building products end-to-end, working directly with stakeholders and product owners.
 
-In depth understanding of **Software Architecture** and making appropriate trade-offs.
-
-Passionate about **Developer Experience** and **Education**, **Devtools**, and **Content Creation**.
+**2 years** creating educational content and speaking at tech conferences and podcasts about development and architecture.
 
 ## Technical Skills
 
@@ -29,6 +27,16 @@ Passionate about **Developer Experience** and **Education**, **Devtools**, and *
 **Tools:** Cloud (Heroku, AWS, Azure, Netlify, Cloudflare, Vercel, Firebase), Database (SQL, MongoDB, Redis), DevOps (GitHub, Travis), SysAdmin (Linux, Docker, Nginx, Ansible)
 
 ## Work Experience
+
+### Software Engineer (SmartData) (Apr 2024 - Current)
+
+Built the **next gen member application** for a healthcare company
+
+Implemented critical improvements for performance, developer experience, and cost efficiency
+
+Collaborated with the product, design, quality assurance, infrastructure, and security teams
+
+Used **Remix**, **React**, **Azure**, and **Okta**
 
 ### Developer Advocate (Clerk.com) (May 2023 - Feb 2024)
 
@@ -124,38 +132,102 @@ Mobile-ready **full stack application** built with Meteor
 
 My contribution – developed all of the system
 
+## Appearances (Conferneces, Podcasts etc.)
+
+### Codemash, Sandusky, OH (Jan 2025)
+Talk: Building Asynchronous UIs Without The Hassle
+
+### EDA Summit, Virtual (Dec 2024)
+Talk: Harnessing Events for Reactive and AI-powered Frontends
+
+### Commit Your Code Conference, Dallas, TX (Dec 2024)
+[Talk: Deploying Stateful Realtime Services To The Edge](https://www.youtube.com/live/_cCmh-FrYeM?si=05mwvnxDxbZ_EAtx&t=2133)
+
+### Dev Innovation Summit, Santa Clara, CA (Nov 2024)
+Talk: Meet the Web Framework from the Future
+
+### React Rally, Salt Lake City, UT (Aug 2024)
+[Talk: Build your own React Metaframework](https://youtu.be/4V_Wz_k35C8?si=wvar4Ra5i-aO6e6q)
+
+### Scrimba Podcast, Virtual (Jun 2024)
+[Podcast: What's New in React 19 (and What That Means for You)](https://youtu.be/8GuvVaEWjzk?si=9sf5hn8ArtPzz9Os)
+
+### Stir Trek, Columbus, OH (May 2024)
+[Talk: Streams, not Waterfalls - Improving Page Load and Core Web Vitals](https://youtu.be/GrJVK6ci--s?si=nKoDMyK05RC2uwk9)
+
+### Modern Web Podcast, Virtual (May 2024)
+[Podcast: Local-First Application Development is Back?](https://youtu.be/0bYeHVAk_EM?si=m3UiQnxbcTHazy_1)
+
+### Scrimba Podcast, Virtual (Feb 2024)
+[Podcast: The State of React (and Should You Still Learn It in 2024)](https://youtu.be/nD1V18VBNcw?si=tnvwbyyJB7irxqMd)
+
+### Guidance Counselor 2.0, Virtual (Feb 2024)
+[Podcast: From College Student to Speaking at Conferences](https://www.linkedin.com/posts/taylordesseyn_from-college-student-to-speaking-at-conferences-activity-7163192438377926657-VOoy)
+
+### Codemash, Sandusky, OH (Jan 2024)
+Talk: Meet Your New BFF: Backend to Frontend without the Duct Tape
+
+Workshop: Build an end to end Next JS app with Next auth, postgres realtime functionality
+
+### Backend Banter, Virtual (Jan 2024)
+[Podcast: I got CAUGHT rolling my own auth..](https://youtu.be/xjcvlddL398?si=A1T0qZWvm8CdsDkZ)
+
+### React Summit US, Jersey City, NJ (Dec 2023)
+[Workshop: From Todo App to B2B SaaS with Next.js and Clerk](https://gitnation.com/contents/from-todo-app-to-b2b-saas-with-nextjs-and-clerk)
+
+### Next.js Conf, San Francisco, CA (Oct 2023)
+[Talk: Beyond the Login Page: Authentication in Next.js](https://youtu.be/44b2U0uGQ0k?si=zTFY-NBByjZw_OFq)
+
+### APIWorld, Santa Clara, CA (Oct 2023)
+Talk: Meet Your New BFF: Fullstack without Duct Tape
+
+### Nicky T Live, Virtual (Sep 2023)
+[Podcast: Clerk, Authentication, Web Dev, All the Things](https://youtu.be/vlxkTAzNm5Y?si=vWuoMMUoyJvFElCU)
+
+### Certified Fresh Events, Virtual (Sep 2023)
+[Talk: Sign-in Sessions, The most powerful authentication tool](https://youtu.be/MYIIuF1ELxM?si=rn5XyB49pgfYLUK2)
+
+### Javascript and Friends, Columbus, OH (Aug 2023)
+[Talk: Meet Your New BFF: Fullstack without Duct Tape](https://youtu.be/vAKwSEzj7sY?si=FkU5xBr9bzXO2vsQ)
+
 ## Education
 
 ### Bachelor’s Degree – University of Cincinnati (Aug 2018 – May 2023 expected)
 
 BS in Information Technology, Software Development track (GPA 3.5)
+
 Minor in Psychology
+
 University Honors Program
 
-## Extra-Curricular
+## Community
 
 ### Organizer of Momentum Developer Conference (Feb 2023 - Current)
 
-Participate in the steering committee of the biggest tech conference in Cincinnati (500+ registrations)
+Member of steering committee of the biggest tech conference in Cincinnati (500+ registrations)
 
-Platform engineering, Social Media,
+Built an app for attendees and speakers to keep track of schedule, network, and provide feedback
 
 ### Organizer of RevolutionUC And MakeUC (Sep 2019 – Mar 2023)
 
 Organizer for UC’s largest hackathons
+
 Developing and managing the hackathon website, server, database, and the various online services
 
 ### President of IT Student Association (Apr 2021 – Apr 2022)
 
 President for UC’s largest student organization for IT students
+
 Providing weekly educational and networking opportunities to enthusiastic students
 
 ### Executive Member of ACM@UC (May 2019 – Apr 2021)
 
 Managing and updating the organization’s website
+
 Plan and record biweekly tech talks and workshops
 
-### Executive Member of The Uc Rotaract Club (Oct 2018 – Oct 2021)
+### Executive Member of The UC Rotaract Club (Oct 2018 – Oct 2021)
 
 Hosting on-campus events and off-campus volunteering projects
+
 Collaborating with the Rotary Club for networking and professional development events
