@@ -71,9 +71,9 @@ I build and teach how to build awesome fullstack applications.
 
 ## Open Source
 
-- Solid.js, core team member (Dec 2024 - Current)
-- Tanstack Start, maintainer (Jun 2024 - Current)
-- Crossws, contributor (Nov 2024 - Current)
+- **Solid.js**, core team member (Dec 2024 - Current)
+- **Tanstack Start**, maintainer (Jun 2024 - Current)
+- **Crossws**, contributor (Nov 2024 - Current)
 
 ## Projects
 
