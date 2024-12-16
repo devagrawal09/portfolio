@@ -69,6 +69,12 @@ I build and teach how to build awesome fullstack applications.
 
 - **Built a web application** for Bharat Vikas Parishad (Shiva Branch, Varanasi) for **management of over 50 members** using **PHP** and **Bootstrap**
 
+## Open Source
+
+- Solid.js, core team member (Dec 2024 - Current)
+- Tanstack Start, maintainer (Jun 2024 - Current)
+- Crossws, contributor (Nov 2024 - Current)
+
 ## Projects
 
 ### Momentum DevCon App (Lead Developer)
