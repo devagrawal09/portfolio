@@ -37,7 +37,7 @@ const AboutPage = ({ location }) => (
                 </p>
                 <p>
                   I got interested into the field of computer science very
-                  early, when my brother introduced my to something called
+                  early, when my brother introduced me to something called
                   "C++". The power of making a computer do whatever I wanted
                   through text commands felt amazing. That's when my love of
                   learning kicked in, which made me spend hours everyday
