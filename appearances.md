@@ -2,8 +2,8 @@
 
 ## Conferences
 
-- Building Asynchronous UIs Without The Hassle (Codemash, Sandusky, OH, Jan 2025)
-- Harnessing Events for Reactive and AI-powered Frontends (EDA Summit, Virtual, Dec 2024)
+- [Building Asynchronous UIs Without The Hassle (Codemash, Sandusky, OH, Jan 2025)](https://youtu.be/pX5r_jTLbvw?si=qjTPBQkyb-zRP96R)
+- [Harnessing Events for Reactive and AI-powered Frontends (EDA Summit, Virtual, Dec 2024)](https://edasummit.com/videos/harnessing-events-for-reactive-and-ai-powered-frontends/)
 - [Deploying Stateful Realtime Services To The Edge](https://www.youtube.com/live/_cCmh-FrYeM?si=05mwvnxDxbZ_EAtx&t=2133) (Commit Your Code Conference, Dallas, TX, Dec 2024)
 - Meet the Web Framework from the Future (Dev Innovation Summit, Santa Clara, CA, Nov 2024)
 - [Build your own React Metaframework](https://youtu.be/4V_Wz_k35C8?si=wvar4Ra5i-aO6e6q) (React Rally, Salt Lake City, UT, Aug 2024)
