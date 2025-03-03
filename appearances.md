@@ -17,6 +17,8 @@
 
 ## Podcasts
 
+- [Building Async UIs without the hassle with Dev Agrawal](https://podrocket.logrocket.com/building-async-uis-without-the-hassle-dev-agrawal) (PodRocket, Virtual, Feb 2025)
+- [Solid.js IS REALLY FAST! Concept breakdown with Dev Agrawal](https://youtu.be/TwpcWoZCQ_4?si=MJuNkZ1t1XenVDVO) (The Programming Podcast, Virtual, Jan 2025)
 - [Realtime Frameworks](https://www.youtube.com/live/q8AlF3QcR2M?si=hdyr5Gu8ie0Lcsbx) (AJC and the Web Devs, Virtual, Dec 2024)
 - [Nitro, Vinxi, and RSCs](https://egghead.io/nitro-vinxi-and-rscs-whats-good-with-dev-agrawal~s577t) (What's Good (Egghead.io), Virtual, Sep 2024)
 - [Build your own metaframework with Vinxi](https://www.youtube.com/live/2m9ErnaDy6s?si=o5XAnyr0XzDzXFXD) (Learn With Jason, Virtual, Jul 2024)
