@@ -110,8 +110,8 @@ I build and teach how to build awesome fullstack applications.
 
 ## Appearances (Conferences, Podcasts, Meetups)
 
-- **Talk:** Building Asynchronous UIs Without The Hassle (Codemash, Sandusky, OH, Jan 2025)
-- **Talk:** Harnessing Events for Reactive and AI-powered Frontends (EDA Summit, Virtual, Dec 2024)
+- **Talk:** [Building Asynchronous UIs Without The Hassle (Codemash, Sandusky, OH, Jan 2025)](https://youtu.be/pX5r_jTLbvw?si=qjTPBQkyb-zRP96R)
+- **Talk:** [Harnessing Events for Reactive and AI-powered Frontends (EDA Summit, Virtual, Dec 2024)](https://edasummit.com/videos/harnessing-events-for-reactive-and-ai-powered-frontends/)
 - **Talk:** [Deploying Stateful Realtime Services To The Edge](https://www.youtube.com/live/_cCmh-FrYeM?si=05mwvnxDxbZ_EAtx&t=2133) (Commit Your Code Conference, Dallas, TX, Dec 2024)
 - **Talk:** [Build your own React Metaframework](https://youtu.be/4V_Wz_k35C8?si=wvar4Ra5i-aO6e6q) (React Rally, Salt Lake City, UT, Aug 2024)
 - **Podcast:** [What's New in React 19 (and What That Means for You)](https://youtu.be/8GuvVaEWjzk?si=9sf5hn8ArtPzz9Os) (Scrimba Podcast, Virtual, Jun 2024)
