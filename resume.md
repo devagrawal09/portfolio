@@ -119,6 +119,8 @@ I build and teach how to build awesome fullstack applications.
 - **Workshop:** [From Todo App to B2B SaaS with Next.js and Clerk](https://gitnation.com/contents/from-todo-app-to-b2b-saas-with-nextjs-and-clerk) (React Summit US, Jersey City, NJ, Dec 2023)
 - **Talk:** [Beyond the Login Page: Authentication in Next.js](https://youtu.be/44b2U0uGQ0k?si=zTFY-NBByjZw_OFq) (Next.js Conf, San Francisco, CA, Oct 2023)
 
+[Complete list](https://github.com/devagrawal09/portfolio/blob/master/appearances.md)
+
 ## Education
 
 ### Bachelor’s Degree – University of Cincinnati (Aug 2018 – May 2023)
