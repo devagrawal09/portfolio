@@ -30,10 +30,11 @@ I build and teach how to build awesome fullstack applications.
 
 ### Software Engineer (SmartData) (Apr 2024 - Current)
 
+- Building an **AI powered** project management assistant
 - Built the **next gen member application** for a healthcare company
 - Implemented critical improvements for performance, developer experience, and cost efficiency
 - Collaborated with the product, design, quality assurance, infrastructure, and security teams
-- Used **Remix**, **React**, **Azure**, and **Okta**
+- Used **Tanstack**, **Remix**, **React**, **Azure**, and **Okta**
 
 ### Developer Advocate (Clerk.com) (May 2023 - Feb 2024)
 
