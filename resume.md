@@ -16,11 +16,11 @@ I build and teach how to build awesome fullstack applications.
 
 ## Technical Skills
 
-**Languages:** TypeScript, Python (Django), C# (.NET Core), Java (Spring), PHP, HTML and CSS
+**Languages:** TypeScript, Python, C#, Java, PHP, HTML and CSS
 
-**Web:** React (Next, Remix, Gatsby), Svelte, Vue, Angular, Express, Nest, Socket.io
+**Web:** React, Solidjs, Angular, Vue, Svelte, Express, Next, Socket.io
 
-**Enterprise:** Microservices, Domain-Driven Design, Event Driven Architecture
+**Architecture:** Event Sourcing, CQRS, Microservices, Domain-Driven Design
 
 **Cross platform:** Ionic, React Native, Electron, PWA
 
@@ -28,10 +28,16 @@ I build and teach how to build awesome fullstack applications.
 
 ## Work Experience
 
-### Software Engineer (SmartData) (Apr 2024 - Current)
+### Software Engineer (Xolvio) (Apr 2025 - Current)
 
-- Building an **AI powered** project management assistant
-- Built the **next gen member application** for a healthcare company
+- Building a machine learning platform to help analysts run quantum algorithms
+- Working with cutting edge Event Sourcing, GraphQL, and AI technologies
+- Used **React Router**, **Apollo GraphQL**, **KurrentDB**, **Emmett**, and **Google Cloud**
+
+### Software Engineer (SmartData) (Apr 2024 - Apr 2025)
+
+- Built an **AI powered** project management assistant to accelerate internal processes
+- Built a **next gen member application** for a healthcare company
 - Implemented critical improvements for performance, developer experience, and cost efficiency
 - Collaborated with the product, design, quality assurance, infrastructure, and security teams
 - Used **Tanstack**, **Remix**, **React**, **Azure**, and **Okta**
