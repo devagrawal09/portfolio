@@ -4,7 +4,7 @@
 
 - Meet The Web Framework From The Future (Frontend Nation, Virtual, June 2025)
 - Sync engine's best friend: fine-grained rendering (Local First Conf, Berlin, Germany, May 2025)
-- [Building Asynchronous UIs Without The Hassle](https://youtu.be/N1wSVaUdV_U) (Stir Trek, Columbus, OH, Jan 2025)
+- [Building Asynchronous UIs Without The Hassle](https://youtu.be/N1wSVaUdV_U) (Stir Trek, Columbus, OH, May 2025)
 - [Building Asynchronous UIs Without The Hassle](https://youtu.be/pX5r_jTLbvw?si=qjTPBQkyb-zRP96R) (Codemash, Sandusky, OH, Jan 2025)
 - [Harnessing Events for Reactive and AI-powered Frontends](https://edasummit.com/videos/harnessing-events-for-reactive-and-ai-powered-frontends/) (EDA Summit, Virtual, Dec 2024)
 - [Deploying Stateful Realtime Services To The Edge](https://www.youtube.com/live/_cCmh-FrYeM?si=05mwvnxDxbZ_EAtx&t=2133) (Commit Your Code Conference, Dallas, TX, Dec 2024)
