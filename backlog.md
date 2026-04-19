@@ -310,7 +310,7 @@ Avoid:
 - [x] Create a fresh SolidStart v2 app using the current recommended setup
 - [x] Add TypeScript, linting, formatting, and project conventions
 - [x] Set up app shell, routing, layout, and metadata strategy
-- [ ] Set up a design system foundation (tokens, spacing, typography, color)
+- [x] Set up a design system foundation (tokens, spacing, typography, color)
 - [ ] Add analytics and structured metadata scaffolding
 
 ## Phase 2 — content modeling
@@ -411,6 +411,18 @@ Avoid:
 - During verification, debugged a typecheck failure caused by using React-style camelCase inline-style keys with Solid's `JSX.CSSProperties`; fixed the root cause by converting the new style objects to Solid-compatible kebab-case keys
 
 **Verification:** `npm run verify` and `npm run build`
+
+### Iteration 5 — 2026-04-19
+**Completed:** Phase 1, item 4 — set up a reusable design system foundation for `rewrite/`
+
+- Expanded `src/styles/global.css` with CSS custom properties for the color palette, spacing scale, typography scale, radii, and layout widths
+- Refactored `src/styles/tokens.ts` to expose semantic design tokens that reference the shared CSS variables instead of raw color literals
+- Added `src/styles/recipes.ts` with reusable page-shell style recipes so top-level routes stop duplicating the same spacing / type / scaffold patterns
+- Updated `Layout` plus the `work`, `talks`, `open-source`, `writing`, `about`, and `contact` routes to consume the shared tokens/recipes
+- Refined the homepage token usage so the hero, proof bar, and “Currently” section all read from the same design-system foundation
+- During verification, `npm run verify` initially failed because Prettier found unformatted edits in `src/routes/about.tsx` and `src/routes/writing.tsx`; fixed the root cause by running the formatter and re-running the full verification pipeline
+
+**Verification:** `npm run verify`, `npm run build`, then `npm run format && npm run verify && npm run build`
 
 ---
 

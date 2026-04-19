@@ -2,7 +2,7 @@ import { A, useLocation } from "@solidjs/router";
 import type { JSX, ParentProps } from "solid-js";
 import { For } from "solid-js";
 import { NAV_LINKS, SITE } from "~/config/site";
-import { colors } from "~/styles/tokens";
+import { colors, space, text } from "~/styles/tokens";
 
 const styles = {
   root: {
@@ -15,7 +15,7 @@ const styles = {
     display: "flex",
     "align-items": "center",
     "justify-content": "space-between",
-    padding: "1.25rem 2rem",
+    padding: `${space[5]} ${space[8]}`,
     "border-bottom": `1px solid ${colors.border}`,
     position: "sticky",
     top: "0",
@@ -32,12 +32,12 @@ const styles = {
 
   navLinks: {
     display: "flex",
-    gap: "1.5rem",
+    gap: space[6],
     "align-items": "center",
   } satisfies JSX.CSSProperties,
 
   navLink: {
-    "font-size": "0.875rem",
+    "font-size": text.sm,
     "font-weight": 500,
     transition: "color 0.15s",
   } satisfies JSX.CSSProperties,
@@ -47,7 +47,7 @@ const styles = {
   } satisfies JSX.CSSProperties,
 
   footer: {
-    padding: "2rem",
+    padding: space[8],
     "border-top": `1px solid ${colors.border}`,
     display: "flex",
     "align-items": "center",

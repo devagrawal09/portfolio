@@ -1,7 +1,7 @@
 import { For } from "solid-js";
-import { PageMeta } from "~/components/PageMeta";
-import { colors } from "~/styles/tokens";
 import type { JSX } from "solid-js";
+import { PageMeta } from "~/components/PageMeta";
+import { colors, layout, radius, space, text } from "~/styles/tokens";
 
 const proofItems = [
   { label: "DevRel Engineer", detail: "PowerSync" },
@@ -12,36 +12,36 @@ const proofItems = [
 
 const styles: Record<string, JSX.CSSProperties> = {
   hero: {
-    "max-width": "780px",
+    "max-width": layout.contentWidth,
     margin: "0 auto",
     padding: "5rem 2rem 4rem",
   },
   eyebrow: {
-    "font-size": "0.75rem",
+    "font-size": text.xs,
     "font-weight": "600",
     "letter-spacing": "0.12em",
     "text-transform": "uppercase",
     color: colors.accent,
-    "margin-bottom": "1rem",
+    "margin-bottom": space[4],
   },
   headline: {
-    "font-size": "clamp(2rem, 5vw, 3.25rem)",
+    "font-size": text.hero,
     "font-weight": "700",
     "line-height": "1.15",
     "letter-spacing": "-0.02em",
-    color: "#f1f5f9",
-    "margin-bottom": "1.25rem",
+    color: colors.textBright,
+    "margin-bottom": space[5],
   },
   subline: {
-    "font-size": "1.125rem",
+    "font-size": text.lg,
     color: colors.textMuted,
-    "max-width": "580px",
-    "margin-bottom": "2rem",
+    "max-width": layout.contentNarrow,
+    "margin-bottom": space[8],
     "line-height": "1.7",
   },
   ctaRow: {
     display: "flex",
-    gap: "1rem",
+    gap: space[4],
     "flex-wrap": "wrap",
   },
   ctaPrimary: {
@@ -49,7 +49,7 @@ const styles: Record<string, JSX.CSSProperties> = {
     padding: "0.625rem 1.5rem",
     "background-color": colors.accent,
     color: colors.bg,
-    "border-radius": "6px",
+    "border-radius": radius.md,
     "font-weight": "600",
     "font-size": "0.9rem",
   },
@@ -58,7 +58,7 @@ const styles: Record<string, JSX.CSSProperties> = {
     padding: "0.625rem 1.5rem",
     border: `1px solid ${colors.border}`,
     color: colors.textMuted,
-    "border-radius": "6px",
+    "border-radius": radius.md,
     "font-size": "0.9rem",
   },
   proofBar: {
@@ -66,12 +66,12 @@ const styles: Record<string, JSX.CSSProperties> = {
     "flex-wrap": "wrap",
     "border-top": `1px solid ${colors.border}`,
     "border-bottom": `1px solid ${colors.border}`,
-    "max-width": "780px",
+    "max-width": layout.contentWidth,
     margin: "0 auto",
   },
   proofItem: {
     flex: "1 1 160px",
-    padding: "1.25rem 2rem",
+    padding: `${space[5]} ${space[8]}`,
     "border-right": `1px solid ${colors.border}`,
   },
   proofLabel: {
@@ -83,29 +83,29 @@ const styles: Record<string, JSX.CSSProperties> = {
   },
   proofDetail: {
     display: "block",
-    "font-size": "0.75rem",
+    "font-size": text.xs,
     color: colors.textFaint,
   },
   nowSection: {
-    "max-width": "780px",
+    "max-width": layout.contentWidth,
     margin: "0 auto",
-    padding: "3.5rem 2rem",
+    padding: `${space[14]} ${space[8]}`,
   },
   sectionHeading: {
-    "font-size": "0.75rem",
+    "font-size": text.xs,
     "font-weight": "600",
     "letter-spacing": "0.12em",
     "text-transform": "uppercase",
     color: colors.textFaint,
-    "margin-bottom": "1.25rem",
+    "margin-bottom": space[5],
   },
   nowList: {
     "list-style": "none",
     display: "flex",
     "flex-direction": "column",
-    gap: "0.75rem",
+    gap: space[3],
     color: colors.textMuted,
-    "font-size": "0.95rem",
+    "font-size": text.base,
     "line-height": "1.7",
   },
 };
