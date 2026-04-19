@@ -58,6 +58,12 @@ typings/
 .cache/
 public
 
+# SolidStart rewrite artifacts
+rewrite/node_modules/
+rewrite/.output/
+rewrite/.nitro/
+rewrite/dist/
+
 # Mac files
 .DS_Store
 
