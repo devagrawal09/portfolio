@@ -324,14 +324,14 @@ Avoid:
 ## Phase 3 — homepage
 - [x] Build hero section
 - [x] Build proof bar
-- [ ] Build featured work section
+- [x] Build featured work section
 - [x] Build talks highlights section
 - [x] Build OSS highlights section
 - [ ] Build writing highlights section
 - [x] Build CTA footer
 
 ## Phase 4 — secondary pages
-- [ ] Work / Projects page
+- [x] Work / Projects page
 - [x] Talks / Appearances page
 - [ ] Open Source page
 - [ ] Writing page
@@ -467,6 +467,18 @@ Avoid:
 - During Hermes verification, found Solid reactivity lint warnings caused by aliasing `props.item` / `props.edu` outside JSX in the new About page subcomponents; fixed the root cause by reading props directly inside JSX so `eslint-plugin-solid` passes cleanly
 
 **Verification:** `npm run format:check`, `npm run verify`, and `npm run build`
+
+---
+
+### Iteration 10 — 2026-04-19
+**Completed:** Phase 3 (featured work section) + Phase 4 (Work / Projects page)
+
+- Added `rewrite/src/data/projects.ts` as typed featured-project content derived from `resume.md` and legacy showcase notes so project curation now lives in one reusable source
+- Expanded `rewrite/src/routes/index.tsx` with a homepage Featured Work section wired to the curated project data and `featured_work_click` analytics events
+- Replaced the placeholder `rewrite/src/routes/work.tsx` scaffold with a data-driven Work page covering project summaries, architecture framing, outcomes, tech tags, and external links
+- During Hermes verification, `npm run verify` initially failed because `prettier --check` flagged `src/routes/work.tsx`; fixed the root cause by formatting the file and re-running the full verification pipeline
+
+**Verification:** `npm run verify`, `npm run build`, then `npm run format -- --write src/routes/work.tsx && npm run verify && npm run build`
 
 ---
 

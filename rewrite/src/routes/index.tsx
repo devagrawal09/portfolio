@@ -5,6 +5,7 @@ import { analytics } from "~/config/analytics";
 import { PageMeta } from "~/components/PageMeta";
 import { colors, layout, radius, space, text } from "~/styles/tokens";
 import { appearances } from "~/data/talks";
+import { homepageFeatured, type FeaturedProject } from "~/data/projects";
 import {
   FOOTER_CTAS,
   HERO,
@@ -208,6 +209,66 @@ const s: Record<string, JSX.CSSProperties> = {
     "margin-left": "auto",
   },
 
+  // ── Featured work cards ──
+  workGrid: {
+    display: "flex",
+    "flex-direction": "column",
+    gap: space[4],
+  },
+  workCard: {
+    padding: `${space[6]} ${space[6]}`,
+    "background-color": colors.bgElevated,
+    "border-radius": radius.lg,
+    border: `1px solid ${colors.border}`,
+  },
+  workCardHeader: {
+    display: "flex",
+    "align-items": "flex-start",
+    "justify-content": "space-between",
+    gap: space[4],
+    "flex-wrap": "wrap",
+    "margin-bottom": space[3],
+  },
+  workCardTitle: {
+    "font-size": text.base,
+    "font-weight": "700",
+    color: colors.textBright,
+  },
+  workCardMeta: {
+    "font-size": text.xs,
+    color: colors.textFaint,
+    "white-space": "nowrap",
+  },
+  workCardTagline: {
+    "font-size": text.sm,
+    color: colors.textMuted,
+    "line-height": "1.6",
+    "margin-bottom": space[4],
+  },
+  workCardTags: {
+    display: "flex",
+    "flex-wrap": "wrap",
+    gap: space[2],
+  },
+  workCardTag: {
+    "font-size": "0.7rem",
+    "font-weight": "600",
+    "letter-spacing": "0.06em",
+    "text-transform": "uppercase",
+    color: colors.textFaint,
+    "background-color": colors.bgSubtle,
+    border: `1px solid ${colors.border}`,
+    "border-radius": radius.sm,
+    padding: "0.15rem 0.5rem",
+  },
+  workCardLink: {
+    "font-size": text.xs,
+    color: colors.accent,
+    "flex-shrink": "0",
+    "align-self": "flex-start",
+    "margin-top": space[1],
+  },
+
   // ── Now section ──
   nowList: {
     "list-style": "none",
@@ -307,6 +368,44 @@ function OssRow(props: { item: OssItem; isLast: boolean }) {
   );
 }
 
+function WorkCard(props: { project: FeaturedProject; onNavigate: () => void }) {
+  return (
+    <div style={s.workCard}>
+      <div style={s.workCardHeader}>
+        <span style={s.workCardTitle}>{props.project.title}</span>
+        <span style={s.workCardMeta}>
+          {props.project.role} · {props.project.period}
+        </span>
+      </div>
+      <p style={s.workCardTagline}>{props.project.tagline}</p>
+      <div
+        style={{
+          display: "flex",
+          "align-items": "flex-end",
+          "justify-content": "space-between",
+          gap: space[4],
+          "flex-wrap": "wrap",
+        }}
+      >
+        <div style={s.workCardTags}>
+          <For each={props.project.tech}>{(tag) => <span style={s.workCardTag}>{tag}</span>}</For>
+        </div>
+        {(props.project.url ?? props.project.repoUrl) && (
+          <a
+            href={props.project.url ?? props.project.repoUrl}
+            style={s.workCardLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={props.onNavigate}
+          >
+            View ↗
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function CtaCard(props: { cta: FooterCta }) {
   const trackClick = () =>
     analytics.trackEvent(props.cta.analyticsEvent, { location: "home_footer" });
@@ -328,6 +427,8 @@ function CtaCard(props: { cta: FooterCta }) {
 export default function Home() {
   const trackHeroCta = (event: HeroCta["analyticsEvent"]) => () =>
     analytics.trackEvent(event, { location: "home_hero" });
+  const trackWorkClick = (slug: string) => () =>
+    analytics.trackEvent("featured_work_click", { slug, location: "home_featured" });
   const trackTalkClick = (title: string) => () =>
     analytics.trackEvent("talk_click", { title, location: "home_featured" });
 
@@ -365,6 +466,21 @@ export default function Home() {
           {(item, i) => <ProofItem item={item} isLast={i() === PROOF_STATS.length - 1} />}
         </For>
       </div>
+
+      {/* ── Featured work ── */}
+      <section style={s.section}>
+        <div style={s.sectionHeader}>
+          <span style={s.sectionLabel}>Featured Work</span>
+          <A href="/work" style={s.sectionLink}>
+            All projects →
+          </A>
+        </div>
+        <div style={s.workGrid}>
+          <For each={homepageFeatured}>
+            {(project) => <WorkCard project={project} onNavigate={trackWorkClick(project.slug)} />}
+          </For>
+        </div>
+      </section>
 
       {/* ── Featured talks ── */}
       <section style={s.section}>
