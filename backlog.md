@@ -294,6 +294,44 @@ Avoid:
 - fullstack architecture
 - developer tooling / demos / education
 
+## Research synthesis — practical portfolio recommendations
+
+### What strong developer portfolios consistently do
+- communicate current positioning within ~5 seconds
+- use typography, spacing, and contrast to feel premium before relying on motion
+- surface proof above the fold instead of hiding credibility in secondary pages
+- curate a small number of strong projects instead of dumping every historical artifact
+- make it obvious how to contact, collaborate, or invite the person to speak
+
+### Recommended visual direction for this rewrite
+- Primary reference blend: **70% Vercel / Linear**, **20% Stripe/editorial**, **10% tasteful motion**
+- Desired feel: modern devtools/product-engineer aesthetic with crisp typography, restrained color, subtle gradients, premium spacing, and light editorial polish
+- Motion should support hierarchy and delight, not become the main event
+- Borrow polish from Awwwards-style sites without copying their self-indulgent complexity or maintenance burden
+
+### Homepage execution rules
+- Hero must answer: who Dev is, what Dev does, what ecosystems/problems he works in, and why he is credible
+- Proof bar should stay above the fold and emphasize PowerSync, Solid ecosystem work, TanStack Start, and speaking/community proof
+- Homepage should prioritize: hero -> proof bar -> featured work -> talks highlights -> OSS highlights -> writing highlights -> dual CTA footer
+- Keep CTAs focused on the two highest-value paths: **speaking** and **collaboration / contact**
+- Featured work should favor 3-5 flagship items with architecture/outcome framing over broad archives
+
+### Visual system guidance
+- Typography and spacing are higher leverage than flashy animation
+- Use one restrained accent color plus a mostly neutral palette
+- Screenshots, cards, and proof blocks should look product-quality and consistent
+- Prefer subtle borders, structured cards, and premium whitespace over decorative backgrounds
+- The design should read like "current, credible, technically sharp" rather than "portfolio template" or "motion demo"
+
+### Anti-patterns to avoid
+- generic "welcome to my portfolio" copy
+- old-template vibes or decorative imagery unrelated to engineering identity
+- giant autobiography sections near the top of the site
+- equal emphasis on outdated or weak projects
+- too many colors, too many CTAs, or too many social links
+- heavy motion that hurts comprehension, performance, or maintainability
+- dumping blog archives instead of curating the writing that reinforces the brand
+
 ---
 
 ## Rewrite backlog
@@ -301,7 +339,7 @@ Avoid:
 ## Phase 0 — foundation / decisions
 - [x] Decide final brand position and homepage messaging
 - [ ] Decide final information architecture
-- [ ] Decide visual direction / references
+- [x] Decide visual direction / references
 - [ ] Decide content source strategy (markdown, mdx, typed data, or mixed)
 - [ ] Decide deployment target for SolidStart app
 - [ ] Decide whether to preserve any legacy URLs for SEO
@@ -333,7 +371,7 @@ Avoid:
 ## Phase 4 — secondary pages
 - [x] Work / Projects page
 - [x] Talks / Appearances page
-- [ ] Open Source page
+- [x] Open Source page
 - [ ] Writing page
 - [ ] About page
 - [ ] Contact page
@@ -479,6 +517,31 @@ Avoid:
 - During Hermes verification, `npm run verify` initially failed because `prettier --check` flagged `src/routes/work.tsx`; fixed the root cause by formatting the file and re-running the full verification pipeline
 
 **Verification:** `npm run verify`, `npm run build`, then `npm run format -- --write src/routes/work.tsx && npm run verify && npm run build`
+
+---
+
+### Iteration 11 — 2026-04-19
+**Completed:** Portfolio design research synthesis captured in backlog
+
+- Added a research-backed recommendation section that distills common patterns from modern developer portfolios, recruiter-oriented advice, and design-system references
+- Recorded the preferred direction for this rewrite as a Vercel/Linear-led product-engineer aesthetic with a small Stripe/editorial influence and restrained motion
+- Documented homepage execution rules, visual-system guidance, and anti-patterns so future iterations stay aligned with a proof-first portfolio instead of drifting toward template or Awwwards-cosplay territory
+
+**Verification:** manual review of updated `backlog.md`
+
+---
+
+### Iteration 12 — 2026-04-19
+**Completed:** Phase 4 — Open Source page
+
+- Replaced the placeholder scaffold in `rewrite/src/routes/open-source.tsx` with a full data-driven page
+- Imports `OSS_CONTRIBUTIONS` from `~/data/profile` (no new data files needed)
+- Page structure: eyebrow → heading → positioning body text → stats bar (5 projects / 2 core+maintainer / 2 authored) → three grouped sections (Core & Maintainer Roles, Authored Libraries, Community Contributions) → GitHub CTA footer
+- `ContributionCard` sub-component shows name, role badge, since date, description, and "View on GitHub ↗" link with `oss_click` analytics event
+- `ContributionSection` sub-component mirrors the `AppearanceSection` pattern from `talks.tsx`
+- All styles composed from existing tokens (`colors`, `radius`, `space`, `text`) and `pageStyles` recipes — no new dependencies
+- Analytics wired using existing `oss_click` and `social_click` events — `analytics.ts` not touched
+- Also marked "Decide visual direction / references" complete in Phase 0 — the research synthesis section added in Iteration 11 already satisfies that decision
 
 ---
 
