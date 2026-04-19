@@ -315,7 +315,7 @@ Avoid:
 
 ## Phase 2 — content modeling
 - [ ] Inventory what existing content should be kept, rewritten, or deleted
-- [ ] Convert `resume.md` into structured website content
+- [x] Convert `resume.md` into structured website content
 - [x] Convert `appearances.md` into structured talks data
 - [ ] Curate featured projects and case studies
 - [ ] Curate writing highlights
@@ -456,6 +456,17 @@ Avoid:
 - During verification, found a TypeScript root-cause issue where the new CTA analytics event names were typed as generic strings and not part of the shared `AnalyticsEvent` union; fixed it by threading the typed event union through `src/data/home.ts` and extending the analytics event list with the new homepage CTA events
 
 **Verification:** `npm run verify && npm run build`
+
+---
+
+### Iteration 9 — 2026-04-19
+**Completed:** Phase 2, item 2 — convert `resume.md` into structured website content
+
+- Added `rewrite/src/data/profile.ts` as typed structured content for work experience, open source contributions, community roles, and education derived from `resume.md`
+- Replaced the placeholder `rewrite/src/routes/about.tsx` scaffold with a data-driven About page that now surfaces current positioning plus structured sections for work history, OSS work, community leadership, education, and a contact CTA
+- During Hermes verification, found Solid reactivity lint warnings caused by aliasing `props.item` / `props.edu` outside JSX in the new About page subcomponents; fixed the root cause by reading props directly inside JSX so `eslint-plugin-solid` passes cleanly
+
+**Verification:** `npm run format:check`, `npm run verify`, and `npm run build`
 
 ---
 
