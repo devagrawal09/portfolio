@@ -1,4 +1,5 @@
 import type { JSX } from "solid-js";
+import { analytics } from "~/config/analytics";
 import { PageMeta } from "~/components/PageMeta";
 import { pageStyles } from "~/styles/recipes";
 import { colors } from "~/styles/tokens";
@@ -9,6 +10,14 @@ const linkStyle: JSX.CSSProperties = {
 };
 
 export default function ContactPage() {
+  const trackContactEmail = () => {
+    analytics.trackEvent("cta_contact", { location: "contact_page", channel: "email" });
+  };
+
+  const trackGithub = () => {
+    analytics.trackEvent("social_click", { location: "contact_page", network: "github" });
+  };
+
   return (
     <>
       <PageMeta title="Contact" description="Get in touch with Dev Agrawal." />
@@ -17,7 +26,7 @@ export default function ContactPage() {
         <h1 style={pageStyles.pageHeading}>Contact</h1>
         <p style={pageStyles.bodyText}>
           Reach out via{" "}
-          <a href="mailto:contact@devagr.me" style={linkStyle}>
+          <a href="mailto:contact@devagr.me" style={linkStyle} onClick={trackContactEmail}>
             contact@devagr.me
           </a>{" "}
           or find me on{" "}
@@ -26,6 +35,7 @@ export default function ContactPage() {
             style={linkStyle}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackGithub}
           >
             GitHub
           </a>

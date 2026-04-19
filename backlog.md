@@ -311,7 +311,7 @@ Avoid:
 - [x] Add TypeScript, linting, formatting, and project conventions
 - [x] Set up app shell, routing, layout, and metadata strategy
 - [x] Set up a design system foundation (tokens, spacing, typography, color)
-- [ ] Add analytics and structured metadata scaffolding
+- [x] Add analytics and structured metadata scaffolding
 
 ## Phase 2 — content modeling
 - [ ] Inventory what existing content should be kept, rewritten, or deleted
@@ -423,6 +423,17 @@ Avoid:
 - During verification, `npm run verify` initially failed because Prettier found unformatted edits in `src/routes/about.tsx` and `src/routes/writing.tsx`; fixed the root cause by running the formatter and re-running the full verification pipeline
 
 **Verification:** `npm run verify`, `npm run build`, then `npm run format && npm run verify && npm run build`
+
+### Iteration 6 — 2026-04-19
+**Completed:** Phase 1, item 5 — add analytics and structured metadata scaffolding for `rewrite/`
+
+- Added `src/config/analytics.ts` and `src/components/AnalyticsTracker.tsx` with a no-op-by-default Plausible-compatible analytics scaffold that only activates when `VITE_ANALYTICS_DOMAIN` is configured
+- Added `src/components/JsonLd.tsx` plus root-level `WebSite` and `Person` JSON-LD so the rewrite now emits structured metadata on every page
+- Upgraded `src/components/PageMeta.tsx` to centralize canonical URLs, absolute OG image URLs, `twitter:*` tags, optional `noindex`, and per-page `WebPage` JSON-LD
+- Expanded `src/config/site.ts` with reusable social/profile metadata and wired homepage/contact CTAs to emit analytics events without introducing any runtime dependency when analytics is disabled
+- During implementation, Claude Code hit its turn limit mid-task, so the iteration was finished manually and verified directly in Hermes
+
+**Verification:** `npm run format && npm run verify && npm run build`
 
 ---
 

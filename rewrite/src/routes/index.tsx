@@ -1,5 +1,6 @@
 import { For } from "solid-js";
 import type { JSX } from "solid-js";
+import { analytics } from "~/config/analytics";
 import { PageMeta } from "~/components/PageMeta";
 import { colors, layout, radius, space, text } from "~/styles/tokens";
 
@@ -111,6 +112,14 @@ const styles: Record<string, JSX.CSSProperties> = {
 };
 
 export default function Home() {
+  const trackContactCta = () => {
+    analytics.trackEvent("cta_contact", { location: "home_hero" });
+  };
+
+  const trackSocialCta = () => {
+    analytics.trackEvent("social_click", { location: "home_hero", network: "github" });
+  };
+
   return (
     <>
       <PageMeta
@@ -128,7 +137,7 @@ export default function Home() {
           ecosystems. Currently DevRel at PowerSync.
         </p>
         <div style={styles.ctaRow}>
-          <a href="mailto:contact@devagr.me" style={styles.ctaPrimary}>
+          <a href="mailto:contact@devagr.me" style={styles.ctaPrimary} onClick={trackContactCta}>
             Get in touch
           </a>
           <a
@@ -136,6 +145,7 @@ export default function Home() {
             style={styles.ctaSecondary}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackSocialCta}
           >
             GitHub →
           </a>
