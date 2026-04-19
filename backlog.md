@@ -309,7 +309,7 @@ Avoid:
 ## Phase 1 — bootstrap the new app
 - [x] Create a fresh SolidStart v2 app using the current recommended setup
 - [x] Add TypeScript, linting, formatting, and project conventions
-- [ ] Set up app shell, routing, layout, and metadata strategy
+- [x] Set up app shell, routing, layout, and metadata strategy
 - [ ] Set up a design system foundation (tokens, spacing, typography, color)
 - [ ] Add analytics and structured metadata scaffolding
 
@@ -398,6 +398,17 @@ Avoid:
 - Updated `tsconfig.json` with `skipLibCheck` to keep type-checking practical against the current alpha stack
 - Updated `src/routes/index.tsx` to use Solid's `<For>` helper instead of array `.map()` for JSX rendering
 - Updated `README.md` with the rewrite quality-check commands
+
+**Verification:** `npm run verify` and `npm run build`
+
+### Iteration 4 — 2026-04-19
+**Completed:** Phase 1, item 3 — set up app shell, routing, layout, and metadata strategy for `rewrite/`
+
+- Added a shared `Layout` component in `src/components/` with sticky top nav, global footer, active-link state, and shared chrome for all routes
+- Added `src/config/site.ts`, `src/components/PageMeta.tsx`, and global styles/tokens to centralize site metadata, navigation config, and base visual primitives
+- Refactored `src/app.tsx` and `src/routes/index.tsx` to use the shared layout and reusable metadata helper instead of route-local shell code
+- Added minimal routed pages for `work`, `talks`, `open-source`, `writing`, `about`, and `contact` so the intended IA now exists in the SolidStart app
+- During verification, debugged a typecheck failure caused by using React-style camelCase inline-style keys with Solid's `JSX.CSSProperties`; fixed the root cause by converting the new style objects to Solid-compatible kebab-case keys
 
 **Verification:** `npm run verify` and `npm run build`
 
