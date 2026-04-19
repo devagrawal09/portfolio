@@ -1,5 +1,6 @@
 import { Title, Meta } from "@solidjs/meta";
 import { A } from "@solidjs/router";
+import { For } from "solid-js";
 
 const proofItems = [
   { label: "DevRel Engineer", detail: "PowerSync" },
@@ -20,8 +21,17 @@ export default function Home() {
       <nav style={styles.nav}>
         <span style={styles.navBrand}>devagr.me</span>
         <div style={styles.navLinks}>
-          <A href="/" style={styles.navLink}>Home</A>
-          <a href="https://github.com/devagrawal09" style={styles.navLink} target="_blank" rel="noopener noreferrer">GitHub</a>
+          <A href="/" style={styles.navLink}>
+            Home
+          </A>
+          <a
+            href="https://github.com/devagrawal09"
+            style={styles.navLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
         </div>
       </nav>
 
@@ -31,22 +41,33 @@ export default function Home() {
           Building demos, systems, and developer experiences for the modern web.
         </h1>
         <p style={styles.subline}>
-          I ship fullstack demos, technical content, and open source work in the Solid and TanStack ecosystems.
-          Currently DevRel at PowerSync.
+          I ship fullstack demos, technical content, and open source work in the Solid and TanStack
+          ecosystems. Currently DevRel at PowerSync.
         </p>
         <div style={styles.ctaRow}>
-          <a href="mailto:contact@devagr.me" style={styles.ctaPrimary}>Get in touch</a>
-          <a href="https://github.com/devagrawal09" style={styles.ctaSecondary} target="_blank" rel="noopener noreferrer">GitHub →</a>
+          <a href="mailto:contact@devagr.me" style={styles.ctaPrimary}>
+            Get in touch
+          </a>
+          <a
+            href="https://github.com/devagrawal09"
+            style={styles.ctaSecondary}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub →
+          </a>
         </div>
       </section>
 
       <section style={styles.proofBar}>
-        {proofItems.map((item) => (
-          <div style={styles.proofItem}>
-            <span style={styles.proofLabel}>{item.label}</span>
-            <span style={styles.proofDetail}>{item.detail}</span>
-          </div>
-        ))}
+        <For each={proofItems}>
+          {(item) => (
+            <div style={styles.proofItem}>
+              <span style={styles.proofLabel}>{item.label}</span>
+              <span style={styles.proofDetail}>{item.detail}</span>
+            </div>
+          )}
+        </For>
       </section>
 
       <section style={styles.nowSection}>

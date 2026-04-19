@@ -18,6 +18,21 @@ npm install        # or pnpm install
 npm run dev        # starts Vite dev server (typically http://localhost:5173)
 ```
 
+### Rewrite quality checks
+
+```bash
+npm run typecheck
+npm run lint
+npm run format:check
+npm run verify     # runs typecheck + lint + format check
+```
+
+To fix formatting:
+
+```bash
+npm run format
+```
+
 To build for production:
 
 ```bash

@@ -308,7 +308,7 @@ Avoid:
 
 ## Phase 1 — bootstrap the new app
 - [x] Create a fresh SolidStart v2 app using the current recommended setup
-- [ ] Add TypeScript, linting, formatting, and project conventions
+- [x] Add TypeScript, linting, formatting, and project conventions
 - [ ] Set up app shell, routing, layout, and metadata strategy
 - [ ] Set up a design system foundation (tokens, spacing, typography, color)
 - [ ] Add analytics and structured metadata scaffolding
@@ -388,6 +388,18 @@ Avoid:
 - `src/routes/index.tsx` (branded homepage content) preserved unchanged
 
 **Verification:** `npm install` and `npm run build` both pass in `rewrite/`.
+
+### Iteration 3 — 2026-04-19
+**Completed:** Phase 1, item 2 — add linting, formatting, and project conventions for `rewrite/`
+
+- Added ESLint 9 + `typescript-eslint` + `eslint-plugin-solid`
+- Added Prettier 3 plus `.prettierrc` and `.editorconfig`
+- Added rewrite scripts: `typecheck`, `lint`, `format`, `format:check`, and `verify`
+- Updated `tsconfig.json` with `skipLibCheck` to keep type-checking practical against the current alpha stack
+- Updated `src/routes/index.tsx` to use Solid's `<For>` helper instead of array `.map()` for JSX rendering
+- Updated `README.md` with the rewrite quality-check commands
+
+**Verification:** `npm run verify` and `npm run build`
 
 ---
 
