@@ -316,7 +316,7 @@ Avoid:
 ## Phase 2 — content modeling
 - [ ] Inventory what existing content should be kept, rewritten, or deleted
 - [ ] Convert `resume.md` into structured website content
-- [ ] Convert `appearances.md` into structured talks data
+- [x] Convert `appearances.md` into structured talks data
 - [ ] Curate featured projects and case studies
 - [ ] Curate writing highlights
 - [ ] Create a central profile/contact config
@@ -332,7 +332,7 @@ Avoid:
 
 ## Phase 4 — secondary pages
 - [ ] Work / Projects page
-- [ ] Talks / Appearances page
+- [x] Talks / Appearances page
 - [ ] Open Source page
 - [ ] Writing page
 - [ ] About page
@@ -434,6 +434,17 @@ Avoid:
 - During implementation, Claude Code hit its turn limit mid-task, so the iteration was finished manually and verified directly in Hermes
 
 **Verification:** `npm run format && npm run verify && npm run build`
+
+---
+
+### Iteration 7 — 2026-04-19
+**Completed:** Phase 2 (convert `appearances.md` into structured talks data) + Phase 4 (Talks / Appearances page)
+
+- Created `rewrite/src/data/talks.ts` with a typed `Appearance` interface (`title`, `event`, `location`, `date`, `url?`, `kind`, `isWorkshop?`) and all 31 appearances from `appearances.md` encoded newest-first; exports named slices `conferences`, `podcasts`, `meetups`
+- Replaced the placeholder scaffold in `src/routes/talks.tsx` with a data-driven page: stats bar (total / conferences / podcasts / meetups counts), three grouped sections (Conferences & Workshops, Podcasts & Shows, Meetups & Community), per-item links, Workshop badge, and a speaking CTA footer wired to `talk_click` and `cta_speaking` analytics events
+- All styles composed from existing design tokens and `pageStyles` recipe — no new dependencies introduced
+
+**Verification:** `npm run verify && npm run build`
 
 ---
 
