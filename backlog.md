@@ -299,7 +299,7 @@ Avoid:
 ## Rewrite backlog
 
 ## Phase 0 — foundation / decisions
-- [ ] Decide final brand position and homepage messaging
+- [x] Decide final brand position and homepage messaging
 - [ ] Decide final information architecture
 - [ ] Decide visual direction / references
 - [ ] Decide content source strategy (markdown, mdx, typed data, or mixed)
@@ -322,13 +322,13 @@ Avoid:
 - [ ] Create a central profile/contact config
 
 ## Phase 3 — homepage
-- [ ] Build hero section
-- [ ] Build proof bar
+- [x] Build hero section
+- [x] Build proof bar
 - [ ] Build featured work section
-- [ ] Build talks highlights section
-- [ ] Build OSS highlights section
+- [x] Build talks highlights section
+- [x] Build OSS highlights section
 - [ ] Build writing highlights section
-- [ ] Build CTA footer
+- [x] Build CTA footer
 
 ## Phase 4 — secondary pages
 - [ ] Work / Projects page
@@ -443,6 +443,17 @@ Avoid:
 - Created `rewrite/src/data/talks.ts` with a typed `Appearance` interface (`title`, `event`, `location`, `date`, `url?`, `kind`, `isWorkshop?`) and all 31 appearances from `appearances.md` encoded newest-first; exports named slices `conferences`, `podcasts`, `meetups`
 - Replaced the placeholder scaffold in `src/routes/talks.tsx` with a data-driven page: stats bar (total / conferences / podcasts / meetups counts), three grouped sections (Conferences & Workshops, Podcasts & Shows, Meetups & Community), per-item links, Workshop badge, and a speaking CTA footer wired to `talk_click` and `cta_speaking` analytics events
 - All styles composed from existing design tokens and `pageStyles` recipe — no new dependencies introduced
+
+**Verification:** `npm run verify && npm run build`
+
+---
+
+### Iteration 8 — 2026-04-19
+**Completed:** Phase 0 (finalize brand/homepage messaging) + Phase 3 (hero, proof bar, talks highlights, OSS highlights, CTA footer)
+
+- Added `rewrite/src/data/home.ts` as typed homepage content/config for positioning copy, proof stats, OSS credibility items, current-focus bullets, and CTA definitions so messaging stops living inline in the route
+- Rebuilt `rewrite/src/routes/index.tsx` into a fuller homepage slice: stronger branded hero, outcome-focused CTAs, proof bar, featured talks pulled from the structured talks data, OSS highlights, refreshed “Currently” section, and a dual-path CTA footer for speaking vs collaboration
+- During verification, found a TypeScript root-cause issue where the new CTA analytics event names were typed as generic strings and not part of the shared `AnalyticsEvent` union; fixed it by threading the typed event union through `src/data/home.ts` and extending the analytics event list with the new homepage CTA events
 
 **Verification:** `npm run verify && npm run build`
 

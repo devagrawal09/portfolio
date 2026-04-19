@@ -20,6 +20,8 @@ export type AnalyticsEvent =
   | "cta_contact"
   | "cta_resume"
   | "cta_speaking"
+  | "cta_work"
+  | "cta_talks"
   | "nav_click"
   | "featured_work_click"
   | "talk_click"
