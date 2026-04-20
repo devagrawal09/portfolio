@@ -384,7 +384,7 @@ Avoid:
 - [x] Fix mobile header spacing so the first nav link does not crowd the site name
 - [x] Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item
 - [x] Add accessibility review pass
-- [ ] Add performance review pass
+- [x] Add performance review pass
 - [x] Add responsive review pass
 - [x] Add SEO review pass
 
@@ -924,11 +924,36 @@ npm run build      # production build must pass cleanly
 
 ---
 
+### Iteration 34 — 2026-04-20
+
+**Completed:** Phase 5 — performance review pass
+
+- Audited representative production-preview routes with Lighthouse performance runs: `/`, `/work`, `/talks`, `/writing/isomorphic`, and `/contact`
+- All audited routes scored `100` for Performance with stable metrics across the set: FCP `1.2–1.5s`, LCP `1.4–1.5s`, TBT `0ms`, CLS `0`
+- No tracked source changes were required from the performance pass itself; the current route splitting, CSS footprint, and runtime overhead are already in a launch-ready state for this review gate
+- `npm run preview` still needed a temporary local-only `dist/server/entry-server.js` symlink to run under Node 25 with the current SolidStart alpha stack; this was used only to execute the audit and was not shipped as a repository change
+
+Left the broad `Final content sweep for stale claims / broken links` and `Launch the new site` items unchecked.
+
+**Verification:**
+```bash
+npm run verify
+npm run build
+# For the performance audit, production preview was started locally and Lighthouse was run against:
+#   /
+#   /work
+#   /talks
+#   /writing/isomorphic
+#   /contact
+# All five routes scored 100 Performance.
+```
+
+---
+
 ## Immediate next steps
 
 1. Finish the final content sweep for stale claims and broken links.
-2. Run a performance review pass.
-3. Launch the new site.
+2. Launch the new site.
 
 ---
 
