@@ -839,6 +839,27 @@ npm run build              # production build must pass cleanly
 #   - workshop entries still show the "Workshop" badge
 ```
 
+### Iteration 31 — 2026-04-20
+
+**Completed:** Phase 6 (partial) — final content sweep sub-step: social profile surface alignment (YouTube + X)
+
+- Added `twitter` (full URL) and `youtube` fields to `SOCIAL_LINKS` in `src/config/site.ts` so every consumer has a single source of truth instead of constructing URLs by string manipulation
+- Expanded `PROFILE_LINKS` (feeds `SITE.profile.sameAs`) to include both `twitter` and `youtube` URLs, aligning the JSON-LD `sameAs` array with the backlog guidance to prioritize GitHub, LinkedIn, YouTube, X, and email
+- Simplified the `SOCIAL_PROFILES` X entry in `src/data/contact.ts` to reference `SITE.social.twitter` directly instead of re-deriving the URL from the handle
+- Added a YouTube entry to `SOCIAL_PROFILES` so the Contact page now lists GitHub, LinkedIn, X / Twitter, and YouTube
+
+Left the broad `Final content sweep for stale claims / broken links` checkbox unchecked; this pass only addresses the social profile surface gap — a full sweep of remaining claims and links has not been done.
+
+**Verification:**
+```bash
+npx tsc --noEmit   # zero type errors
+npm run build      # production build must pass cleanly
+# Then open http://localhost:4173/contact and confirm:
+#   - "Find me online" section shows GitHub, LinkedIn, X / Twitter, YouTube
+#   - YouTube row links to https://youtube.com/@devagr
+#   - X / Twitter row links to https://x.com/devagrawal09
+```
+
 ---
 
 ## Immediate next steps

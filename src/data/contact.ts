@@ -64,8 +64,14 @@ export const SOCIAL_PROFILES: SocialProfile[] = [
   },
   {
     label: "X / Twitter",
-    url: `https://x.com/${SITE.social.twitterHandle.replace("@", "")}`,
+    url: SITE.social.twitter,
     handle: SITE.social.twitterHandle,
     analyticsProps: { location: "contact_page", network: "twitter" },
+  },
+  {
+    label: "YouTube",
+    url: SITE.social.youtube,
+    handle: "@devagr",
+    analyticsProps: { location: "contact_page", network: "youtube" },
   },
 ];

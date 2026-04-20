@@ -1,10 +1,17 @@
 const SOCIAL_LINKS = {
   github: "https://github.com/devagrawal09",
   linkedin: "https://www.linkedin.com/in/devagrawal09",
+  twitter: "https://x.com/devagrawal09",
   twitterHandle: "@devagrawal09",
+  youtube: "https://youtube.com/@devagr",
 } as const;
 
-const PROFILE_LINKS = [SOCIAL_LINKS.github, SOCIAL_LINKS.linkedin] as const;
+const PROFILE_LINKS = [
+  SOCIAL_LINKS.github,
+  SOCIAL_LINKS.linkedin,
+  SOCIAL_LINKS.twitter,
+  SOCIAL_LINKS.youtube,
+] as const;
 
 export const SITE = {
   name: "Dev Agrawal",
