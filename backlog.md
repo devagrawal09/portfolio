@@ -380,6 +380,9 @@ Avoid:
 ## Phase 5 — polish / credibility
 - [ ] Add custom OG images / social cards
 - [ ] Add subtle motion and interaction polish
+- [x] Improve large-screen layout density so wide desktop screens use horizontal space intentionally
+- [ ] Fix mobile header spacing so the first nav link does not crowd the site name
+- [ ] Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item
 - [ ] Add accessibility review pass
 - [ ] Add performance review pass
 - [ ] Add responsive review pass
@@ -633,6 +636,17 @@ npm run build
 **Verification:** `npm run verify` and `npm run build`
 
 ---
+
+### Iteration 19 — 2026-04-20
+**Completed:** Phase 5 — improve large-screen layout density so wide desktop screens use horizontal space intentionally
+
+- Added a desktop-only `@media (min-width: 1280px)` override in `src/styles/global.css` so the shared `--layout-content-width` token expands from 780px to 1080px on wide screens instead of leaving oversized gutters across the homepage and secondary pages
+- Updated `src/components/Layout.tsx` so the sticky header and footer now use centered inner wrappers tied to the same shared layout width token, keeping the wider page rhythm aligned instead of stretching chrome edge-to-edge while content widens
+- This ships as a design-system-level density improvement, so homepage sections plus the Work/Talks/Writing/About/Contact pages all inherit the wider desktop layout without per-page rewrites
+
+**Root cause found during verification:** the site's shared layout width token was fixed at 780px for every viewport, which made wide desktop screens feel underused. During verification, `npm run format:check` also failed because `src/entry-server.tsx` had stale formatting drift from a previous iteration; the root cause there was that earlier targeted formatting had not normalized the whole file. The density fix was to widen the token only at large breakpoints and align layout chrome to it; the verification fix was to format `src/entry-server.tsx` and re-run the full pipeline.
+
+**Verification:** `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm run format -- --write src/entry-server.tsx src/components/Layout.tsx src/styles/global.css`, `npm run verify`, and `npm run build`
 
 ## Immediate next steps
 

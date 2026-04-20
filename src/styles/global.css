@@ -54,6 +54,12 @@
   --layout-content-pad: 2rem;
 }
 
+@media (min-width: 1280px) {
+  :root {
+    --layout-content-width: 1080px;
+  }
+}
+
 html {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

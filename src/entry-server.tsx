@@ -23,6 +23,9 @@ const handler = createHandler(() => (
 const originalFetch = handler.fetch.bind(handler);
 
 export default Object.assign(handler, {
-  fetch: (request: Request | { url: string; headers?: HeadersInit; method?: string; body?: BodyInit | null }) =>
-    originalFetch(normalizeNetlifyRequest(request) as Request),
+  fetch: (
+    request:
+      | Request
+      | { url: string; headers?: HeadersInit; method?: string; body?: BodyInit | null }
+  ) => originalFetch(normalizeNetlifyRequest(request) as Request),
 });
