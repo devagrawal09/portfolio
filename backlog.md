@@ -355,7 +355,7 @@ Avoid:
 - [ ] Inventory what existing content should be kept, rewritten, or deleted
 - [x] Convert `resume.md` into structured website content
 - [x] Convert `appearances.md` into structured talks data
-- [ ] Curate featured projects and case studies
+- [x] Curate featured projects and case studies
 - [x] Curate writing highlights
 - [x] Create a central profile/contact config
 
@@ -605,6 +605,20 @@ npm run build
 - Added `not_found_nav` to the `AnalyticsEvent` union in `src/config/analytics.ts` so recovery clicks can be tracked
 
 **Verification:** `npm run typecheck` and `npm run lint` both pass cleanly
+
+---
+
+### Iteration 18 — 2026-04-20
+**Completed:** Phase 2 — curate featured projects and ship case-study pages for the Work section
+
+- Extended `src/data/projects.ts` so each featured project now carries a `caseStudyPath`, challenge framing, and highlight bullets; all four curated projects (`momentum-devcon`, `solid-socket`, `osdp`, `hackathon-suite`) now have structured case-study content
+- Split the Work area into nested routes: `src/routes/work/index.tsx` keeps the project listing, `src/routes/work/[slug].tsx` renders the case-study page, and `src/routes/work.tsx` now serves as the nested layout wrapper
+- Updated homepage featured-work cards and the Work index cards to expose `Case study →` internal links while preserving the existing external `View project` / `Source` links
+- Added `case_study_click` analytics event wiring for homepage and Work-page internal navigation
+
+**Root cause found during verification:** the first pass failed because the new nested Work route used React/Remix-style `Outlet` expectations that `@solidjs/router` does not export in this setup, and the homepage `WorkCard` call sites were not updated for the new required `onCaseStudy` prop. The fix was to use a lightweight parent route that renders `props.children` and to thread the new case-study analytics handler through the homepage card usage.
+
+**Verification:** `npm run format -- --write src/routes/work.tsx src/routes/work/[slug].tsx src/entry-server.tsx`, `npm run verify`, and `npm run build`
 
 ---
 

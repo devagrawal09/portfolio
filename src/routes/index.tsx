@@ -262,9 +262,17 @@ const s: Record<string, JSX.CSSProperties> = {
     "border-radius": radius.sm,
     padding: "0.15rem 0.5rem",
   },
-  workCardLink: {
+  workCardCaseStudyLink: {
     "font-size": text.xs,
     color: colors.accent,
+    "font-weight": "600",
+    "flex-shrink": "0",
+    "align-self": "flex-start",
+    "margin-top": space[1],
+  },
+  workCardLink: {
+    "font-size": text.xs,
+    color: colors.textFaint,
     "flex-shrink": "0",
     "align-self": "flex-start",
     "margin-top": space[1],
@@ -397,7 +405,11 @@ function OssRow(props: { item: OssItem; isLast: boolean }) {
   );
 }
 
-function WorkCard(props: { project: FeaturedProject; onNavigate: () => void }) {
+function WorkCard(props: {
+  project: FeaturedProject;
+  onNavigate: () => void;
+  onCaseStudy: () => void;
+}) {
   return (
     <div style={s.workCard}>
       <div style={s.workCardHeader}>
@@ -419,17 +431,28 @@ function WorkCard(props: { project: FeaturedProject; onNavigate: () => void }) {
         <div style={s.workCardTags}>
           <For each={props.project.tech}>{(tag) => <span style={s.workCardTag}>{tag}</span>}</For>
         </div>
-        {(props.project.url ?? props.project.repoUrl) && (
-          <a
-            href={props.project.url ?? props.project.repoUrl}
-            style={s.workCardLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={props.onNavigate}
-          >
-            View ↗
-          </a>
-        )}
+        <div style={{ display: "flex", gap: space[4], "align-items": "center" }}>
+          {props.project.caseStudyPath && (
+            <A
+              href={props.project.caseStudyPath}
+              style={s.workCardCaseStudyLink}
+              onClick={props.onCaseStudy}
+            >
+              Case study →
+            </A>
+          )}
+          {(props.project.url ?? props.project.repoUrl) && (
+            <a
+              href={props.project.url ?? props.project.repoUrl}
+              style={s.workCardLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={props.onNavigate}
+            >
+              View ↗
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -474,6 +497,8 @@ export default function Home() {
     analytics.trackEvent(event, { location: "home_hero" });
   const trackWorkClick = (slug: string) => () =>
     analytics.trackEvent("featured_work_click", { slug, location: "home_featured" });
+  const trackCaseStudyClick = (slug: string) => () =>
+    analytics.trackEvent("case_study_click", { slug, location: "home_featured" });
   const trackTalkClick = (title: string) => () =>
     analytics.trackEvent("talk_click", { title, location: "home_featured" });
   const trackWritingClick = (slug: string) => () =>
@@ -524,7 +549,13 @@ export default function Home() {
         </div>
         <div style={s.workGrid}>
           <For each={homepageFeatured}>
-            {(project) => <WorkCard project={project} onNavigate={trackWorkClick(project.slug)} />}
+            {(project) => (
+              <WorkCard
+                project={project}
+                onNavigate={trackWorkClick(project.slug)}
+                onCaseStudy={trackCaseStudyClick(project.slug)}
+              />
+            )}
           </For>
         </div>
       </section>

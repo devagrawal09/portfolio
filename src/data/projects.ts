@@ -1,6 +1,5 @@
 // Curated featured projects — the highest-signal work Dev has shipped.
-// Import this file wherever project data is needed (homepage strip, work page, etc.).
-// Case-study sub-pages are out of scope for now; add a caseStudyPath field when ready.
+// Import this file wherever project data is needed (homepage strip, work page, case studies, etc.).
 
 import type { AnalyticsEvent } from "~/config/analytics";
 
@@ -35,6 +34,12 @@ export interface FeaturedProject {
   featured: boolean;
   /** Analytics event emitted when the user navigates into this project */
   analyticsEvent: Extract<AnalyticsEvent, "featured_work_click">;
+  /** Route path for the detailed case study page, e.g. "/work/momentum-devcon" */
+  caseStudyPath?: string;
+  /** The core problem or constraint the project addressed — richer context for case study */
+  challenges?: string;
+  /** Key achievement bullets shown on the case study page */
+  highlights?: string[];
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -57,6 +62,15 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "product",
     featured: true,
     analyticsEvent: "featured_work_click",
+    caseStudyPath: "/work/momentum-devcon",
+    challenges:
+      "Proving SolidStart's server-function model could handle real-time event logistics — session management, live feedback collection, and attendee coordination — under conference-day load with no room for downtime.",
+    highlights: [
+      "Shipped to 500+ attendees across two conference years with no day-of incidents",
+      "Validated SolidStart server functions and optimistic UI in a live production context",
+      "Event sourcing made real-time feedback auditable and replayable after each session",
+      "Demonstrates that a solo build can match the polish of vendor conference apps",
+    ],
   },
   {
     slug: "solid-socket",
@@ -77,6 +91,15 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "oss",
     featured: true,
     analyticsEvent: "featured_work_click",
+    caseStudyPath: "/work/solid-socket",
+    challenges:
+      "Most WebSocket integrations require glue code that breaks the reactive mental model. The goal was to make server-side reactive state feel identical to a local SolidJS signal — no explicit subscriptions, no fetch wrappers, no adapter boilerplate on the consumer side.",
+    highlights: [
+      "Published to npm as a proof-of-concept for server-side reactivity in SolidJS",
+      "Server signals synchronize to client components with no extra fetch or subscription code",
+      "Cited in community talks on async UI, sync engines, and the future of server reactivity",
+      "Built on crossws for WebSocket adapter portability across runtimes",
+    ],
   },
   {
     slug: "osdp",
@@ -96,6 +119,15 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "civic",
     featured: true,
     analyticsEvent: "featured_work_click",
+    caseStudyPath: "/work/osdp",
+    challenges:
+      "Ohio court systems are fragmented — different counties use different formats, some still paper-based. The platform had to collect structured, analyzable sentencing data without disrupting judge and clerk workflows or requiring courts to adopt new infrastructure.",
+    highlights: [
+      "Deployed to production serving the Ohio Supreme Court and 10+ county courts",
+      "JSON-schema-driven form engine handles complex multi-step court forms dynamically",
+      "Collected data informs felony sentencing decisions statewide",
+      "Publicly accessible dataset used by academic researchers and policy analysts",
+    ],
   },
   {
     slug: "hackathon-suite",
@@ -115,6 +147,15 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "product",
     featured: false,
     analyticsEvent: "featured_work_click",
+    caseStudyPath: "/work/hackathon-suite",
+    challenges:
+      "Running a student hackathon once a year is demanding; running multiple formats (virtual and in-person) across four years while growing a volunteer team required building a platform that could evolve as fast as the events did.",
+    highlights: [
+      "Grew from a single registration tool to a 9-component platform over four years",
+      "Led a volunteer engineering team through virtual and in-person hackathon formats",
+      "Built a Tinder-style team-matching algorithm for hundreds of participants",
+      "Automated Discord server setup, role assignment, and participant communication end-to-end",
+    ],
   },
 ];
 
