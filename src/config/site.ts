@@ -1,6 +1,6 @@
 const SOCIAL_LINKS = {
   github: "https://github.com/devagrawal09",
-  linkedin: "https://www.linkedin.com/in/devagrawal09",
+  linkedin: "https://www.linkedin.com/in/dev-agr",
   twitter: "https://x.com/devagrawal09",
   twitterHandle: "@devagrawal09",
   youtube: "https://youtube.com/@devagr",

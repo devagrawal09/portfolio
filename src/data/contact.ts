@@ -59,7 +59,7 @@ export const SOCIAL_PROFILES: SocialProfile[] = [
   {
     label: "LinkedIn",
     url: SITE.social.linkedin,
-    handle: "devagrawal09",
+    handle: SITE.social.linkedin.split("/in/")[1],
     analyticsProps: { location: "contact_page", network: "linkedin" },
   },
   {

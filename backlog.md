@@ -864,6 +864,32 @@ npm run build      # production build must pass cleanly
 
 ---
 
+### Iteration 33 — 2026-04-20
+
+**Completed:** Phase 6 (partial) — final content sweep sub-step: align LinkedIn URL/handle with resume.md
+
+- Updated `SOCIAL_LINKS.linkedin` in `src/config/site.ts` from `https://www.linkedin.com/in/devagrawal09` to `https://www.linkedin.com/in/dev-agr` to match the canonical handle in `resume.md`
+- Fixed the LinkedIn `handle` field in `SOCIAL_PROFILES` in `src/data/contact.ts`: it was hard-coded as `"devagrawal09"` and was not derived from `SITE.social.linkedin`, so it did not pick up the URL change; changed to `SITE.social.linkedin.split("/in/")[1]` so the display handle is always derived from the single source of truth
+- JSON-LD `sameAs` (via `PROFILE_LINKS`) picks up the corrected URL automatically through the shared config
+
+**Root cause:** `src/config/site.ts` was the only file changed in the first Claude pass. The Contact page's `SOCIAL_PROFILES` entry for LinkedIn had its `handle` field hard-coded as a separate string literal, so the visible handle shown to visitors remained `devagrawal09` even after the URL was corrected.
+
+Left the broad `Final content sweep for stale claims / broken links` checkbox unchecked; this pass only corrects the LinkedIn handle discrepancy.
+
+**Verification:**
+```bash
+npm run verify
+npm run build
+grep -R "linkedin.com/in/devagrawal09" src/   # expected: no matches
+grep -R 'handle: "devagrawal09"' src/         # expected: no matches
+# Then run a local dev server and confirm in the browser at http://127.0.0.1:4174/contact:
+#   - LinkedIn row shows handle "dev-agr"
+#   - LinkedIn row links to https://www.linkedin.com/in/dev-agr
+#   - JSON-LD sameAs contains https://www.linkedin.com/in/dev-agr
+```
+
+---
+
 ### Iteration 32 — 2026-04-20
 
 **Completed:** Phase 6 (partial) — preserve additional legacy Gatsby routes beyond /blog
