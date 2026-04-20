@@ -375,7 +375,7 @@ Avoid:
 - [x] Writing page
 - [x] About page
 - [x] Contact page
-- [ ] 404 page
+- [x] 404 page
 
 ## Phase 5 — polish / credibility
 - [ ] Add custom OG images / social cards
@@ -594,6 +594,17 @@ npm run verify
 # Production build still works
 npm run build
 ```
+
+---
+
+### Iteration 17 — 2026-04-19
+**Completed:** Phase 4 (404 / not-found page)
+
+- Created `src/routes/[...404].tsx` as the SolidStart v2 catch-all route; uses `<HttpStatusCode code={404} />` for correct server-side status, `<PageMeta noIndex />` to suppress indexing, and the standard `pageStyles` recipe + design tokens to stay on-brand
+- Added navigation grid (all `NAV_LINKS`) and a primary "Go home →" CTA so visitors have clear recovery paths
+- Added `not_found_nav` to the `AnalyticsEvent` union in `src/config/analytics.ts` so recovery clicks can be tracked
+
+**Verification:** `npm run typecheck` and `npm run lint` both pass cleanly
 
 ---
 

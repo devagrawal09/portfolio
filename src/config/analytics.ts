@@ -27,7 +27,8 @@ export type AnalyticsEvent =
   | "talk_click"
   | "oss_click"
   | "social_click"
-  | "writing_click";
+  | "writing_click"
+  | "not_found_nav";
 
 export type AnalyticsProperties = Record<string, string | number | boolean>;
 
