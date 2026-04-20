@@ -357,7 +357,7 @@ Avoid:
 - [x] Convert `appearances.md` into structured talks data
 - [ ] Curate featured projects and case studies
 - [x] Curate writing highlights
-- [ ] Create a central profile/contact config
+- [x] Create a central profile/contact config
 
 ## Phase 3 — homepage
 - [x] Build hero section
@@ -373,8 +373,8 @@ Avoid:
 - [x] Talks / Appearances page
 - [x] Open Source page
 - [x] Writing page
-- [ ] About page
-- [ ] Contact page
+- [x] About page
+- [x] Contact page
 - [ ] 404 page
 
 ## Phase 5 — polish / credibility
@@ -594,6 +594,18 @@ npm run verify
 # Production build still works
 npm run build
 ```
+
+---
+
+### Iteration 16 — 2026-04-19
+**Completed:** Phase 2 (central profile/contact config) + Phase 4 (Contact page) and backlog cleanup for secondary-page status
+
+- Added `src/data/contact.ts` as the canonical typed source for contact email, speaking/collaboration CTA hrefs, and social profile metadata so contact details stop being scattered across route files
+- Replaced the minimal `src/routes/contact.tsx` placeholder with a polished, data-driven Contact page that presents two clear intent paths (speaking and collaboration) plus a structured social profile list, all styled with existing tokens/recipes and wired to typed analytics events
+- Rewired existing contact CTAs in `src/data/home.ts`, `src/routes/about.tsx`, and `src/routes/talks.tsx` to reuse the shared contact config instead of hard-coded `mailto:` links
+- Marked the backlog items for central profile/contact config, About page, and Contact page complete now that the underlying implementation exists
+
+**Verification:** `npm run verify` and `npm run build`
 
 ---
 

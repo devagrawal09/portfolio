@@ -2,8 +2,9 @@ import { For } from "solid-js";
 import type { JSX } from "solid-js";
 import { analytics } from "~/config/analytics";
 import { PageMeta } from "~/components/PageMeta";
-import { appearances, conferences, meetups, podcasts } from "~/data/talks";
-import type { Appearance } from "~/data/talks";
+import { SPEAKING_EMAIL_HREF } from "~/data/contact";
+import { appearances, conferences, meetups, podcasts, type Appearance } from "~/data/talks";
+
 import { colors, radius, space, text } from "~/styles/tokens";
 import { pageStyles } from "~/styles/recipes";
 
@@ -226,7 +227,7 @@ export default function TalksPage() {
 
         <div style={styles.ctaRow}>
           <p style={styles.ctaText}>Interested in having me speak at your conference or podcast?</p>
-          <a href="mailto:contact@devagr.me" style={styles.ctaLink} onClick={trackSpeakingCta}>
+          <a href={SPEAKING_EMAIL_HREF} style={styles.ctaLink} onClick={trackSpeakingCta}>
             Get in touch
           </a>
         </div>

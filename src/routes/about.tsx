@@ -2,6 +2,7 @@ import { For } from "solid-js";
 import type { JSX } from "solid-js";
 import { analytics } from "~/config/analytics";
 import { PageMeta } from "~/components/PageMeta";
+import { CONTACT_EMAIL_HREF } from "~/data/contact";
 import { COMMUNITY_ROLES, EDUCATION, OSS_CONTRIBUTIONS, WORK_ROLES } from "~/data/profile";
 import type { CommunityRole, EducationEntry, OssContribution, WorkRole } from "~/data/profile";
 import { colors, radius, space, text } from "~/styles/tokens";
@@ -354,7 +355,7 @@ export default function AboutPage() {
         {/* CTA */}
         <div style={styles.ctaRow}>
           <p style={styles.ctaText}>Want to collaborate, speak together, or just say hi?</p>
-          <a href="mailto:contact@devagr.me" style={styles.ctaLink} onClick={trackContact}>
+          <a href={CONTACT_EMAIL_HREF} style={styles.ctaLink} onClick={trackContact}>
             Get in touch
           </a>
         </div>

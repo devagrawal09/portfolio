@@ -2,6 +2,7 @@
 // Edit this file to update hero copy, proof stats, OSS items, now items, and CTAs.
 // Featured talks are derived directly from ~/data/talks to avoid duplication.
 import type { AnalyticsEvent } from "~/config/analytics";
+import { CONTACT_EMAIL_HREF, SPEAKING_EMAIL_HREF } from "~/data/contact";
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
@@ -118,14 +119,14 @@ export const FOOTER_CTAS: FooterCta[] = [
   {
     label: "Invite me to speak",
     description: "Looking for a conference or podcast guest?",
-    href: "mailto:contact@devagr.me?subject=Speaking%20inquiry",
+    href: SPEAKING_EMAIL_HREF,
     variant: "primary",
     analyticsEvent: "cta_speaking",
   },
   {
     label: "Work with me",
     description: "Building something interesting? Let's talk.",
-    href: "mailto:contact@devagr.me",
+    href: CONTACT_EMAIL_HREF,
     variant: "secondary",
     analyticsEvent: "cta_contact",
   },
