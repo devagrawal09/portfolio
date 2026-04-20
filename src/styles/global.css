@@ -83,3 +83,70 @@ a {
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+/* --- Site header / nav --- */
+.site-header {
+  padding: var(--space-5) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bg);
+  z-index: 10;
+}
+
+.site-header-inner {
+  max-width: var(--layout-content-width);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-brand {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.site-nav-link {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+
+@media (max-width: 639px) {
+  .site-header {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .site-header-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .site-brand {
+    flex-basis: 100%;
+  }
+
+  .site-nav-links {
+    width: 100%;
+    gap: var(--space-2) var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .site-nav-link {
+    font-size: var(--text-xs);
+  }
+}

@@ -381,7 +381,7 @@ Avoid:
 - [ ] Add custom OG images / social cards
 - [ ] Add subtle motion and interaction polish
 - [x] Improve large-screen layout density so wide desktop screens use horizontal space intentionally
-- [ ] Fix mobile header spacing so the first nav link does not crowd the site name
+- [x] Fix mobile header spacing so the first nav link does not crowd the site name
 - [ ] Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item
 - [ ] Add accessibility review pass
 - [ ] Add performance review pass
@@ -648,18 +648,26 @@ npm run build
 
 **Verification:** `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm run format -- --write src/entry-server.tsx src/components/Layout.tsx src/styles/global.css`, `npm run verify`, and `npm run build`
 
+---
+
+### Iteration 20 — 2026-04-20
+**Completed:** Phase 5 — fix mobile header spacing so the first nav link does not crowd the site name
+
+- Updated `src/components/Layout.tsx` to move the header chrome to semantic CSS classes (`site-header`, `site-header-inner`, `site-brand`, `site-nav-links`, `site-nav-link`) while keeping the footer and route shell unchanged
+- Added responsive header rules in `src/styles/global.css` so the mobile header reflows into a two-row layout: the brand gets its own line, nav links wrap beneath it, and long labels like `Open Source` stay intact with `white-space: nowrap`
+- Preserved the existing desktop header rhythm while making the small-screen header readable without the first nav link crowding the site name
+
+**Root cause found during verification:** the original header used a single desktop-oriented flex row with fixed gaps at all breakpoints, so on mobile the first nav link sat too close to the site brand and long labels wrapped awkwardly. Claude Code's first pass also left `Layout.tsx` in a partial broken state by referencing deleted inline-style keys (`styles.nav`, `styles.navInner`, `styles.navLinks`, `linkStyle`); the fix was to complete the refactor to class-based header styling and verify the resulting mobile layout from a 390px-wide screenshot.
+
+**Verification:** `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm run verify`, `npm run build`, plus mobile screenshot review via `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/ /tmp/portfolio-mobile-home-after2.png`
+
 ## Immediate next steps
 
-1. Treat this as a **rewrite**, not a refactor.
-2. Start from a fresh SolidStart v2 app.
-3. Rebuild the content model around:
-   - current roles
-   - talks
-   - OSS
-   - featured work
-   - writing
-4. Design the homepage around proof and positioning first.
-5. Port only the content that still strengthens the brand.
+1. Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item.
+2. Run a focused responsive review pass across homepage and secondary pages.
+3. Run an accessibility review pass on navigation, color contrast, and keyboard/focus states.
+4. Run an SEO / metadata review, including custom OG image coverage.
+5. Finish the final content sweep for stale claims and broken links.
 
 ---
 
