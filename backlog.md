@@ -862,12 +862,47 @@ npm run build      # production build must pass cleanly
 
 ---
 
+---
+
+### Iteration 32 — 2026-04-20
+
+**Completed:** Phase 6 (partial) — preserve additional legacy Gatsby routes beyond /blog
+
+- Added `src/routes/showcase.tsx` layout wrapper for all `/showcase/*` legacy routes
+- Added `src/routes/showcase/projects/index.tsx` → redirects `/showcase/projects` to `/work`
+- Added `src/routes/showcase/projects/[slug].tsx` → slug-aware redirect: `hackathon` → `/work/hackathon-suite`, `osdp` → `/work/osdp`, `portfolio` → `/`, all others → `/work`
+- Added `src/routes/showcase/experiences/index.tsx` → redirects `/showcase/experiences` to `/about`
+- Added `src/routes/showcase/experiences/[slug].tsx` → redirects all `/showcase/experiences/:slug` to `/about`
+- Added `src/routes/review.tsx` layout wrapper for `/review/*` legacy routes
+- Added `src/routes/review/[slug].tsx` → reuses `getLegacyWritingPath` so `/review/freshman`, `/review/sophomore`, `/review/junior` etc. forward to their correct `/writing#slug` anchors
+
+Left the broad `Preserve or redirect legacy routes where useful` checkbox unchecked; this pass covers the known legacy Gatsby surface for `/showcase/*` and `/review/*` but has not audited every possible historical URL.
+
+**Verification:**
+```bash
+npx tsc --noEmit   # zero type errors
+npm run build      # production build must pass cleanly
+# Then verify redirects at:
+#   /showcase/projects           → /work
+#   /showcase/projects/hackathon → /work/hackathon-suite
+#   /showcase/projects/osdp      → /work/osdp
+#   /showcase/projects/portfolio → /
+#   /showcase/projects/bonfire   → /work  (fallback)
+#   /showcase/experiences        → /about
+#   /showcase/experiences/itsa   → /about
+#   /showcase/experiences/revolutionuc → /about
+#   /review/freshman             → /writing#freshman
+#   /review/sophomore            → /writing#sophomore
+#   /review/junior               → /writing#junior
+```
+
+---
+
 ## Immediate next steps
 
 1. Finish the final content sweep for stale claims and broken links.
 2. Run a performance review pass.
-3. Decide whether any non-writing legacy Gatsby URLs still need redirects before launch.
-4. Launch the new site.
+3. Launch the new site.
 
 ---
 
