@@ -6,6 +6,7 @@ import { PageMeta } from "~/components/PageMeta";
 import { colors, layout, radius, space, text } from "~/styles/tokens";
 import { appearances } from "~/data/talks";
 import { homepageFeatured, type FeaturedProject } from "~/data/projects";
+import { featuredArticles, type Article } from "~/data/writing";
 import {
   FOOTER_CTAS,
   HERO,
@@ -269,6 +270,34 @@ const s: Record<string, JSX.CSSProperties> = {
     "margin-top": space[1],
   },
 
+  // ── Writing highlights ──
+  writingItem: {
+    padding: `${space[5]} ${space[6]}`,
+    "background-color": colors.bgElevated,
+    "border-radius": radius.lg,
+    border: `1px solid ${colors.border}`,
+    display: "flex",
+    "align-items": "center",
+    "justify-content": "space-between",
+    gap: space[4],
+    "flex-wrap": "wrap",
+  },
+  writingTitle: {
+    "font-size": text.base,
+    "font-weight": "600",
+    color: colors.text,
+    "margin-bottom": "0.2rem",
+  },
+  writingMeta: {
+    "font-size": text.xs,
+    color: colors.textFaint,
+  },
+  writingArrow: {
+    "font-size": text.sm,
+    color: colors.accent,
+    "flex-shrink": "0",
+  },
+
   // ── Now section ──
   nowList: {
     "list-style": "none",
@@ -406,6 +435,22 @@ function WorkCard(props: { project: FeaturedProject; onNavigate: () => void }) {
   );
 }
 
+function WritingCard(props: { article: Article; onNavigate: () => void }) {
+  return (
+    <div style={s.writingItem}>
+      <div>
+        <div style={s.writingTitle}>{props.article.title}</div>
+        <div style={s.writingMeta}>
+          {props.article.displayDate} · {props.article.tags.join(" · ")}
+        </div>
+      </div>
+      <A href="/writing" style={s.writingArrow} onClick={props.onNavigate}>
+        →
+      </A>
+    </div>
+  );
+}
+
 function CtaCard(props: { cta: FooterCta }) {
   const trackClick = () =>
     analytics.trackEvent(props.cta.analyticsEvent, { location: "home_footer" });
@@ -431,6 +476,8 @@ export default function Home() {
     analytics.trackEvent("featured_work_click", { slug, location: "home_featured" });
   const trackTalkClick = (title: string) => () =>
     analytics.trackEvent("talk_click", { title, location: "home_featured" });
+  const trackWritingClick = (slug: string) => () =>
+    analytics.trackEvent("writing_click", { slug, location: "home_featured" });
 
   return (
     <>
@@ -524,6 +571,23 @@ export default function Home() {
         <div style={s.ossList}>
           <For each={OSS_ITEMS}>
             {(item, i) => <OssRow item={item} isLast={i() === OSS_ITEMS.length - 1} />}
+          </For>
+        </div>
+      </section>
+
+      {/* ── Writing highlights ── */}
+      <section style={s.section}>
+        <div style={s.sectionHeader}>
+          <span style={s.sectionLabel}>Writing</span>
+          <A href="/writing" style={s.sectionLink}>
+            All articles →
+          </A>
+        </div>
+        <div style={s.talkList}>
+          <For each={featuredArticles}>
+            {(article) => (
+              <WritingCard article={article} onNavigate={trackWritingClick(article.slug)} />
+            )}
           </For>
         </div>
       </section>

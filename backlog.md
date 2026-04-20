@@ -356,7 +356,7 @@ Avoid:
 - [x] Convert `resume.md` into structured website content
 - [x] Convert `appearances.md` into structured talks data
 - [ ] Curate featured projects and case studies
-- [ ] Curate writing highlights
+- [x] Curate writing highlights
 - [ ] Create a central profile/contact config
 
 ## Phase 3 — homepage
@@ -365,14 +365,14 @@ Avoid:
 - [x] Build featured work section
 - [x] Build talks highlights section
 - [x] Build OSS highlights section
-- [ ] Build writing highlights section
+- [x] Build writing highlights section
 - [x] Build CTA footer
 
 ## Phase 4 — secondary pages
 - [x] Work / Projects page
 - [x] Talks / Appearances page
 - [x] Open Source page
-- [ ] Writing page
+- [x] Writing page
 - [ ] About page
 - [ ] Contact page
 - [ ] 404 page
@@ -542,6 +542,18 @@ Avoid:
 - All styles composed from existing tokens (`colors`, `radius`, `space`, `text`) and `pageStyles` recipes — no new dependencies
 - Analytics wired using existing `oss_click` and `social_click` events — `analytics.ts` not touched
 - Also marked "Decide visual direction / references" complete in Phase 0 — the research synthesis section added in Iteration 11 already satisfies that decision
+
+---
+
+### Iteration 13 — 2026-04-19
+**Completed:** Phase 2 (curate writing highlights) + Phase 3 (homepage writing highlights section) + Phase 4 (Writing page)
+
+- Added `rewrite/src/data/writing.ts` as a typed curated writing source that separates high-signal technical articles from archived year-in-review reflections and intentionally omits non-brand-relevant honors artifacts
+- Replaced the placeholder `rewrite/src/routes/writing.tsx` scaffold with a data-driven Writing page featuring technical article cards, a reflections archive, and `writing_click` analytics wiring
+- Extended `rewrite/src/routes/index.tsx` with a homepage Writing highlights section so the homepage now matches the intended hero → proof → featured work → talks → OSS → writing → CTA order from the backlog
+- During verification, `npm run verify` initially failed because Claude left the homepage section incomplete and the new Writing route had Solid reactivity lint warnings from conditional early returns; fixed the root cause by wiring the homepage section fully and converting the conditional link rendering to `Show`-based JSX
+
+**Verification:** `npm run verify` and `npm run build` (after `npm run format -- --write src/data/writing.ts src/routes/index.tsx src/routes/writing.tsx`)
 
 ---
 
