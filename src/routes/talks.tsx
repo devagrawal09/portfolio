@@ -96,6 +96,18 @@ const styles: Record<string, JSX.CSSProperties> = {
     "flex-shrink": "0",
     "align-self": "center",
   },
+  noRecordingBadge: {
+    "font-size": text.xs,
+    "font-weight": 500,
+    "letter-spacing": "0.05em",
+    color: colors.textFaint,
+    border: `1px solid ${colors.border}`,
+    "border-radius": radius.sm,
+    padding: `2px ${space[2]}`,
+    "white-space": "nowrap",
+    "flex-shrink": "0",
+    "align-self": "center",
+  },
   itemMeta: {
     display: "flex",
     "flex-wrap": "wrap",
@@ -160,6 +172,7 @@ function AppearanceItem(props: { item: Appearance }) {
           <span style={styles.itemTitle}>{props.item.title}</span>
         )}
         {props.item.isWorkshop && <span style={styles.badge}>Workshop</span>}
+        {!props.item.url && <span style={styles.noRecordingBadge}>No public recording</span>}
       </div>
       <div style={styles.itemMeta}>
         <span>{props.item.event}</span>
@@ -210,7 +223,7 @@ export default function TalksPage() {
           </div>
           <div style={styles.statItem}>
             <span style={styles.statNumber}>{conferences.length}</span>
-            <span style={styles.statLabel}>Conferences</span>
+            <span style={styles.statLabel}>Conf &amp; Workshops</span>
           </div>
           <div style={styles.statItem}>
             <span style={styles.statNumber}>{podcasts.length}</span>

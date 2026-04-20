@@ -818,6 +818,29 @@ npm run build
 
 ---
 
+### Iteration 30 — 2026-04-20
+
+**Completed:** Phase 6 (partial) — final content sweep sub-step: talks page content clarity
+
+- Added a `noRecordingBadge` style and a "No public recording" label that appears on every `AppearanceItem` that has no `url`, so visitors can immediately tell whether a talk is watchable rather than wondering why the title isn't a link
+- Changed the "Conferences" stat label to "Conf & Workshops" so the stats row aligns with the "Conferences & Workshops" section heading and workshops are represented in the taxonomy
+- No data-model changes were needed; `isWorkshop` and the absence of `url` were already the source of truth
+
+Left the broad `Final content sweep for stale claims / broken links` checkbox unchecked; this pass only covers the talks-page UX clarity slice.
+
+**Verification:**
+```bash
+npx tsc --noEmit           # zero type errors
+npm run build              # production build must pass cleanly
+# Then open http://localhost:4173/talks and confirm:
+#   - entries without a URL show "No public recording" badge
+#   - entries with a URL still render as linked titles with →
+#   - stats row shows "Conf & Workshops" not "Conferences"
+#   - workshop entries still show the "Workshop" badge
+```
+
+---
+
 ## Immediate next steps
 
 1. Finish the final content sweep for stale claims and broken links.
