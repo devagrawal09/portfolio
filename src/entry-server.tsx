@@ -1,5 +1,7 @@
 import { createHandler, StartServer } from "@solidjs/start/server";
-export default createHandler(() => (
+import { normalizeNetlifyRequest } from "../build/netlify-request.js";
+
+const handler = createHandler(() => (
   <StartServer
     document={({ assets, children, scripts }) => (
       <html lang="en">
@@ -17,3 +19,10 @@ export default createHandler(() => (
     )}
   />
 ));
+
+const originalFetch = handler.fetch.bind(handler);
+
+export default Object.assign(handler, {
+  fetch: (request: Request | { url: string; headers?: HeadersInit; method?: string; body?: BodyInit | null }) =>
+    originalFetch(normalizeNetlifyRequest(request) as Request),
+});
