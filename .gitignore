@@ -56,7 +56,6 @@ typings/
 
 # Build artifacts
 .cache/
-public
 .solid-start/
 .output/
 .nitro/

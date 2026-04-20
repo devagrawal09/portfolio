@@ -514,6 +514,7 @@ export default function Home() {
       <PageMeta
         title="DevRel Engineer & Fullstack Builder"
         description="Dev Agrawal — DevRel engineer shipping fullstack demos, technical content, and open source work in the Solid and TanStack ecosystems."
+        ogImage="/og.svg"
       />
 
       {/* ── Hero ── */}

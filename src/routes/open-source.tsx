@@ -198,6 +198,7 @@ export default function OpenSourcePage() {
       <PageMeta
         title="Open Source"
         description="Dev Agrawal's open source work — Solid.js core team member, TanStack Start maintainer, and author of solid-socket and solid-events."
+        ogImage="/og/open-source.svg"
       />
       <div style={pageStyles.page}>
         <p style={pageStyles.eyebrow}>Open Source</p>

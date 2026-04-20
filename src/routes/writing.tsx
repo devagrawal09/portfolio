@@ -212,6 +212,7 @@ export default function WritingPage() {
       <PageMeta
         title="Writing"
         description="Technical articles and year-in-review reflections by Dev Agrawal — covering SSR, serverless, fullstack architecture, and lessons from building in the JavaScript ecosystem."
+        ogImage="/og/writing.svg"
       />
       <div style={pageStyles.page}>
         <p style={pageStyles.eyebrow}>Articles</p>

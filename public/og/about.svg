@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="55%" r="65%">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="100%" stop-color="#0d0f14"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="5" height="630" fill="#a78bfa"/>
+
+  <!-- Eyebrow -->
+  <text x="60" y="92" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="16" font-weight="600" fill="#64748b" letter-spacing="3">
+    DEVAGRAWAL · ABOUT
+  </text>
+
+  <!-- Headline -->
+  <text font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="54" font-weight="700" fill="#f1f5f9" style="letter-spacing: -0.025em">
+    <tspan x="60" y="228">DevRel Engineer &amp;</tspan>
+    <tspan x="60" dy="70">Fullstack Developer</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="60" y="390" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="22" fill="#94a3b8">
+    PowerSync · Solid.js · TanStack · Conference Speaker
+  </text>
+
+  <!-- Accent dot row -->
+  <circle cx="60" cy="450" r="3" fill="#a78bfa"/>
+  <circle cx="78" cy="450" r="3" fill="#a78bfa" fill-opacity="0.5"/>
+  <circle cx="96" cy="450" r="3" fill="#a78bfa" fill-opacity="0.25"/>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="#141720"/>
+  <text x="60" y="612" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" fill="#64748b" letter-spacing="2">devagr.me</text>
+  <text x="1140" y="612" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="14" fill="#a78bfa" text-anchor="end">Dev Agrawal</text>
+</svg>

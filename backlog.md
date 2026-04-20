@@ -378,7 +378,7 @@ Avoid:
 - [x] 404 page
 
 ## Phase 5 — polish / credibility
-- [ ] Add custom OG images / social cards
+- [x] Add custom OG images / social cards
 - [ ] Add subtle motion and interaction polish
 - [x] Improve large-screen layout density so wide desktop screens use horizontal space intentionally
 - [x] Fix mobile header spacing so the first nav link does not crowd the site name
@@ -386,7 +386,7 @@ Avoid:
 - [x] Add accessibility review pass
 - [ ] Add performance review pass
 - [x] Add responsive review pass
-- [ ] Add SEO review pass
+- [x] Add SEO review pass
 
 ## Phase 6 — cleanup / launch
 - [x] Remove old Gatsby-specific code and assets once replacement is ready
@@ -702,11 +702,25 @@ npm run build
 
 **Verification:** `npm run verify`, `npm run build`, and local browser checks on `http://127.0.0.1:4173/` and `http://127.0.0.1:4173/writing` with console review
 
+---
+
+### Iteration 24 — 2026-04-20
+**Completed:** Phase 5 — SEO review pass + custom OG/social-card coverage
+
+- Updated `src/config/site.ts` so the site-wide fallback OG image now points at the existing `public/og.svg` asset instead of the missing `/og.png`
+- Wired route-specific `ogImage` coverage into the homepage plus the top-level `Work`, `Talks`, `Open Source`, `Writing`, `About`, and `Contact` pages, and reused the Work social card for project case-study routes
+- Added `public/robots.txt` and `public/sitemap.xml`, and removed the stale `public` ignore rule from `.gitignore`, so crawlers now receive an explicit crawl policy and a sitemap that includes all top-level pages plus the existing Work case-study URLs
+- Reconciled stale backlog state by checking off both `Add custom OG images / social cards` and `Add SEO review pass` now that the assets are actually wired into page metadata and technical SEO coverage exists
+
+**Root cause found during verification:** the rewrite already had polished OG SVG assets in `public/`, but the shared site config still advertised `/og.png`, which does not exist, and no route overrode that default. That left social metadata pointing at a broken image URL while `robots.txt` and `sitemap.xml` were both absent. Hermes also found that `public/` was still gitignored, so the new crawler files would not have shipped until `.gitignore` was corrected. During Hermes verification, `npm run verify` failed once because the new case-study `PageMeta` line in `src/routes/work/[slug].tsx` needed Prettier formatting; the fix was to format that file and re-run the full pipeline.
+
+**Verification:** `npm run verify && npm run build` (initial run, caught the Prettier failure), `npm run format -- --write src/routes/work/[slug].tsx && npm run verify && npm run build`, `curl -s http://127.0.0.1:4173/robots.txt`, `curl -s http://127.0.0.1:4173/sitemap.xml`, plus local browser metadata/console checks on `http://127.0.0.1:4173/`, `http://127.0.0.1:4173/work`, and `http://127.0.0.1:4173/work/momentum-devcon`
+
 ## Immediate next steps
 
-1. Run an SEO / metadata review, including custom OG image coverage.
-2. Finish the final content sweep for stale claims and broken links.
-3. Run a performance review pass.
+1. Finish the final content sweep for stale claims and broken links.
+2. Run a performance review pass.
+3. Preserve or redirect legacy routes where useful.
 4. Launch the new site.
 
 ---

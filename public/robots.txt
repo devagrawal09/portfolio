@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devagr.me/sitemap.xml

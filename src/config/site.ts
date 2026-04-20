@@ -12,7 +12,7 @@ export const SITE = {
   description:
     "DevRel engineer, fullstack developer, and open-source contributor building with SolidJS and the modern web.",
   url: "https://devagr.me",
-  og: { image: "/og.png" },
+  og: { image: "/og.svg" },
   social: SOCIAL_LINKS,
   profile: {
     jobTitle: "DevRel Engineer & Fullstack Developer",

@@ -193,6 +193,7 @@ export default function TalksPage() {
       <PageMeta
         title="Talks & Appearances"
         description={`${appearances.length.toString()} conference talks, podcast appearances, and workshops by Dev Agrawal on SolidJS, TanStack, async UI, local-first development, and modern fullstack architecture.`}
+        ogImage="/og/talks.svg"
       />
       <div style={pageStyles.page}>
         <p style={pageStyles.eyebrow}>Speaking</p>

@@ -245,6 +245,7 @@ export default function WorkPage() {
       <PageMeta
         title="Work"
         description="Selected projects, open source work, and technical case studies from Dev Agrawal — fullstack engineer, DevRel, and Solid ecosystem contributor."
+        ogImage="/og/work.svg"
       />
 
       <div style={s.header}>

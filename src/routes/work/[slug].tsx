@@ -252,7 +252,11 @@ export default function CaseStudyPage() {
     >
       {(p) => (
         <>
-          <PageMeta title={`${p().title} — Case Study`} description={p().tagline} />
+          <PageMeta
+            title={`${p().title} — Case Study`}
+            description={p().tagline}
+            ogImage="/og/work.svg"
+          />
 
           <div style={s.page}>
             {/* Back link */}
