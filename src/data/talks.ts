@@ -37,7 +37,7 @@ export const appearances: Appearance[] = [
     event: "Stir Trek",
     location: "Columbus, OH",
     date: "May 2025",
-    url: "https://youtu.be/N1wSVaUdV_U",
+    url: "https://www.youtube.com/watch?v=N1wSVaUdV_U",
     kind: "conference",
   },
   {
@@ -45,7 +45,7 @@ export const appearances: Appearance[] = [
     event: "Codemash",
     location: "Sandusky, OH",
     date: "Jan 2025",
-    url: "https://youtu.be/pX5r_jTLbvw?si=qjTPBQkyb-zRP96R",
+    url: "https://www.youtube.com/watch?v=pX5r_jTLbvw",
     kind: "conference",
   },
   {
@@ -76,7 +76,7 @@ export const appearances: Appearance[] = [
     event: "React Rally",
     location: "Salt Lake City, UT",
     date: "Aug 2024",
-    url: "https://youtu.be/4V_Wz_k35C8?si=wvar4Ra5i-aO6e6q",
+    url: "https://www.youtube.com/watch?v=4V_Wz_k35C8",
     kind: "conference",
   },
   {
@@ -84,7 +84,7 @@ export const appearances: Appearance[] = [
     event: "Stir Trek",
     location: "Columbus, OH",
     date: "May 2024",
-    url: "https://youtu.be/GrJVK6ci--s?si=nKoDMyK05RC2uwk9",
+    url: "https://www.youtube.com/watch?v=GrJVK6ci--s",
     kind: "conference",
   },
   {
@@ -116,7 +116,7 @@ export const appearances: Appearance[] = [
     event: "Next.js Conf",
     location: "San Francisco, CA",
     date: "Oct 2023",
-    url: "https://youtu.be/44b2U0uGQ0k?si=zTFY-NBByjZw_OFq",
+    url: "https://www.youtube.com/watch?v=44b2U0uGQ0k",
     kind: "conference",
   },
   {
@@ -131,7 +131,7 @@ export const appearances: Appearance[] = [
     event: "JavaScript and Friends",
     location: "Columbus, OH",
     date: "Aug 2023",
-    url: "https://youtu.be/vAKwSEzj7sY?si=FkU5xBr9bzXO2vsQ",
+    url: "https://www.youtube.com/watch?v=vAKwSEzj7sY",
     kind: "conference",
   },
 
@@ -149,7 +149,7 @@ export const appearances: Appearance[] = [
     event: "The Programming Podcast",
     location: "Virtual",
     date: "Jan 2025",
-    url: "https://youtu.be/TwpcWoZCQ_4?si=MJuNkZ1t1XenVDVO",
+    url: "https://www.youtube.com/watch?v=TwpcWoZCQ_4",
     kind: "podcast",
   },
   {
@@ -181,7 +181,7 @@ export const appearances: Appearance[] = [
     event: "Scrimba Podcast",
     location: "Virtual",
     date: "Jun 2024",
-    url: "https://youtu.be/8GuvVaEWjzk?si=9sf5hn8ArtPzz9Os",
+    url: "https://www.youtube.com/watch?v=8GuvVaEWjzk",
     kind: "podcast",
   },
   {
@@ -189,7 +189,7 @@ export const appearances: Appearance[] = [
     event: "Modern Web Podcast",
     location: "Virtual",
     date: "May 2024",
-    url: "https://youtu.be/0bYeHVAk_EM?si=m3UiQnxbcTHazy_1",
+    url: "https://www.youtube.com/watch?v=0bYeHVAk_EM",
     kind: "podcast",
   },
   {
@@ -197,7 +197,7 @@ export const appearances: Appearance[] = [
     event: "Scrimba Podcast",
     location: "Virtual",
     date: "Feb 2024",
-    url: "https://youtu.be/nD1V18VBNcw?si=tnvwbyyJB7irxqMd",
+    url: "https://www.youtube.com/watch?v=nD1V18VBNcw",
     kind: "podcast",
   },
   {
@@ -213,7 +213,7 @@ export const appearances: Appearance[] = [
     event: "Backend Banter",
     location: "Virtual",
     date: "Jan 2024",
-    url: "https://youtu.be/xjcvlddL398?si=A1T0qZWvm8CdsDkZ",
+    url: "https://www.youtube.com/watch?v=xjcvlddL398",
     kind: "podcast",
   },
   {
@@ -221,7 +221,7 @@ export const appearances: Appearance[] = [
     event: "Nicky T Live",
     location: "Virtual",
     date: "Sep 2023",
-    url: "https://youtu.be/vlxkTAzNm5Y?si=vWuoMMUoyJvFElCU",
+    url: "https://www.youtube.com/watch?v=vlxkTAzNm5Y",
     kind: "podcast",
   },
 
@@ -231,7 +231,7 @@ export const appearances: Appearance[] = [
     event: "Certified Fresh Events",
     location: "Virtual",
     date: "Sep 2023",
-    url: "https://youtu.be/MYIIuF1ELxM?si=rn5XyB49pgfYLUK2",
+    url: "https://www.youtube.com/watch?v=MYIIuF1ELxM",
     kind: "meetup",
   },
   {
@@ -239,7 +239,7 @@ export const appearances: Appearance[] = [
     event: "ACM@UC",
     location: "Cincinnati, OH",
     date: "Nov 2022",
-    url: "https://youtu.be/EyGMpEgmRMo?si=lELS8TY1BBP-H-8f",
+    url: "https://www.youtube.com/watch?v=EyGMpEgmRMo",
     kind: "meetup",
   },
   {
@@ -255,7 +255,7 @@ export const appearances: Appearance[] = [
     event: "ACM@UC + ITSA",
     location: "Cincinnati, OH",
     date: "Oct 2021",
-    url: "https://youtu.be/cdssceyEbSU?si=jWUl8zleCNookuNv",
+    url: "https://www.youtube.com/watch?v=cdssceyEbSU",
     kind: "meetup",
   },
   {

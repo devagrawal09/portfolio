@@ -776,6 +776,48 @@ npm run build    # production Netlify SSR build — passed, 676 kB total
 
 ---
 
+### Iteration 29 — 2026-04-20
+**Completed:** Phase 6 (partial) — final content sweep sub-step: writing-page positioning copy and canonical talk video URLs
+
+- Updated the Writing page intro in `src/routes/writing/index.tsx` so it no longer frames the current site voice around being a `DevRel practitioner`; it now describes the page as technical deep-dives plus year-in-review entries about building, speaking, and contributing to open source
+- Normalized straightforward `youtu.be` shortlinks in `src/data/talks.ts` to canonical `https://www.youtube.com/watch?v=...` destinations for talks, podcasts, and meetup recordings, reducing redirect hops and making the curated talks data more stable
+- Left the `Guidance Counselor 2.0` entry on its existing LinkedIn activity URL because this pass did not verify a better canonical source and the content sweep should not guess at replacements
+- Left the broad backlog checkbox for `Final content sweep for stale claims / broken links` unchecked; this pass improves writing/talk-link hygiene but does not complete the full remaining sweep
+
+**Root cause found during verification:** the remaining content drift was now small but still public-facing: the Writing index intro used an outdated current-positioning phrase (`DevRel practitioner`), and several talks entries still used `youtu.be` shortlinks that immediately redirected to canonical `youtube.com/watch` URLs. The correct scoped fix was to tighten the public copy and store the stable canonical video destinations directly, while leaving the unverified LinkedIn-hosted episode untouched.
+
+**Verification:**
+```bash
+python3 - <<'PY'
+import urllib.request
+urls = [
+    'https://www.youtube.com/watch?v=N1wSVaUdV_U',
+    'https://www.youtube.com/watch?v=pX5r_jTLbvw',
+    'https://www.youtube.com/watch?v=4V_Wz_k35C8',
+    'https://www.youtube.com/watch?v=GrJVK6ci--s',
+    'https://www.youtube.com/watch?v=44b2U0uGQ0k',
+    'https://www.youtube.com/watch?v=vAKwSEzj7sY',
+    'https://www.youtube.com/watch?v=TwpcWoZCQ_4',
+    'https://www.youtube.com/watch?v=8GuvVaEWjzk',
+    'https://www.youtube.com/watch?v=0bYeHVAk_EM',
+    'https://www.youtube.com/watch?v=nD1V18VBNcw',
+    'https://www.youtube.com/watch?v=xjcvlddL398',
+    'https://www.youtube.com/watch?v=vlxkTAzNm5Y',
+    'https://www.youtube.com/watch?v=MYIIuF1ELxM',
+    'https://www.youtube.com/watch?v=EyGMpEgmRMo',
+    'https://www.youtube.com/watch?v=cdssceyEbSU',
+]
+for url in urls:
+    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    with urllib.request.urlopen(req, timeout=15) as response:
+        print(response.geturl())
+PY
+npm run verify
+npm run build
+```
+
+---
+
 ## Immediate next steps
 
 1. Finish the final content sweep for stale claims and broken links.

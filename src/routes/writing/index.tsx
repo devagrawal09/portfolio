@@ -224,8 +224,8 @@ export default function WritingPage() {
         <p style={pageStyles.eyebrow}>Articles</p>
         <h1 style={pageStyles.pageHeading}>Writing</h1>
         <p style={pageStyles.bodyText}>
-          Technical deep-dives on SSR, serverless, and fullstack patterns — plus annual reflections
-          on growing as an engineer, DevRel practitioner, and open-source contributor.
+          Technical deep-dives on SSR, serverless, and fullstack patterns — plus year-in-review
+          entries capturing lessons from building, speaking, and contributing to open source.
         </p>
 
         {/* ── Technical articles ── */}
