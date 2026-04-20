@@ -386,9 +386,9 @@ Avoid:
 - [ ] Add SEO review pass
 
 ## Phase 6 — cleanup / launch
-- [ ] Remove old Gatsby-specific code and assets once replacement is ready
+- [x] Remove old Gatsby-specific code and assets once replacement is ready
 - [ ] Preserve or redirect legacy routes where useful
-- [ ] Update README with local setup and deployment notes
+- [x] Update README with local setup and deployment notes
 - [ ] Final content sweep for stale claims / broken links
 - [ ] Launch the new site
 
@@ -568,6 +568,32 @@ Avoid:
 **Root cause found during verification:** Netlify framework detection still saw the legacy Gatsby repo metadata and auto-loaded the Gatsby build plugin, even though `base = "rewrite"` pointed the actual build at the SolidStart app. That plugin then failed looking for Gatsby-specific `.cache` artifacts.
 
 **Verification:** `npm run build` and `netlify build --offline`
+
+---
+
+### Iteration 15 — 2026-04-19
+**Completed:** Phase 6, items 1 and 3 — remove legacy Gatsby code/assets and confirm README is finalized
+
+- All Gatsby-specific source files (`gatsby-browser.js`, `gatsby-config.js`, `gatsby-node.ts`, `gatsby-ssr.js`, `font-preload-cache.json`) and the legacy `src/` Gatsby content (pages, templates, old data, static images) have been removed from the working tree; the SolidStart v2 app now lives at the repo root
+- Removed the `rewrite/` subdirectory, which housed the in-progress SolidStart app during the migration window, now that the app is promoted to root
+- Removed `NETLIFY_SKIP_GATSBY_BUILD_PLUGIN = "true"` from `netlify.toml` — the workaround was only required while `gatsby-config.js` existed alongside the SolidStart build; Netlify framework detection no longer finds any Gatsby artifacts
+- Removed `static/seo-images/**/*.png` from `.gitignore` — the `static/` directory no longer exists in the working tree
+- Removed stale `gatsbyjs`/editor-template residue from `.vscode/settings.json` and updated `LICENSE` away from the inherited Gatsby starter copyright
+- README was already fully updated with local-dev, quality-check, build, and Netlify deployment notes in prior iterations; confirmed complete and checked off
+
+**Root cause found during verification:** `npm run verify` initially failed because `src/app.tsx` imported `~/components/Layout` while the migrated file still existed as `src/components/layout.tsx`. On this case-insensitive filesystem that produced a TypeScript casing conflict. Renaming the component file to `Layout.tsx` fixed the root cause instead of weakening compiler settings.
+
+**Verification (run by Hermes):**
+```bash
+# No Gatsby references should remain in repo-owned files
+git grep -i gatsby -- ':!backlog.md' ':!README.md' ':!LICENSE' ':!.vscode/settings.json'
+
+# Full quality gate
+npm run verify
+
+# Production build still works
+npm run build
+```
 
 ---
 

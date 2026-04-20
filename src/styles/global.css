@@ -1,339 +1,79 @@
-/*!
- * Start Bootstrap - Business Casual v5.0.0 (https://startbootstrap.com/template-overviews/business-casual)
- * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* --- Colors --- */
+  --color-bg: #0d0f14;
+  --color-bg-elevated: #141720;
+  --color-bg-subtle: #1a1f2e;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-text-faint: #64748b;
+  --color-text-bright: #f1f5f9;
+  --color-accent: #a78bfa;
+  --color-accent-dim: rgba(167, 139, 250, 0.12);
+  --color-accent-border: rgba(167, 139, 250, 0.3);
+
+  /* --- Spacing (4px base unit) --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* --- Typography — font sizes --- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 0.95rem;
+  --text-md: 1.05rem;
+  --text-lg: 1.125rem;
+  --text-hero: clamp(2rem, 5vw, 3.25rem);
+  --text-page-heading: clamp(1.75rem, 4vw, 2.5rem);
+
+  /* --- Border radius --- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* --- Layout --- */
+  --layout-content-width: 780px;
+  --layout-content-narrow: 560px;
+  --layout-content-pad: 2rem;
+}
+
+html {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body {
-  font-family: "Lora";
-  background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(47, 23, 15, 0.65))
-    ),
-    url("./bg.jpg");
-  background: rgba(47, 23, 15, 0.65), url("./bg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100dvh;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway";
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-p {
-  line-height: 1.75;
-}
-
-.text-faded {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.site-heading {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: "Raleway";
-}
-
-.site-heading .site-heading-upper {
-  display: block;
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.site-heading .site-heading-lower {
-  font-size: 5rem;
-  font-weight: 100;
-  line-height: 4rem;
-}
-
-.page-section {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.section-heading .section-heading-upper {
-  display: block;
-  font-size: 1rem;
-  font-weight: 800;
-}
-
-.section-heading .section-heading-lower {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 100;
-}
-
-@media (min-width: 768px) {
-  .section-heading .section-heading-lower {
-    font-size: 2.8rem;
-  }
-}
-
-.experience-img {
-  max-height: 200px;
-}
-
-.bg-faded {
-  background-color: rgba(255, 255, 255, 0.85);
-}
-
-#mainNav {
-  background-color: rgba(47, 23, 15, 0.9);
-  font-family: "Raleway";
-}
-
-#mainNav .navbar-brand {
-  color: #e6a756;
-}
-
-#mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 800;
-}
-
-#mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #e6a756;
-}
-
-@media (min-width: 992px) {
-  #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.9rem;
-  }
-  #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
-  }
-  #mainNav .navbar-nav .nav-item .nav-link.active:hover {
-    color: #e6a756;
-  }
-}
-
-.btn-xl {
-  font-weight: 700;
-  font-size: 0.8rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.intro {
-  position: relative;
-}
-
-@media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    float: right;
-  }
-  .intro .intro-text {
-    left: 0;
-    width: 60%;
-    margin-top: 3rem;
-    position: absolute;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .intro .intro-text {
-    width: 45%;
-  }
-}
-
-.cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
-}
-
-.cta .cta-inner {
-  position: relative;
-  padding: 3rem;
-  margin: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.85);
-}
-
-.cta .cta-inner:before {
-  border-radius: 0.5rem;
-  content: "";
-  position: absolute;
-  top: -0.5rem;
-  bottom: -0.5rem;
-  left: -0.5rem;
-  right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
-  z-index: -1;
-}
-
-@media (min-width: 992px) {
-  .about-heading .about-heading-img {
-    position: relative;
-    z-index: 0;
-    -webkit-transform: scaleX(1.1);
-    transform: scaleX(1.1);
-  }
-  .about-heading .about-heading-content {
-    margin-top: -5rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .experience .experience-title {
-    position: relative;
-    z-index: 1;
-    margin-bottom: -3rem;
-  }
-  .experience .experience-img {
-    position: relative;
-    z-index: 0;
-    max-width: 60vw;
-  }
-  .experience .experience-description {
-    position: relative;
-    z-index: 1;
-    margin-top: -3rem;
-    max-width: 50vw;
-  }
-}
-
-.showcase {
-  background: rgba(94, 56, 41, 0.85);
-  border-radius: 0.5rem;
-  width: 80%;
-  margin: auto;
-}
-
-.list-hours {
-  font-size: 0.9rem;
-}
-
-.list-hours .list-hours-item {
-  border-bottom: 1px solid rgba(230, 167, 86, 0.5);
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
-.list-hours .list-hours-item.today {
-  font-weight: bold;
-  color: #e6a756;
-}
-
-@media (min-width: 992px) {
-  .list-hours {
-    width: 50%;
-    font-size: 1.1rem;
-  }
-}
-
-.address strong {
-  font-size: 1.2rem;
-}
-
-.footer {
-  background-color: rgba(47, 23, 15, 0.9);
-}
-
-.text-primary {
-  color: #e6a756 !important;
-}
-
-.bg-primary {
-  background-color: #e6a756 !important;
-}
-
-.btn {
-  -webkit-box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
-  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
-}
-
-.btn-primary {
-  background-color: #e6a756;
-  border-color: #e6a756;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-  background-color: #df902a;
-  border-color: #df902a;
-}
-
-.font-weight-light {
-  font-weight: 100 !important;
-}
-
-.wheat-text {
-  color: wheat;
-}
-
-.project {
-  margin-top: 25px;
-  text-align: center;
-}
-
-.project .project-image {
-  width: 80%;
-  border: 1px solid black;
-  border-radius: 3px;
-}
-
-.project h3 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.project-page .project-image {
-  width: 100%;
-}
-
-.blog-article .text-muted,
-.blog-article .article-excerpt {
-  font-size: 0.9rem;
-}
-
-.blog-article .article-image {
-  width: 100%;
-  filter: brightness(0.8);
-}
-
-@media (min-width: 992px) {
-  .featured-article-card {
-    height: 27rem;
-  }
-
-  .article-card {
-    height: 12.5rem;
-  }
-}
-
-.text-justify-p p {
-  text-align: justify;
-}
-
-.landing {
-  text-shadow: 0 0 5rem rgba(0, 0, 0, 1);
-}
-
-.landing h1 {
-  font-size: 5rem;
-}
-
-.landing p {
-  font-size: 1.5rem;
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
