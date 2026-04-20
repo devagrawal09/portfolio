@@ -1,0 +1,8 @@
+[build]
+  base = "rewrite"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NETLIFY_SKIP_GATSBY_BUILD_PLUGIN = "true"

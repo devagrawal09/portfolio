@@ -341,7 +341,7 @@ Avoid:
 - [ ] Decide final information architecture
 - [x] Decide visual direction / references
 - [ ] Decide content source strategy (markdown, mdx, typed data, or mixed)
-- [ ] Decide deployment target for SolidStart app
+- [x] Decide deployment target for SolidStart app
 - [ ] Decide whether to preserve any legacy URLs for SEO
 
 ## Phase 1 — bootstrap the new app
@@ -554,6 +554,20 @@ Avoid:
 - During verification, `npm run verify` initially failed because Claude left the homepage section incomplete and the new Writing route had Solid reactivity lint warnings from conditional early returns; fixed the root cause by wiring the homepage section fully and converting the conditional link rendering to `Show`-based JSX
 
 **Verification:** `npm run verify` and `npm run build` (after `npm run format -- --write src/data/writing.ts src/routes/index.tsx src/routes/writing.tsx`)
+
+---
+
+### Iteration 14 — 2026-04-19
+**Completed:** Phase 0 — decide deployment target for the SolidStart rewrite
+
+- Chose **Netlify** as the deployment target for the in-progress `rewrite/` app and codified that decision in the repo root `netlify.toml`
+- Updated `rewrite/vite.config.ts` to use Nitro's `netlify` preset so SolidStart emits Netlify-compatible SSR output
+- Added `NETLIFY_SKIP_GATSBY_BUILD_PLUGIN=true` because the legacy Gatsby app still exists at the repo root and Netlify otherwise auto-injects `@netlify/plugin-gatsby`, which breaks the SolidStart build during local verification
+- Updated `.gitignore` to ignore `rewrite/.solid-start/` and documented the mixed Gatsby + rewrite deployment setup in `README.md`
+
+**Root cause found during verification:** Netlify framework detection still saw the legacy Gatsby repo metadata and auto-loaded the Gatsby build plugin, even though `base = "rewrite"` pointed the actual build at the SolidStart app. That plugin then failed looking for Gatsby-specific `.cache` artifacts.
+
+**Verification:** `npm run build` and `netlify build --offline`
 
 ---
 

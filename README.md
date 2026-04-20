@@ -8,6 +8,8 @@ This website is built with [Gatsby](https://www.gatsbyjs.org/) and hosted [here]
 
 A fresh rewrite is in progress in the `rewrite/` directory. The legacy Gatsby site remains untouched until the new site is ready to launch.
 
+Deployment target for the rewrite: **Netlify**.
+
 See [`backlog.md`](./backlog.md) for the full plan and iteration log.
 
 ### Run the rewrite locally
@@ -41,3 +43,17 @@ npm run start
 ```
 
 Requires Node 20+.
+
+### Netlify deployment notes
+
+The repo still contains the legacy Gatsby site at the root, but the in-progress rewrite deploys from `rewrite/`.
+
+- Root `netlify.toml` sets `base = "rewrite"` and runs the SolidStart build there.
+- `rewrite/vite.config.ts` uses Nitro's Netlify preset for the SolidStart SSR output.
+- `NETLIFY_SKIP_GATSBY_BUILD_PLUGIN=true` is set to stop Netlify from auto-injecting the Gatsby build plugin while this mixed Gatsby + SolidStart repo is in transition.
+
+Useful local verification command:
+
+```bash
+netlify build --offline
+```
