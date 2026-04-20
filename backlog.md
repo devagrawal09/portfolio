@@ -759,6 +759,23 @@ npm run build
 
 ---
 
+### Iteration 28 — 2026-04-20
+**Completed:** Phase 6 (partial) — final content sweep sub-step: about-page intro positioning, contact CTA copy, and crossws canonical URLs
+
+- Updated `src/routes/about.tsx` intro paragraph: removed the stale "software engineer and developer advocate" dual-title framing left over from the DevRel era; replaced with "software engineer at Xolvio building event-sourced systems and fullstack apps" while preserving the OSS-contribution and conference-speaking context that follows
+- Updated `src/data/contact.ts` "Work with me" channel description: removed the DevRel-flavoured "Need DevRel, architecture input, or a technical demo?" CTA copy; replaced with collaboration language that fits a software-engineer positioning — "Open to engineering collaboration, architecture discussions, and technical project conversations"
+- Updated crossws URL in `src/data/home.ts` from `https://github.com/unjs/crossws` to `https://github.com/h3js/crossws` — the repo migrated to the h3js org and the old URL now redirects
+- Updated crossws URL in `src/data/profile.ts` from `https://github.com/unjs/crossws` to `https://github.com/h3js/crossws`; also updated the adjacent description from "the broader UnJS ecosystem" to "now under the h3js org, used under the hood in Nitro and H3" to reflect the current ecosystem naming
+- Left the broad backlog checkbox for `Final content sweep for stale claims / broken links` unchecked; this pass only covers the about-page intro positioning, contact CTA copy, and crossws link hygiene — a broader sweep of all remaining claims and links has not been done
+
+**Verification:**
+```bash
+npm run verify   # typecheck + lint + format:check — all passed
+npm run build    # production Netlify SSR build — passed, 676 kB total
+```
+
+---
+
 ## Immediate next steps
 
 1. Finish the final content sweep for stale claims and broken links.

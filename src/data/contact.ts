@@ -33,7 +33,7 @@ export const CONTACT_CHANNELS: ContactChannel[] = [
   {
     label: "Work with me",
     description:
-      "Building something in the Solid or TanStack ecosystem? Need DevRel, architecture input, or a technical demo? Let's talk.",
+      "Working on something in the Solid or TanStack ecosystem? Open to engineering collaboration, architecture discussions, and technical project conversations.",
     href: CONTACT_EMAIL_HREF,
     analyticsEvent: "cta_contact",
     analyticsProps: { location: "contact_page", channel: "email" },

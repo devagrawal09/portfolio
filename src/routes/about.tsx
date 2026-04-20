@@ -317,10 +317,10 @@ export default function AboutPage() {
         <p style={pageStyles.eyebrow}>Background</p>
         <h1 style={pageStyles.pageHeading}>About Dev</h1>
         <p style={pageStyles.bodyText}>
-          I'm a software engineer and developer advocate focused on fullstack architecture, reactive
-          UI, and local-first systems. I contribute to the Solid.js core, maintain TanStack Start,
-          and speak at conferences on async UI, sync engines, and modern web patterns. Currently
-          building at Xolvio while staying active in the OSS ecosystem.
+          I'm a software engineer at Xolvio building event-sourced systems and fullstack apps. I
+          contribute to the Solid.js core, maintain TanStack Start, and speak at conferences on
+          async UI, sync engines, and modern web patterns. Active in the OSS ecosystem across the
+          Solid and TanStack communities.
         </p>
 
         {/* Work experience */}

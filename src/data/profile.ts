@@ -121,9 +121,9 @@ export const OSS_CONTRIBUTIONS: OssContribution[] = [
     name: "crossws",
     role: "Contributor",
     since: "Nov 2024",
-    url: "https://github.com/unjs/crossws",
+    url: "https://github.com/h3js/crossws",
     description:
-      "Cross-runtime WebSocket adapter used under the hood in Nitro, H3, and the broader UnJS ecosystem.",
+      "Cross-runtime WebSocket adapter, now under the h3js org, used under the hood in Nitro and H3.",
   },
 ];
 

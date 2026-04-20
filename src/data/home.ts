@@ -92,7 +92,7 @@ export const OSS_ITEMS: OssItem[] = [
     name: "crossws",
     role: "Contributor",
     since: "Nov 2024",
-    url: "https://github.com/unjs/crossws",
+    url: "https://github.com/h3js/crossws",
   },
 ];
 
