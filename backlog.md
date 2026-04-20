@@ -716,11 +716,26 @@ npm run build
 
 **Verification:** `npm run verify && npm run build` (initial run, caught the Prettier failure), `npm run format -- --write src/routes/work/[slug].tsx && npm run verify && npm run build`, `curl -s http://127.0.0.1:4173/robots.txt`, `curl -s http://127.0.0.1:4173/sitemap.xml`, plus local browser metadata/console checks on `http://127.0.0.1:4173/`, `http://127.0.0.1:4173/work`, and `http://127.0.0.1:4173/work/momentum-devcon`
 
+---
+
+### Iteration 25 — 2026-04-20
+**Completed:** Phase 6 (partial) — preserve useful legacy writing/blog routes and restore real writing destinations
+
+- Converted `src/routes/writing.tsx` into a nested layout wrapper and added `src/routes/writing/index.tsx` plus `src/routes/writing/[slug].tsx`, so the Writing section now supports internal article detail pages for the two featured technical pieces (`/writing/isomorphic` and `/writing/serverless`)
+- Expanded `src/data/writing.ts` with structured prose sections for those two featured articles, then pointed the homepage Writing highlights and Writing-page technical cards at real internal destinations instead of dead-ending back on `/writing`
+- Added legacy `/blog` routing wrappers plus `/blog/index.tsx` and `/blog/[slug].tsx` so old blog URLs now forward into the new Writing experience (`/blog` → `/writing`, technical articles → their new detail pages, reflection slugs → anchored archive entries on `/writing`)
+- Claude Code twice hit `error_max_turns` mid-iteration and left the Writing route in a partial folder-route state; Hermes inspected the diff, finished the missing route wiring manually, and verified the final behavior before continuing
+- Left the broad backlog checkbox for `Preserve or redirect legacy routes where useful` unchecked for now because this pass only covers the high-value legacy writing/blog URLs, not every historical route in the old Gatsby site
+
+**Root cause found during verification:** the rewrite had curated writing metadata, but the Writing page still rendered non-clickable summary cards unless an external `url` existed, and all old `/blog/*` URLs fell through to the 404 page. That meant the homepage's Writing highlights looped users into a dead-end section and any existing legacy article links lost continuity entirely. The fix was to add first-class internal writing detail routes for the featured technical articles, anchorable archive entries for reflection slugs, and explicit legacy blog route forwarding.
+
+**Verification:** initial failing check showed `/blog`, `/blog/isomorphic`, and `/blog/serverless` all 404ed and `/writing` had no article links beyond site nav; then `npm run format -- --write src/data/writing.ts src/routes/index.tsx src/routes/writing.tsx src/routes/writing/index.tsx src/routes/writing/[slug].tsx src/routes/blog.tsx src/routes/blog/index.tsx src/routes/blog/[slug].tsx`, `npm run verify`, `npm run build`, post-fix route/link verification against `http://127.0.0.1:4173/`, `http://127.0.0.1:4173/writing`, `http://127.0.0.1:4173/blog`, `http://127.0.0.1:4173/blog/isomorphic`, and `http://127.0.0.1:4173/blog/serverless`, plus local browser/console checks on `/`, `/writing`, `/writing/isomorphic`, and `/blog/senior`
+
 ## Immediate next steps
 
 1. Finish the final content sweep for stale claims and broken links.
 2. Run a performance review pass.
-3. Preserve or redirect legacy routes where useful.
+3. Decide whether any non-writing legacy Gatsby URLs still need redirects before launch.
 4. Launch the new site.
 
 ---

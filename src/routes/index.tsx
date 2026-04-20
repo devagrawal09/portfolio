@@ -459,6 +459,8 @@ function WorkCard(props: {
 }
 
 function WritingCard(props: { article: Article; onNavigate: () => void }) {
+  const href = () => props.article.url ?? "/writing";
+
   return (
     <div style={s.writingItem}>
       <div>
@@ -468,7 +470,7 @@ function WritingCard(props: { article: Article; onNavigate: () => void }) {
         </div>
       </div>
       <A
-        href="/writing"
+        href={href()}
         style={s.writingArrow}
         onClick={props.onNavigate}
         aria-label={`Read ${props.article.title}`}
