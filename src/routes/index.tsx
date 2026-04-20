@@ -449,7 +449,7 @@ function WorkCard(props: {
               rel="noopener noreferrer"
               onClick={props.onNavigate}
             >
-              View ↗
+              {props.project.urlLabel ?? "View ↗"}
             </a>
           )}
         </div>

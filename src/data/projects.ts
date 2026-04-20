@@ -27,6 +27,8 @@ export interface FeaturedProject {
   tech: string[];
   /** Primary link — live site, talk recording, or public demo */
   url?: string;
+  /** Custom label for the primary link. Defaults to 'View project ↗' / 'View ↗' when absent. */
+  urlLabel?: string;
   /** Source repository */
   repoUrl?: string;
   kind: ProjectKind;
@@ -115,7 +117,8 @@ export const PROJECTS: FeaturedProject[] = [
     outcome:
       "Deployed to production serving Ohio courts and the Supreme Court. Data collected informs felony sentencing decisions statewide and is publicly accessible for researchers.",
     tech: ["Node.js", "Express", "React", "PostgreSQL", "MongoDB", "Linux"],
-    url: "https://ohiosentencingdata.info/",
+    url: "https://courtnewsohio.gov/happening/2021/sentencingDataPlatform_062521.asp",
+    urlLabel: "Official coverage ↗",
     kind: "civic",
     featured: true,
     analyticsEvent: "featured_work_click",

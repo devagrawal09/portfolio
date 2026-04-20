@@ -332,7 +332,7 @@ export default function CaseStudyPage() {
                   rel="noopener noreferrer"
                   onClick={trackExternal("case_study_external")}
                 >
-                  View project ↗
+                  {p().urlLabel ?? "View project ↗"}
                 </a>
               </Show>
               <Show when={p().repoUrl && p().repoUrl !== p().url}>

@@ -731,6 +731,20 @@ npm run build
 
 **Verification:** initial failing check showed `/blog`, `/blog/isomorphic`, and `/blog/serverless` all 404ed and `/writing` had no article links beyond site nav; then `npm run format -- --write src/data/writing.ts src/routes/index.tsx src/routes/writing.tsx src/routes/writing/index.tsx src/routes/writing/[slug].tsx src/routes/blog.tsx src/routes/blog/index.tsx src/routes/blog/[slug].tsx`, `npm run verify`, `npm run build`, post-fix route/link verification against `http://127.0.0.1:4173/`, `http://127.0.0.1:4173/writing`, `http://127.0.0.1:4173/blog`, `http://127.0.0.1:4173/blog/isomorphic`, and `http://127.0.0.1:4173/blog/serverless`, plus local browser/console checks on `/`, `/writing`, `/writing/isomorphic`, and `/blog/senior`
 
+---
+
+### Iteration 26 — 2026-04-20
+**Completed:** Phase 6 (partial) — final content sweep sub-step for stale/broken project links
+
+- Added an optional `urlLabel` field to `FeaturedProject` in `src/data/projects.ts` so project cards and case-study pages can describe outbound links truthfully instead of always rendering a generic “View” label
+- Replaced the broken `https://ohiosentencingdata.info/` primary link for the Ohio Sentencing Data Platform with the stable official Court News Ohio announcement (`https://courtnewsohio.gov/happening/2021/sentencingDataPlatform_062521.asp`) and labeled it `Official coverage ↗`
+- Wired the new `urlLabel` support through the homepage featured-work cards, the Work index cards, and the Work case-study pages so this content sweep improvement applies consistently wherever project links are shown
+- Left the broad backlog checkbox for `Final content sweep for stale claims / broken links` unchecked for now because this pass only fixes the highest-impact broken project link and related labeling, not every remaining content-review task
+
+**Root cause found during verification:** the Work data model assumed every primary project link was a live product destination and hard-coded generic “View” labels around that assumption. Hermes' external-link audit found that the Ohio Sentencing Data Platform URL now redirects through unrelated domains and ends in a Cloudflare challenge instead of a stable public page, so the portfolio was surfacing a broken high-visibility project link. The fix was to support truthful outbound-link labels in shared project metadata and swap the dead OSDP link for stable official public coverage.
+
+**Verification:** link audit via `python3` + `urllib` over external URLs in `src/`, `curl -I -L -s -o /tmp/osdp_article_headers.txt -w '%{url_effective}\n%{http_code}\n' https://courtnewsohio.gov/happening/2021/sentencingDataPlatform_062521.asp`, `npm run verify`, `npm run build`, plus local browser/console checks on `http://127.0.0.1:4173/`, `http://127.0.0.1:4173/work`, and `http://127.0.0.1:4173/work/osdp`
+
 ## Immediate next steps
 
 1. Finish the final content sweep for stale claims and broken links.

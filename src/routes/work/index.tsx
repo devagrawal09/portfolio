@@ -218,7 +218,7 @@ function ProjectCard(props: { project: FeaturedProject }) {
             rel="noopener noreferrer"
             onClick={trackExternal}
           >
-            View project ↗
+            {props.project.urlLabel ?? "View project ↗"}
           </a>
         )}
         {props.project.repoUrl && props.project.repoUrl !== props.project.url && (
