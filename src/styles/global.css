@@ -165,3 +165,31 @@ a {
     border-bottom: none;
   }
 }
+
+/* --- Case-study detail rows: stack label above content on mobile --- */
+@media (max-width: 639px) {
+  .case-detail-row {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+/* --- Footer inner: stack copyright and credit on mobile --- */
+.footer-inner {
+  max-width: var(--layout-content-width);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text-faint);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 639px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}

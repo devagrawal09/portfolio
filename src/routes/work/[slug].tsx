@@ -273,21 +273,21 @@ export default function CaseStudyPage() {
 
             {/* What + Challenges + Architecture + Outcome */}
             <div style={s.detailBlock}>
-              <div style={s.detailRow}>
+              <div class="case-detail-row" style={s.detailRow}>
                 <span style={s.detailLabel}>What</span>
                 <span style={s.detailValue}>{p().description}</span>
               </div>
               <Show when={p().challenges}>
-                <div style={s.detailRow}>
+                <div class="case-detail-row" style={s.detailRow}>
                   <span style={s.detailLabel}>Challenge</span>
                   <span style={s.detailValue}>{p().challenges}</span>
                 </div>
               </Show>
-              <div style={s.detailRow}>
+              <div class="case-detail-row" style={s.detailRow}>
                 <span style={s.detailLabel}>Architecture</span>
                 <span style={s.detailValue}>{p().architecture}</span>
               </div>
-              <div style={s.detailRow}>
+              <div class="case-detail-row" style={s.detailRow}>
                 <span style={s.detailLabel}>Outcome</span>
                 <span style={s.detailValueOutcome}>{p().outcome}</span>
               </div>

@@ -385,7 +385,7 @@ Avoid:
 - [x] Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item
 - [ ] Add accessibility review pass
 - [ ] Add performance review pass
-- [ ] Add responsive review pass
+- [x] Add responsive review pass
 - [ ] Add SEO review pass
 
 ## Phase 6 — cleanup / launch
@@ -674,13 +674,26 @@ npm run build
 
 **Verification:** `npm run verify`, `npm run build`, plus before/after 390px-wide screenshot review via `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/ /tmp/portfolio-proofbar-before.png` and `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/ /tmp/portfolio-proofbar-after.png`
 
+---
+
+### Iteration 22 — 2026-04-20
+**Completed:** Phase 5 — responsive review pass
+
+- Ran a focused 390px mobile review across the homepage plus the `work`, `talks`, `open-source`, `writing`, `about`, and `contact` routes, along with the `Momentum DevCon App` case-study page, to find the highest-impact remaining small-screen issues
+- Fixed the case-study route in `src/routes/work/[slug].tsx` by giving the detail rows a responsive class hook and stacking the label/content layout on small screens instead of keeping the desktop two-column rhythm on phones
+- Moved the shared footer inner layout into `src/styles/global.css` and added a narrow-screen rule so copyright and the SolidStart credit stack cleanly across the site on mobile
+- Confirmed the homepage and the updated case-study page render without browser-console errors after the responsive fixes
+
+**Root cause found during verification:** the case-study page kept a desktop-oriented flex row with a `min-width: 110px` left label column at every breakpoint, which squeezed the body copy into an overly narrow mobile column. The shared footer had a similar issue: it used a fixed horizontal `justify-content: space-between` layout at every width, which made the small-screen footer feel cramped. The fix was to keep the existing desktop layout intact while adding mobile-only stacking rules for those two shared problem areas.
+
+**Verification:** `npm run verify`, `npm run build`, `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/ /tmp/portfolio-home-after.png`, `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/work /tmp/portfolio-work-after.png`, and `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/work/momentum-devcon /tmp/portfolio-case-study-after.png`
+
 ## Immediate next steps
 
-1. Run a focused responsive review pass across homepage and secondary pages.
-2. Run an accessibility review pass on navigation, color contrast, and keyboard/focus states.
-3. Run an SEO / metadata review, including custom OG image coverage.
-4. Finish the final content sweep for stale claims and broken links.
-5. Launch the new site.
+1. Run an accessibility review pass on navigation, color contrast, and keyboard/focus states.
+2. Run an SEO / metadata review, including custom OG image coverage.
+3. Finish the final content sweep for stale claims and broken links.
+4. Launch the new site.
 
 ---
 
