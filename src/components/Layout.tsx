@@ -33,6 +33,9 @@ export function Layout(props: ParentProps) {
 
   return (
     <div style={styles.root}>
+      <a href="#main-content" class="skip-link">
+        Skip to main content
+      </a>
       <nav class="site-header" aria-label="Primary">
         <div class="site-header-inner">
           <A href="/" class="site-brand">
@@ -50,7 +53,9 @@ export function Layout(props: ParentProps) {
         </div>
       </nav>
 
-      <main style={styles.main}>{props.children}</main>
+      <main id="main-content" tabindex="-1" style={styles.main}>
+        {props.children}
+      </main>
 
       <footer style={styles.footer}>
         <div class="footer-inner">

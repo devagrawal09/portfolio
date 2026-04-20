@@ -84,6 +84,25 @@ a {
   border-radius: 2px;
 }
 
+/* --- Skip link --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-md);
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
 /* --- Site header / nav --- */
 .site-header {
   padding: var(--space-5) var(--space-8);

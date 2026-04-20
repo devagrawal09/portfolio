@@ -222,7 +222,7 @@ export default function WritingPage() {
         </p>
 
         {/* ── Technical articles ── */}
-        <span style={s.sectionLabel}>Technical</span>
+        <h2 style={s.sectionLabel}>Technical</h2>
         <div style={s.articleList}>
           <For each={technicalArticles}>
             {(article) => <ArticleCard article={article} onNavigate={trackClick(article.slug)} />}
@@ -231,7 +231,7 @@ export default function WritingPage() {
 
         {/* ── Year-in-review archive ── */}
         <div style={s.archiveDivider}>
-          <span style={s.sectionLabel}>Year in Review</span>
+          <h2 style={s.sectionLabel}>Year in Review</h2>
           <div style={s.archiveList}>
             <For each={reflectionArticles}>
               {(article, i) => (

@@ -383,7 +383,7 @@ Avoid:
 - [x] Improve large-screen layout density so wide desktop screens use horizontal space intentionally
 - [x] Fix mobile header spacing so the first nav link does not crowd the site name
 - [x] Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item
-- [ ] Add accessibility review pass
+- [x] Add accessibility review pass
 - [ ] Add performance review pass
 - [x] Add responsive review pass
 - [ ] Add SEO review pass
@@ -688,11 +688,25 @@ npm run build
 
 **Verification:** `npm run verify`, `npm run build`, `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/ /tmp/portfolio-home-after.png`, `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/work /tmp/portfolio-work-after.png`, and `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/work/momentum-devcon /tmp/portfolio-case-study-after.png`
 
+---
+
+### Iteration 23 — 2026-04-20
+**Completed:** Phase 5 — accessibility review pass
+
+- Added a shared skip link in `src/components/Layout.tsx` plus supporting styles in `src/styles/global.css`, and made the shared `<main>` landmark focusable so keyboard users can bypass the sticky nav and land directly in page content
+- Upgraded homepage section labels in `src/routes/index.tsx` and Writing page subsection labels in `src/routes/writing.tsx` from styled spans to real `h2` elements, preserving the current visual design while fixing the missing heading hierarchy in the accessibility tree
+- Gave the homepage Writing highlight CTA a descriptive accessible label (`Read <article title>`) instead of exposing an unlabeled arrow-only control to assistive tech
+- Smoke-checked `/` and `/writing` in the local browser after the changes and confirmed the pages render without console errors
+
+**Root cause found during verification:** the shared layout optimized for visual polish but omitted a skip link and focusable main target, while the homepage and Writing page used presentation-only spans for subsection labels. That left keyboard users without a fast path past navigation and left assistive technologies with an incomplete heading outline. The homepage Writing cards had a related issue: the CTA rendered as a bare arrow, so the control had almost no standalone meaning in the accessibility tree. The fix was to add shared keyboard-navigation affordances and swap the presentation-only labels for semantic headings without redesigning the page.
+
+**Verification:** `npm run verify`, `npm run build`, and local browser checks on `http://127.0.0.1:4173/` and `http://127.0.0.1:4173/writing` with console review
+
 ## Immediate next steps
 
-1. Run an accessibility review pass on navigation, color contrast, and keyboard/focus states.
-2. Run an SEO / metadata review, including custom OG image coverage.
-3. Finish the final content sweep for stale claims and broken links.
+1. Run an SEO / metadata review, including custom OG image coverage.
+2. Finish the final content sweep for stale claims and broken links.
+3. Run a performance review pass.
 4. Launch the new site.
 
 ---

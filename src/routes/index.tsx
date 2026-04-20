@@ -467,7 +467,12 @@ function WritingCard(props: { article: Article; onNavigate: () => void }) {
           {props.article.displayDate} · {props.article.tags.join(" · ")}
         </div>
       </div>
-      <A href="/writing" style={s.writingArrow} onClick={props.onNavigate}>
+      <A
+        href="/writing"
+        style={s.writingArrow}
+        onClick={props.onNavigate}
+        aria-label={`Read ${props.article.title}`}
+      >
         →
       </A>
     </div>
@@ -542,7 +547,7 @@ export default function Home() {
       {/* ── Featured work ── */}
       <section style={s.section}>
         <div style={s.sectionHeader}>
-          <span style={s.sectionLabel}>Featured Work</span>
+          <h2 style={s.sectionLabel}>Featured Work</h2>
           <A href="/work" style={s.sectionLink}>
             All projects →
           </A>
@@ -563,7 +568,7 @@ export default function Home() {
       {/* ── Featured talks ── */}
       <section style={s.section}>
         <div style={s.sectionHeader}>
-          <span style={s.sectionLabel}>Featured Talks</span>
+          <h2 style={s.sectionLabel}>Featured Talks</h2>
           <A href="/talks" style={s.sectionLink}>
             All {appearances.length} appearances →
           </A>
@@ -594,7 +599,7 @@ export default function Home() {
       {/* ── OSS & ecosystem ── */}
       <section style={s.section}>
         <div style={s.sectionHeader}>
-          <span style={s.sectionLabel}>Open Source</span>
+          <h2 style={s.sectionLabel}>Open Source</h2>
           <A href="/open-source" style={s.sectionLink}>
             More →
           </A>
@@ -609,7 +614,7 @@ export default function Home() {
       {/* ── Writing highlights ── */}
       <section style={s.section}>
         <div style={s.sectionHeader}>
-          <span style={s.sectionLabel}>Writing</span>
+          <h2 style={s.sectionLabel}>Writing</h2>
           <A href="/writing" style={s.sectionLink}>
             All articles →
           </A>
@@ -626,7 +631,7 @@ export default function Home() {
       {/* ── Now ── */}
       <section style={{ ...s.section, "border-bottom": "none" }}>
         <div style={s.sectionHeader}>
-          <span style={s.sectionLabel}>Currently</span>
+          <h2 style={s.sectionLabel}>Currently</h2>
         </div>
         <ul style={s.nowList}>
           <For each={NOW_ITEMS}>
