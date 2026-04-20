@@ -137,7 +137,7 @@ export default function ContactPage() {
     <>
       <PageMeta
         title="Contact"
-        description="Reach out to Dev Agrawal for speaking invitations, collaboration, or DevRel work."
+        description="Reach out to Dev Agrawal for speaking invitations, technical collaboration, or product-demo work."
         ogImage="/og/contact.svg"
       />
       <div style={pageStyles.page}>

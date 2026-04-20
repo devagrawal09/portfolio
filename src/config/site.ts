@@ -10,12 +10,12 @@ export const SITE = {
   name: "Dev Agrawal",
   handle: "devagr.me",
   description:
-    "DevRel engineer, fullstack developer, and open-source contributor building with SolidJS and the modern web.",
+    "Software engineer, fullstack developer, and open-source contributor building with SolidJS and the modern web.",
   url: "https://devagr.me",
   og: { image: "/og.svg" },
   social: SOCIAL_LINKS,
   profile: {
-    jobTitle: "DevRel Engineer & Fullstack Developer",
+    jobTitle: "Software Engineer & Fullstack Developer",
     email: "contact@devagr.me",
     sameAs: PROFILE_LINKS,
   },

@@ -745,6 +745,20 @@ npm run build
 
 **Verification:** link audit via `python3` + `urllib` over external URLs in `src/`, `curl -I -L -s -o /tmp/osdp_article_headers.txt -w '%{url_effective}\n%{http_code}\n' https://courtnewsohio.gov/happening/2021/sentencingDataPlatform_062521.asp`, `npm run verify`, `npm run build`, plus local browser/console checks on `http://127.0.0.1:4173/`, `http://127.0.0.1:4173/work`, and `http://127.0.0.1:4173/work/osdp`
 
+### Iteration 27 — 2026-04-20
+**Completed:** Phase 6 (partial) — final content sweep sub-step for stale current-role messaging
+
+- Updated homepage-facing role copy in `src/data/home.ts`: the hero eyebrow no longer leads with an outdated past-role label, the hero subline now reflects the current Xolvio software-engineer role, the proof bar now reads `Engineer / Xolvio`, and the first `NOW_ITEMS` bullet now matches the current work described in `profile.ts`
+- Updated shared/site metadata in `src/config/site.ts` so the global description and JSON-LD job title now say `Software Engineer` instead of `DevRel Engineer`
+- Updated route-level metadata in `src/routes/index.tsx`, `src/routes/about.tsx`, `src/routes/work/index.tsx`, and `src/routes/contact.tsx` so page titles/descriptions no longer present the old PowerSync-era role as the current one
+- Left the broad backlog checkbox for `Final content sweep for stale claims / broken links` unchecked because this run only addressed the stale current-role messaging slice; broader link/copy audit work remains
+
+**Root cause found during verification:** the portfolio's current-role facts had drifted across multiple content layers. `resume.md` and `src/data/profile.ts` had been updated for the move to Xolvio, but the homepage copy and shared SEO/site metadata still reflected an older PowerSync-era DevRel snapshot. That meant the site's most visible first impression and metadata described a role that was two positions out of date.
+
+**Verification:** `grep -RIn "PowerSync\|DevRel engineer" src || true` (confirmed zero current-role matches in `src/`); `npm run verify`; `npm run build`
+
+---
+
 ## Immediate next steps
 
 1. Finish the final content sweep for stale claims and broken links.

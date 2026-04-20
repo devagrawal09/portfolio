@@ -17,10 +17,10 @@ export interface HeroCta {
 
 export const HERO = {
   name: "Dev Agrawal",
-  eyebrow: "DevRel · Fullstack · OSS",
+  eyebrow: "Fullstack · OSS · Speaker",
   headline: "Building demos, systems, and developer experiences for the modern web.",
   subline:
-    "I'm a DevRel engineer at PowerSync — shipping fullstack apps, technical content, and open source work in the Solid and TanStack ecosystems.",
+    "I'm a Software Engineer at Xolvio — building event-sourced systems and fullstack apps, while contributing to the Solid.js and TanStack ecosystems.",
   ctas: [
     {
       label: "View my work",
@@ -51,7 +51,7 @@ export const PROOF_STATS: ProofStat[] = [
   { stat: "31+", label: "Talks & Appearances" },
   { stat: "Core Team", label: "Solid.js" },
   { stat: "Maintainer", label: "TanStack Start" },
-  { stat: "DevRel", label: "PowerSync" },
+  { stat: "Engineer", label: "Xolvio" },
 ];
 
 // ─── OSS / ecosystem section ──────────────────────────────────────────────────
@@ -99,7 +99,7 @@ export const OSS_ITEMS: OssItem[] = [
 // ─── "Now" / current focus ────────────────────────────────────────────────────
 
 export const NOW_ITEMS: string[] = [
-  "Building local-first / realtime developer experiences at PowerSync",
+  "Building an event-sourced ML platform at Xolvio with GraphQL, React, and Google Cloud",
   "Maintaining TanStack Start and contributing to the Solid.js core",
   "Speaking at conferences on async UI, sync engines, and modern fullstack patterns",
   "Exploring offline-first architecture, reactive data, and developer tooling",

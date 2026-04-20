@@ -310,7 +310,7 @@ export default function AboutPage() {
     <>
       <PageMeta
         title="About"
-        description="Dev Agrawal — DevRel engineer, Solid.js core team member, TanStack Start maintainer, and conference speaker on modern fullstack development."
+        description="Dev Agrawal — software engineer, Solid.js core team member, TanStack Start maintainer, and conference speaker on modern fullstack development."
         ogImage="/og/about.svg"
       />
       <div style={pageStyles.page}>
