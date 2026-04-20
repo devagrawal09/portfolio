@@ -150,3 +150,18 @@ a {
     font-size: var(--text-xs);
   }
 }
+
+/* --- Proof bar responsive layout --- */
+@media (max-width: 639px) {
+  .proof-item {
+    flex: 1 1 100% !important;
+    padding-left: var(--space-5) !important;
+    padding-right: var(--space-5) !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .proof-item:last-child {
+    border-bottom: none;
+  }
+}

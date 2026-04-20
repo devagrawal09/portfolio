@@ -382,7 +382,7 @@ Avoid:
 - [ ] Add subtle motion and interaction polish
 - [x] Improve large-screen layout density so wide desktop screens use horizontal space intentionally
 - [x] Fix mobile header spacing so the first nav link does not crowd the site name
-- [ ] Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item
+- [x] Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item
 - [ ] Add accessibility review pass
 - [ ] Add performance review pass
 - [ ] Add responsive review pass
@@ -661,13 +661,26 @@ npm run build
 
 **Verification:** `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm run verify`, `npm run build`, plus mobile screenshot review via `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/ /tmp/portfolio-mobile-home-after2.png`
 
+---
+
+### Iteration 21 — 2026-04-20
+**Completed:** Phase 5 — fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item
+
+- Added a dedicated `proof-item` class to the homepage proof-bar cards in `src/routes/index.tsx` so the shared proof-bar item can receive mobile-specific layout treatment without disturbing the desktop/tablet inline style structure
+- Added a narrow-screen override in `src/styles/global.css` (`@media (max-width: 639px)`) that stacks proof-bar items to full width, removes the right-hand divider, reduces horizontal padding, and uses bottom dividers between items instead of the cramped two-column treatment
+- This turns the homepage proof bar into a clean vertical list on phones, resolving the tight `DevRel` / `PowerSync` cell and improving readability for all four proof stats while preserving the wider-screen appearance
+
+**Root cause found during verification:** the proof bar used a rigid wrapped flex layout with `flex: 1 1 160px` plus generous horizontal padding and right-side borders on every card, which effectively forced a cramped two-column grid on ~390px screens. The `DevRel` / `PowerSync` item exposed the issue most clearly because its narrow cell had too little usable width after padding and dividers. The fix was to give proof items a mobile-only full-width stacked layout instead of trying to preserve the desktop multi-column rhythm on phones.
+
+**Verification:** `npm run verify`, `npm run build`, plus before/after 390px-wide screenshot review via `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/ /tmp/portfolio-proofbar-before.png` and `npx playwright screenshot -b chromium --viewport-size='390,844' --full-page http://127.0.0.1:4173/ /tmp/portfolio-proofbar-after.png`
+
 ## Immediate next steps
 
-1. Fix small-screen proof-bar/stat wrapping, especially the `DevRel` / `PowerSync` item.
-2. Run a focused responsive review pass across homepage and secondary pages.
-3. Run an accessibility review pass on navigation, color contrast, and keyboard/focus states.
-4. Run an SEO / metadata review, including custom OG image coverage.
-5. Finish the final content sweep for stale claims and broken links.
+1. Run a focused responsive review pass across homepage and secondary pages.
+2. Run an accessibility review pass on navigation, color contrast, and keyboard/focus states.
+3. Run an SEO / metadata review, including custom OG image coverage.
+4. Finish the final content sweep for stale claims and broken links.
+5. Launch the new site.
 
 ---
 

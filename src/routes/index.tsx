@@ -386,7 +386,7 @@ function ProofItem(props: { item: ProofStat; isLast: boolean }) {
   const style = (): JSX.CSSProperties =>
     props.isLast ? { ...s.proofItem, "border-right": "none" } : s.proofItem;
   return (
-    <div style={style()}>
+    <div class="proof-item" style={style()}>
       <span style={s.proofStat}>{props.item.stat}</span>
       <span style={s.proofLabel}>{props.item.label}</span>
     </div>
