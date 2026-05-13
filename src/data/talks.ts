@@ -11,6 +11,9 @@ export interface Appearance {
   /** Human-readable date, e.g. "Jan 2025" or "Nov 2021 – Mar 2022" */
   date: string;
   url?: string;
+  audienceNote?: string;
+  sourceUrl?: string;
+  featuredProof?: boolean;
   kind: AppearanceKind;
   isWorkshop?: boolean;
 }
@@ -23,6 +26,10 @@ export const appearances: Appearance[] = [
     event: "Frontend Nation",
     location: "Virtual",
     date: "Jun 2025",
+    url: "https://youtu.be/WfzrVMi222s?si=Cie9OyRRu59QCCz_",
+    audienceNote: "50k+ developer reach",
+    sourceUrl: "https://frontendnation.com/",
+    featuredProof: true,
     kind: "conference",
   },
   {
@@ -30,6 +37,10 @@ export const appearances: Appearance[] = [
     event: "Local First Conf",
     location: "Berlin, Germany",
     date: "May 2025",
+    url: "https://youtu.be/YQT26cnCKqo?si=OD0GKZLoBcZfNIrO",
+    audienceNote: "300 attendees",
+    sourceUrl: "https://www.localfirstconf.com/local-first-conf-2025",
+    featuredProof: true,
     kind: "conference",
   },
   {
@@ -38,6 +49,7 @@ export const appearances: Appearance[] = [
     location: "Columbus, OH",
     date: "May 2025",
     url: "https://www.youtube.com/watch?v=N1wSVaUdV_U",
+    sourceUrl: "https://stirtrek.com/",
     kind: "conference",
   },
   {
@@ -46,6 +58,9 @@ export const appearances: Appearance[] = [
     location: "Sandusky, OH",
     date: "Jan 2025",
     url: "https://www.youtube.com/watch?v=pX5r_jTLbvw",
+    audienceNote: "Around 1,100 attendees",
+    sourceUrl:
+      "https://securityboulevard.com/2025/01/codemash-2025-a-community-conversation-about-nhi-and-secrets-security/",
     kind: "conference",
   },
   {
@@ -85,6 +100,8 @@ export const appearances: Appearance[] = [
     location: "Columbus, OH",
     date: "May 2024",
     url: "https://www.youtube.com/watch?v=GrJVK6ci--s",
+    audienceNote: "About 1,500 attendees",
+    sourceUrl: "https://samestuffdifferentday.net/2024/06/25/leadership-journey-stirtrek/",
     kind: "conference",
   },
   {
@@ -136,6 +153,15 @@ export const appearances: Appearance[] = [
   },
 
   // ─── Podcasts ────────────────────────────────────────────────────────────────
+  {
+    title: "How to be notable, event sourcing, and SolidJS",
+    event: "ConTejas Code",
+    location: "Berlin, Germany",
+    date: "Jun 2025",
+    url: "https://youtu.be/sOiJLddxw_Y?si=5U30lww5TmD18GvA",
+    featuredProof: true,
+    kind: "podcast",
+  },
   {
     title: "Building Async UIs without the hassle",
     event: "PodRocket",

@@ -479,9 +479,6 @@ a {
   margin: 0 auto;
   width: 100%;
   padding: 0 var(--layout-content-pad) var(--space-12);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-4);
 }
 
 .proof-cluster {
@@ -642,8 +639,9 @@ a {
 
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(18rem, 1fr);
   gap: var(--space-4);
+  align-items: start;
 }
 
 .content-column {
@@ -661,6 +659,19 @@ a {
   font-weight: 800;
 }
 
+.article-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.article-card {
+  min-height: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--space-4);
+  text-align: left;
+}
+
 .content-card small,
 .content-featured small {
   display: block;
@@ -674,6 +685,134 @@ a {
 .content-featured span {
   display: block;
   max-width: 34ch;
+}
+
+.article-card span {
+  max-width: none;
+}
+
+.article-card strong,
+.article-card em {
+  display: block;
+  font-style: normal;
+}
+
+.article-card strong {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-bright);
+  font-size: var(--text-md);
+  line-height: 1.25;
+}
+
+.article-card em {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.markdown-content {
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+  line-height: 1.75;
+}
+
+.markdown-content > *:first-child {
+  margin-top: 0;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+  color: var(--color-text-bright);
+  line-height: 1.2;
+}
+
+.markdown-content h1 {
+  margin: var(--space-10) 0 var(--space-5);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+}
+
+.markdown-content h2 {
+  margin: var(--space-10) 0 var(--space-4);
+  font-size: var(--text-xl);
+}
+
+.markdown-content h3 {
+  margin: var(--space-8) 0 var(--space-3);
+  font-size: var(--text-lg);
+}
+
+.markdown-content p,
+.markdown-content ul,
+.markdown-content ol,
+.markdown-content blockquote,
+.markdown-content pre,
+.markdown-content table,
+.markdown-content img {
+  margin: 0 0 var(--space-5);
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.4rem;
+}
+
+.markdown-content li + li {
+  margin-top: var(--space-2);
+}
+
+.markdown-content a {
+  color: var(--color-accent);
+}
+
+.markdown-content code {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-subtle);
+  padding: 0.08rem 0.3rem;
+  color: var(--color-text-bright);
+  font-size: 0.9em;
+}
+
+.markdown-content pre {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-subtle);
+  padding: var(--space-4);
+}
+
+.markdown-content pre code {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.markdown-content table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
 }
 
 .placeholder-grid {

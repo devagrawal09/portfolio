@@ -3,9 +3,11 @@ import type { JSX } from "solid-js";
 import { A, useParams } from "@solidjs/router";
 import { HttpStatusCode } from "@solidjs/start";
 import { analytics } from "~/config/analytics";
+import { MarkdownContent } from "~/components/MarkdownContent";
 import { PageMeta } from "~/components/PageMeta";
 import { pageStyles } from "~/styles/recipes";
 import { colors, layout, radius, space, text } from "~/styles/tokens";
+import { getMarkdownArticleContent } from "~/data/articleContent";
 import { ARTICLES } from "~/data/writing";
 
 // ─── Styles ───────────────────────────────────────────────────────────────────
@@ -96,7 +98,9 @@ const s: Record<string, JSX.CSSProperties> = {
 
 export default function ArticlePage() {
   const params = useParams<{ slug: string }>();
-  const article = () => ARTICLES.find((a) => a.slug === params.slug && a.kind === "technical");
+  const article = () =>
+    ARTICLES.find((a) => a.slug === params.slug && (a.contentPath || a.sections?.length));
+  const markdown = () => getMarkdownArticleContent(article()?.contentPath);
 
   const trackRead = () =>
     analytics.trackEvent("writing_click", { slug: params.slug, location: "article_page" });
@@ -133,13 +137,25 @@ export default function ArticlePage() {
             <p style={pageStyles.eyebrow}>Technical</p>
             <h1 style={s.title}>{a().title}</h1>
             <div style={s.meta}>
+              <Show when={a().source}>
+                <span style={s.metaDate}>{a().source}</span>
+                <span style={s.metaDot}>·</span>
+              </Show>
               <span style={s.metaDate}>{a().displayDate}</span>
               <span style={s.metaDot}>·</span>
               <For each={a().tags}>{(tag) => <span style={s.tag}>{tag}</span>}</For>
             </div>
 
+            <Show when={markdown()}>
+              {(content) => (
+                <div style={s.body} onClick={trackRead}>
+                  <MarkdownContent html={content().html} />
+                </div>
+              )}
+            </Show>
+
             {/* Prose sections */}
-            <Show when={a().sections?.length}>
+            <Show when={!markdown() && a().sections?.length}>
               <div style={s.body} onClick={trackRead}>
                 <For each={a().sections}>
                   {(section) => (

@@ -4,6 +4,9 @@ import { A, useParams } from "@solidjs/router";
 import { HttpStatusCode } from "@solidjs/start";
 import { analytics } from "~/config/analytics";
 import { PageMeta } from "~/components/PageMeta";
+import { ProofBadge } from "~/components/ProofBadge";
+import { ProofGrid } from "~/components/ProofGrid";
+import { getProofByIds } from "~/data/proof";
 import { pageStyles } from "~/styles/recipes";
 import { colors, layout, radius, space, text } from "~/styles/tokens";
 import { PROJECTS, type ProjectKind } from "~/data/projects";
@@ -114,6 +117,17 @@ const s: Record<string, JSX.CSSProperties> = {
     "padding-top": space[8],
     "border-top": `1px solid ${colors.border}`,
     "margin-bottom": space[8],
+  },
+  proofBlock: {
+    "padding-top": space[8],
+    "border-top": `1px solid ${colors.border}`,
+    "margin-bottom": space[8],
+  },
+  proofBadgeRow: {
+    display: "flex",
+    "flex-wrap": "wrap",
+    gap: space[2],
+    "margin-bottom": space[6],
   },
   highlightsLabel: {
     "font-size": text.xs,
@@ -245,6 +259,7 @@ export default function CaseStudyPage() {
   const params = useParams<{ slug: string }>();
   const project = () => PROJECTS.find((p) => p.slug === params.slug);
   const placeholder = () => placeholderProjects.find((p) => p.slug === params.slug);
+  const proofItems = () => getProofByIds(project()?.proofIds);
 
   const trackExternal = (label: string) => () =>
     analytics.trackEvent("featured_work_click", {
@@ -294,6 +309,13 @@ export default function CaseStudyPage() {
                 <p class="sketch-eyebrow">Project Notes</p>
                 <h1 class="sketch-heading">{p().title}</h1>
                 <p class="sketch-body">{p().summary}</p>
+
+                <Show when={getProofByIds(p().proofIds).length}>
+                  <div style={s.proofBlock}>
+                    <p style={s.highlightsLabel}>Proof</p>
+                    <ProofGrid items={getProofByIds(p().proofIds)} variant="detailed" showSources />
+                  </div>
+                </Show>
 
                 <div style={s.placeholderGrid} class="placeholder-grid">
                   <div class="sketch-card" style={s.placeholderCard}>
@@ -382,6 +404,16 @@ export default function CaseStudyPage() {
                     )}
                   </For>
                 </ul>
+              </div>
+            </Show>
+
+            <Show when={proofItems().length}>
+              <div style={s.proofBlock}>
+                <p style={s.highlightsLabel}>Proof</p>
+                <div style={s.proofBadgeRow}>
+                  <For each={proofItems()}>{(item) => <ProofBadge item={item} />}</For>
+                </div>
+                <ProofGrid items={proofItems()} variant="detailed" showSources />
               </div>
             </Show>
 

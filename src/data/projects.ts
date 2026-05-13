@@ -42,6 +42,15 @@ export interface FeaturedProject {
   challenges?: string;
   /** Key achievement bullets shown on the case study page */
   highlights?: string[];
+  /** Proof items rendered on case studies */
+  proofIds?: string[];
+  /** Short public recognition notes */
+  recognition?: string[];
+  /** Public supporting links for project context */
+  publicSources?: {
+    label: string;
+    href: string;
+  }[];
 }
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -73,6 +82,7 @@ export const PROJECTS: FeaturedProject[] = [
       "Event sourcing made real-time feedback auditable and replayable after each session",
       "Demonstrates that a solo build can match the polish of vendor conference apps",
     ],
+    proofIds: ["speaking-appearances"],
   },
   {
     slug: "solid-socket",
@@ -101,6 +111,18 @@ export const PROJECTS: FeaturedProject[] = [
       "Server signals synchronize to client components with no extra fetch or subscription code",
       "Cited in community talks on async UI, sync engines, and the future of server reactivity",
       "Built on crossws for WebSocket adapter portability across runtimes",
+    ],
+    proofIds: ["oss-solid-socket", "award-solidhack", "oss-solid-core"],
+    recognition: ["SolidHack 2024 Best SolidStart App winner"],
+    publicSources: [
+      {
+        label: "SolidHack winner listing",
+        href: "https://hack.solidjs.com/categories-challenges",
+      },
+      {
+        label: "Source",
+        href: "https://github.com/devagrawal09/solid-socket",
+      },
     ],
   },
   {
@@ -131,6 +153,13 @@ export const PROJECTS: FeaturedProject[] = [
       "Collected data informs felony sentencing decisions statewide",
       "Publicly accessible dataset used by academic researchers and policy analysts",
     ],
+    proofIds: ["project-osdp"],
+    publicSources: [
+      {
+        label: "Court News Ohio coverage",
+        href: "https://courtnewsohio.gov/happening/2021/sentencingDataPlatform_062521.asp",
+      },
+    ],
   },
   {
     slug: "hackathon-suite",
@@ -158,6 +187,13 @@ export const PROJECTS: FeaturedProject[] = [
       "Led a volunteer engineering team through virtual and in-person hackathon formats",
       "Built a Tinder-style team-matching algorithm for hundreds of participants",
       "Automated Discord server setup, role assignment, and participant communication end-to-end",
+    ],
+    proofIds: ["project-hackathon-suite"],
+    publicSources: [
+      {
+        label: "RevolutionUC GitHub",
+        href: "https://github.com/revolutionUC/",
+      },
     ],
   },
 ];

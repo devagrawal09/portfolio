@@ -1,5 +1,7 @@
 import { For } from "solid-js";
 import { PageMeta } from "~/components/PageMeta";
+import { ProofGrid } from "~/components/ProofGrid";
+import { PROOF_ITEMS } from "~/data/proof";
 
 const summary = [
   "Product engineering for 9 years in TypeScript, Python, .NET, Java, and PHP",
@@ -58,6 +60,16 @@ const education = {
   details: ["BS in Information Technology, Software Development track", "Minor in Psychology"],
 } as const;
 
+const recognitionProof = PROOF_ITEMS.filter((item) =>
+  [
+    "oss-solid-core",
+    "oss-tanstack-start",
+    "award-solidhack",
+    "research-acm",
+    "speaking-appearances",
+  ].includes(item.id)
+);
+
 export default function AboutPage() {
   return (
     <>
@@ -82,6 +94,13 @@ export default function AboutPage() {
           <div class="resume-copy">
             <For each={summary}>{(item) => <p>{item}</p>}</For>
           </div>
+        </section>
+
+        <section class="resume-section" aria-labelledby="recognition-heading">
+          <h2 id="recognition-heading" class="sketch-section-title">
+            Recognition
+          </h2>
+          <ProofGrid items={recognitionProof} variant="detailed" showSources />
         </section>
 
         <section class="resume-section" aria-labelledby="experience-heading">

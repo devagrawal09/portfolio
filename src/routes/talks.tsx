@@ -2,7 +2,9 @@ import { For } from "solid-js";
 import type { JSX } from "solid-js";
 import { analytics } from "~/config/analytics";
 import { PageMeta } from "~/components/PageMeta";
+import { ProofGrid } from "~/components/ProofGrid";
 import { SPEAKING_EMAIL_HREF } from "~/data/contact";
+import { SPEAKING_PROOF } from "~/data/proof";
 import { appearances, conferences, meetups, podcasts, type Appearance } from "~/data/talks";
 
 import { colors, radius, space, text } from "~/styles/tokens";
@@ -16,6 +18,9 @@ const styles: Record<string, JSX.CSSProperties> = {
     "margin-bottom": space[14],
     "padding-bottom": space[10],
     "border-bottom": `1px solid ${colors.border}`,
+  },
+  proofSection: {
+    "margin-bottom": space[14],
   },
   statItem: {
     display: "flex",
@@ -119,6 +124,10 @@ const styles: Record<string, JSX.CSSProperties> = {
   metaDot: {
     color: colors.border,
   },
+  audienceLink: {
+    color: colors.accent,
+    "font-weight": 650,
+  },
   ctaRow: {
     "margin-top": space[12],
     "padding-top": space[8],
@@ -180,6 +189,23 @@ function AppearanceItem(props: { item: Appearance }) {
         <span>{props.item.location}</span>
         <span style={styles.metaDot}>·</span>
         <span>{props.item.date}</span>
+        {props.item.audienceNote && (
+          <>
+            <span style={styles.metaDot}>·</span>
+            {props.item.sourceUrl ? (
+              <a
+                href={props.item.sourceUrl}
+                style={styles.audienceLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {props.item.audienceNote}
+              </a>
+            ) : (
+              <span>{props.item.audienceNote}</span>
+            )}
+          </>
+        )}
       </div>
     </div>
   );
@@ -215,6 +241,10 @@ export default function TalksPage() {
           Conference talks, podcast guest spots, and workshops on SolidJS, TanStack, async UI,
           local-first development, and modern fullstack architecture.
         </p>
+
+        <div style={styles.proofSection}>
+          <ProofGrid items={SPEAKING_PROOF} variant="compact" showSources />
+        </div>
 
         <div style={styles.statsRow}>
           <div style={styles.statItem}>
