@@ -8,19 +8,21 @@
 
 ## Summary
 
-I build and teach how to build awesome fullstack applications.
+I build and teach how to build delightful fullstack AI applications.
 
-**8 years of experience** building products end-to-end, working directly with stakeholders and product owners.
+**9 years of experience** building products end-to-end, working directly with stakeholders and product owners.
 
-**2 years** creating educational content and speaking at tech conferences and podcasts about development and architecture.
+**4 years** creating educational content and speaking at tech conferences and podcasts about development and architecture.
+
+**14 months** building AI and Agentic applications and workflows for automated software development and delivery.
 
 ## Technical Skills
 
 **Languages:** TypeScript, Python, C#, Java, PHP, HTML and CSS
 
-**Web:** React, Solidjs, Angular, Vue, Svelte, Express, Next, Socket.io
+**Web:** React, Solid, Angular, Vue, Svelte, Express, Next, Socket.io
 
-**Architecture:** Event Sourcing, CQRS, Microservices, Domain-Driven Design
+**Architecture:** Event Sourcing, CQRS, Microservices, Domain-Driven Design, Vertical Slices, Local First
 
 **Cross platform:** Ionic, React Native, Electron, PWA
 
@@ -28,10 +30,19 @@ I build and teach how to build awesome fullstack applications.
 
 ## Work Experience
 
-### Software Engineer (Xolvio) (Apr 2025 - Current)
+### Developer Relations Engineer (PowerSync) (Dec 2025 - May 2026)
 
-- Building a machine learning platform to help analysts run quantum algorithms
-- Working with cutting edge Event Sourcing, GraphQL, and AI technologies
+- Raised the visibility and engagement of PowerSync within the developer community
+- Made educational and technical content for PowerSync blog, YouTube, and conference talks
+- Boosted site viewership, new signups, social media followers, and the north star metric
+- Brainstormed and executed AI strategy for product improvement, growth, and internal use
+- Used **React**, **Solid**, **TanStack Start**, **TanStack DB**, and **Mastra**
+
+### Software Engineer (Xolvio) (Apr 2025 - Dec 2025)
+
+- Built a machine learning platform to help analysts run quantum algorithms
+- Prototyped agentic apps and experiences for researchers and engineers
+- Worked with cutting edge Event Sourcing, GraphQL, and AI technologies
 - Used **React Router**, **Apollo GraphQL**, **KurrentDB**, **Emmett**, and **Google Cloud**
 
 ### Software Engineer (SmartData) (Apr 2024 - Apr 2025)
