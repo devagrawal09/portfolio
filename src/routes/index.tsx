@@ -69,9 +69,9 @@ const proof = [
 ] as const;
 
 const navCards = [
-  { label: "Resume", href: "/about" },
-  { label: "Projects", href: "/work" },
-  { label: "Content", href: "/writing" },
+  { label: "Resume", href: "/about", meta: "experience.log" },
+  { label: "Projects", href: "/work", meta: "ship.list" },
+  { label: "Content", href: "/writing", meta: "notes.md" },
 ] as const;
 
 function HomeIcon(props: ProofIcon) {
@@ -245,10 +245,29 @@ export default function Home() {
             <p class="home-subtitle">I build and teach how to build delightful web and AI apps</p>
           </div>
 
-          <div class="paper-stack" aria-hidden="true">
-            <span class="paper paper-one" />
-            <span class="paper paper-two" />
-            <span class="paper paper-three" />
+          <div class="terminal-panel" aria-label="Current developer profile">
+            <div class="terminal-topbar">
+              <span />
+              <span />
+              <span />
+              <strong>devagr.me</strong>
+            </div>
+            <div class="terminal-body">
+              <p>
+                <span class="terminal-prompt">$</span> whoami
+              </p>
+              <p class="terminal-output">
+                fullstack engineer / oss maintainer / technical educator
+              </p>
+              <p>
+                <span class="terminal-prompt">$</span> current_focus
+              </p>
+              <ul>
+                <li>event-sourced systems</li>
+                <li>Solid.js and TanStack ecosystems</li>
+                <li>AI application architecture</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -271,7 +290,8 @@ export default function Home() {
             <For each={navCards}>
               {(card) => (
                 <A href={card.href} class="home-nav-card">
-                  {card.label}
+                  <span>{card.meta}</span>
+                  <strong>{card.label}</strong>
                 </A>
               )}
             </For>
