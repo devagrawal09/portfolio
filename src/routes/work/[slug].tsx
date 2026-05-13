@@ -7,6 +7,7 @@ import { PageMeta } from "~/components/PageMeta";
 import { pageStyles } from "~/styles/recipes";
 import { colors, layout, radius, space, text } from "~/styles/tokens";
 import { PROJECTS, type ProjectKind } from "~/data/projects";
+import { placeholderProjects } from "~/data/project-placeholders";
 
 // ─── Styles ───────────────────────────────────────────────────────────────────
 
@@ -203,6 +204,30 @@ const s: Record<string, JSX.CSSProperties> = {
     "font-size": text.sm,
     color: colors.textFaint,
   },
+  placeholderGrid: {
+    display: "grid",
+    "grid-template-columns": "repeat(3, minmax(0, 1fr))",
+    gap: space[4],
+    "margin-top": space[10],
+  },
+  placeholderCard: {
+    padding: space[5],
+    "min-height": "120px",
+  },
+  placeholderLabel: {
+    display: "block",
+    "font-size": text.xs,
+    "font-weight": "800",
+    "text-transform": "uppercase",
+    color: colors.textFaint,
+    "margin-bottom": space[2],
+  },
+  placeholderText: {
+    "font-size": text.sm,
+    "font-weight": "700",
+    color: colors.text,
+    "line-height": "1.5",
+  },
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -219,6 +244,7 @@ const KIND_LABELS: Record<ProjectKind, string> = {
 export default function CaseStudyPage() {
   const params = useParams<{ slug: string }>();
   const project = () => PROJECTS.find((p) => p.slug === params.slug);
+  const placeholder = () => placeholderProjects.find((p) => p.slug === params.slug);
 
   const trackExternal = (label: string) => () =>
     analytics.trackEvent("featured_work_click", {
@@ -230,24 +256,69 @@ export default function CaseStudyPage() {
     <Show
       when={project()}
       fallback={
-        <>
-          <HttpStatusCode code={404} />
-          <PageMeta
-            title="Case study not found"
-            description="That project doesn't exist."
-            noIndex
-          />
-          <div style={pageStyles.page}>
-            <p style={pageStyles.eyebrow}>Work</p>
-            <h1 style={pageStyles.pageHeading}>Project not found.</h1>
-            <p style={pageStyles.bodyText}>
-              That case study URL doesn't match any project in the portfolio.
-            </p>
-            <A href="/work" style={s.linkPrimary}>
-              ← All projects
-            </A>
-          </div>
-        </>
+        <Show
+          when={placeholder()}
+          fallback={
+            <>
+              <HttpStatusCode code={404} />
+              <PageMeta
+                title="Case study not found"
+                description="That project doesn't exist."
+                noIndex
+              />
+              <div class="sketch-page sketch-page-narrow">
+                <p class="sketch-eyebrow">Work</p>
+                <h1 class="sketch-heading">Project not found.</h1>
+                <p class="sketch-body">
+                  That case study URL doesn't match any project in the portfolio.
+                </p>
+                <A href="/work" class="sketch-button">
+                  All projects
+                </A>
+              </div>
+            </>
+          }
+        >
+          {(p) => (
+            <>
+              <PageMeta
+                title={`${p().title} — Project Notes`}
+                description={p().summary}
+                ogImage="/og/work.svg"
+                noIndex
+              />
+              <div class="sketch-page sketch-page-narrow">
+                <A href="/work" style={s.backLink}>
+                  ← All projects
+                </A>
+                <p class="sketch-eyebrow">Project Notes</p>
+                <h1 class="sketch-heading">{p().title}</h1>
+                <p class="sketch-body">{p().summary}</p>
+
+                <div style={s.placeholderGrid} class="placeholder-grid">
+                  <div class="sketch-card" style={s.placeholderCard}>
+                    <span style={s.placeholderLabel}>Status</span>
+                    <p style={s.placeholderText}>
+                      Placeholder page while the full case study is being assembled.
+                    </p>
+                  </div>
+                  <div class="sketch-card" style={s.placeholderCard}>
+                    <span style={s.placeholderLabel}>What belongs here</span>
+                    <p style={s.placeholderText}>
+                      Problem framing, role, stack, screenshots, and concrete outcomes.
+                    </p>
+                  </div>
+                  <div class="sketch-card" style={s.placeholderCard}>
+                    <span style={s.placeholderLabel}>Next step</span>
+                    <p style={s.placeholderText}>
+                      Replace this note with a concise project narrative and proof points.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        </Show>
       }
     >
       {(p) => (

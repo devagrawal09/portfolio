@@ -1,0 +1,298 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+2 0 obj
+<< /Length 2772 >>
+stream
+BT
+/F1 9.5 Tf
+50 750 Td
+13 TL
+(Dev Agrawal) Tj T*
+() Tj T*
+(GitHub \(https://github.com/devagrawal09\) .) Tj T*
+(LinkedIn \(https://www.linkedin.com/in/dev-agr\) .) Tj T*
+(Website \(https://devagr.me\) .) Tj T*
+(Twitter \(https://twitter.com/devagrawal09\) .) Tj T*
+(YouTube \(https://youtube.com/@devagr\)) Tj T*
+() Tj T*
+(Summary) Tj T*
+() Tj T*
+(I build and teach how to build delightful fullstack AI applications.) Tj T*
+() Tj T*
+(9 years of experience building products end-to-end, working directly with stakeholders and) Tj T*
+(product owners.) Tj T*
+() Tj T*
+(4 years creating educational content and speaking at tech conferences and podcasts about) Tj T*
+(development and architecture.) Tj T*
+() Tj T*
+(14 months building AI and Agentic applications and workflows for automated software) Tj T*
+(development and delivery.) Tj T*
+() Tj T*
+(Technical Skills) Tj T*
+() Tj T*
+(Languages: TypeScript, Python, C#, Java, PHP, HTML and CSS) Tj T*
+() Tj T*
+(Web: React, Solid, Angular, Vue, Svelte, Express, Next, Socket.io) Tj T*
+() Tj T*
+(Architecture: Event Sourcing, CQRS, Microservices, Domain-Driven Design, Vertical Slices,) Tj T*
+(Local First) Tj T*
+() Tj T*
+(Cross platform: Ionic, React Native, Electron, PWA) Tj T*
+() Tj T*
+(Tools: Cloud \(Heroku, AWS, Azure, Netlify, Cloudflare, Vercel, Firebase\), Database \(SQL,) Tj T*
+(MongoDB, Redis\), DevOps \(GitHub, Travis\), SysAdmin \(Linux, Docker, Nginx, Ansible\)) Tj T*
+() Tj T*
+(Work Experience) Tj T*
+() Tj T*
+(Developer Relations Engineer \(PowerSync\) \(Dec 2025 - May 2026\)) Tj T*
+() Tj T*
+(- Raised the visibility and engagement of PowerSync within the developer community) Tj T*
+(- Made educational and technical content for PowerSync blog, YouTube, and conference talks) Tj T*
+(- Boosted site viewership, new signups, social media followers, and the north star metric) Tj T*
+(- Brainstormed and executed AI strategy for product improvement, growth, and internal use) Tj T*
+(- Used React, Solid, TanStack Start, TanStack DB, and Mastra) Tj T*
+() Tj T*
+(Software Engineer \(Xolvio\) \(Apr 2025 - Dec 2025\)) Tj T*
+() Tj T*
+(- Built a machine learning platform to help analysts run quantum algorithms) Tj T*
+(- Prototyped agentic apps and experiences for researchers and engineers) Tj T*
+(- Worked with cutting edge Event Sourcing, GraphQL, and AI technologies) Tj T*
+(- Used React Router, Apollo GraphQL, KurrentDB, Emmett, and Google Cloud) Tj T*
+() Tj T*
+(Software Engineer \(SmartData\) \(Apr 2024 - Apr 2025\)) Tj T*
+() Tj T*
+(- Built an AI powered project management assistant to accelerate internal processes) Tj T*
+(- Built a next gen member application for a healthcare company) Tj T*
+(- Implemented critical improvements for performance, developer experience, and cost) Tj T*
+(efficiency) Tj T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Length 3160 >>
+stream
+BT
+/F1 9.5 Tf
+50 750 Td
+13 TL
+(- Collaborated with the product, design, quality assurance, infrastructure, and security) Tj T*
+(teams) Tj T*
+(- Used Tanstack, Remix, React, Azure, and Okta) Tj T*
+() Tj T*
+(Developer Advocate \(Clerk.com\) \(May 2023 - Feb 2024\)) Tj T*
+() Tj T*
+(- Helped establish Clerk in the community during the hockey stick growth period \(5x managed) Tj T*
+(users, 3x downloads, 2x company size, Series A and B\)) Tj T*
+(- Engaged and provided support to the Discord community of 8k members and Twitter community) Tj T*
+(of 14k followers) Tj T*
+(- Solidified Clerk's presence at 5 conferences through talks, workshops, demos, and product) Tj T*
+(walkthroughs) Tj T*
+(- Curated feedback and requests from the community to help prioritize work for the) Tj T*
+(engineering team) Tj T*
+(- Built starter kits and demos on Next.js, React, TailwindCSS, and Vercel) Tj T*
+() Tj T*
+(Senior Software Developer \(UC IT Solutions Center\) \(Jan 2020 – Aug 2020, Jan 2021 – Dec) Tj T*
+(2022\)) Tj T*
+() Tj T*
+(- Led the development and operation of the Ohio Sentencing Data Platform in collaboration) Tj T*
+(with the Ohio Supreme Court and 10+ counties across Ohio) Tj T*
+(- Led the work on a suite of applications used by UC Corrections Institute and Department of) Tj T*
+(Youth Services, and developed the new version of the primary case tracking application) Tj T*
+(- Identified and triaged project requirements in collaboration with key stakeholders) Tj T*
+(- Used Nodejs, Express, React, PostgreSQL, MongoDB, and Linux) Tj T*
+() Tj T*
+(Research Assistant \(University of Cincinnati\) \(Sep 2018 – Dec 2019\)) Tj T*
+() Tj T*
+(- Worked on a research project funded by NSF and Mozilla with a team of professors and) Tj T*
+(masters students) Tj T*
+(- Built an access control model for smart-homes that supports automatic emergency detection,) Tj T*
+(escalation, and response) Tj T*
+(- Published a paper for the ACM International Conference on Enhancing Smart Home Security) Tj T*
+() Tj T*
+(Web Developer \(TorpedoShoes\) \(May 2019 – Aug 2019\)) Tj T*
+() Tj T*
+(- Built an internal platform using MeteorJS for tracking manufacturing lines, quality) Tj T*
+(control, and reporting to replace existing paper report system used by 8 manufacturing units) Tj T*
+() Tj T*
+(Web Developer \(HealthyLovedOnes\) \(Apr 2018 – Jul 2018\)) Tj T*
+() Tj T*
+(- Developed a web application using MeteorJS for caregivers and people in need to connect) Tj T*
+(with each other) Tj T*
+(- Built a platform for job search, advertisement, communication, and payment for caregivers) Tj T*
+() Tj T*
+(Web Developer \(Bharat Vikas Parishad\) \(Feb 2017 – May 2017\)) Tj T*
+() Tj T*
+(- Built a web application for Bharat Vikas Parishad \(Shiva Branch, Varanasi\) for management) Tj T*
+(of over 50 members using PHP and Bootstrap) Tj T*
+() Tj T*
+(Open Source) Tj T*
+() Tj T*
+(- Solid.js, core team member \(Dec 2024 - Current\)) Tj T*
+(- Solid-socket, author \(Oct 2024 - Current\)) Tj T*
+(- Solid-events, author \(Oct 2024 - Current\)) Tj T*
+(- Tanstack Start, maintainer \(Jun 2024 - Current\)) Tj T*
+(- Crossws, contributor \(Nov 2024 - Current\)) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+4 0 obj
+<< /Length 3260 >>
+stream
+BT
+/F1 9.5 Tf
+50 750 Td
+13 TL
+(Projects) Tj T*
+() Tj T*
+(Momentum DevCon App \(Lead Developer\)) Tj T*
+(- Application for conference attendees to view and bookmark sessions, provide feedback, and) Tj T*
+(connect with other attendees) Tj T*
+(- Responsive mobile-first web application with server rendering, optimistic UI, event) Tj T*
+(sourcing, and CQRS) Tj T*
+(- Built with SolidStart, Drizzle, Postgres, Vercel) Tj T*
+() Tj T*
+(Hackathon Suite \(Lead Developer\)) Tj T*
+() Tj T*
+(- Suite of applications to aid hackathon organizing with marketing, judging, registration,) Tj T*
+(hacker matching, and discord management) Tj T*
+(- Service-based backend leveraging cloud services \(AWS, Heroku, Netlify, Cloudflare\)) Tj T*
+(- Frontends built with Jekyll, React, and Angular) Tj T*
+() Tj T*
+(Ohio Sentencing Data Platform \(Senior Developer\)) Tj T*
+() Tj T*
+(- Collaboration with the Ohio Supreme Court to record and analyze data about criminal) Tj T*
+(sentencing cases) Tj T*
+(- Custom built engine to generate complex forms with real-time capabilities, analyzable data) Tj T*
+(outputs, and docx exports based on JSON schemas) Tj T*
+(- Integration with legacy systems to pull data) Tj T*
+() Tj T*
+(Devtranet \(Senior Developer\)) Tj T*
+() Tj T*
+(- Networking platform for engineers, investors, and entrepreneurs.) Tj T*
+(- Discovering events, posting blogs, showcasing projects, finding jobs, and social media) Tj T*
+(- Full stack Typescript, Next.js, React, and Tailwind) Tj T*
+() Tj T*
+(HealthyLovedOnes \(Solo Developer\)) Tj T*
+() Tj T*
+(- A job portal for caregivers and those in need with built in hiring, communication, and) Tj T*
+(payment system) Tj T*
+(- Holistic caregiver profiles based on professional and personal skills) Tj T*
+(- Mobile-ready full stack application built with Meteor) Tj T*
+() Tj T*
+(Appearances \(Conferences, Podcasts, Meetups\)) Tj T*
+() Tj T*
+(- Talk: Building Asynchronous UIs Without The Hassle \(Codemash, Sandusky, OH, Jan 2025\)) Tj T*
+(\(https://youtu.be/pX5r_jTLbvw?si=qjTPBQkyb-zRP96R\)) Tj T*
+(- Talk: Harnessing Events for Reactive and AI-powered Frontends \(EDA Summit, Virtual, Dec) Tj T*
+(2024\)) Tj T*
+(\(https://edasummit.com/videos/harnessing-events-for-reactive-and-ai-powered-frontends/\)) Tj T*
+(- Talk: Deploying Stateful Realtime Services To The Edge) Tj T*
+(\(https://www.youtube.com/live/_cCmh-FrYeM?si=05mwvnxDxbZ_EAtx&t=2133\) \(Commit Your Code) Tj T*
+(Conference, Dallas, TX, Dec 2024\)) Tj T*
+(- Talk: Build your own React Metaframework) Tj T*
+(\(https://youtu.be/4V_Wz_k35C8?si=wvar4Ra5i-aO6e6q\) \(React Rally, Salt Lake City, UT, Aug) Tj T*
+(2024\)) Tj T*
+(- Podcast: What's New in React 19 \(and What That Means for You\)) Tj T*
+(\(https://youtu.be/8GuvVaEWjzk?si=9sf5hn8ArtPzz9Os\) \(Scrimba Podcast, Virtual, Jun 2024\)) Tj T*
+(- Talk: Streams, not Waterfalls - Improving Page Load and Core Web Vitals) Tj T*
+(\(https://youtu.be/GrJVK6ci--s?si=nKoDMyK05RC2uwk9\) \(Stir Trek, Columbus, OH, May 2024\)) Tj T*
+(- Workshop: From Todo App to B2B SaaS with Next.js and Clerk) Tj T*
+(\(https://gitnation.com/contents/from-todo-app-to-b2b-saas-with-nextjs-and-clerk\) \(React) Tj T*
+(Summit US, Jersey City, NJ, Dec 2023\)) Tj T*
+(- Talk: Beyond the Login Page: Authentication in Next.js) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Length 1854 >>
+stream
+BT
+/F1 9.5 Tf
+50 750 Td
+13 TL
+(\(https://youtu.be/44b2U0uGQ0k?si=zTFY-NBByjZw_OFq\) \(Next.js Conf, San Francisco, CA, Oct) Tj T*
+(2023\)) Tj T*
+() Tj T*
+(Complete list \(https://github.com/devagrawal09/portfolio/blob/master/appearances.md\)) Tj T*
+() Tj T*
+(Education) Tj T*
+() Tj T*
+(Bachelor’s Degree – University of Cincinnati \(Aug 2018 – May 2023\)) Tj T*
+() Tj T*
+(- BS in Information Technology, Software Development track \(GPA 3.5\)) Tj T*
+(- Minor in Psychology) Tj T*
+(- University Honors Program) Tj T*
+() Tj T*
+(Community) Tj T*
+() Tj T*
+(Organizer of Momentum Developer Conference \(Feb 2023 - Current\)) Tj T*
+() Tj T*
+(- Member of steering committee of the biggest tech conference in Cincinnati \(500+) Tj T*
+(registrations\)) Tj T*
+(- Built an app for attendees and speakers to keep track of schedule, network, and provide) Tj T*
+(feedback) Tj T*
+() Tj T*
+(Organizer of RevolutionUC And MakeUC \(Sep 2019 – Mar 2023\)) Tj T*
+() Tj T*
+(- Organizer for UC’s largest hackathons) Tj T*
+(- Developing and managing the hackathon website, server, database, and the various online) Tj T*
+(services) Tj T*
+() Tj T*
+(President of IT Student Association \(Apr 2021 – Apr 2022\)) Tj T*
+() Tj T*
+(- President for UC’s largest student organization for IT students) Tj T*
+(- Providing weekly educational and networking opportunities to enthusiastic students) Tj T*
+() Tj T*
+(Executive Member of ACM@UC \(May 2019 – Apr 2021\)) Tj T*
+() Tj T*
+(- Managing and updating the organization’s website) Tj T*
+(- Plan and record biweekly tech talks and workshops) Tj T*
+() Tj T*
+(Executive Member of The UC Rotaract Club \(Oct 2018 – Oct 2021\)) Tj T*
+() Tj T*
+(- Hosting on-campus events and off-campus volunteering projects) Tj T*
+(- Collaborating with the Rotary Club for networking and professional development events) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 3 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 5 0 R >>
+endobj
+10 0 obj
+<< /Type /Pages /Kids [6 0 R 7 0 R 8 0 R 9 0 R] /Count 4 >>
+endobj
+11 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000077 00000 n 
+0000002901 00000 n 
+0000006113 00000 n 
+0000009425 00000 n 
+0000011331 00000 n 
+0000011458 00000 n 
+0000011585 00000 n 
+0000011712 00000 n 
+0000011839 00000 n 
+0000011915 00000 n 
+trailer
+<< /Size 12 /Root 11 0 R >>
+startxref
+11966
+%%EOF
