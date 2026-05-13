@@ -134,7 +134,9 @@ export default function ArticlePage() {
             </A>
 
             {/* Header */}
-            <p style={pageStyles.eyebrow}>Technical</p>
+            <p style={pageStyles.eyebrow}>
+              {a().kind === "technical" ? "Technical" : "Reflection"}
+            </p>
             <h1 style={s.title}>{a().title}</h1>
             <div style={s.meta}>
               <Show when={a().source}>

@@ -558,6 +558,7 @@ export const ARTICLES: Article[] = [
     description:
       "Graduating, landing a DevRel role, and speaking at conferences — alongside the unexpected cracks that can form when you level up fast.",
     tags: ["DevRel", "Career", "Reflection"],
+    contentPath: "writing/review/senior.md",
     kind: "reflection",
     featured: false,
     analyticsEvent: "writing_click",
@@ -570,6 +571,7 @@ export const ARTICLES: Article[] = [
     description:
       "A year of stepping up as a tech lead, confronting self-doubt, and learning what real responsibility actually feels like.",
     tags: ["Career", "Reflection"],
+    contentPath: "writing/review/junior.md",
     kind: "reflection",
     featured: false,
     analyticsEvent: "writing_click",
@@ -582,6 +584,7 @@ export const ARTICLES: Article[] = [
     description:
       "A transitional year leading hackathon infrastructure and deepening fullstack skills while building toward production civic tech.",
     tags: ["Career", "Reflection"],
+    contentPath: "writing/review/pre-junior.md",
     kind: "reflection",
     featured: false,
     analyticsEvent: "writing_click",
@@ -594,6 +597,7 @@ export const ARTICLES: Article[] = [
     description:
       "Shipping the first version of the Ohio Sentencing Data Platform during a pandemic — taking ownership, learning to build for real users.",
     tags: ["Career", "Reflection"],
+    contentPath: "writing/review/sophomore.md",
     kind: "reflection",
     featured: false,
     analyticsEvent: "writing_click",
@@ -606,6 +610,7 @@ export const ARTICLES: Article[] = [
     description:
       "First year at UC: discovering the developer community, joining hackathons, and figuring out what kind of engineer to become.",
     tags: ["Career", "Reflection"],
+    contentPath: "writing/review/freshman.md",
     kind: "reflection",
     featured: false,
     analyticsEvent: "writing_click",
@@ -640,5 +645,6 @@ export function getLegacyWritingPath(slug: string) {
   const article = getArticleBySlug(slug);
   if (!article) return "/writing";
   if (article.url?.startsWith("/")) return article.url;
+  if (article.contentPath || article.sections?.length) return `/writing/${article.slug}`;
   return `/writing#${article.slug}`;
 }
