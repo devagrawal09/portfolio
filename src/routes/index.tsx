@@ -1,14 +1,93 @@
 import { For } from "solid-js";
 import { A } from "@solidjs/router";
+import { Code2, MicVocal, PenLine } from "lucide-solid";
 import { PageMeta } from "~/components/PageMeta";
-import { ProofGrid } from "~/components/ProofGrid";
-import { FEATURED_PROOF } from "~/data/proof";
+
+type ExperienceIcon =
+  | { label: string; slug: string; color: string }
+  | { label: string; symbol: "mic" | "pen" | "code"; color: string };
 
 const navCards = [
-  { label: "Resume", href: "/about", meta: "experience.log" },
-  { label: "Projects", href: "/work", meta: "ship.list" },
-  { label: "Content", href: "/writing", meta: "notes.md" },
+  { label: "Resume", href: "/about" },
+  { label: "Projects", href: "/work" },
+  { label: "Content", href: "/writing" },
 ] as const;
+
+const experienceGroups = [
+  {
+    duration: "9 years",
+    label: "Product Engineering",
+    tags: [
+      { label: "TypeScript", slug: "typescript", color: "3178C6" },
+      { label: "Python", slug: "python", color: "3776AB" },
+      { label: ".NET", slug: "dotnet", color: "512BD4" },
+      { label: "Java", slug: "openjdk", color: "F37626" },
+      { label: "PHP", slug: "php", color: "777BB4" },
+    ],
+  },
+  {
+    duration: "4 years",
+    label: "Technical Content Creation",
+    tags: [
+      { label: "YouTube", slug: "youtube", color: "FF0000" },
+      { label: "Talks", symbol: "mic", color: "FFD166" },
+      { label: "Twitch", slug: "twitch", color: "9146FF" },
+      { label: "Written", symbol: "pen", color: "63E6BE" },
+    ],
+  },
+  {
+    duration: "20 months",
+    label: "Framework Design and OSS",
+    tags: [
+      { label: "Solid", slug: "solid", color: "2C4F7C" },
+      { label: "Ripple", slug: "ripple", color: "0085C0" },
+      { label: "TanStack", slug: "tanstack", color: "FF4154" },
+    ],
+  },
+  {
+    duration: "14 months",
+    label: "AI and Agentic Engineering",
+    tags: [
+      { label: "OpenAI", slug: "openai", color: "74AA9C" },
+      { label: "OpenCode", symbol: "code", color: "8AB4FF" },
+      { label: "OpenRouter", slug: "openrouter", color: "7C3AED" },
+    ],
+  },
+] satisfies readonly {
+  duration: string;
+  label: string;
+  tags: readonly ExperienceIcon[];
+}[];
+
+function ExperienceIconMark(props: { item: ExperienceIcon }) {
+  if ("slug" in props.item) {
+    return (
+      <img
+        src={`https://cdn.simpleicons.org/${props.item.slug}/${props.item.color}`}
+        alt=""
+        width="24"
+        height="24"
+        loading="lazy"
+      />
+    );
+  }
+
+  const iconProps = {
+    "aria-hidden": true,
+    color: `#${props.item.color}`,
+    size: 30,
+    strokeWidth: 2.4,
+  } as const;
+
+  const icons = {
+    mic: MicVocal,
+    pen: PenLine,
+    code: Code2,
+  } as const;
+
+  const Icon = icons[props.item.symbol];
+  return <Icon {...iconProps} />;
+}
 
 export default function Home() {
   return (
@@ -58,14 +137,29 @@ export default function Home() {
 
         <div>
           <div class="home-proof">
-            <ProofGrid items={FEATURED_PROOF} />
+            <For each={experienceGroups}>
+              {(group) => (
+                <article class="proof-cluster">
+                  <span class="proof-number">{group.duration}</span>
+                  <h2 class="proof-label">{group.label}</h2>
+                  <div class="proof-tags">
+                    <For each={group.tags}>
+                      {(tag) => (
+                        <span class="proof-icon" aria-label={tag.label} title={tag.label}>
+                          <ExperienceIconMark item={tag} />
+                        </span>
+                      )}
+                    </For>
+                  </div>
+                </article>
+              )}
+            </For>
           </div>
 
           <nav class="home-nav-grid" aria-label="Featured pages">
             <For each={navCards}>
               {(card) => (
                 <A href={card.href} class="home-nav-card">
-                  <span>{card.meta}</span>
                   <strong>{card.label}</strong>
                 </A>
               )}

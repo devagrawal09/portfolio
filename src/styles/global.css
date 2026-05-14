@@ -475,17 +475,24 @@ a {
 }
 
 .home-proof {
-  max-width: var(--layout-content-width);
+  max-width: min(1500px, 100vw);
   margin: 0 auto;
   width: 100%;
-  padding: 0 var(--layout-content-pad) var(--space-12);
+  padding: 0 clamp(1.5rem, 4vw, 5rem) var(--space-16);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 1fr));
+  gap: clamp(2rem, 3vw, 3.5rem);
 }
 
 .proof-cluster {
-  padding: var(--space-5);
-  border: 1px solid rgba(168, 179, 194, 0.2);
+  min-height: 320px;
+  padding: var(--space-8);
+  border: 0;
   border-radius: var(--radius-lg);
-  background: rgba(21, 27, 35, 0.78);
+  background: rgba(21, 27, 35, 0.42);
+  text-align: center;
+  display: grid;
+  align-content: center;
 }
 
 .proof-number {
@@ -500,10 +507,44 @@ a {
   display: block;
   min-height: 3.7rem;
   font-size: var(--text-base);
-  font-weight: 560;
+  font-weight: 680;
   line-height: 1.25;
   margin-bottom: var(--space-4);
   color: var(--color-text-muted);
+}
+
+.proof-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.proof-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 999px;
+  color: var(--color-text);
+  background: rgba(13, 17, 23, 0.28);
+}
+
+.proof-icon img,
+.proof-icon svg {
+  width: 1.85rem;
+  height: 1.85rem;
+  display: block;
+}
+
+.proof-icon svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .home-nav-grid {
