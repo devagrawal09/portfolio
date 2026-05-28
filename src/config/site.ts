@@ -23,7 +23,7 @@ export const SITE = {
   social: SOCIAL_LINKS,
   profile: {
     jobTitle: "Software Engineer & Fullstack Developer",
-    email: "contact@devagr.me",
+    email: "devagrawal09@gmail.com",
     sameAs: PROFILE_LINKS,
   },
 } as const;
