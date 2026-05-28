@@ -1,6 +1,15 @@
 import { For, Show } from "solid-js";
 import { analytics } from "~/config/analytics";
-import type { Appearance } from "~/data/talks";
+
+export type Appearance = {
+  title: string;
+  event: string;
+  location: string;
+  date: string;
+  url?: string;
+  kind: "conference" | "podcast" | "meetup";
+  isWorkshop?: boolean;
+};
 
 export function AppearanceItem(props: { item: Appearance }) {
   const trackClick = () => {
@@ -10,7 +19,6 @@ export function AppearanceItem(props: { item: Appearance }) {
       kind: props.item.kind,
     });
   };
-
   const content = (
     <span>
       <strong>{props.item.title}</strong>
@@ -23,7 +31,6 @@ export function AppearanceItem(props: { item: Appearance }) {
       </small>
     </span>
   );
-
   return (
     <Show
       when={props.item.url}
@@ -44,7 +51,7 @@ export function AppearanceItem(props: { item: Appearance }) {
   );
 }
 
-export function AppearanceGrid(props: { heading: string; items: Appearance[] }) {
+export function AppearanceGrid(props: { heading: string; items: readonly Appearance[] }) {
   return (
     <section class="content-section" aria-label={props.heading}>
       <div class="article-list">

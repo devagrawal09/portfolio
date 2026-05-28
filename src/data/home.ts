@@ -1,6 +1,6 @@
 // Typed content configuration for the homepage.
 // Edit this file to update hero copy, proof stats, OSS items, now items, and CTAs.
-// Featured talks are derived directly from ~/data/talks to avoid duplication.
+// Featured talks are owned by the content routes to avoid duplication.
 import type { AnalyticsEvent } from "~/config/analytics";
 import { CONTACT_EMAIL_HREF, SPEAKING_EMAIL_HREF } from "~/data/contact";
 
@@ -46,7 +46,7 @@ export interface ProofStat {
   label: string;
 }
 
-/** Numbers derived from structured data in ~/data/talks.ts (31 total appearances). */
+/** Numbers from the current speaking/content inventory. */
 export const PROOF_STATS: ProofStat[] = [
   { stat: "31+", label: "Talks & Appearances" },
   { stat: "Core Team", label: "Solid.js" },

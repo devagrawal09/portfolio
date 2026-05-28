@@ -1,5 +1,5 @@
 import { Navigate, useParams } from "@solidjs/router";
-import { getLegacyWritingPath } from "~/data/writing";
+import { getLegacyWritingPath } from "~/routes/content/writing/legacyRedirects";
 
 export default function LegacyReviewRedirect() {
   const params = useParams<{ slug: string }>();
