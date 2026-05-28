@@ -2,11 +2,12 @@ import { For } from "solid-js";
 import { A } from "@solidjs/router";
 import { MicVocal, PenLine } from "lucide-solid";
 import { PageMeta } from "~/components/PageMeta";
+import { SITE } from "~/config/site";
 
 type ExperienceIcon =
-  | { label: string; slug: string; color: string }
-  | { label: string; src: string; logo?: "ripple" }
-  | { label: string; symbol: "mic" | "pen"; color: string };
+  | { label: string; href?: string; slug: string; color: string }
+  | { label: string; href?: string; src: string; logo?: "ripple" | "vinxi" }
+  | { label: string; href?: string; symbol: "mic" | "pen"; color: string };
 
 const navCards = [
   { label: "Resume", href: "/resume" },
@@ -30,28 +31,45 @@ const experienceGroups = [
     duration: "4 years",
     label: "Technical Content Creation",
     tags: [
-      { label: "YouTube", slug: "youtube", color: "FF0000" },
-      { label: "Talks", symbol: "mic", color: "FFD166" },
-      { label: "Twitch", slug: "twitch", color: "9146FF" },
-      { label: "Written", symbol: "pen", color: "63E6BE" },
+      { label: "YouTube", href: SITE.social.youtube, slug: "youtube", color: "FF0000" },
+      { label: "Talks", href: "/content/conferences", symbol: "mic", color: "FFD166" },
+      {
+        label: "Twitch",
+        href: "https://www.twitch.tv/devagrawal099",
+        slug: "twitch",
+        color: "9146FF",
+      },
+      { label: "Written", href: "/content/writing", symbol: "pen", color: "63E6BE" },
     ],
   },
   {
     duration: "20 months",
     label: "Framework Design and OSS",
     tags: [
-      { label: "Solid", slug: "solid", color: "2C4F7C" },
-      { label: "Ripple", src: "/icons/ripple-logo-horizontal.png", logo: "ripple" },
-      { label: "TanStack", slug: "tanstack", color: "FF4154" },
+      { label: "Solid", href: "https://www.solidjs.com/", slug: "solid", color: "2C4F7C" },
+      {
+        label: "Ripple",
+        href: "https://ripplejs.com/",
+        src: "/icons/ripple-logo-horizontal.png",
+        logo: "ripple",
+      },
+      { label: "Vinxi", href: "https://vinxi.vercel.app/", src: "/icons/vinxi.ico", logo: "vinxi" },
+      { label: "TanStack", href: "https://tanstack.com/", slug: "tanstack", color: "FF4154" },
     ],
   },
   {
     duration: "14 months",
     label: "AI and Agentic Engineering",
     tags: [
-      { label: "OpenAI", src: "/icons/openai-symbol.svg" },
-      { label: "OpenCode", src: "/icons/opencode-logo.svg" },
-      { label: "OpenRouter", slug: "openrouter", color: "7C3AED" },
+      { label: "OpenAI", href: "https://openai.com/", src: "/icons/openai-symbol.svg" },
+      { label: "OpenCode", href: "https://opencode.ai/", src: "/icons/opencode-logo.svg" },
+      { label: "Mastra", href: "https://mastra.ai/", src: "/icons/mastra-logo.svg" },
+      {
+        label: "OpenRouter",
+        href: "https://openrouter.ai/",
+        slug: "openrouter",
+        color: "7C3AED",
+      },
     ],
   },
 ] satisfies readonly {
@@ -60,12 +78,15 @@ const experienceGroups = [
   tags: readonly ExperienceIcon[];
 }[];
 
-function ExperienceIconMark(props: { item: ExperienceIcon }) {
-  if ("src" in props.item) {
+function renderExperienceIconMark(item: ExperienceIcon) {
+  if ("src" in item) {
     return (
       <img
-        classList={{ "proof-icon-ripple": props.item.logo === "ripple" }}
-        src={props.item.src}
+        classList={{
+          "proof-icon-ripple": item.logo === "ripple",
+          "proof-icon-vinxi": item.logo === "vinxi",
+        }}
+        src={item.src}
         alt=""
         width="32"
         height="32"
@@ -73,10 +94,10 @@ function ExperienceIconMark(props: { item: ExperienceIcon }) {
     );
   }
 
-  if ("slug" in props.item) {
+  if ("slug" in item) {
     return (
       <img
-        src={`https://cdn.simpleicons.org/${props.item.slug}/${props.item.color}`}
+        src={`https://cdn.simpleicons.org/${item.slug}/${item.color}`}
         alt=""
         width="24"
         height="24"
@@ -87,7 +108,7 @@ function ExperienceIconMark(props: { item: ExperienceIcon }) {
 
   const iconProps = {
     "aria-hidden": true,
-    color: `#${props.item.color}`,
+    color: `#${item.color}`,
     size: 30,
     strokeWidth: 2.4,
   } as const;
@@ -97,8 +118,41 @@ function ExperienceIconMark(props: { item: ExperienceIcon }) {
     pen: PenLine,
   } as const;
 
-  const Icon = icons[props.item.symbol];
+  const Icon = icons[item.symbol];
   return <Icon {...iconProps} />;
+}
+
+function renderExperienceIconBadge(item: ExperienceIcon) {
+  const icon = renderExperienceIconMark(item);
+
+  if (!item.href) {
+    return (
+      <span class="proof-icon" aria-label={item.label} title={item.label}>
+        {icon}
+      </span>
+    );
+  }
+
+  if (item.href.startsWith("/")) {
+    return (
+      <A class="proof-icon" href={item.href} aria-label={item.label} title={item.label}>
+        {icon}
+      </A>
+    );
+  }
+
+  return (
+    <a
+      class="proof-icon"
+      href={item.href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={item.label}
+      title={item.label}
+    >
+      {icon}
+    </a>
+  );
 }
 
 export default function Home() {
@@ -155,13 +209,7 @@ export default function Home() {
                   <span class="proof-number">{group.duration}</span>
                   <h2 class="proof-label">{group.label}</h2>
                   <div class="proof-tags">
-                    <For each={group.tags}>
-                      {(tag) => (
-                        <span class="proof-icon" aria-label={tag.label} title={tag.label}>
-                          <ExperienceIconMark item={tag} />
-                        </span>
-                      )}
-                    </For>
+                    <For each={group.tags}>{(tag) => renderExperienceIconBadge(tag)}</For>
                   </div>
                 </article>
               )}

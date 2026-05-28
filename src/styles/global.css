@@ -545,12 +545,13 @@ a {
 }
 
 .proof-icon .proof-icon-ripple {
-  width: auto;
-  height: 2rem;
-  max-width: none;
-  object-fit: none;
-  object-position: left center;
-  transform: translateX(0.08rem);
+  width: 1.85rem;
+  height: 1.85rem;
+  object-fit: contain;
+}
+
+.proof-icon .proof-icon-vinxi {
+  filter: invert(1);
 }
 
 .proof-icon svg {
