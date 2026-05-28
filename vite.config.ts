@@ -4,4 +4,7 @@ import { solidStart } from "@solidjs/start/config";
 
 export default defineConfig({
   plugins: [solidStart(), nitro({ preset: "netlify" })],
+  server: {
+    allowedHosts: ["lucifer.tail2c77bf.ts.net"],
+  },
 });

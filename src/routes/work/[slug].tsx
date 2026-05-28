@@ -4,12 +4,9 @@ import { A, useParams } from "@solidjs/router";
 import { HttpStatusCode } from "@solidjs/start";
 import { analytics } from "~/config/analytics";
 import { PageMeta } from "~/components/PageMeta";
-import { ProofBadge } from "~/components/ProofBadge";
-import { ProofGrid } from "~/components/ProofGrid";
-import { getProofByIds } from "~/data/proof";
-import { pageStyles } from "~/styles/recipes";
 import { colors, layout, radius, space, text } from "~/styles/tokens";
-import { PROJECTS, type ProjectKind } from "~/data/projects";
+import { PROJECTS, type FeaturedProject } from "~/data/projects";
+import type { PlaceholderProject } from "~/data/project-placeholders";
 import { placeholderProjects } from "~/data/project-placeholders";
 
 // ─── Styles ───────────────────────────────────────────────────────────────────
@@ -20,17 +17,6 @@ const s: Record<string, JSX.CSSProperties> = {
     "max-width": layout.contentWidth,
     margin: "0 auto",
     padding: `${space[16]} ${space[8]} ${space[16]}`,
-  },
-
-  // ── Back link ──
-  backLink: {
-    display: "inline-flex",
-    "align-items": "center",
-    gap: space[2],
-    "font-size": text.sm,
-    color: colors.textFaint,
-    "margin-bottom": space[10],
-    "text-decoration": "none",
   },
 
   // ── Header ──
@@ -49,115 +35,13 @@ const s: Record<string, JSX.CSSProperties> = {
     "letter-spacing": "-0.03em",
     "line-height": "1.2",
   },
-  kindBadge: {
-    "font-size": "0.7rem",
-    "font-weight": "600",
-    "letter-spacing": "0.08em",
-    "text-transform": "uppercase",
-    color: colors.accent,
-    "background-color": colors.accentDim,
-    border: `1px solid ${colors.accentBorder}`,
-    "border-radius": radius.sm,
-    padding: "0.2rem 0.55rem",
-    "flex-shrink": "0",
-    "align-self": "flex-start",
-    "margin-top": "0.4rem",
-  },
-  meta: {
-    "font-size": text.sm,
-    color: colors.textFaint,
-    "margin-bottom": space[5],
-  },
   tagline: {
     "font-size": text.md,
     color: colors.text,
     "line-height": "1.7",
-    "font-weight": "500",
+    "font-weight": "400",
     "max-width": layout.contentNarrow,
     "margin-bottom": space[10],
-  },
-
-  // ── Detail sections ──
-  detailBlock: {
-    display: "flex",
-    "flex-direction": "column",
-    gap: space[5],
-    "padding-top": space[8],
-    "border-top": `1px solid ${colors.border}`,
-    "margin-bottom": space[8],
-  },
-  detailRow: {
-    display: "flex",
-    gap: space[6],
-    "align-items": "flex-start",
-  },
-  detailLabel: {
-    "font-size": text.xs,
-    "font-weight": "600",
-    "letter-spacing": "0.1em",
-    "text-transform": "uppercase",
-    color: colors.textFaint,
-    "min-width": "110px",
-    "padding-top": "0.2em",
-    "flex-shrink": "0",
-  },
-  detailValue: {
-    "font-size": text.base,
-    color: colors.textMuted,
-    "line-height": "1.7",
-  },
-  detailValueOutcome: {
-    "font-size": text.base,
-    color: colors.text,
-    "line-height": "1.7",
-  },
-
-  // ── Highlights ──
-  highlightsBlock: {
-    "padding-top": space[8],
-    "border-top": `1px solid ${colors.border}`,
-    "margin-bottom": space[8],
-  },
-  proofBlock: {
-    "padding-top": space[8],
-    "border-top": `1px solid ${colors.border}`,
-    "margin-bottom": space[8],
-  },
-  proofBadgeRow: {
-    display: "flex",
-    "flex-wrap": "wrap",
-    gap: space[2],
-    "margin-bottom": space[6],
-  },
-  highlightsLabel: {
-    "font-size": text.xs,
-    "font-weight": "600",
-    "letter-spacing": "0.1em",
-    "text-transform": "uppercase",
-    color: colors.textFaint,
-    "margin-bottom": space[5],
-  },
-  highlightsList: {
-    display: "flex",
-    "flex-direction": "column",
-    gap: space[3],
-    "list-style": "none",
-    padding: "0",
-    margin: "0",
-  },
-  highlightItem: {
-    display: "flex",
-    gap: space[3],
-    "align-items": "flex-start",
-    "font-size": text.base,
-    color: colors.textMuted,
-    "line-height": "1.65",
-  },
-  highlightDot: {
-    "font-size": "0.45rem",
-    color: colors.accent,
-    "padding-top": "0.55em",
-    "flex-shrink": "0",
   },
 
   // ── Tech tags ──
@@ -173,6 +57,14 @@ const s: Record<string, JSX.CSSProperties> = {
     "text-transform": "uppercase",
     color: colors.textFaint,
     "margin-bottom": space[4],
+  },
+  linksSectionLabel: {
+    width: "100%",
+    "font-size": text.xs,
+    "font-weight": "600",
+    "letter-spacing": "0.1em",
+    "text-transform": "uppercase",
+    color: colors.textFaint,
   },
   tagRow: {
     display: "flex",
@@ -213,45 +105,35 @@ const s: Record<string, JSX.CSSProperties> = {
     "font-size": text.sm,
     color: colors.textMuted,
   },
-  linkBack: {
-    "margin-left": "auto",
-    "font-size": text.sm,
-    color: colors.textFaint,
-  },
-  placeholderGrid: {
-    display: "grid",
-    "grid-template-columns": "repeat(3, minmax(0, 1fr))",
-    gap: space[4],
-    "margin-top": space[10],
-  },
-  placeholderCard: {
-    padding: space[5],
-    "min-height": "120px",
-  },
-  placeholderLabel: {
-    display: "block",
-    "font-size": text.xs,
-    "font-weight": "800",
-    "text-transform": "uppercase",
-    color: colors.textFaint,
-    "margin-bottom": space[2],
-  },
-  placeholderText: {
-    "font-size": text.sm,
-    "font-weight": "700",
-    color: colors.text,
-    "line-height": "1.5",
-  },
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-const KIND_LABELS: Record<ProjectKind, string> = {
-  product: "Product",
-  oss: "Open Source",
-  civic: "Civic Tech",
-  devrel: "DevRel",
+type ProjectLink = {
+  label: string;
+  href: string;
+  primary?: boolean;
 };
+
+function linksForFeaturedProject(project: FeaturedProject): ProjectLink[] {
+  const links = [
+    project.url
+      ? { label: project.urlLabel ?? "View project ↗", href: project.url, primary: true }
+      : undefined,
+    project.repoUrl && project.repoUrl !== project.url
+      ? { label: "Source →", href: project.repoUrl }
+      : undefined,
+    ...(project.publicSources?.map((source) => ({ label: source.label, href: source.href })) ?? []),
+  ].filter((link): link is ProjectLink => Boolean(link));
+
+  return links.filter(
+    (link, index) => links.findIndex((candidate) => candidate.href === link.href) === index
+  );
+}
+
+function linksForPlaceholderProject(project: PlaceholderProject): ProjectLink[] {
+  return project.links?.map((link, index) => ({ ...link, primary: index === 0 })) ?? [];
+}
 
 // ─── Route ────────────────────────────────────────────────────────────────────
 
@@ -259,7 +141,6 @@ export default function CaseStudyPage() {
   const params = useParams<{ slug: string }>();
   const project = () => PROJECTS.find((p) => p.slug === params.slug);
   const placeholder = () => placeholderProjects.find((p) => p.slug === params.slug);
-  const proofItems = () => getProofByIds(project()?.proofIds);
 
   const trackExternal = (label: string) => () =>
     analytics.trackEvent("featured_work_click", {
@@ -297,46 +178,42 @@ export default function CaseStudyPage() {
           {(p) => (
             <>
               <PageMeta
-                title={`${p().title} — Project Notes`}
+                title={`${p().title} — Project`}
                 description={p().summary}
                 ogImage="/og/work.svg"
                 noIndex
               />
-              <div class="sketch-page sketch-page-narrow">
-                <A href="/work" style={s.backLink}>
-                  ← All projects
-                </A>
-                <p class="sketch-eyebrow">Project Notes</p>
-                <h1 class="sketch-heading">{p().title}</h1>
-                <p class="sketch-body">{p().summary}</p>
+              <div style={s.page}>
+                <div style={s.headerTop}>
+                  <h1 style={s.title}>{p().title}</h1>
+                </div>
+                <p style={s.tagline}>{p().summary}</p>
 
-                <Show when={getProofByIds(p().proofIds).length}>
-                  <div style={s.proofBlock}>
-                    <p style={s.highlightsLabel}>Proof</p>
-                    <ProofGrid items={getProofByIds(p().proofIds)} variant="detailed" showSources />
-                  </div>
-                </Show>
-
-                <div style={s.placeholderGrid} class="placeholder-grid">
-                  <div class="sketch-card" style={s.placeholderCard}>
-                    <span style={s.placeholderLabel}>Status</span>
-                    <p style={s.placeholderText}>
-                      Placeholder page while the full case study is being assembled.
-                    </p>
-                  </div>
-                  <div class="sketch-card" style={s.placeholderCard}>
-                    <span style={s.placeholderLabel}>What belongs here</span>
-                    <p style={s.placeholderText}>
-                      Problem framing, role, stack, screenshots, and concrete outcomes.
-                    </p>
-                  </div>
-                  <div class="sketch-card" style={s.placeholderCard}>
-                    <span style={s.placeholderLabel}>Next step</span>
-                    <p style={s.placeholderText}>
-                      Replace this note with a concise project narrative and proof points.
-                    </p>
+                <div style={s.tagSection}>
+                  <p style={s.tagSectionLabel}>Tech stack</p>
+                  <div style={s.tagRow}>
+                    <For each={p().tech}>{(tag) => <span style={s.tag}>{tag}</span>}</For>
                   </div>
                 </div>
+
+                <Show when={linksForPlaceholderProject(p()).length}>
+                  <div style={s.linksSection}>
+                    <p style={s.linksSectionLabel}>Links</p>
+                    <For each={linksForPlaceholderProject(p())}>
+                      {(link) => (
+                        <a
+                          href={link.href}
+                          style={link.primary ? s.linkPrimary : s.linkSecondary}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={trackExternal("project_link")}
+                        >
+                          {link.label}
+                        </a>
+                      )}
+                    </For>
+                  </div>
+                </Show>
               </div>
             </>
           )}
@@ -346,113 +223,42 @@ export default function CaseStudyPage() {
       {(p) => (
         <>
           <PageMeta
-            title={`${p().title} — Case Study`}
-            description={p().tagline}
+            title={`${p().title} — Project`}
+            description={p().description}
             ogImage="/og/work.svg"
           />
 
           <div style={s.page}>
-            {/* Back link */}
-            <A href="/work" style={s.backLink}>
-              ← All projects
-            </A>
-
-            {/* Header */}
-            <p style={pageStyles.eyebrow}>{KIND_LABELS[p().kind]}</p>
             <div style={s.headerTop}>
               <h1 style={s.title}>{p().title}</h1>
-              <span style={s.kindBadge}>{KIND_LABELS[p().kind]}</span>
             </div>
-            <div style={s.meta}>
-              {p().role} · {p().period}
-            </div>
-            <p style={s.tagline}>{p().tagline}</p>
+            <p style={s.tagline}>{p().description}</p>
 
-            {/* What + Challenges + Architecture + Outcome */}
-            <div style={s.detailBlock}>
-              <div class="case-detail-row" style={s.detailRow}>
-                <span style={s.detailLabel}>What</span>
-                <span style={s.detailValue}>{p().description}</span>
-              </div>
-              <Show when={p().challenges}>
-                <div class="case-detail-row" style={s.detailRow}>
-                  <span style={s.detailLabel}>Challenge</span>
-                  <span style={s.detailValue}>{p().challenges}</span>
-                </div>
-              </Show>
-              <div class="case-detail-row" style={s.detailRow}>
-                <span style={s.detailLabel}>Architecture</span>
-                <span style={s.detailValue}>{p().architecture}</span>
-              </div>
-              <div class="case-detail-row" style={s.detailRow}>
-                <span style={s.detailLabel}>Outcome</span>
-                <span style={s.detailValueOutcome}>{p().outcome}</span>
-              </div>
-            </div>
-
-            {/* Highlights */}
-            <Show when={p().highlights?.length}>
-              <div style={s.highlightsBlock}>
-                <p style={s.highlightsLabel}>Highlights</p>
-                <ul style={s.highlightsList}>
-                  <For each={p().highlights}>
-                    {(item) => (
-                      <li style={s.highlightItem}>
-                        <span style={s.highlightDot}>●</span>
-                        <span>{item}</span>
-                      </li>
-                    )}
-                  </For>
-                </ul>
-              </div>
-            </Show>
-
-            <Show when={proofItems().length}>
-              <div style={s.proofBlock}>
-                <p style={s.highlightsLabel}>Proof</p>
-                <div style={s.proofBadgeRow}>
-                  <For each={proofItems()}>{(item) => <ProofBadge item={item} />}</For>
-                </div>
-                <ProofGrid items={proofItems()} variant="detailed" showSources />
-              </div>
-            </Show>
-
-            {/* Tech stack */}
             <div style={s.tagSection}>
-              <p style={s.tagSectionLabel}>Stack</p>
+              <p style={s.tagSectionLabel}>Tech stack</p>
               <div style={s.tagRow}>
                 <For each={p().tech}>{(tag) => <span style={s.tag}>{tag}</span>}</For>
               </div>
             </div>
 
-            {/* External links + back */}
-            <div style={s.linksSection}>
-              <Show when={p().url}>
-                <a
-                  href={p().url}
-                  style={s.linkPrimary}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={trackExternal("case_study_external")}
-                >
-                  {p().urlLabel ?? "View project ↗"}
-                </a>
-              </Show>
-              <Show when={p().repoUrl && p().repoUrl !== p().url}>
-                <a
-                  href={p().repoUrl}
-                  style={s.linkSecondary}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={trackExternal("case_study_repo")}
-                >
-                  Source →
-                </a>
-              </Show>
-              <A href="/work" style={s.linkBack}>
-                ← All projects
-              </A>
-            </div>
+            <Show when={linksForFeaturedProject(p()).length}>
+              <div style={s.linksSection}>
+                <p style={s.linksSectionLabel}>Links</p>
+                <For each={linksForFeaturedProject(p())}>
+                  {(link) => (
+                    <a
+                      href={link.href}
+                      style={link.primary ? s.linkPrimary : s.linkSecondary}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={trackExternal("project_link")}
+                    >
+                      {link.label}
+                    </a>
+                  )}
+                </For>
+              </div>
+            </Show>
           </div>
         </>
       )}

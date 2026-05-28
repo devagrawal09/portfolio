@@ -34,7 +34,7 @@ export const PROOF_ITEMS: ProofItem[] = [
     description:
       "Conference talks, podcast guest spots, workshops, and meetups on SolidJS, TanStack, async UI, local-first development, authentication, and fullstack architecture.",
     context: "Public speaking across conferences, podcasts, workshops, and community events.",
-    sources: [{ label: "Talks page", href: "/talks", sourceType: "public" }],
+    sources: [{ label: "Conferences", href: "/content/conferences", sourceType: "public" }],
     featured: true,
   },
   {
@@ -125,7 +125,7 @@ export const PROOF_ITEMS: ProofItem[] = [
     metric: "Author",
     label: "solid-events",
     description:
-      "Created event-driven primitives for SolidJS that help model reactive UI flows with clearer boundaries and less incidental state.",
+      "Created event-composition and state-derivation primitives for SolidJS that make data flow more predictable than procedural event emitters.",
     context: "Composable event primitives for Solid.",
     sources: [
       {
@@ -135,6 +135,24 @@ export const PROOF_ITEMS: ProofItem[] = [
       },
     ],
     relatedProjectSlugs: ["solid-events"],
+  },
+  {
+    id: "project-powerchat",
+    category: "project-impact",
+    metric: "Prototype",
+    label: "PowerChat",
+    description:
+      "Built a public-source prototype for multiplayer, multi-agent collaboration with shared channels, offline-first sync, agent mentions, workspace metadata, and streamed responses persisted as synced state.",
+    context:
+      "Experimental collaborative AI app built with SolidStart, PowerSync, Postgres, Drizzle, and Mastra.",
+    sources: [
+      {
+        label: "PowerChat source",
+        href: "https://github.com/devagrawal09/powerchat",
+        sourceType: "public",
+      },
+    ],
+    relatedProjectSlugs: ["powerchat"],
   },
   {
     id: "award-solidhack",
@@ -232,7 +250,7 @@ export const PROOF_ITEMS: ProofItem[] = [
     metric: "Health",
     label: "Healthcare member experience",
     description:
-      "Worked on member-facing healthcare application flows including dashboards, help-center surfaces, self-service UX, reliability, and performance improvements.",
+      "Built primary healthcare member interface workflows for viewing member details, benefits, documents, claims, and related self-service information.",
     context: "Regulated-industry product engineering, described at a safe abstraction level.",
     sources: [{ label: "Project details require approval", sourceType: "needs-verification" }],
     relatedProjectSlugs: ["caresource"],
@@ -241,9 +259,9 @@ export const PROOF_ITEMS: ProofItem[] = [
     id: "project-qbridge",
     category: "project-impact",
     metric: "Quantum",
-    label: "AI quantum research tooling",
+    label: "QBridg and QAI Hub",
     description:
-      "Built AI-assisted research tooling that helps technical users reason about quantum workflows, experiments, execution status, and result interpretation.",
+      "Built AI-assisted research, optimization, dataset-preparation, and model-configuration workflows across QBridg's MCP assistant surface and QAI Hub's event-sourced application flow.",
     context: "Private client work described without unreleased customer details.",
     sources: [{ label: "Project details require approval", sourceType: "needs-verification" }],
     relatedProjectSlugs: ["qbridge", "qai-hub"],

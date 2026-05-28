@@ -3,7 +3,7 @@
 // (pitch.md, gcsp.md) are intentionally omitted as not brand-relevant.
 //
 // Source material: git history commit 310b4a3d (src/data/blog/articles/)
-// Technical articles are hosted at /writing/:slug (internal routes).
+// Technical articles are hosted at /content/writing/:slug (internal routes).
 
 import type { AnalyticsEvent } from "~/config/analytics";
 
@@ -34,7 +34,7 @@ export interface Article {
   /** Relative Markdown content file, loaded from /content */
   contentPath?: string;
   /**
-   * Destination URL. Use a root-relative path (e.g. "/writing/isomorphic")
+   * Destination URL. Use a root-relative path (e.g. "/content/writing/isomorphic")
    * for internal articles; a full https:// URL for external ones.
    */
   url?: string;
@@ -392,7 +392,7 @@ export const ARTICLES: Article[] = [
     tags: ["SSR", "JavaScript", "Fullstack"],
     kind: "technical",
     featured: true,
-    url: "/writing/isomorphic",
+    url: "/content/writing/isomorphic",
     analyticsEvent: "writing_click",
     sections: [
       {
@@ -426,7 +426,7 @@ export const ARTICLES: Article[] = [
     tags: ["Serverless", "Cloud", "AWS"],
     kind: "technical",
     featured: true,
-    url: "/writing/serverless",
+    url: "/content/writing/serverless",
     analyticsEvent: "writing_click",
     sections: [
       {
@@ -643,8 +643,8 @@ export function getArticleBySlug(slug: string) {
 
 export function getLegacyWritingPath(slug: string) {
   const article = getArticleBySlug(slug);
-  if (!article) return "/writing";
+  if (!article) return "/content/writing";
   if (article.url?.startsWith("/")) return article.url;
-  if (article.contentPath || article.sections?.length) return `/writing/${article.slug}`;
-  return `/writing#${article.slug}`;
+  if (article.contentPath || article.sections?.length) return `/content/writing/${article.slug}`;
+  return `/content/writing#${article.slug}`;
 }

@@ -5,20 +5,18 @@ import { PROJECTS } from "~/data/projects";
 import { placeholderProjects } from "~/data/project-placeholders";
 
 type ProjectTile = {
+  slug: string;
   title: string;
-  href?: string;
 };
 
 const allProjectTiles = [
-  ...PROJECTS.filter((project) => project.caseStudyPath).map((project) => ({
+  ...PROJECTS.map((project) => ({
     slug: project.slug,
     title: project.title,
-    href: project.caseStudyPath,
   })),
   ...placeholderProjects.map((project) => ({
     slug: project.slug,
     title: project.title,
-    href: `/work/${project.slug}`,
   })),
 ];
 
@@ -55,8 +53,8 @@ const projectTiles: ProjectTile[] = projectOrder.flatMap((orderedProject) => {
 
   return [
     {
+      slug: project.slug,
       title: orderedProject.title ?? project.title,
-      href: project.href,
     },
   ];
 });
@@ -74,17 +72,13 @@ export default function WorkPage() {
         <h1 class="sketch-heading">Projects</h1>
         <div class="project-grid">
           <For each={projectTiles}>
-            {(project) =>
-              project.href ? (
-                <A href={project.href} class="sketch-card project-tile">
-                  <span>{project.title}</span>
-                </A>
-              ) : (
-                <div class="sketch-card project-tile">
-                  <span>{project.title}</span>
-                </div>
-              )
-            }
+            {(project) => (
+              <article class="sketch-card project-tile">
+                <h2>
+                  <A href={`/work/${project.slug}`}>{project.title}</A>
+                </h2>
+              </article>
+            )}
           </For>
         </div>
       </div>

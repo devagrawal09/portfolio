@@ -1,16 +1,17 @@
 import { For } from "solid-js";
 import { A } from "@solidjs/router";
-import { Code2, MicVocal, PenLine } from "lucide-solid";
+import { MicVocal, PenLine } from "lucide-solid";
 import { PageMeta } from "~/components/PageMeta";
 
 type ExperienceIcon =
   | { label: string; slug: string; color: string }
-  | { label: string; symbol: "mic" | "pen" | "code"; color: string };
+  | { label: string; src: string; logo?: "ripple" }
+  | { label: string; symbol: "mic" | "pen"; color: string };
 
 const navCards = [
   { label: "Resume", href: "/about" },
   { label: "Projects", href: "/work" },
-  { label: "Content", href: "/writing" },
+  { label: "Content", href: "/content/writing" },
 ] as const;
 
 const experienceGroups = [
@@ -40,7 +41,7 @@ const experienceGroups = [
     label: "Framework Design and OSS",
     tags: [
       { label: "Solid", slug: "solid", color: "2C4F7C" },
-      { label: "Ripple", slug: "ripple", color: "0085C0" },
+      { label: "Ripple", src: "/icons/ripple-logo-horizontal.png", logo: "ripple" },
       { label: "TanStack", slug: "tanstack", color: "FF4154" },
     ],
   },
@@ -48,8 +49,8 @@ const experienceGroups = [
     duration: "14 months",
     label: "AI and Agentic Engineering",
     tags: [
-      { label: "OpenAI", slug: "openai", color: "74AA9C" },
-      { label: "OpenCode", symbol: "code", color: "8AB4FF" },
+      { label: "OpenAI", src: "/icons/openai-symbol.svg" },
+      { label: "OpenCode", src: "/icons/opencode-logo.svg" },
       { label: "OpenRouter", slug: "openrouter", color: "7C3AED" },
     ],
   },
@@ -60,6 +61,18 @@ const experienceGroups = [
 }[];
 
 function ExperienceIconMark(props: { item: ExperienceIcon }) {
+  if ("src" in props.item) {
+    return (
+      <img
+        classList={{ "proof-icon-ripple": props.item.logo === "ripple" }}
+        src={props.item.src}
+        alt=""
+        width="32"
+        height="32"
+      />
+    );
+  }
+
   if ("slug" in props.item) {
     return (
       <img
@@ -82,7 +95,6 @@ function ExperienceIconMark(props: { item: ExperienceIcon }) {
   const icons = {
     mic: MicVocal,
     pen: PenLine,
-    code: Code2,
   } as const;
 
   const Icon = icons[props.item.symbol];

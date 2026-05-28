@@ -30,7 +30,7 @@ export const HERO = {
     },
     {
       label: "See talks",
-      href: "/talks",
+      href: "/content/conferences",
       variant: "secondary",
       analyticsEvent: "cta_talks",
     },

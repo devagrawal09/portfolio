@@ -86,19 +86,20 @@ export const PROJECTS: FeaturedProject[] = [
   },
   {
     slug: "solid-socket",
-    title: "solid-socket",
+    title: "Solid Socket",
     role: "Author",
     period: "Oct 2024 – Present",
     tagline:
-      "OSS library extending SolidJS reactivity to the server for real-time, WebSocket-backed sync.",
+      "Signals-meet-WebSockets experiment for SolidStart, with realtime server state exposed through familiar reactive APIs.",
     description:
-      "An open source library that brings SolidJS reactive primitives to the server side, letting server state synchronize directly to client components over WebSocket connections — without extra data-fetching boilerplate.",
+      'An open source SolidStart extension that adds a `"use socket"` directive, turning exported functions into WebSocket-backed RPC and subscriptions. The demo is a collaborative TodoMVC app with username login, invite-based sharing, optimistic updates, presence indicators, and cookie-based access control.',
     architecture:
-      "Bridges SolidJS signals with server-side reactive state via crossws WebSocket adapters. Exposes a component-friendly API so subscriptions look identical to local reactive reads.",
+      "Splits socket modules into a stateful server bundle, serializes functions and reactive values across a WebSocket connection, and exposes `createSocketMemo`, socket stores/projections, persisted signals, and an event-log sync engine over Solid primitives.",
     outcome:
-      "Published on npm. Referenced as a proof-of-concept for server-side reactivity patterns in the Solid ecosystem and used in community talks on async UI and sync engines.",
-    tech: ["SolidJS", "SolidStart", "WebSockets", "crossws", "TypeScript"],
-    url: "https://github.com/devagrawal09/solid-socket",
+      "Published as a proof-of-concept for server-side reactivity in Solid. Won SolidHack 2024's Best SolidStart App category and shipped a live Railway demo that exercises realtime collaboration, persisted reactive state, and multi-user sync.",
+    tech: ["SolidJS", "SolidStart", "WebSockets", "Vinxi", "TypeScript", "unstorage"],
+    url: "https://solid-socket-production.up.railway.app/",
+    urlLabel: "Live demo ↗",
     repoUrl: "https://github.com/devagrawal09/solid-socket",
     kind: "oss",
     featured: true,
@@ -107,10 +108,10 @@ export const PROJECTS: FeaturedProject[] = [
     challenges:
       "Most WebSocket integrations require glue code that breaks the reactive mental model. The goal was to make server-side reactive state feel identical to a local SolidJS signal — no explicit subscriptions, no fetch wrappers, no adapter boilerplate on the consumer side.",
     highlights: [
-      "Published to npm as a proof-of-concept for server-side reactivity in SolidJS",
-      "Server signals synchronize to client components with no extra fetch or subscription code",
-      "Cited in community talks on async UI, sync engines, and the future of server reactivity",
-      "Built on crossws for WebSocket adapter portability across runtimes",
+      'Introduces `"use socket"` files as a SolidStart-style directive for stateful server-side socket functions',
+      "Server signals and memos synchronize to client components with no extra fetch or subscription code",
+      "Includes a TodoMVC demo with invites, presence, optimistic updates, cookie auth, and reactive persistence",
+      "Explores incremental projections and event-log sync as a foundation for local-first Solid apps",
     ],
     proofIds: ["oss-solid-socket", "award-solidhack", "oss-solid-core"],
     recognition: ["SolidHack 2024 Best SolidStart App winner"],
@@ -120,8 +121,146 @@ export const PROJECTS: FeaturedProject[] = [
         href: "https://hack.solidjs.com/categories-challenges",
       },
       {
+        label: "Live demo",
+        href: "https://solid-socket-production.up.railway.app/",
+      },
+      {
         label: "Source",
         href: "https://github.com/devagrawal09/solid-socket",
+      },
+    ],
+  },
+  {
+    slug: "solid-events",
+    title: "Solid Events",
+    role: "Author",
+    period: "Oct 2024 – Present",
+    tagline: "Declarative event composition and state derivation primitives for SolidJS.",
+    description:
+      "A published SolidJS library for modeling user events, async workflows, optimistic UI, and fine-grained mutations as explicit event pipelines. It fills the event-composition gap between pull-based Solid signals and heavier observable systems like RxJS.",
+    architecture:
+      "Provides `createEvent`, `createSubject`, `createAsyncSubject`, `createSubjectStore`, `createTopic`, and `createPartition`. Handlers compose into typed pipelines, can halt propagation, flatten promises, bind cleanup to Solid owners, and derive signal or store state from named events.",
+    outcome:
+      "Published on npm as `solid-events` and won the SolidHack 2024 Solid Primitive challenge. The README documents Strello-style drag-and-drop, optimistic deletion, and fine-grained board mutation flows rewritten around explicit event composition.",
+    tech: ["SolidJS", "TypeScript", "RxJS", "Solid Primitives", "Vitest"],
+    url: "https://www.npmjs.com/package/solid-events",
+    urlLabel: "npm package ↗",
+    repoUrl: "https://github.com/devagrawal09/solid-events",
+    kind: "oss",
+    featured: true,
+    analyticsEvent: "featured_work_click",
+    caseStudyPath: "/work/solid-events",
+    challenges:
+      "Complex Solid apps can end up with procedural event handlers that mix validation, state mutation, side effects, and optimistic behavior in one block. solid-events makes the decision points explicit so state changes are visible at declaration time instead of hidden behind scattered setters.",
+    highlights: [
+      "Defines typed event handlers that can transform payloads, halt propagation, and flatten async callbacks",
+      "Derives signal and store state from named events with automatic Solid owner cleanup",
+      "Composes and partitions events so validation, side effects, and UI state become separate readable steps",
+      "Simplifies optimistic UI and fine-grained mutations by applying each event directly to derived state",
+    ],
+    proofIds: ["oss-solid-events", "award-solidhack", "oss-solid-core"],
+    recognition: ["SolidHack 2024 Solid Primitive challenge winner"],
+    publicSources: [
+      {
+        label: "npm package",
+        href: "https://www.npmjs.com/package/solid-events",
+      },
+      {
+        label: "Source",
+        href: "https://github.com/devagrawal09/solid-events",
+      },
+      {
+        label: "Strello demo implementation",
+        href: "https://github.com/devagrawal09/strello/pull/1/files",
+      },
+    ],
+  },
+  {
+    slug: "qbridge",
+    title: "QBridg",
+    role: "Product Engineer",
+    period: "2024",
+    tagline:
+      "Mastra-powered MCP assistant for quantum research, optimization workflows, and TerraQuantum knowledge access.",
+    description:
+      "QBridg is an internal AI assistant that gives users conversational and tool-based access to TerraQuantum research assets, solution portfolios, and workflow demos. It exposes research analysis, dataset assessment, model reproduction, and vehicle-routing optimization through agent chat and direct tool APIs.",
+    architecture:
+      "Built with Mastra agents, MCP server connectors, OpenAI models, LibSQL-backed memory, vector storage, and typed tool specifications. The MCP contract includes search/execute validation helpers so surfaced tools can be tested against use-case prompts before being exposed to downstream clients.",
+    outcome:
+      "Produced an internal-preview assistant with persistent conversational memory, workflow telemetry, typed MCP tool specs, and integration paths for optimization documentation and demo workflows without requiring users to learn the underlying platform APIs.",
+    tech: ["Mastra", "MCP", "TypeScript", "LibSQL", "OpenAI", "Zod", "Nexus"],
+    kind: "product",
+    featured: true,
+    analyticsEvent: "featured_work_click",
+    caseStudyPath: "/work/qbridge",
+    challenges:
+      "Technical research and optimization capabilities are hard to surface through a single UI because users need knowledge retrieval, guided workflows, and executable tools. QBridg packages those capabilities behind MCP so agents can discover the right tool and run the next step from natural-language intent.",
+    highlights: [
+      "Connected Mastra agents to MCP servers for research and optimization tool discovery",
+      "Modeled tool contracts with input/output schemas, examples, and use-case tests",
+      "Used LibSQL for conversation memory, workflow persistence, telemetry, and vector-backed recall",
+      "Covered dataset analysis, ML/quantum-readiness assessment, model benchmarking, and VRP optimization demos",
+    ],
+    proofIds: ["project-qbridge"],
+  },
+  {
+    slug: "qai-hub",
+    title: "QAI Hub",
+    role: "Product Engineer",
+    period: "2025",
+    tagline:
+      "Event-sourced machine-learning workflow app for dataset preparation and model configuration.",
+    description:
+      "QAI Hub is a full-stack app for guiding users through AI/ML experiment setup: uploading datasets, detecting and editing schemas, generating cleaning recommendations, processing cleaned data, and configuring model-training runs. The product turns a multi-step ML workflow into explicit screens and recoverable state transitions.",
+    architecture:
+      "React Router 7 app backed by KurrentDB event streams. Dataset and model workflows are represented as command functions that append domain events, while projections rebuild current state for route loaders and redirect users to the next incomplete step.",
+    outcome:
+      "Shipped the core workflow shell for dataset upload/cleaning and model configuration, including API/gRPC service definitions for dataset jobs and event-derived progress state across each wizard step.",
+    tech: ["React Router", "React", "TypeScript", "KurrentDB", "Event Sourcing", "Tailwind"],
+    kind: "product",
+    featured: true,
+    analyticsEvent: "featured_work_click",
+    caseStudyPath: "/work/qai-hub",
+    challenges:
+      "ML platform flows often hide critical decisions in backend jobs or one-off form state. QAI Hub makes each step auditable by storing uploads, schema edits, cleaning recommendations, processing milestones, model choices, layer config, loss functions, metrics, hyperparameters, and compute selections as domain events.",
+    highlights: [
+      "Modeled dataset setup as events for creation, upload, schema detection, schema edits, cleaning recommendations, confirmation, and processing",
+      "Modeled model configuration as events for model type, layers, loss, metrics, tunable hyperparameters, and compute size",
+      "Used projections to rebuild current workflow state and route users to the next incomplete step",
+      "Documented dataset upload, recommendation, cleaning, state, list, and gRPC service contracts",
+    ],
+    proofIds: ["project-qbridge"],
+  },
+  {
+    slug: "specter",
+    title: "Specter",
+    role: "Author",
+    period: "May 2026 – Present",
+    tagline: "TypeScript and Solid framework for vertically sliced, event-sourced applications.",
+    description:
+      "Specter is an open source framework for building applications around vertical features, durable event logs, command/query slices, reactions, and typed Solid views. The workspace includes the `@specter-ts/core` runtime, a `create-specter` project initializer, and a reference app that proves the framework API.",
+    architecture:
+      "Solid-oriented TypeScript core with Event definitions, Command Slices, Query Slices, Reaction Slices, and View contracts. Effect RPC provides the client/server transport, Drizzle persists event-derived state, and Vite packages the framework and initializer.",
+    outcome:
+      "Shipped the core framework shape, generator, reference application, scenario-testing model, and architecture decisions needed to validate Specter's event-sourced development workflow before public release.",
+    tech: ["TypeScript", "Solid", "Effect", "Effect RPC", "Drizzle", "Vite", "Event Sourcing"],
+    repoUrl: "https://github.com/devagrawal09/specter",
+    kind: "oss",
+    featured: true,
+    analyticsEvent: "featured_work_click",
+    caseStudyPath: "/work/specter",
+    challenges:
+      "Event-sourced systems are powerful but often force teams to stitch together command handlers, read models, reactions, tests, and UI bindings by convention. Specter makes those boundaries explicit while keeping a Solid app understandable as vertical slices instead of scattered infrastructure code.",
+    highlights: [
+      "Defines a vertical-slice model around commands, queries, reactions, events, and views",
+      "Uses Effect RPC for end-to-end typed command dispatch and query transport",
+      "Includes `create-specter` so new projects can start from a working reference application",
+      "Provides scenario tests that document slice behavior as executable examples",
+    ],
+    publicSources: [
+      {
+        label: "Source",
+        href: "https://github.com/devagrawal09/specter",
       },
     ],
   },
