@@ -73,11 +73,9 @@ export default function WorkPage() {
         <div class="project-grid">
           <For each={projectTiles}>
             {(project) => (
-              <article class="sketch-card project-tile">
-                <h2>
-                  <A href={`/work/${project.slug}`}>{project.title}</A>
-                </h2>
-              </article>
+              <A href={`/projects/${project.slug}`} class="sketch-card project-tile">
+                <h2>{project.title}</h2>
+              </A>
             )}
           </For>
         </div>

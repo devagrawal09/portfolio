@@ -1,13 +1,13 @@
 import { Navigate, useParams } from "@solidjs/router";
 
 const PROJECT_REDIRECTS: Record<string, string> = {
-  hackathon: "/work/hackathon-suite",
-  osdp: "/work/osdp",
+  hackathon: "/projects/hackathon-suite",
+  osdp: "/projects/osdp",
   portfolio: "/",
 };
 
 function getLegacyProjectPath(slug: string): string {
-  return PROJECT_REDIRECTS[slug] ?? "/work";
+  return PROJECT_REDIRECTS[slug] ?? "/projects";
 }
 
 export default function LegacyShowcaseProjectRedirect() {

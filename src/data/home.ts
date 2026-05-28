@@ -24,7 +24,7 @@ export const HERO = {
   ctas: [
     {
       label: "View my work",
-      href: "/work",
+      href: "/projects",
       variant: "primary",
       analyticsEvent: "cta_work",
     },

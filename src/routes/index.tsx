@@ -9,8 +9,8 @@ type ExperienceIcon =
   | { label: string; symbol: "mic" | "pen"; color: string };
 
 const navCards = [
-  { label: "Resume", href: "/about" },
-  { label: "Projects", href: "/work" },
+  { label: "Resume", href: "/resume" },
+  { label: "Projects", href: "/projects" },
   { label: "Content", href: "/content/writing" },
 ] as const;
 
@@ -22,7 +22,7 @@ const experienceGroups = [
       { label: "TypeScript", slug: "typescript", color: "3178C6" },
       { label: "Python", slug: "python", color: "3776AB" },
       { label: ".NET", slug: "dotnet", color: "512BD4" },
-      { label: "Java", slug: "openjdk", color: "F37626" },
+      { label: "Java", src: "/icons/java-logo.svg" },
       { label: "PHP", slug: "php", color: "777BB4" },
     ],
   },

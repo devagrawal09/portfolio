@@ -36,7 +36,7 @@ export interface FeaturedProject {
   featured: boolean;
   /** Analytics event emitted when the user navigates into this project */
   analyticsEvent: Extract<AnalyticsEvent, "featured_work_click">;
-  /** Route path for the detailed case study page, e.g. "/work/momentum-devcon" */
+  /** Route path for the detailed project page, e.g. "/projects/momentum-devcon" */
   caseStudyPath?: string;
   /** The core problem or constraint the project addressed — richer context for case study */
   challenges?: string;
@@ -73,7 +73,7 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "product",
     featured: true,
     analyticsEvent: "featured_work_click",
-    caseStudyPath: "/work/momentum-devcon",
+    caseStudyPath: "/projects/momentum-devcon",
     challenges:
       "Proving SolidStart's server-function model could handle real-time event logistics — session management, live feedback collection, and attendee coordination — under conference-day load with no room for downtime.",
     highlights: [
@@ -104,7 +104,7 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "oss",
     featured: true,
     analyticsEvent: "featured_work_click",
-    caseStudyPath: "/work/solid-socket",
+    caseStudyPath: "/projects/solid-socket",
     challenges:
       "Most WebSocket integrations require glue code that breaks the reactive mental model. The goal was to make server-side reactive state feel identical to a local SolidJS signal — no explicit subscriptions, no fetch wrappers, no adapter boilerplate on the consumer side.",
     highlights: [
@@ -149,7 +149,7 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "oss",
     featured: true,
     analyticsEvent: "featured_work_click",
-    caseStudyPath: "/work/solid-events",
+    caseStudyPath: "/projects/solid-events",
     challenges:
       "Complex Solid apps can end up with procedural event handlers that mix validation, state mutation, side effects, and optimistic behavior in one block. solid-events makes the decision points explicit so state changes are visible at declaration time instead of hidden behind scattered setters.",
     highlights: [
@@ -192,7 +192,7 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "product",
     featured: true,
     analyticsEvent: "featured_work_click",
-    caseStudyPath: "/work/qbridge",
+    caseStudyPath: "/projects/qbridge",
     challenges:
       "Technical research and optimization capabilities are hard to surface through a single UI because users need knowledge retrieval, guided workflows, and executable tools. QBridg packages those capabilities behind MCP so agents can discover the right tool and run the next step from natural-language intent.",
     highlights: [
@@ -220,7 +220,7 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "product",
     featured: true,
     analyticsEvent: "featured_work_click",
-    caseStudyPath: "/work/qai-hub",
+    caseStudyPath: "/projects/qai-hub",
     challenges:
       "ML platform flows often hide critical decisions in backend jobs or one-off form state. QAI Hub makes each step auditable by storing uploads, schema edits, cleaning recommendations, processing milestones, model choices, layer config, loss functions, metrics, hyperparameters, and compute selections as domain events.",
     highlights: [
@@ -248,7 +248,7 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "oss",
     featured: true,
     analyticsEvent: "featured_work_click",
-    caseStudyPath: "/work/specter",
+    caseStudyPath: "/projects/specter",
     challenges:
       "Event-sourced systems are powerful but often force teams to stitch together command handlers, read models, reactions, tests, and UI bindings by convention. Specter makes those boundaries explicit while keeping a Solid app understandable as vertical slices instead of scattered infrastructure code.",
     highlights: [
@@ -283,7 +283,7 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "civic",
     featured: true,
     analyticsEvent: "featured_work_click",
-    caseStudyPath: "/work/osdp",
+    caseStudyPath: "/projects/osdp",
     challenges:
       "Ohio court systems are fragmented — different counties use different formats, some still paper-based. The platform had to collect structured, analyzable sentencing data without disrupting judge and clerk workflows or requiring courts to adopt new infrastructure.",
     highlights: [
@@ -318,7 +318,7 @@ export const PROJECTS: FeaturedProject[] = [
     kind: "product",
     featured: false,
     analyticsEvent: "featured_work_click",
-    caseStudyPath: "/work/hackathon-suite",
+    caseStudyPath: "/projects/hackathon-suite",
     challenges:
       "Running a student hackathon once a year is demanding; running multiple formats (virtual and in-person) across four years while growing a volunteer team required building a platform that could evolve as fast as the events did.",
     highlights: [

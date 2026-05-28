@@ -1,7 +1,5 @@
-import type { JSX } from "solid-js";
+import { Navigate } from "@solidjs/router";
 
-// Layout wrapper for /work and /work/[slug].
-// SolidStart nests the folder routes beneath this file and provides children.
-export default function WorkLayout(props: { children?: JSX.Element }) {
-  return <>{props.children}</>;
+export default function WorkRedirect() {
+  return <Navigate href="/projects" />;
 }

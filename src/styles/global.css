@@ -663,6 +663,7 @@ a {
   gap: var(--space-3);
   padding: var(--space-4);
   text-align: center;
+  text-decoration: none;
 }
 
 .project-tile h2 {

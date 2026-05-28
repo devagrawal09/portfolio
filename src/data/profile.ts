@@ -1,5 +1,5 @@
 // Structured content derived from resume.md.
-// The About page and any other page that needs biography/work data imports from here.
+// The resume page and any other page that needs biography/work data imports from here.
 // Keep this file factual and up-to-date; avoid narrative that belongs on the page itself.
 
 // ─── Work experience ──────────────────────────────────────────────────────────
