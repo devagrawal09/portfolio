@@ -57,6 +57,48 @@ export interface FeaturedProject {
 
 export const PROJECTS: FeaturedProject[] = [
   {
+    slug: "specter",
+    title: "Specter",
+    role: "Author",
+    period: "May 2026 – Present",
+    tagline: "TypeScript and Solid framework for vertically sliced, event-sourced applications.",
+    description:
+      "Framework for building specifications that compile, execute and scaffold applications around vertical features. The workspace includes the `@specter-ts/core` runtime, the `create-specter` project initializer, and a reference app that proves the framework API.",
+    architecture:
+      "Solid-oriented TypeScript core with Event Definitions, Command Slices, Query Slices, Reaction Slices, Slice State, and View contracts. Effect RPC exposes end-to-end typed command/query transport, Drizzle and SQLite persist event-derived state, and Vite packages the framework and initializer.",
+    outcome:
+      "Shipped the core framework package, initializer CLI, reference application, scenario-testing model, and architecture decisions needed to validate Specter's event-sourced development workflow before public release.",
+    tech: [
+      "TypeScript",
+      "Solid",
+      "Effect",
+      "Effect RPC",
+      "Drizzle",
+      "SQLite",
+      "Vite",
+      "Event Sourcing",
+    ],
+    repoUrl: "https://github.com/devagrawal09/specter",
+    kind: "oss",
+    featured: true,
+    analyticsEvent: "featured_work_click",
+    caseStudyPath: "/projects/specter",
+    challenges:
+      "Event-sourced systems are powerful but often force teams to stitch together command handlers, read models, reactions, tests, and UI bindings by convention. Specter makes those boundaries explicit while keeping a Solid app understandable as vertical slices instead of scattered infrastructure code.",
+    highlights: [
+      "Defines a vertical-slice model around commands, queries, reactions, events, slice state, and views",
+      "Uses Effect RPC for end-to-end typed command dispatch and query transport",
+      "Includes `create-specter` so new projects can start from a working reference application",
+      "Provides scenario tests that document slice behavior as executable examples",
+    ],
+    publicSources: [
+      {
+        label: "Source",
+        href: "https://github.com/devagrawal09/specter",
+      },
+    ],
+  },
+  {
     slug: "momentum-devcon",
     title: "Momentum DevCon App",
     role: "Lead Developer",
@@ -232,39 +274,6 @@ export const PROJECTS: FeaturedProject[] = [
     proofIds: ["project-qbridge"],
   },
   {
-    slug: "specter",
-    title: "Specter",
-    role: "Author",
-    period: "May 2026 – Present",
-    tagline: "TypeScript and Solid framework for vertically sliced, event-sourced applications.",
-    description:
-      "Specter is an open source framework for building applications around vertical features, durable event logs, command/query slices, reactions, and typed Solid views. The workspace includes the `@specter-ts/core` runtime, a `create-specter` project initializer, and a reference app that proves the framework API.",
-    architecture:
-      "Solid-oriented TypeScript core with Event definitions, Command Slices, Query Slices, Reaction Slices, and View contracts. Effect RPC provides the client/server transport, Drizzle persists event-derived state, and Vite packages the framework and initializer.",
-    outcome:
-      "Shipped the core framework shape, generator, reference application, scenario-testing model, and architecture decisions needed to validate Specter's event-sourced development workflow before public release.",
-    tech: ["TypeScript", "Solid", "Effect", "Effect RPC", "Drizzle", "Vite", "Event Sourcing"],
-    repoUrl: "https://github.com/devagrawal09/specter",
-    kind: "oss",
-    featured: true,
-    analyticsEvent: "featured_work_click",
-    caseStudyPath: "/projects/specter",
-    challenges:
-      "Event-sourced systems are powerful but often force teams to stitch together command handlers, read models, reactions, tests, and UI bindings by convention. Specter makes those boundaries explicit while keeping a Solid app understandable as vertical slices instead of scattered infrastructure code.",
-    highlights: [
-      "Defines a vertical-slice model around commands, queries, reactions, events, and views",
-      "Uses Effect RPC for end-to-end typed command dispatch and query transport",
-      "Includes `create-specter` so new projects can start from a working reference application",
-      "Provides scenario tests that document slice behavior as executable examples",
-    ],
-    publicSources: [
-      {
-        label: "Source",
-        href: "https://github.com/devagrawal09/specter",
-      },
-    ],
-  },
-  {
     slug: "osdp",
     title: "Ohio Sentencing Data Platform",
     role: "Senior Developer",
@@ -336,6 +345,3 @@ export const PROJECTS: FeaturedProject[] = [
     ],
   },
 ];
-
-/** Projects surfaced on the homepage featured-work strip (featured: true). */
-export const homepageFeatured = PROJECTS.filter((p) => p.featured);

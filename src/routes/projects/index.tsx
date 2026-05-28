@@ -21,6 +21,7 @@ const allProjectTiles = [
 ];
 
 const projectOrder: readonly { slug: string; title?: string }[] = [
+  { slug: "specter" },
   { slug: "powerchat" },
   { slug: "solid-2" },
   { slug: "solid-socket", title: "Solid Socket" },
