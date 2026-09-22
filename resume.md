@@ -123,38 +123,37 @@ Software engineer and developer advocate building full-stack AI and devtool prod
 - Presented talks and workshops at conferences about Remult
 - Provided feedback on the framework and API design
 
-### Author ([Jev Review](https://github.com/devagrawal09/jev-review))
+## Selected Projects
+
+### [Jev Review](https://github.com/devagrawal09/jev-review)
 
 - Experimental open-source project exploring typed probabilistic decisions in software-review workflows
 - Built against TypeSafe's Jev SDK to test bounded questions, confidence, and explicit uncertainty
 - Status: demo
 
-### Author ([Stanley](https://github.com/devagrawal09/stanley-code))
+### [Stanley](https://github.com/devagrawal09/stanley-code)
 
 - Jev-first self evolving coding agent
-- Handles most tasks using jev-powered workflows, only falling back to LLMs if necesarry
-- LLM agents continuously build and maintain workflows to suit user needs
+- Routes supported tasks to deterministic workflows, unsupported tasks to LLMs
+- LLMs continuously draft and refactor reusable workflows to expand support
 - Status: demo
 
-### Author ([OC++](https://github.com/devagrawal09/opencode/tree/codemode-fork))
+### [OC++](https://github.com/devagrawal09/opencode/tree/codemode-fork)
 
 - Fork of opencode with a heavily upgraded code-mode plugin
 - Compiled safety, durable exection, notebook semantics, async workers, approvals, and external events
 - UI shows detailed trace of the code execution with full visibility into file changes and processes
 - Actively investigating Jev-first workflows, working examples, and evaluations
 - Status: experimental, daily driving, heavily dogfooding
-
-### Author (Momentum DevCon App)
-
-- Application for **conference attendees** to view and **bookmark sessions**, **provide feedback**, and **connect with other attendees**
-- Responsive **mobile-first** web application with **server rendering**, **optimistic UI**, **event sourcing**, and **CQRS**
-- Built with SolidStart, Drizzle, Postgres, Vercel
-
-### Author (RevolutionUC Hackathon Suite)
-
-- **Suite of applications** to aid hackathon organizing with **marketing**, **judging**, **registration**, **hacker matching**, and **discord management**
-- Service-based backend **leveraging cloud services** (AWS, Heroku, Netlify, Cloudflare)
 - **Frontends** built with Jekyll, React, and Angular
+
+### Software Factory Benchmark
+
+- An evaluation for an agent or system of agents (software factory) for building, testing, serving, monitoring, and evolving software
+- Agent plays an RTS like simulation by writing code that observes visible state and sends actions to the controllable units
+- The simulation is random, endless, messy, and constantly changing, better emulating realistic engineering scenarios
+- 3d browser viewer for the simulation along with HUD controls, potentially for human players in the future
+- Status: prototype
 
 ## Appearances (Conferences, Podcasts, Meetups)
 
