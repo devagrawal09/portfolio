@@ -8,46 +8,47 @@
 
 ## Summary
 
-Software engineer and developer advocate building full-stack AI and developer-tool products, then teaching developers through writing, talks, workshops, and demos.
+Software engineer and developer advocate building full-stack AI and devtool products, then teaching developers through writing, talks, workshops, and demos.
 
 **9 years of experience** building products end-to-end and working directly with users, stakeholders, and product teams.
 
-**4 years of experience** creating technical content, supporting developer communities, and speaking at conferences and on podcasts.
-
-Recent work includes agentic software delivery, MCP and RAG systems, real-time AI interfaces, and developer- and agent-friendly APIs.
+**4 years of experience** creating technical content, supporting developer communities, and speaking at conferences and podcasts.
 
 ## Technical Skills
 
-**Languages:** TypeScript, Python, C#, Java, HTML, CSS
+**Languages:** - Fluent: TypeScript, Python, C#, PHP, Java, HTML, CSS - Familiar: Rust, Go, Elixir, Roc, Clojure, Haskell, Smalltalk
 
-**AI and developer tools:** LLM applications, agentic workflows, MCP, RAG, tool use, SDK/API design, developer education, usability testing
+**AI and developer tools:** Multi-Agent Workflows and Harnesses, Code Mode, SDK/API Design, Memory Systems, Dogfooding, Docs and Education
 
-**Web:** React, Solid, TanStack, Next.js, React Router, Express, GraphQL
+**Applications:** React and React Native, Solid, TanStack, Next.js, GraphQL, Sync Engines
 
-**Architecture:** Event Sourcing, CQRS, Domain-Driven Design, microservices, local-first systems
+**Architecture:** Microservices, Event Sourcing, CQRS, Domain-Driven Design, Local-First Apps, Multi-Cloud, Vertical Slices, Plugin and Kernel
 
-**Infrastructure and data:** AWS, Azure, Google Cloud, Cloudflare, Vercel, Docker, Linux, PostgreSQL, MongoDB, Redis
+**Infrastructure:** Linux, Docker, AWS, Azure, Google Cloud, Cloudflare, Vercel, Netlify, Railway
+
+**Data:** SQL, MongoDB, Redis, DynamoDB, Kurrent (EventStore DB)
 
 ## Work Experience
 
 ### Product Engineer (Codemod) (Aug 2026 - current)
 
-- Dogfood Codemod and redesign it for the agentic era
-- Redesign product APIs to make them easier for developers and agents to discover, understand, and use
-- Work directly with customers and turn feedback into product and developer-experience improvements
+- Dogfood Codemod and analyzed the ecosystem to identify pain points
+- Redesigned product APIs for better developer and agent experience
+- Worked directly with customers to gather feedback and demo features
+- Creating technical content like case studies, documentation, and GTM
 
 ### Developer Relations Engineer (PowerSync) (Dec 2025 - May 2026)
 
-- Authored four technical articles about building reliable AI applications with sync engines and local-first architecture
+- Authored technical articles about building reliable and multiplayer AI applications with sync engines
 - Created demos and educational material using React, Solid, TanStack Start, TanStack DB, and Mastra
 - Helped organize an AI hackathon with partner companies and engaged participating developers
 - Contributed to product API design and AI strategy across product, growth, and internal workflows
 
 ### Software Engineer (Xolvio) (Apr 2025 - Dec 2025)
 
-- Contributed to an internal AI software factory designed to pair agentic workflows with deterministic verification
-- Built an agentic platform for running and improving quantum machine-learning and optimization experiments
-- Built an MCP gateway for tool discovery, composition, observability, and improvement
+- Contributed to an internal AI software factory with deterministic verification and scalable architecture
+- Built an agentic platform for running quantum ML and optimization experiments in natural language
+- Built an MCP gateway for tool discovery, composition, observability, and improvement based on human feedback
 - Built a RAG knowledge base that helped coding agents use specialized quantum algorithm libraries
 
 ### Software Engineer (SmartData) (Apr 2024 - Apr 2025)
@@ -62,15 +63,17 @@ Recent work includes agentic software delivery, MCP and RAG systems, real-time A
 - Represented Clerk during a company growth period that included 5x managed users and 3x package downloads
 - Supported an 8,000-member Discord community and synthesized developer feedback for product and engineering teams
 - Represented Clerk at five conferences through talks, workshops, demos, and product walkthroughs
-- Authored the technical "How We Roll" series and articles about building with webhooks
+- Established an escalation pipeline from customer support through content, demos, docs, and product
+- Built a CLI for automatically migrating data from any platform to Clerk
 - Built authentication starter kits and demos with Next.js, React, Tailwind CSS, and Vercel
 
 ### Senior Software Developer (UC IT Solutions Center) (Jan 2020 – Aug 2020, Jan 2021 – Dec 2022)
 
 - Led development and operation of the Ohio Sentencing Data Platform with the Ohio Supreme Court and more than 10 counties
 - Translated complex legal and court workflows into configurable forms, analyzable data, document exports, and legacy-system integrations
-- Conducted stakeholder research and usability testing to identify requirements and improve workflows
-- Led applications used by the UC Corrections Institute and Ohio Department of Youth Services
+- Participated in research and usability testing with judges to identify requirements and improve workflows
+- Led the work on multiple apps used by the UC Corrections Institute and Ohio Department of Youth Services
+- Enhanced a PWA used by a professional training agency for reporting and tracking progress
 
 ### Research Assistant (University of Cincinnati) (Sep 2018 – Dec 2019)
 
@@ -93,40 +96,65 @@ Recent work includes agentic software delivery, MCP and RAG systems, real-time A
 
 ## Open Source
 
-- **Solid.js**, core team member (Dec 2024 - present)
-- **Solid Socket**, author (Oct 2024 - present)
-- **Solid Events**, author (Oct 2024 - present)
-- **Crossws**, contributor (Nov 2024 - present)
+### Core Team (Solid.js) (November 2024 - present)
 
-## Projects
+- Contributed to the Solid 2.0 framework and API design for built-in efficient asynchronous co-ordination
+- Built demos and experiments to stress test Solid 2.0 in different situations and improve the design
+- Published a CLI tool to detect migration sites in existing Solid codebases using AST analysis
+- Actively supported and collected feedback from early adopters to identify pain points
+- Contributed documentation and education for the new data patterns introduced in SolidStart
+- Published libraries for better event composition and full-stack reactivity on top of Solid
+- Represented and spoke about Solid.js at conferences and podcasts
 
-### Momentum DevCon App (Lead Developer)
+### Core Team (Ripple.ts) (November 2025 - present)
+
+- Minor contributions to the framework and API design
+- Provided feedback on the async co-ordination, fallback and error handling APIs
+
+### Maintainer (TanStack Start) (August 2024 - present)
+
+- Minor contributions to the framework architecture primarily during its experimental phase
+- Experimented with React Server Components (RSCs) internals and low level APIs
+- Prototyped a custom full stack framework on top of RSCs to identify pain points
+- Experimented with infra-agnostic data caching and real-time patterns
+
+### Developer Advocate (Remult) (August 2023 - January 2024)
+
+- Presented talks and workshops at conferences about Remult
+- Provided feedback on the framework and API design
+
+### Author ([Jev Review](https://github.com/devagrawal09/jev-review))
+
+- Experimental open-source project exploring typed probabilistic decisions in software-review workflows
+- Built against TypeSafe's Jev SDK to test bounded questions, confidence, and explicit uncertainty
+- Status: demo
+
+### Author ([Stanley](https://github.com/devagrawal09/stanley-code))
+
+- Jev-first self evolving coding agent
+- Handles most tasks using jev-powered workflows, only falling back to LLMs if necesarry
+- LLM agents continuously build and maintain workflows to suit user needs
+- Status: demo
+
+### Author ([OC++](https://github.com/devagrawal09/opencode/tree/codemode-fork))
+
+- Fork of opencode with a heavily upgraded code-mode plugin
+- Compiled safety, durable exection, notebook semantics, async workers, approvals, and external events
+- UI shows detailed trace of the code execution with full visibility into file changes and processes
+- Actively investigating Jev-first workflows, working examples, and evaluations
+- Status: experimental, daily driving, heavily dogfooding
+
+### Author (Momentum DevCon App)
 
 - Application for **conference attendees** to view and **bookmark sessions**, **provide feedback**, and **connect with other attendees**
 - Responsive **mobile-first** web application with **server rendering**, **optimistic UI**, **event sourcing**, and **CQRS**
 - Built with SolidStart, Drizzle, Postgres, Vercel
 
-### Hackathon Suite (Lead Developer)
+### Author (RevolutionUC Hackathon Suite)
 
 - **Suite of applications** to aid hackathon organizing with **marketing**, **judging**, **registration**, **hacker matching**, and **discord management**
 - Service-based backend **leveraging cloud services** (AWS, Heroku, Netlify, Cloudflare)
 - **Frontends** built with Jekyll, React, and Angular
-
-### Ohio Sentencing Data Platform (Senior Developer)
-
-- Collaboration with the **Ohio Supreme Court** to **record and analyze data** about criminal sentencing cases
-- **Custom built engine** to generate **complex forms** with **real-time capabilities**, **analyzable data outputs**, and **docx exports** based on JSON schemas
-- **Integration with legacy systems** to pull data
-
-### [Jev Review](https://github.com/devagrawal09/jev-review)
-
-- Experimental open-source project exploring typed probabilistic decisions in software-review workflows
-- Built against TypeSafe's Jev SDK to test bounded questions, confidence, and explicit uncertainty
-
-### [Stanley](https://github.com/devagrawal09/stanley-code)
-
-- Experimental CLI integrating Jev decisions into coding-agent review and routing workflows
-- Uses code-owned confidence and margin thresholds, overload handling, CI, architecture checks, and 196 tests
 
 ## Appearances (Conferences, Podcasts, Meetups)
 
@@ -151,27 +179,27 @@ Recent work includes agentic software delivery, MCP and RAG systems, real-time A
 
 ## Community
 
-### Organizer of Momentum Developer Conference (Feb 2023 - Current)
+### Momentum Developer Conference (Feb 2023 - Current)
 
 - Member of steering committee of the biggest tech conference in Cincinnati (500+ registrations)
 - Built an app for attendees and speakers to keep track of schedule, network, and provide feedback
 
-### Organizer of RevolutionUC And MakeUC (Sep 2019 – Mar 2023)
+### RevolutionUC And MakeUC (Sep 2019 – Mar 2023)
 
 - Organizer for UC’s largest hackathons
 - Developing and managing the hackathon website, server, database, and the various online services
 
-### President of IT Student Association (Apr 2021 – Apr 2022)
+### IT Student Association (Apr 2021 – Apr 2022)
 
 - President for UC’s largest student organization for IT students
 - Providing weekly educational and networking opportunities to enthusiastic students
 
-### Executive Member of ACM@UC (May 2019 – Apr 2021)
+### ACM@UC (May 2019 – Apr 2021)
 
 - Managing and updating the organization’s website
 - Plan and record biweekly tech talks and workshops
 
-### Executive Member of The UC Rotaract Club (Oct 2018 – Oct 2021)
+### The UC Rotaract Club (Oct 2018 – Oct 2021)
 
 - Hosting on-campus events and off-campus volunteering projects
 - Collaborating with the Rotary Club for networking and professional development events
