@@ -8,65 +8,69 @@
 
 ## Summary
 
-I build and teach how to build delightful fullstack AI applications.
+Software engineer and developer advocate building full-stack AI and developer-tool products, then teaching developers through writing, talks, workshops, and demos.
 
-**9 years of experience** building products end-to-end, working directly with stakeholders and product owners.
+**9 years of experience** building products end-to-end and working directly with users, stakeholders, and product teams.
 
-**4 years** creating educational content and speaking at tech conferences and podcasts about development and architecture.
+**4 years of experience** creating technical content, supporting developer communities, and speaking at conferences and on podcasts.
 
-**14 months** building AI and Agentic applications and workflows for automated software development and delivery.
+Recent work includes agentic software delivery, MCP and RAG systems, real-time AI interfaces, and developer- and agent-friendly APIs.
 
 ## Technical Skills
 
-**Languages:** TypeScript, Python, C#, Java, PHP, HTML and CSS
+**Languages:** TypeScript, Python, C#, Java, HTML, CSS
 
-**Web:** React, Solid, Angular, Vue, Svelte, Express, Next, Socket.io
+**AI and developer tools:** LLM applications, agentic workflows, MCP, RAG, tool use, SDK/API design, developer education, usability testing
 
-**Architecture:** Event Sourcing, CQRS, Microservices, Domain-Driven Design, Vertical Slices, Local First
+**Web:** React, Solid, TanStack, Next.js, React Router, Express, GraphQL
 
-**Cross platform:** Ionic, React Native, Electron, PWA
+**Architecture:** Event Sourcing, CQRS, Domain-Driven Design, microservices, local-first systems
 
-**Tools:** Cloud (Heroku, AWS, Azure, Netlify, Cloudflare, Vercel, Firebase), Database (SQL, MongoDB, Redis), DevOps (GitHub, Travis), SysAdmin (Linux, Docker, Nginx, Ansible)
+**Infrastructure and data:** AWS, Azure, Google Cloud, Cloudflare, Vercel, Docker, Linux, PostgreSQL, MongoDB, Redis
 
 ## Work Experience
 
+### Product Engineer (Codemod) (Aug 2026 - current)
+
+- Dogfood Codemod and redesign it for the agentic era
+- Redesign product APIs to make them easier for developers and agents to discover, understand, and use
+- Work directly with customers and turn feedback into product and developer-experience improvements
+
 ### Developer Relations Engineer (PowerSync) (Dec 2025 - May 2026)
 
-- Raised the visibility and engagement of PowerSync within the developer community
-- Made educational and technical content for PowerSync blog, YouTube, and conference talks
-- Boosted site viewership, new signups, social media followers, and the north star metric
-- Brainstormed and executed AI strategy for product improvement, growth, and internal use
-- Used **React**, **Solid**, **TanStack Start**, **TanStack DB**, and **Mastra**
+- Authored four technical articles about building reliable AI applications with sync engines and local-first architecture
+- Created demos and educational material using React, Solid, TanStack Start, TanStack DB, and Mastra
+- Helped organize an AI hackathon with partner companies and engaged participating developers
+- Contributed to product API design and AI strategy across product, growth, and internal workflows
 
 ### Software Engineer (Xolvio) (Apr 2025 - Dec 2025)
 
-- Built a machine learning platform to help analysts run quantum algorithms
-- Prototyped agentic apps and experiences for researchers and engineers
-- Worked with cutting edge Event Sourcing, GraphQL, and AI technologies
-- Used **React Router**, **Apollo GraphQL**, **KurrentDB**, **Emmett**, and **Google Cloud**
+- Contributed to an internal AI software factory designed to pair agentic workflows with deterministic verification
+- Built an agentic platform for running and improving quantum machine-learning and optimization experiments
+- Built an MCP gateway for tool discovery, composition, observability, and improvement
+- Built a RAG knowledge base that helped coding agents use specialized quantum algorithm libraries
 
 ### Software Engineer (SmartData) (Apr 2024 - Apr 2025)
 
-- Built an **AI powered** project management assistant to accelerate internal processes
-- Built a **next gen member application** for a healthcare company
-- Implemented critical improvements for performance, developer experience, and cost efficiency
-- Collaborated with the product, design, quality assurance, infrastructure, and security teams
-- Used **Tanstack**, **Remix**, **React**, **Azure**, and **Okta**
+- Built a real-time meeting assistant that listened to calls, queried company data, used tools, and performed actions
+- Built a healthcare member application for accessing benefits, claims, and support resources
+- Investigated and implemented architecture, performance, developer-experience, and cost improvements
+- Collaborated with product, design, quality assurance, infrastructure, and security teams
 
 ### Developer Advocate (Clerk.com) (May 2023 - Feb 2024)
 
-- Helped **establish Clerk in the community** during the hockey stick **growth period** (5x managed users, 3x downloads, 2x company size, Series A and B)
-- **Engaged and provided support** to the Discord community of 8k members and Twitter community of 14k followers
-- **Solidified Clerk's presence** at 5 conferences through **talks**, **workshops**, **demos**, and **product walkthroughs**
-- **Curated feedback and requests** from the community to help **prioritize work** for the engineering team
-- Built starter kits and demos on **Next.js**, **React**, **TailwindCSS**, and **Vercel**
+- Represented Clerk during a company growth period that included 5x managed users and 3x package downloads
+- Supported an 8,000-member Discord community and synthesized developer feedback for product and engineering teams
+- Represented Clerk at five conferences through talks, workshops, demos, and product walkthroughs
+- Authored the technical "How We Roll" series and articles about building with webhooks
+- Built authentication starter kits and demos with Next.js, React, Tailwind CSS, and Vercel
 
 ### Senior Software Developer (UC IT Solutions Center) (Jan 2020 – Aug 2020, Jan 2021 – Dec 2022)
 
-- **Led the development and operation** of the **Ohio Sentencing Data Platform** in collaboration with the **Ohio Supreme Court** and **10+ counties across Ohio**
-- Led the work on a **suite of applications** used by **UC Corrections Institute** and **Department of Youth Services**, and developed the new version of the **primary case tracking application**
-- **Identified and triaged project requirements** in collaboration with key stakeholders
-- Used **Nodejs**, **Express**, **React**, **PostgreSQL**, **MongoDB**, and **Linux**
+- Led development and operation of the Ohio Sentencing Data Platform with the Ohio Supreme Court and more than 10 counties
+- Translated complex legal and court workflows into configurable forms, analyzable data, document exports, and legacy-system integrations
+- Conducted stakeholder research and usability testing to identify requirements and improve workflows
+- Led applications used by the UC Corrections Institute and Ohio Department of Youth Services
 
 ### Research Assistant (University of Cincinnati) (Sep 2018 – Dec 2019)
 
@@ -89,15 +93,15 @@ I build and teach how to build delightful fullstack AI applications.
 
 ## Open Source
 
-- **Solid.js**, core team member (Dec 2024 - Current)
-- **Solid-socket**, author (Oct 2024 - Current)
-- **Solid-events**, author (Oct 2024 - Current)
-- **Tanstack Start**, maintainer (Jun 2024 - Current)
-- **Crossws**, contributor (Nov 2024 - Current)
+- **Solid.js**, core team member (Dec 2024 - present)
+- **Solid Socket**, author (Oct 2024 - present)
+- **Solid Events**, author (Oct 2024 - present)
+- **Crossws**, contributor (Nov 2024 - present)
 
 ## Projects
 
 ### Momentum DevCon App (Lead Developer)
+
 - Application for **conference attendees** to view and **bookmark sessions**, **provide feedback**, and **connect with other attendees**
 - Responsive **mobile-first** web application with **server rendering**, **optimistic UI**, **event sourcing**, and **CQRS**
 - Built with SolidStart, Drizzle, Postgres, Vercel
@@ -114,17 +118,15 @@ I build and teach how to build delightful fullstack AI applications.
 - **Custom built engine** to generate **complex forms** with **real-time capabilities**, **analyzable data outputs**, and **docx exports** based on JSON schemas
 - **Integration with legacy systems** to pull data
 
-### Devtranet (Senior Developer)
+### [Jev Review](https://github.com/devagrawal09/jev-review)
 
-- **Networking platform** for engineers, investors, and entrepreneurs.
-- **Discovering events**, **posting blogs**, **showcasing projects**, **finding jobs**, and **social media**
-- **Full stack Typescript**, Next.js, React, and Tailwind
+- Experimental open-source project exploring typed probabilistic decisions in software-review workflows
+- Built against TypeSafe's Jev SDK to test bounded questions, confidence, and explicit uncertainty
 
-### HealthyLovedOnes (Solo Developer)
+### [Stanley](https://github.com/devagrawal09/stanley-code)
 
-- A **job portal** for caregivers and those in need with built in hiring, communication, and payment system
-- **Holistic caregiver profiles** based on professional and personal skills
-- Mobile-ready **full stack application** built with Meteor
+- Experimental CLI integrating Jev decisions into coding-agent review and routing workflows
+- Uses code-owned confidence and margin thresholds, overload handling, CI, architecture checks, and 196 tests
 
 ## Appearances (Conferences, Podcasts, Meetups)
 
