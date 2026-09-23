@@ -10,32 +10,30 @@
 
 Software engineer and developer advocate building full-stack AI and devtool products, then teaching developers through writing, talks, workshops, and demos.
 
-**9 years of experience** building products end-to-end and working directly with users, stakeholders, and product teams.
+Building software since 2017, with **6+ years of professional product experience** working directly with users, stakeholders, and product teams.
 
 **4 years of experience** creating technical content, supporting developer communities, and speaking at conferences and podcasts.
 
 ## Technical Skills
 
-**Languages:** - Fluent: TypeScript, Python, C#, PHP, Java, HTML, CSS - Familiar: Rust, Go, Elixir, Roc, Clojure, Haskell, Smalltalk
+**Languages:** TypeScript, Python; prior production experience with C#, Java, PHP, HTML, and CSS
 
-**AI and developer tools:** Multi-Agent Workflows and Harnesses, Code Mode, SDK/API Design, Memory Systems, Dogfooding, Docs and Education
+**AI and developer tools:** Agent workflows and harnesses, MCP, RAG, memory systems, evaluation, SDK/API design, dogfooding, documentation, developer education
 
-**Applications:** React and React Native, Solid, TanStack, Next.js, GraphQL, Sync Engines
+**Applications:** React, React Native, Solid, TanStack, Next.js, GraphQL, local-first sync
 
-**Architecture:** Microservices, Event Sourcing, CQRS, Domain-Driven Design, Local-First Apps, Multi-Cloud, Vertical Slices, Plugin and Kernel
+**Architecture:** Event Sourcing, CQRS, Domain-Driven Design, microservices, vertical slices, plugin architectures
 
-**Infrastructure:** Linux, Docker, AWS, Azure, Google Cloud, Cloudflare, Vercel, Netlify, Railway
-
-**Data:** SQL, MongoDB, Redis, DynamoDB, Kurrent (EventStore DB)
+**Infrastructure and data:** Linux, Docker, AWS, Azure, Google Cloud, Cloudflare, Vercel, SQL, MongoDB, Redis, DynamoDB, KurrentDB
 
 ## Work Experience
 
-### Product Engineer (Codemod) (Aug 2026 - current)
+### Product Engineer (Codemod) (Aug 2026 - present)
 
-- Dogfood Codemod and analyzed the ecosystem to identify pain points
-- Redesigned product APIs for better developer and agent experience
-- Worked directly with customers to gather feedback and demo features
-- Creating technical content like case studies, documentation, and GTM
+- Dogfood Codemod and analyze the ecosystem to identify pain points
+- Redesign product APIs for better developer and agent experience
+- Work directly with customers to gather feedback and demo features
+- Create case studies, documentation, and go-to-market material
 
 ### Developer Relations Engineer (PowerSync) (Dec 2025 - May 2026)
 
@@ -64,7 +62,7 @@ Software engineer and developer advocate building full-stack AI and devtool prod
 - Supported an 8,000-member Discord community and synthesized developer feedback for product and engineering teams
 - Represented Clerk at five conferences through talks, workshops, demos, and product walkthroughs
 - Established an escalation pipeline from customer support through content, demos, docs, and product
-- Built a CLI for automatically migrating data from any platform to Clerk
+- Built a CLI for migrating user data from supported third-party platforms to Clerk
 - Built authentication starter kits and demos with Next.js, React, Tailwind CSS, and Vercel
 
 ### Senior Software Developer (UC IT Solutions Center) (Jan 2020 – Aug 2020, Jan 2021 – Dec 2022)
@@ -128,56 +126,39 @@ Software engineer and developer advocate building full-stack AI and devtool prod
 ### [Jev Review](https://github.com/devagrawal09/jev-review) (Sep 2026)
 
 - Experimental open-source project exploring typed probabilistic decisions in software-review workflows
-- Built against TypeSafe's Jev SDK to test bounded questions, confidence, and explicit uncertainty
+- Uses TypeSafe's Jev SDK to test bounded questions, confidence, and explicit uncertainty
 - Status: demo
 
 ### [Stanley](https://github.com/devagrawal09/stanley-code) (Sep 2026)
 
-- Jev-first self evolving coding agent
-- Routes supported tasks to deterministic workflows, unsupported tasks to LLMs
-- LLMs continuously draft and refactor reusable workflows to expand support
+- Jev-first, self-evolving coding agent
+- Routes supported tasks to deterministic Jev-powered workflows and unsupported tasks to an LLM agent
+- LLM agents draft and refactor reusable workflows that can be reviewed and promoted
 - Status: demo
 
-### [OC++](https://github.com/devagrawal09/opencode/tree/codemode-fork) (Jul 2026 - current)
+### [OC++](https://github.com/devagrawal09/opencode/tree/codemode-fork) (Jul 2026 - present)
 
-- Fork of opencode with a heavily upgraded code-mode plugin
-- Compiled safety, durable exection, notebook semantics, async workers, approvals, and external events
-- UI shows detailed trace of the code execution with full visibility into file changes and processes
-- Actively investigating Jev-first workflows, working examples, and evaluations
-- Status: experimental, daily driving, heavily dogfooding
+- OpenCode fork with a heavily upgraded code-mode plugin
+- Adds compiled safety, durable execution, notebook semantics, async workers, approvals, and external events
+- Provides detailed execution traces with visibility into file changes and processes
+- Used daily to investigate Jev-first workflows, examples, and evaluations
+- Status: experimental and heavily dogfooded
 
-### Software Factory Benchmark (Apr 2026 - current)
+### [Software Factory Benchmark](https://github.com/devagrawal09/software-factory-benchmark) (Apr 2026 - present)
 
-- An evaluation for an agent or system of agents (software factory) for building, testing, serving, monitoring, and evolving software
-- Agent plays an RTS like simulation by writing code that observes visible state and sends actions to the controllable units
-- The simulation is random, endless, messy, and constantly changing, better emulating realistic engineering scenarios
-- 3d browser viewer for the simulation along with HUD controls, potentially for human players in the future
-- Status: experimental
+- Benchmark for long-running agent software engineering and operations
+- Agents build and operate an HTTP controller that keeps a procedurally generated settlement alive
+- Tests adaptation under partial observations, hidden scenarios, continuous deadlines, and service failures
+- Runner owns simulation, validation, durable recording, and replay; agents own controller code, deployment, diagnostics, and strategy
+- Includes a 3D browser spectator and replay viewer
+- Status: working prototype
 
-### Harlan (Feb 2026 - Jul 2026)
+### [PowerChat](https://github.com/devagrawal09/powerchat) (Nov 2025 - May 2026)
 
-- Early prototype of the ideas on OC++, built on top of Specter
-- A custom programming language built around function composition and pattern matching
-- A custom agent harness with a single execute tool for running Harlan code
-- Compile-time safety, durable execution, observable traces, generative UI (planned)
-- Status: demo
-
-### Specter (Dec 2025 - Jul 2026)
-
-- A framework for defining structured behavior specifications that validate, test, and orchestrate the implementation logic
-- Inspired by the Xolvio's internal AI Software Factory which put coding agents into deterministic workflows and scaffolds
-- Coding agents write implementations for specs in vertical slices in a scalable architecture and automatically tested
-- Tests guarantee specified behavior is followed, Runtime guarantees state is durable and consistent
-- Language-agnostic, auto generated architecture diagrams, full runtime observability, realtime subscriptions
-- Status: experimental, dogfooding
-
-### Powerchat (Nov 2025 - May 2026)
-
-- A next generation collaborative workspace combining the best of Slack, Notion, and Linear
-- Agents participate in chat, collaborative editing, and task management directly and have full context
-- Agents run inside sandbox for full coding, automation, and hosting capabilities
-- LLM tokens stream to multiple clients and don't crash if any clients navigate or disconnect
-- Status: experimental, dogfooding
+- Collaborative workspace where people and agents share chat, documents, tasks, and context
+- Runs agents in sandboxes with coding, automation, and hosting capabilities
+- Uses a sync engine to stream durable model output to multiple clients across navigation and disconnections
+- Status: experimental and dogfooded
 
 ## Appearances (Conferences, Podcasts, Meetups)
 
@@ -202,27 +183,27 @@ Software engineer and developer advocate building full-stack AI and devtool prod
 
 ## Community
 
-### Momentum Developer Conference (Feb 2023 - Current)
+### Momentum Developer Conference (Feb 2023 - present)
 
-- Member of steering committee of the biggest tech conference in Cincinnati (500+ registrations)
-- Built an app for attendees and speakers to keep track of schedule, network, and provide feedback
+- Serve on the steering committee for Cincinnati's largest technology conference (500+ registrations)
+- Built an app for attendees and speakers to track schedules, network, and provide feedback
 
-### RevolutionUC And MakeUC (Sep 2019 – Mar 2023)
+### RevolutionUC and MakeUC (Sep 2019 – Mar 2023)
 
-- Organizer for UC’s largest hackathons
-- Developing and managing the hackathon website, server, database, and the various online services
+- Organized UC's largest hackathons
+- Developed and managed the hackathon website, server, database, and online services
 
 ### IT Student Association (Apr 2021 – Apr 2022)
 
-- President for UC’s largest student organization for IT students
-- Providing weekly educational and networking opportunities to enthusiastic students
+- Served as president of UC's largest student organization for IT students
+- Provided weekly educational and networking opportunities for students
 
 ### ACM@UC (May 2019 – Apr 2021)
 
-- Managing and updating the organization’s website
-- Plan and record biweekly tech talks and workshops
+- Managed and updated the organization's website
+- Planned and recorded biweekly technical talks and workshops
 
 ### The UC Rotaract Club (Oct 2018 – Oct 2021)
 
-- Hosting on-campus events and off-campus volunteering projects
-- Collaborating with the Rotary Club for networking and professional development events
+- Hosted on-campus events and off-campus volunteer projects
+- Collaborated with the Rotary Club on networking and professional-development events
