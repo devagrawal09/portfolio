@@ -125,35 +125,59 @@ Software engineer and developer advocate building full-stack AI and devtool prod
 
 ## Selected Projects
 
-### [Jev Review](https://github.com/devagrawal09/jev-review)
+### [Jev Review](https://github.com/devagrawal09/jev-review) (Sep 2026)
 
 - Experimental open-source project exploring typed probabilistic decisions in software-review workflows
 - Built against TypeSafe's Jev SDK to test bounded questions, confidence, and explicit uncertainty
 - Status: demo
 
-### [Stanley](https://github.com/devagrawal09/stanley-code)
+### [Stanley](https://github.com/devagrawal09/stanley-code) (Sep 2026)
 
 - Jev-first self evolving coding agent
 - Routes supported tasks to deterministic workflows, unsupported tasks to LLMs
 - LLMs continuously draft and refactor reusable workflows to expand support
 - Status: demo
 
-### [OC++](https://github.com/devagrawal09/opencode/tree/codemode-fork)
+### [OC++](https://github.com/devagrawal09/opencode/tree/codemode-fork) (Jul 2026 - current)
 
 - Fork of opencode with a heavily upgraded code-mode plugin
 - Compiled safety, durable exection, notebook semantics, async workers, approvals, and external events
 - UI shows detailed trace of the code execution with full visibility into file changes and processes
 - Actively investigating Jev-first workflows, working examples, and evaluations
 - Status: experimental, daily driving, heavily dogfooding
-- **Frontends** built with Jekyll, React, and Angular
 
-### Software Factory Benchmark
+### Software Factory Benchmark (Apr 2026 - current)
 
 - An evaluation for an agent or system of agents (software factory) for building, testing, serving, monitoring, and evolving software
 - Agent plays an RTS like simulation by writing code that observes visible state and sends actions to the controllable units
 - The simulation is random, endless, messy, and constantly changing, better emulating realistic engineering scenarios
 - 3d browser viewer for the simulation along with HUD controls, potentially for human players in the future
-- Status: prototype
+- Status: experimental
+
+### Harlan (Feb 2026 - Jul 2026)
+
+- Early prototype of the ideas on OC++, built on top of Specter
+- A custom programming language built around function composition and pattern matching
+- A custom agent harness with a single execute tool for running Harlan code
+- Compile-time safety, durable execution, observable traces, generative UI (planned)
+- Status: demo
+
+### Specter (Dec 2025 - Jul 2026)
+
+- A framework for defining structured behavior specifications that validate, test, and orchestrate the implementation logic
+- Inspired by the Xolvio's internal AI Software Factory which put coding agents into deterministic workflows and scaffolds
+- Coding agents write implementations for specs in vertical slices in a scalable architecture and automatically tested
+- Tests guarantee specified behavior is followed, Runtime guarantees state is durable and consistent
+- Language-agnostic, auto generated architecture diagrams, full runtime observability, realtime subscriptions
+- Status: experimental, dogfooding
+
+### Powerchat (Nov 2025 - May 2026)
+
+- A next generation collaborative workspace combining the best of Slack, Notion, and Linear
+- Agents participate in chat, collaborative editing, and task management directly and have full context
+- Agents run inside sandbox for full coding, automation, and hosting capabilities
+- LLM tokens stream to multiple clients and don't crash if any clients navigate or disconnect
+- Status: experimental, dogfooding
 
 ## Appearances (Conferences, Podcasts, Meetups)
 
