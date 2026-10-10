@@ -20,7 +20,7 @@ Building software since 2017, with **6+ years of professional product experience
 
 **Architecture:** Event Sourcing, CQRS, Domain-Driven Design, microservices, vertical slices, plugin architectures
 
-**Infrastructure and data:** Linux, Docker, AWS, Azure, Google Cloud, Cloudflare, Vercel, SQL, MongoDB, Redis, DynamoDB, KurrentDB
+**Infrastructure and data:** Linux, Docker, AWS, Azure, Google Cloud, Cloudflare, Vercel, Railway, DigitalOcean, Heroku, SQL, MongoDB, Redis, DynamoDB, KurrentDB
 
 ## Work Experience
 
@@ -119,11 +119,13 @@ Building software since 2017, with **6+ years of professional product experience
 
 ## Selected Projects
 
-### [Jev Review](https://github.com/devagrawal09/jev-review) (Sep 2026)
+### [Solid Yield](https://github.com/devagrawal09/solid-yield) (Oct 2026)
 
-- Experimental open-source project exploring typed probabilistic decisions in software-review workflows
-- Uses TypeSafe's Jev SDK to test bounded questions, confidence, and explicit uncertainty
-- Status: demo
+- Library for type safe reactivity, async, error, and context handling for Solid.js 2.0
+- Experimental compiler for optimizing bundle size, server rendering, and resumability
+- Sugar mode for checking normal Solid code, custom linter and typescript plugin
+- Inspired by Effect.ts, Foldkit, Octane, and React Compiler
+- Status: experimental, dogfooding
 
 ### [Stanley](https://github.com/devagrawal09/stanley-code) (Sep 2026)
 
@@ -138,7 +140,7 @@ Building software since 2017, with **6+ years of professional product experience
 - Adds compiled safety, durable execution, notebook semantics, async workers, approvals, and external events
 - Provides detailed execution traces with visibility into file changes and processes
 - Used daily to investigate Jev-first workflows, examples, and evaluations
-- Status: experimental and heavily dogfooded
+- Status: experimental and heavily dogfooding
 
 ### [Software Factory Benchmark](https://github.com/devagrawal09/software-factory-benchmark) (Apr 2026 - present)
 
@@ -149,12 +151,19 @@ Building software since 2017, with **6+ years of professional product experience
 - Includes a 3D browser spectator and replay viewer
 - Status: working prototype
 
+### [Specter](https://github.com/devagrawal09/specter) (Jan 2026 - present)
+
+- Typescript framework for specifications that compile, execute, and scaffold the application
+- Primitive for autonomous software factories with deterministic verification of implementation
+- Language agnostic, visual specification editors, runtime protocol and observability
+- Status: working prototype, dogfooding
+
 ### [PowerChat](https://github.com/devagrawal09/powerchat) (Nov 2025 - May 2026)
 
 - Collaborative workspace where people and agents share chat, documents, tasks, and context
 - Runs agents in sandboxes with coding, automation, and hosting capabilities
 - Uses a sync engine to stream durable model output to multiple clients across navigation and disconnections
-- Status: experimental and dogfooded
+- Status: experimental, dogfooding
 
 ## Appearances (Conferences, Podcasts, Meetups)
 
