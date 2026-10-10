@@ -1,10 +1,6 @@
 # Dev Agrawal
 
-[GitHub](https://github.com/devagrawal09) .
-[LinkedIn](https://www.linkedin.com/in/dev-agr) .
-[Website](https://devagr.me) .
-[Twitter](https://twitter.com/devagrawal09) .
-[YouTube](https://youtube.com/@devagr)
+[GitHub](https://github.com/devagrawal09) | [LinkedIn](https://www.linkedin.com/in/dev-agr) | [Website](https://devagr.me) | [Twitter](https://twitter.com/devagrawal09) | [YouTube](https://youtube.com/@devagr)
 
 ## Summary
 
@@ -75,13 +71,13 @@ Building software since 2017, with **6+ years of professional product experience
 
 ### Research Assistant (University of Cincinnati) (Sep 2018 – Dec 2019)
 
-- Worked on a research project **funded by NSF and Mozilla** with a team of professors and masters students
-- **Built an access control model** for smart-homes that supports **automatic emergency detection**, **escalation**, and **response**
+- Worked on a research project **funded by NSF and Mozilla** with a team of professors and master's students
+- **Built an access control model** for smart homes that supports **automatic emergency detection**, **escalation**, and **response**
 - **Published a paper** for the **ACM International Conference** on Enhancing Smart Home Security
 
 ### Web Developer (TorpedoShoes) (May 2019 – Aug 2019)
 
-- **Built an internal platform** using **MeteorJS** for tracking manufacturing lines, quality control, and reporting to **replace existing paper report system** used by **8 manufacturing units**
+- **Built an internal platform** using **MeteorJS** for tracking manufacturing lines, quality control, and reporting to **replace the existing paper reporting system** used by **8 manufacturing units**
 
 ### Web Developer (HealthyLovedOnes) (Apr 2018 – Jul 2018)
 
@@ -96,7 +92,7 @@ Building software since 2017, with **6+ years of professional product experience
 
 ### Core Team (Solid.js) (November 2024 - present)
 
-- Contributed to the Solid 2.0 framework and API design for built-in efficient asynchronous co-ordination
+- Contributed to the Solid 2.0 framework and API design for efficient built-in asynchronous coordination
 - Built demos and experiments to stress test Solid 2.0 in different situations and improve the design
 - Published a CLI tool to detect migration sites in existing Solid codebases using AST analysis
 - Actively supported and collected feedback from early adopters to identify pain points
@@ -107,13 +103,13 @@ Building software since 2017, with **6+ years of professional product experience
 ### Core Team (Ripple.ts) (November 2025 - present)
 
 - Minor contributions to the framework and API design
-- Provided feedback on the async co-ordination, fallback and error handling APIs
+- Provided feedback on the async coordination, fallback, and error-handling APIs
 
 ### Maintainer (TanStack Start) (August 2024 - present)
 
 - Minor contributions to the framework architecture primarily during its experimental phase
 - Experimented with React Server Components (RSCs) internals and low level APIs
-- Prototyped a custom full stack framework on top of RSCs to identify pain points
+- Prototyped a custom full-stack framework on top of RSCs to identify pain points
 - Experimented with infra-agnostic data caching and real-time patterns
 
 ### Developer Advocate (Remult) (August 2023 - January 2024)
